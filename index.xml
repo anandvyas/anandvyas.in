@@ -2,43 +2,43 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Anand vyas</title>
-    <link>http://localhost:1313/</link>
+    <link>http://anandvyas.in/</link>
     <description>Recent content on Anand vyas</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 21 Aug 2017 00:15:00 +0200</lastBuildDate>
     
-	<atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://anandvyas.in/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>About</title>
-      <link>http://localhost:1313/about/</link>
+      <link>http://anandvyas.in/about/</link>
       <pubDate>Mon, 21 Aug 2017 00:15:00 +0200</pubDate>
       
-      <guid>http://localhost:1313/about/</guid>
+      <guid>http://anandvyas.in/about/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Custom layout - Resume</title>
-      <link>http://localhost:1313/resume/</link>
+      <link>http://anandvyas.in/resume/</link>
       <pubDate>Mon, 21 Aug 2017 00:15:00 +0200</pubDate>
       
-      <guid>http://localhost:1313/resume/</guid>
+      <guid>http://anandvyas.in/resume/</guid>
       <description></description>
     </item>
     
     <item>
       <title>What is Cloud Computing ?</title>
-      <link>http://localhost:1313/aws/cloud-computing/</link>
+      <link>http://anandvyas.in/aws/cloud-computing/</link>
       <pubDate>Mon, 03 Jul 2017 00:15:00 +0200</pubDate>
       
-      <guid>http://localhost:1313/aws/cloud-computing/</guid>
+      <guid>http://anandvyas.in/aws/cloud-computing/</guid>
       <description>&lt;p&gt;Cloud computing is the delivery of computing services — servers, storage, databases, networking, software, analytics and more—over the Internet (“the cloud”).&lt;/p&gt;
 
 &lt;div class=&#34;text-center&#34;&gt;
-    &lt;img class=&#34;img-responsive&#34; src=&#34;http://localhost:1313/images/blog/aws-cloud-computing-defined.jpg&#34; alt=&#34;aws cloud computing&#34; /&gt;
+    &lt;img class=&#34;img-responsive&#34; src=&#34;http://anandvyas.in/images/blog/aws-cloud-computing-defined.jpg&#34; alt=&#34;aws cloud computing&#34; /&gt;
 &lt;/div&gt;
  
 
