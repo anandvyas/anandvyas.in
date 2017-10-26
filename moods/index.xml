@@ -2,12 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Moods on Anand vyas</title>
-    <link>http://localhost:1313/moods/</link>
+    <link>http://anandvyas.in/moods/</link>
     <description>Recent content in Moods on Anand vyas</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-	<atom:link href="http://localhost:1313/moods/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://anandvyas.in/moods/index.xml" rel="self" type="application/rss+xml" />
     
     
   </channel>
