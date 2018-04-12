@@ -3,27 +3,32 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://anandvyas.in/english/</loc>
-    <lastmod>2017-10-14T17:59:57+05:30</lastmod>
+    <loc>http://anandvyas.in/docker/</loc>
+    <lastmod>2018-04-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://anandvyas.in/linux/</loc>
+    <lastmod>2018-04-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://anandvyas.in/linux/regular-expressions/</loc>
+    <lastmod>2018-04-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://anandvyas.in/linux/shell-script/</loc>
+    <lastmod>2018-04-08T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://anandvyas.in/linux/linux-commands/</loc>
+    <lastmod>2018-04-04T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>http://anandvyas.in/aws/</loc>
-    <lastmod>2017-10-14T17:59:57+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://anandvyas.in/docker/</loc>
-    <lastmod>2017-10-14T17:59:57+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://anandvyas.in/git/</loc>
-    <lastmod>2017-10-14T17:59:57+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://anandvyas.in/jenkins/</loc>
     <lastmod>2017-10-14T17:59:57+05:30</lastmod>
   </url>
   
@@ -38,47 +43,25 @@
   </url>
   
   <url>
-    <loc>http://anandvyas.in/aws/cloud-computing/</loc>
-    <lastmod>2017-07-03T00:15:00+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://anandvyas.in/english/vocabulary/</loc>
-  </url>
-  
-  <url>
     <loc>http://anandvyas.in/</loc>
-    <lastmod>2017-08-21T00:15:00+02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://anandvyas.in/categories/aws/</loc>
-    <lastmod>2017-07-03T00:15:00+02:00</lastmod>
+    <lastmod>2018-04-11T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://anandvyas.in/categories/</loc>
-    <lastmod>2017-07-03T00:15:00+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://anandvyas.in/categories/cloud/</loc>
-    <lastmod>2017-07-03T00:15:00+02:00</lastmod>
+    <loc>http://anandvyas.in/categories/linux/</loc>
+    <lastmod>2018-04-11T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://anandvyas.in/tags/cloud-computing/</loc>
-    <lastmod>2017-07-03T00:15:00+02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://anandvyas.in/categories/cloud-computing/</loc>
-    <lastmod>2017-07-03T00:15:00+02:00</lastmod>
+    <loc>http://anandvyas.in/tags/linux-commands/</loc>
+    <lastmod>2018-04-04T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -88,8 +71,20 @@
   </url>
   
   <url>
+    <loc>http://anandvyas.in/tags/regular-expressions/</loc>
+    <lastmod>2018-04-11T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://anandvyas.in/tags/shell-script---cheat-sheat/</loc>
+    <lastmod>2018-04-08T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://anandvyas.in/tags/</loc>
-    <lastmod>2017-07-03T00:15:00+02:00</lastmod>
+    <lastmod>2018-04-04T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

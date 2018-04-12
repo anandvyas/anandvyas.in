@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Shell Script - Cheat Sheat - Anand vyas</title>
+    <meta content="Shell Script - Cheat Sheat - Anand vyas" property="og:title">
+    <meta content="Linux, Shell Script - Cheat Sheat" name="keywords">
+    <meta content="linux - Shell Script - Cheat Sheat" property="og:description">
+    <meta name="author" content="Anand Vyas">
+
+    
+    <link href="http://anandvyas.in/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link href="http://anandvyas.in/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    
+    <link href="http://anandvyas.in/css/highlighter.css" rel="stylesheet">
+    
+    <link href="http://anandvyas.in/css/sb-admin.css" rel="stylesheet">
+    <link href="http://anandvyas.in/css/about.css" rel="stylesheet">
+</head>
+<body class="fixed-nav sticky-footer bg-dark sidenav-toggled" id="page-top">
+  
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+    <a class="navbar-brand" href="http://anandvyas.in/">
+        <img src="http://anandvyas.in/images/profile/logo.png" />
+        <span>Anand vyas</span>
+    </a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav navbar-sidenav">
+            <li class="nav-item sidebar-profile text-center">
+                <div class="profile-pic">
+                    <img src="http://anandvyas.in/images/profile/avatar.jpg" alt="avatar">
+                </div>
+                <div class="profile-detail">
+                    
+                    <span>Solution Architect</span> 
+                    <span>Cloud Architect</span> 
+                    <span>DevOps</span> 
+                    <span>Tech Lead</span> 
+                </div>
+            </li>
+            
+            <li class="nav-item sidebar-menu" data-toggle="tooltip" data-placement="right" title="Home">
+                <a class="nav-link" href="http://anandvyas.in/">
+                <i class="fa fa-fw fa fa-home"></i>
+                <span class="nav-link-text">Home</span>
+                </a>
+            </li>
+            
+            <li class="nav-item sidebar-menu" data-toggle="tooltip" data-placement="right" title="About">
+                <a class="nav-link" href="http://anandvyas.in/about">
+                <i class="fa fa-fw fa fa-user-circle"></i>
+                <span class="nav-link-text">About</span>
+                </a>
+            </li>
+            
+            <li class="nav-item sidebar-menu" data-toggle="tooltip" data-placement="right" title="Categories">
+                <a class="nav-link" href="http://anandvyas.in/categories">
+                <i class="fa fa-fw fa fa-dashboard"></i>
+                <span class="nav-link-text">Categories</span>
+                </a>
+            </li>
+            
+            <li class="nav-item sidebar-menu" data-toggle="tooltip" data-placement="right" title="Tags">
+                <a class="nav-link" href="http://anandvyas.in/tags">
+                <i class="fa fa-fw fa fa-tags"></i>
+                <span class="nav-link-text">Tags</span>
+                </a>
+            </li>
+            
+        </ul>
+        <ul class="navbar-nav sidenav-social">
+            
+            <li><a href="#" target="_blank"><i class="fa fa-mobile"></i></a></li>
+            
+            <li><a href="mailto:anandvyas@live.com" target="_blank"><i class="fa fa-envelope"></i></a></li>
+            
+            <li><a href="https://twitter.com/anandvyaas" target="_blank"><i class="fa fa-twitter"></i></a></li>
+            
+            <li><a href="https://www.linkedin.com/in/anandvyaas" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+            
+            <li><a href="https://www.instagram.com/anandvyaas" target="_blank"><i class="fa fa-instagram"></i></a></li>
+            
+            <li><a href="https://github.com/anandvyas" target="_blank"><i class="fa fa-github"></i></a></li>
+            
+            <li><a href="https://stackoverflow.com/users/8208060/anand-vyas" target="_blank"><i class="fa fa-stack-overflow"></i></a></li>
+            
+        </ul>
+        <ul class="navbar-nav sidenav-toggler">
+            <li class="nav-item">
+                <a class="nav-link text-center" id="sidenavToggler">
+            <i class="fa fa-fw fa-angle-left"></i>
+            </a>
+            </li>
+        </ul>
+        
+        
+    </div>
+</nav>
+  
+  <div class="content-wrapper">
+    <div class="container-fluid">
+    
+
+
+<ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="http://anandvyas.in/">Home</a></li>
+
+
+    
+    <li class="breadcrumb-item active"><a href='http://anandvyas.in/linux'>linux</a></li>
+    
+    
+
+
+    
+    <li class="breadcrumb-item active"><a href='http://anandvyas.in/linux/shell-script'>shell-script</a></li>
+    
+    
+
+
+    
+
+</ol>
+
+        <div class="post">
+            <h1>Shell Script - Cheat Sheat</h1>
+            <span class="post-date">Sun, Apr 8, 2018</span>
+            
+
+<h3 id="a-name-shell-script-variables-define-variables-a"><a name="shell-script-variables">Define Variables</a></h3>
+
+<pre><code class="language-sh">NAME=&quot;John&quot;
+echo $NAME #=&gt; John
+echo &quot;$NAME&quot; #=&gt; John
+echo &quot;${NAME}!&quot; #=&gt; John!
+echo &quot;Hi $NAME&quot;  #=&gt; Hi John
+echo 'Hi $NAME'  #=&gt; Hi $NAME
+</code></pre>
+
+<h3 id="a-name-shell-script-conditions-conditions-a"><a name="shell-script-conditions">Conditions</a></h3>
+
+<table>
+<thead>
+<tr>
+<th>String/Numeric Condition</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>[ -z STRING ]</td>
+<td>Empty string</td>
+</tr>
+
+<tr>
+<td>[ -n STRING ]</td>
+<td>Not empty string</td>
+</tr>
+
+<tr>
+<td>[ NUM -eq NUM ]</td>
+<td>Equal</td>
+</tr>
+
+<tr>
+<td>[ NUM -ne NUM ]</td>
+<td>Not equal</td>
+</tr>
+
+<tr>
+<td>[ NUM -lt NUM ]</td>
+<td>Less than</td>
+</tr>
+
+<tr>
+<td>[ NUM -le NUM ]</td>
+<td>Less than or equal</td>
+</tr>
+
+<tr>
+<td>[ NUM -gt NUM ]</td>
+<td>Greater than</td>
+</tr>
+
+<tr>
+<td>[ NUM -ge NUM ]</td>
+<td>Greater than or equal</td>
+</tr>
+
+<tr>
+<td>[[ STRING =~ STRING ]]</td>
+<td>Regexp</td>
+</tr>
+
+<tr>
+<td>(( NUM &lt; NUM ))</td>
+<td>Numeric conditions</td>
+</tr>
+
+<tr>
+<td>[ -o noclobber ]</td>
+<td>If OPTIONNAME is enabled</td>
+</tr>
+
+<tr>
+<td>[ ! EXPR ]</td>
+<td>Not</td>
+</tr>
+
+<tr>
+<td>[ X ] &amp;&amp; [ Y ]</td>
+<td>And</td>
+</tr>
+
+<tr>
+<td>[ X ] || [ Y ]</td>
+<td>Or</td>
+</tr>
+</tbody>
+</table>
+
+<p><br/></p>
+
+<table>
+<thead>
+<tr>
+<th>File Condition</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>[ -e FILE ]</td>
+<td>Exists</td>
+</tr>
+
+<tr>
+<td>[ -r FILE ]</td>
+<td>Readable</td>
+</tr>
+
+<tr>
+<td>[ -h FILE ]</td>
+<td>Symlink</td>
+</tr>
+
+<tr>
+<td>[ -d FILE ]</td>
+<td>Directory</td>
+</tr>
+
+<tr>
+<td>[ -w FILE ]</td>
+<td>Writable</td>
+</tr>
+
+<tr>
+<td>[ -s FILE ]</td>
+<td>Size is &gt; 0 bytes</td>
+</tr>
+
+<tr>
+<td>[ -f FILE ]</td>
+<td>File</td>
+</tr>
+
+<tr>
+<td>[ -x FILE ]</td>
+<td>Executable</td>
+</tr>
+
+<tr>
+<td>[ FILE1 -nt FILE2 ]</td>
+<td>1 is more recent than 2</td>
+</tr>
+
+<tr>
+<td>[ FILE1 -ot FILE2 ]</td>
+<td>2 is more recent than 1</td>
+</tr>
+
+<tr>
+<td>[ FILE1 -ef FILE2 ]</td>
+<td>Same files</td>
+</tr>
+</tbody>
+</table>
+
+<p><strong>Example</strong></p>
+
+<pre><code class="language-sh"># String
+if [ -z &quot;$string&quot; ]; then
+  echo &quot;String is empty&quot;
+elif [ -n &quot;$string&quot; ]; then
+  echo &quot;String is not empty&quot;
+fi
+# Combinations
+if [ X ] &amp;&amp; [ Y ]; then
+  ...
+fi
+# Regex
+if [[ &quot;A&quot; =~ &quot;.&quot; ]]
+if (( $a &lt; $b ))
+if [ -e &quot;file.txt&quot; ]; then
+  echo &quot;file exists&quot;
+fi
+
+# Case/switch
+case &quot;$1&quot; in
+  start | up)
+    vagrant up
+    ;;
+
+  *)
+    echo &quot;Usage: $0 {start|stop|ssh}&quot;
+    ;;
+esac
+
+</code></pre>
+
+<p><br/></p>
+
+<h3 id="a-name-shell-script-loops-loops-a"><a name="shell-script-loops">Loops</a></h3>
+
+<pre><code class="language-sh"># Basic loop
+for i in /etc/rc.*; do
+  echo $i
+done
+
+# Range loop
+for i in {1..5}; do
+    echo &quot;Welcome $i&quot;
+done
+
+:'
+Welcome 1
+Welcome 2
+Welcome 3
+Welcome 4
+Welcome 5
+'
+
+# With step size
+for i in {5..50..5}; do
+    echo &quot;Welcome $i&quot;
+done
+
+:'
+Welcome 5
+Welcome 10
+Welcome 15
+Welcome 20
+Welcome 25
+Welcome 30
+Welcome 35
+Welcome 40
+Welcome 45
+Welcome 50
+'
+
+# Reading lines
+cat file.txt | while read line; do
+  echo $line
+done
+
+# Forever
+while true; do
+  ···
+done
+
+</code></pre>
+
+<p><br/></p>
+
+<h3 id="a-name-shell-script-array-array-a"><a name="shell-script-array">Array</a></h3>
+
+<pre><code class="language-sh">Fruits=('Apple' 'Banana' 'Orange')
+
+Fruits[0]=&quot;Apple&quot;
+Fruits[1]=&quot;Banana&quot;
+Fruits[2]=&quot;Orange&quot;
+
+# Working with arrays
+echo ${Fruits[0]}           # Element #0
+echo ${Fruits[@]}           # All elements, space-separated
+echo ${#Fruits[@]}          # Number of elements
+echo ${#Fruits}             # String length of the 1st element
+echo ${#Fruits[3]}          # String length of the Nth element
+echo ${Fruits[@]:3:2}       # Range (from position 3, length 2)
+
+# Operations
+Fruits=(&quot;${Fruits[@]}&quot; &quot;Watermelon&quot;)    # Push
+Fruits=( ${Fruits[@]/Ap*/} )            # Remove by regex match
+unset Fruits[2]                         # Remove one item
+Fruits=(&quot;${Fruits[@]}&quot;)                 # Duplicate
+Fruits=(&quot;${Fruits[@]}&quot; &quot;${Veggies[@]}&quot;) # Concatenate
+lines=(`cat &quot;logfile&quot;`)                 # Read from file
+
+# Iteration
+for i in &quot;${arrayName[@]}&quot;; do
+  echo $i
+done
+
+</code></pre>
+
+<p><br/></p>
+
+<h3 id="a-name-shell-script-function-function-a"><a name="shell-script-function">Function</a></h3>
+
+<pre><code class="language-sh"># Defining functions
+myfunc() {
+    echo &quot;hello $1&quot;
+}
+
+# Same as above (alternate syntax)
+function myfunc() {
+    echo &quot;hello $1&quot;
+}
+
+# Calling function 
+myfunc &quot;John&quot;
+
+# Returning values
+adduser()
+{
+  USER=$1
+  PASSWORD=$2
+  shift ; shift
+  COMMENTS=$@
+  useradd -c &quot;${COMMENTS}&quot; $USER
+  if [ &quot;$?&quot; -ne &quot;0&quot; ]; then
+    echo &quot;Useradd failed&quot;
+    return 1
+  fi
+  passwd $USER $PASSWORD
+  if [ &quot;$?&quot; -ne &quot;0&quot; ]; then
+    echo &quot;Setting password failed&quot;
+    return 2
+  fi
+  echo &quot;Added user $USER ($COMMENTS) with pass $PASSWORD&quot;
+}
+
+result=$(adduser)
+
+# Arguments
+:'
+$#	Number of arguments
+$*	All arguments
+$@	All arguments, starting from first
+$1	First argument
+'
+</code></pre>
+
+<p><br/></p>
+
+<h3 id="a-name-shell-script-parameter-expansions-parameter-expansions-a"><a name="shell-script-parameter-expansions">Parameter expansions</a></h3>
+
+<pre><code class="language-sh"># Basics
+name=&quot;John&quot;
+echo ${name}
+echo ${name/J/j}    #=&gt; &quot;john&quot; (substitution)
+echo ${name:0:2}    #=&gt; &quot;jo&quot; (slicing)
+echo ${name::2}     #=&gt; &quot;jo&quot; (slicing)
+echo ${name::-1}    #=&gt; &quot;joh&quot; (slicing)
+echo ${food:-Cake}  #=&gt; $food or &quot;Cake&quot;
+
+length=2
+echo ${name:0:length}  #=&gt; &quot;jo&quot;
+
+
+STR=&quot;/path/to/foo.cpp&quot;
+echo ${STR%.cpp}    # /path/to/foo
+echo ${STR%.cpp}.o  # /path/to/foo.o
+
+echo ${STR##*.}     # cpp (extension)
+echo ${STR##*/}     # foo.cpp (basepath)
+
+echo ${STR#*/}      # path/to/foo.cpp
+echo ${STR##*/}     # foo.cpp
+
+echo ${STR/foo/bar} # /path/to/bar.cpp
+STR=&quot;Hello world&quot;
+echo ${STR:6:5}   # &quot;world&quot;
+echo ${STR:-5:5}  # &quot;world&quot;
+SRC=&quot;/path/to/foo.cpp&quot;
+BASE=${STR##*/}   #=&gt; &quot;foo.cpp&quot; (basepath)
+DIR=${SRC%$BASE}  #=&gt; &quot;/path/to&quot; (dirpath)
+
+# Single line comment
+: '
+This is a
+multi line
+comment
+'
+</code></pre>
+
+<blockquote>
+<p>See More: <a href="http://wiki.bash-hackers.org/syntax/pe">Brace expansion</a></p>
+</blockquote>
+
+        </div>
+        <div id="disqus_thread"></div>
+<script>
+
+
+
+
+
+(function() { 
+var d = document, s = d.createElement('script');
+s.src = 'https://anandvyas.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+                            
+    </div>
+    
+    
+    <footer class="sticky-footer">
+    <div class="container">
+        <div class="text-center">
+            <small>Copyright © Anand Vyas 2018</small>
+        </div>
+    </div>
+</footer>
+
+<a class="scroll-to-top rounded" href="#page-top">
+    <i class="fa fa-angle-up"></i>
+</a>
+
+<script src="http://anandvyas.in/js/jquery.min.js"></script>
+<script src="http://anandvyas.in/js/popper.min.js"></script>
+<script src="http://anandvyas.in/js/bootstrap.min.js"></script>
+<script src="http://anandvyas.in/js/highlight.min.js"></script>
+<script src="http://anandvyas.in/js/moment.min.js"></script>
+<script src="http://anandvyas.in/js/clipboard.min.js"></script>
+
+<script src="http://anandvyas.in/js/jquery.easing.min.js"></script>
+
+<script src="http://anandvyas.in/js/sb-admin.js"></script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-108803266-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'UA-108803266-1');
+</script>
+  </div>
+<script data-no-instant>document.write('<script src="/livereload.js?port=1313&mindelay=10"></' + 'script>')</script></body>
+</html>

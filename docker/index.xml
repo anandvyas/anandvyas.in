@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>aws home page on Anand vyas</title>
+    <title>Docker on Anand vyas</title>
     <link>http://anandvyas.in/docker/</link>
-    <description>Recent content in aws home page on Anand vyas</description>
+    <description>Recent content in Docker on Anand vyas</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 14 Oct 2017 17:59:57 +0530</lastBuildDate>
+    <lastBuildDate>Thu, 12 Apr 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://anandvyas.in/docker/index.xml" rel="self" type="application/rss+xml" />
     
