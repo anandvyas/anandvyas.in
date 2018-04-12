@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Regular Expressions on Anand vyas</title>
+    <link>http://localhost:1313/tags/regular-expressions/</link>
+    <description>Recent content in Regular Expressions on Anand vyas</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 11 Apr 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://localhost:1313/tags/regular-expressions/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Regular Expressions - Cheat Sheat</title>
+      <link>http://localhost:1313/linux/regular-expressions/</link>
+      <pubDate>Wed, 11 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/linux/regular-expressions/</guid>
+      <description>                                
+Anchors Examples    Partten Description Example     ^ Display only those lines which starts with anand grep -w ^anand /etc/passwd   $ Display only those lines which end with anand grep -w anand$ /etc/passwd    </description>
+    </item>
+    
+  </channel>
+</rss>

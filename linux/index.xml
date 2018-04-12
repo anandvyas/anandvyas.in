@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Anand vyas</title>
-    <link>http://localhost:1313/</link>
-    <description>Recent content on Anand vyas</description>
+    <title>Linux on Anand vyas</title>
+    <link>http://localhost:1313/linux/</link>
+    <description>Recent content in Linux on Anand vyas</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 11 Apr 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 12 Apr 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://localhost:1313/linux/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -39,24 +39,6 @@ Anchors Examples    Partten Description Example     ^ Display only those lines w
       <description>Basic commands of linux
    Commands Commands                    
 User management    Commands Description     useradd [USERNAME] Add new user   useradd -G [GROUPNAME] [USERNAME] Add new user in group   passwd [USERNAME] User account is locked until you set a password with the passwd command   usermod -a -G [GROUPNAME] [USERNAME] Add user in group   userdel [USERNAME] Remove the existing user   cat /etc/passwd | sort View username and group information   cat /etc/group | sort View linux group   usermod -d -m [NEW_DIRECTORY] [USERNAME] Change the user home directory location   usermod -u [UID] [USERNAME] Change the user UID</description>
-    </item>
-    
-    <item>
-      <title>About</title>
-      <link>http://localhost:1313/about/</link>
-      <pubDate>Mon, 21 Aug 2017 00:15:00 +0200</pubDate>
-      
-      <guid>http://localhost:1313/about/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Custom layout - Resume</title>
-      <link>http://localhost:1313/resume/</link>
-      <pubDate>Mon, 21 Aug 2017 00:15:00 +0200</pubDate>
-      
-      <guid>http://localhost:1313/resume/</guid>
-      <description></description>
     </item>
     
   </channel>

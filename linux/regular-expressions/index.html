@@ -4,10 +4,10 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Moods - Anand vyas</title>
-    <meta content="Moods - Anand vyas" property="og:title">
-    <meta content="" name="keywords">
-    <meta content="" property="og:description">
+    <title>Regular Expressions - Cheat Sheat - Anand vyas</title>
+    <meta content="Regular Expressions - Cheat Sheat - Anand vyas" property="og:title">
+    <meta content="Linux, Regular Expressions" name="keywords">
+    <meta content="Regular Expressions - linux" property="og:description">
     <meta name="author" content="Anand Vyas">
 
     
@@ -20,7 +20,6 @@
     <link href="http://localhost:1313/css/sb-admin.css" rel="stylesheet">
     <link href="http://localhost:1313/css/about.css" rel="stylesheet">
 </head>
-
 <body class="fixed-nav sticky-footer bg-dark sidenav-toggled" id="page-top">
   
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
@@ -107,11 +106,135 @@
   
   <div class="content-wrapper">
     <div class="container-fluid">
-      <h5>Moods</h5>
-      <ul class="posts">
-        
-      </ul>
+    
+
+
+<ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="http://localhost:1313/">Home</a></li>
+
+
+    
+    <li class="breadcrumb-item active"><a href='http://localhost:1313/linux'>linux</a></li>
+    
+    
+
+
+    
+    <li class="breadcrumb-item active"><a href='http://localhost:1313/linux/regular-expressions'>regular-expressions</a></li>
+    
+    
+
+
+    
+
+</ol>
+
+        <div class="post">
+            <h1>Regular Expressions - Cheat Sheat</h1>
+            <span class="post-date">Wed, Apr 11, 2018</span>
+            
+
+<table>
+<thead>
+<tr>
+<th><div class="text-center">
+    <img class="img-responsive" src="http://localhost:1313/images/linux/regex-anchors.png" alt="Anchors" />
+</div>
+ </th>
+<th><div class="text-center">
+    <img class="img-responsive" src="http://localhost:1313/images/linux/regex-character-classes.png" alt="Character Classes" />
+</div>
+ </th>
+<th><div class="text-center">
+    <img class="img-responsive" src="http://localhost:1313/images/linux/regex-pattern-modifiers.png" alt="Pattern Modifiers" />
+</div>
+ </th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><div class="text-center">
+    <img class="img-responsive" src="http://localhost:1313/images/linux/regex-quantifiers.png" alt="Quantifiers" />
+</div>
+ </td>
+<td><div class="text-center">
+    <img class="img-responsive" src="http://localhost:1313/images/linux/regex-special-characters.png" alt="Special Characters" />
+</div>
+ </td>
+<td><div class="text-center">
+    <img class="img-responsive" src="http://localhost:1313/images/linux/regex-string-replacement.png" alt="String Replacement" />
+</div>
+ </td>
+</tr>
+
+<tr>
+<td><div class="text-center">
+    <img class="img-responsive" src="http://localhost:1313/images/linux/regex-ranges.png" alt="Ranges" />
+</div>
+ </td>
+<td><div class="text-center">
+    <img class="img-responsive" src="http://localhost:1313/images/linux/regex-assertions.png" alt="Assertions" />
+</div>
+  <div class="text-center">
+    <img class="img-responsive" src="http://localhost:1313/images/linux/regex-metacharacters.png" alt="Metacharacters" />
+</div>
+ </td>
+<td><div class="text-center">
+    <img class="img-responsive" src="http://localhost:1313/images/linux/regex-posix.png" alt="Metacharacters" />
+</div>
+ </td>
+</tr>
+</tbody>
+</table>
+
+<p><br/></p>
+
+<h3 id="a-name-regex-anchors-example-anchors-examples-a"><a name="regex-anchors-example">Anchors Examples</a></h3>
+
+<table>
+<thead>
+<tr>
+<th>Partten</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>^</td>
+<td>Display only those lines which starts with anand</td>
+<td>grep -w ^anand /etc/passwd</td>
+</tr>
+
+<tr>
+<td>$</td>
+<td>Display only those lines which end with anand</td>
+<td>grep -w anand$ /etc/passwd</td>
+</tr>
+</tbody>
+</table>
+
+        </div>
+        <div id="disqus_thread"></div>
+<script>
+
+
+
+
+
+(function() { 
+var d = document, s = d.createElement('script');
+s.src = 'https://anandvyas.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+                            
     </div>
+    
+    
     <footer class="sticky-footer">
     <div class="container">
         <div class="text-center">
@@ -144,5 +267,4 @@
 </script>
   </div>
 <script data-no-instant>document.write('<script src="/livereload.js?port=1313&mindelay=10"></' + 'script>')</script></body>
-
 </html>
