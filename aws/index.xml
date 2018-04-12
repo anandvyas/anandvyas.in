@@ -2,13 +2,13 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>aws home page on Anand vyas</title>
-    <link>http://localhost:1313/aws/</link>
+    <link>http://anandvyas.in/aws/</link>
     <description>Recent content in aws home page on Anand vyas</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 14 Oct 2017 17:59:57 +0530</lastBuildDate>
     
-	<atom:link href="http://localhost:1313/aws/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://anandvyas.in/aws/index.xml" rel="self" type="application/rss+xml" />
     
     
   </channel>

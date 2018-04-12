@@ -2,40 +2,40 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Anand vyas</title>
-    <link>http://localhost:1313/</link>
+    <link>http://anandvyas.in/</link>
     <description>Recent content on Anand vyas</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 11 Apr 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://anandvyas.in/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Regular Expressions - Cheat Sheat</title>
-      <link>http://localhost:1313/linux/regular-expressions/</link>
+      <link>http://anandvyas.in/linux/regular-expressions/</link>
       <pubDate>Wed, 11 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/linux/regular-expressions/</guid>
+      <guid>http://anandvyas.in/linux/regular-expressions/</guid>
       <description>                                
 Anchors Examples    Partten Description Example     ^ Display only those lines which starts with anand grep -w ^anand /etc/passwd   $ Display only those lines which end with anand grep -w anand$ /etc/passwd    </description>
     </item>
     
     <item>
       <title>Shell Script - Cheat Sheat</title>
-      <link>http://localhost:1313/linux/shell-script/</link>
+      <link>http://anandvyas.in/linux/shell-script/</link>
       <pubDate>Sun, 08 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/linux/shell-script/</guid>
+      <guid>http://anandvyas.in/linux/shell-script/</guid>
       <description>Define Variables NAME=&amp;quot;John&amp;quot; echo $NAME #=&amp;gt; John echo &amp;quot;$NAME&amp;quot; #=&amp;gt; John echo &amp;quot;${NAME}!&amp;quot; #=&amp;gt; John! echo &amp;quot;Hi $NAME&amp;quot; #=&amp;gt; Hi John echo &#39;Hi $NAME&#39; #=&amp;gt; Hi $NAME  Conditions    String/Numeric Condition Description     [ -z STRING ] Empty string   [ -n STRING ] Not empty string   [ NUM -eq NUM ] Equal   [ NUM -ne NUM ] Not equal   [ NUM -lt NUM ] Less than   [ NUM -le NUM ] Less than or equal   [ NUM -gt NUM ] Greater than   [ NUM -ge NUM ] Greater than or equal   [[ STRING =~ STRING ]] Regexp   (( NUM &amp;lt; NUM )) Numeric conditions   [ -o noclobber ] If OPTIONNAME is enabled   [ !</description>
     </item>
     
     <item>
       <title>Linux commands</title>
-      <link>http://localhost:1313/linux/linux-commands/</link>
+      <link>http://anandvyas.in/linux/linux-commands/</link>
       <pubDate>Wed, 04 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/linux/linux-commands/</guid>
+      <guid>http://anandvyas.in/linux/linux-commands/</guid>
       <description>Basic commands of linux
    Commands Commands                    
 User management    Commands Description     useradd [USERNAME] Add new user   useradd -G [GROUPNAME] [USERNAME] Add new user in group   passwd [USERNAME] User account is locked until you set a password with the passwd command   usermod -a -G [GROUPNAME] [USERNAME] Add user in group   userdel [USERNAME] Remove the existing user   cat /etc/passwd | sort View username and group information   cat /etc/group | sort View linux group   usermod -d -m [NEW_DIRECTORY] [USERNAME] Change the user home directory location   usermod -u [UID] [USERNAME] Change the user UID</description>
@@ -43,19 +43,19 @@ User management    Commands Description     useradd [USERNAME] Add new user   us
     
     <item>
       <title>About</title>
-      <link>http://localhost:1313/about/</link>
+      <link>http://anandvyas.in/about/</link>
       <pubDate>Mon, 21 Aug 2017 00:15:00 +0200</pubDate>
       
-      <guid>http://localhost:1313/about/</guid>
+      <guid>http://anandvyas.in/about/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Custom layout - Resume</title>
-      <link>http://localhost:1313/resume/</link>
+      <link>http://anandvyas.in/resume/</link>
       <pubDate>Mon, 21 Aug 2017 00:15:00 +0200</pubDate>
       
-      <guid>http://localhost:1313/resume/</guid>
+      <guid>http://anandvyas.in/resume/</guid>
       <description></description>
     </item>
     
