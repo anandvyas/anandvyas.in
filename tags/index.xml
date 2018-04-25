@@ -6,10 +6,19 @@
     <description>Recent content in Tags on Anand vyas</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 04 Apr 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 12 Apr 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://anandvyas.in/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Htaccess</title>
+      <link>http://anandvyas.in/tags/htaccess/</link>
+      <pubDate>Thu, 12 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://anandvyas.in/tags/htaccess/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Linux Commands</title>
