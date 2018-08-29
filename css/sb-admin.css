@@ -31,11 +31,20 @@ table {
 table th, table td {
   padding: 6px 13px;
   border: 1px solid #dfe2e5;
+  vertical-align: top;
+  
 }
 
 table tr {
   background-color: #fff;
   border-top: 1px solid #c6cbd1;
+}
+
+img.img-responsive{
+  max-width: 100%;
+  height: auto;
+  width: auto\9; 
+  margin-bottom: 20px;
 }
 
 a{
@@ -522,6 +531,7 @@ footer.sticky-footer {
   line-height: 55px;
 }
 
+
 @media (min-width: 992px) {
   footer.sticky-footer {
     width: calc(100% - 250px);
@@ -569,11 +579,22 @@ nav.navigation {
   border: 1px solid #eee;
   padding: 10px;
   margin-bottom: 10px;
+  
 }
 
 .post h1 {
-  font-size: 28px;
+  font-size: 24px;
   margin-bottom: 0px;
+  color: #CC9900;
+}
+
+.post h3 {
+  font-size: 20px;
+  color: #CC9900;
+}
+
+.post h4 {
+  font-size: 18px;
   color: #CC9900;
 }
 
@@ -674,4 +695,31 @@ body.sidenav-toggled .sidenav-social {
   }
 }
 
-
+blockquote {
+  font-family: Georgia, serif;
+  font-size: 16px;
+  font-style: italic;
+  width: 100%;
+  margin: 1.25em 0;
+  padding: 0.25em 40px;
+  line-height: 1.45;
+  position: relative;
+  color: #383838;
+  border-left:3px dashed #c1c1c1;
+  background:#eee;
+  }
+   
+  blockquote cite {
+  color: #999999;
+  font-size: 14px;
+  display: block;
+  margin-top: 5px;
+  }
+    
+  blockquote cite:before {
+  content: "\2014 \2009";
+  }
+  
+.innerlink{
+  padding-top:70px;
+}

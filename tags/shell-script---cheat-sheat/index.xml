@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Shell Script   Cheat Sheat on Anand vyas</title>
+    <link>https://anandvyas.in/tags/shell-script---cheat-sheat/</link>
+    <description>Recent content in Shell Script   Cheat Sheat on Anand vyas</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 08 Apr 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://anandvyas.in/tags/shell-script---cheat-sheat/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Shell Script - Cheat Sheat</title>
+      <link>https://anandvyas.in/linux/shell-script/</link>
+      <pubDate>Sun, 08 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://anandvyas.in/linux/shell-script/</guid>
+      <description>Define Variables NAME=&amp;quot;John&amp;quot; echo $NAME #=&amp;gt; John echo &amp;quot;$NAME&amp;quot; #=&amp;gt; John echo &amp;quot;${NAME}!&amp;quot; #=&amp;gt; John! echo &amp;quot;Hi $NAME&amp;quot; #=&amp;gt; Hi John echo &#39;Hi $NAME&#39; #=&amp;gt; Hi $NAME  Conditions    String/Numeric Condition Description     [ -z STRING ] Empty string   [ -n STRING ] Not empty string   [ NUM -eq NUM ] Equal   [ NUM -ne NUM ] Not equal   [ NUM -lt NUM ] Less than   [ NUM -le NUM ] Less than or equal   [ NUM -gt NUM ] Greater than   [ NUM -ge NUM ] Greater than or equal   [[ STRING =~ STRING ]] Regexp   (( NUM &amp;lt; NUM )) Numeric conditions   [ -o noclobber ] If OPTIONNAME is enabled   [ !</description>
+    </item>
+    
+  </channel>
+</rss>
