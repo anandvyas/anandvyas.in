@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Docker Installation on Anand vyas</title>
+    <link>https://anandvyas.in/categories/docker-installation/</link>
+    <description>Recent content in Docker Installation on Anand vyas</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 12 Apr 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://anandvyas.in/categories/docker-installation/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Install Docker on Ubuntu 16.04</title>
+      <link>https://anandvyas.in/docker/install-docker/</link>
+      <pubDate>Thu, 12 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://anandvyas.in/docker/install-docker/</guid>
+      <description>There are two ways to install Docker CE (Community Edition) are,
+ Install from repository Install from latest edge release  Install from repository # Update the package index sudo apt-get update # Allow apt to use a repository over HTTPS sudo apt-get install apt-transport-https ca-certificates curl software-properties-common # Add Docker’s official GPG key curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add - # Add the Docker repository to APT sources sudo add-apt-repository &amp;quot;deb [arch=amd64] https://download.</description>
+    </item>
+    
+  </channel>
+</rss>

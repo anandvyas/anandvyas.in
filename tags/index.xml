@@ -2,48 +2,57 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Anand vyas</title>
-    <link>http://anandvyas.in/tags/</link>
+    <link>https://anandvyas.in/tags/</link>
     <description>Recent content in Tags on Anand vyas</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 12 Apr 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://anandvyas.in/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://anandvyas.in/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Htaccess</title>
-      <link>http://anandvyas.in/tags/htaccess/</link>
+      <title>Docker</title>
+      <link>https://anandvyas.in/tags/docker/</link>
       <pubDate>Thu, 12 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://anandvyas.in/tags/htaccess/</guid>
+      <guid>https://anandvyas.in/tags/docker/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Htaccess</title>
+      <link>https://anandvyas.in/tags/htaccess/</link>
+      <pubDate>Thu, 12 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://anandvyas.in/tags/htaccess/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Linux Commands</title>
-      <link>http://anandvyas.in/tags/linux-commands/</link>
+      <link>https://anandvyas.in/tags/linux-commands/</link>
       <pubDate>Wed, 04 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://anandvyas.in/tags/linux-commands/</guid>
+      <guid>https://anandvyas.in/tags/linux-commands/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Regular Expressions</title>
-      <link>http://anandvyas.in/tags/regular-expressions/</link>
+      <link>https://anandvyas.in/tags/regular-expressions/</link>
       <pubDate>Wed, 11 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://anandvyas.in/tags/regular-expressions/</guid>
+      <guid>https://anandvyas.in/tags/regular-expressions/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Shell Script   Cheat Sheat</title>
-      <link>http://anandvyas.in/tags/shell-script---cheat-sheat/</link>
+      <link>https://anandvyas.in/tags/shell-script---cheat-sheat/</link>
       <pubDate>Sun, 08 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://anandvyas.in/tags/shell-script---cheat-sheat/</guid>
+      <guid>https://anandvyas.in/tags/shell-script---cheat-sheat/</guid>
       <description></description>
     </item>
     

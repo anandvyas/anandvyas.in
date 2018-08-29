@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Ansible - Infrastructure as Code - Anand vyas</title>
+    <meta content="Ansible - Infrastructure as Code - Anand vyas" property="og:title">
+    <meta content="Linux, Ansible" name="keywords">
+    <meta content="Ansible intro" property="og:description">
+    <meta name="author" content="Anand Vyas">
+
+    
+    <link href="https://anandvyas.in/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link href="https://anandvyas.in/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    
+    <link href="https://anandvyas.in/css/highlighter.css" rel="stylesheet">
+    
+    <link href="https://anandvyas.in/css/sb-admin.css" rel="stylesheet">
+    <link href="https://anandvyas.in/css/about.css" rel="stylesheet">
+</head>
+<body class="fixed-nav sticky-footer bg-dark sidenav-toggled" id="page-top">
+  
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+    <a class="navbar-brand" href="https://anandvyas.in/">
+        <img src="https://anandvyas.in/images/profile/logo.png" />
+        <span>Anand vyas</span>
+    </a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav navbar-sidenav">
+            <li class="nav-item sidebar-profile text-center">
+                <div class="profile-pic">
+                    <img src="https://anandvyas.in/images/profile/avatar.jpg" alt="avatar">
+                </div>
+                <div class="profile-detail">
+                    
+                    <span>Solution Architect</span> 
+                    <span>Cloud Architect</span> 
+                    <span>DevOps</span> 
+                    <span>Tech Lead</span> 
+                </div>
+            </li>
+            
+            <li class="nav-item sidebar-menu" data-toggle="tooltip" data-placement="right" title="Home">
+                <a class="nav-link" href="https://anandvyas.in/">
+                <i class="fa fa-fw fa fa-home"></i>
+                <span class="nav-link-text">Home</span>
+                </a>
+            </li>
+            
+            <li class="nav-item sidebar-menu" data-toggle="tooltip" data-placement="right" title="About">
+                <a class="nav-link" href="https://anandvyas.in/about">
+                <i class="fa fa-fw fa fa-user-circle"></i>
+                <span class="nav-link-text">About</span>
+                </a>
+            </li>
+            
+            <li class="nav-item sidebar-menu" data-toggle="tooltip" data-placement="right" title="Categories">
+                <a class="nav-link" href="https://anandvyas.in/categories">
+                <i class="fa fa-fw fa fa-dashboard"></i>
+                <span class="nav-link-text">Categories</span>
+                </a>
+            </li>
+            
+            <li class="nav-item sidebar-menu" data-toggle="tooltip" data-placement="right" title="Tags">
+                <a class="nav-link" href="https://anandvyas.in/tags">
+                <i class="fa fa-fw fa fa-tags"></i>
+                <span class="nav-link-text">Tags</span>
+                </a>
+            </li>
+            
+        </ul>
+        <ul class="navbar-nav sidenav-social">
+            
+            <li><a href="#" target="_blank"><i class="fa fa-mobile"></i></a></li>
+            
+            <li><a href="mailto:anandvyas@live.com" target="_blank"><i class="fa fa-envelope"></i></a></li>
+            
+            <li><a href="https://twitter.com/anandvyaas" target="_blank"><i class="fa fa-twitter"></i></a></li>
+            
+            <li><a href="https://www.linkedin.com/in/anandvyaas" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+            
+            <li><a href="https://www.instagram.com/anandvyaas" target="_blank"><i class="fa fa-instagram"></i></a></li>
+            
+            <li><a href="https://github.com/anandvyas" target="_blank"><i class="fa fa-github"></i></a></li>
+            
+            <li><a href="https://stackoverflow.com/users/8208060/anand-vyas" target="_blank"><i class="fa fa-stack-overflow"></i></a></li>
+            
+        </ul>
+        <ul class="navbar-nav sidenav-toggler">
+            <li class="nav-item">
+                <a class="nav-link text-center" id="sidenavToggler">
+            <i class="fa fa-fw fa-angle-left"></i>
+            </a>
+            </li>
+        </ul>
+        
+        
+    </div>
+</nav>
+  
+  <div class="content-wrapper">
+    <div class="container-fluid">
+    
+
+
+<ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="https://anandvyas.in/">Home</a></li>
+
+
+    
+    <li class="breadcrumb-item active"><a href='https://anandvyas.in/ansible'>ansible</a></li>
+    
+    
+
+
+    
+    <li class="breadcrumb-item active"><a href='https://anandvyas.in/ansible/intro'>intro</a></li>
+    
+    
+
+
+    
+
+</ol>
+
+        <div class="post">
+            <h1>Ansible - Infrastructure as Code</h1>
+            <span class="post-date">Sat, May 26, 2018</span>
+            
+
+<h3 id="a-name-ansible-configuration-configuration-a"><a name="ansible-configuration">Configuration</a></h3>
+
+<p>You can configure ansible through ansible configuration variables, there are two ways to change the value of ansible configuration variables</p>
+
+<ul>
+<li>Environment variables</li>
+<li>ini file named ansible.cfg</li>
+</ul>
+
+<p>Ansible configuration variable value are manage in below order</p>
+
+<ul>
+<li>1. ANSIBLE_CONFIG (environment variable if set)</li>
+<li>2. ansible.cfg (in the current directory)</li>
+<li>3. ~/.ansible.cfg (in the home directory)</li>
+<li>4. /etc/ansible/ansible.cfg</li>
+</ul>
+
+<h5 id="structure-of-ansible-cfg-file">Structure of ansible.cfg file</h5>
+
+<pre><code class="language-sh">[defaults]
+inventory = ./inventory
+</code></pre>
+
+<blockquote>
+<p>In INI format file Both the hash sign (#) and semicolon (;) are allowed as comment markers</p>
+</blockquote>
+
+<h3 id="a-name-ansible-inventory-inventory-a"><a name="ansible-inventory">Inventory</a></h3>
+
+<p>The Ansible inventory file defines the hosts and groups of hosts upon which commands, modules, and tasks in a playbook operate. The default location for the inventory file is <strong>/etc/ansible/hosts</strong>. If you want to use project specific inventory file then there are two ways</p>
+
+<ul>
+<li>use -i option for specific inventory file [ansible-playbook -i inventory-file-location ]</li>
+<li>define the location of inventory file in <strong>ansible.cfg</strong> file.</li>
+</ul>
+
+<pre><code class="language-sh">[webserver]
+app01
+app02
+
+[database]
+db01
+
+[loadbalancer]
+lb01
+</code></pre>
+
+<p>In inventory/hosts file two default groups are there</p>
+
+<ol>
+<li><strong>all</strong>: contains every host.</li>
+<li><strong>ungrouped</strong>: contains all hosts that don’t have another group aside from all</li>
+</ol>
+
+<h4 id="inventory-file-variables">Inventory file variables</h4>
+
+<p><strong>Connection</strong></p>
+
+<ul>
+<li><strong>ansible_connection</strong>: Connection type to the host. This can be the name of any of ansible’s connection plugins. default ssh, and non-ssh local, Docker</li>
+<li><strong>ansible_host</strong>: The name of the host to connect to, if different from the alias</li>
+<li><strong>ansible_port</strong>: specific ssh port, if not 22</li>
+<li><strong>ansible_user</strong>: default ssh user name</li>
+</ul>
+
+<p><strong>SSH Connection</strong></p>
+
+<ul>
+<li><strong>ansible_ssh_pass</strong>: ssh password to use (Always use vault)</li>
+<li><strong>ansible_ssh_private_key_file</strong>: Private key file used by ssh</li>
+<li><strong>ansible_ssh_common_args</strong>: This setting is always appended to the default command line for sftp, scp, and ssh.</li>
+</ul>
+
+<p><strong>Privilege escalation</strong></p>
+
+<ul>
+<li><strong>ansible_become</strong>: allows to force sudo privilege</li>
+<li><strong>ansible_become_user</strong>: allows to set the user you become through privilege escalation</li>
+<li><strong>ansible_become_pass</strong>: allows you to set the privilege escalation password</li>
+</ul>
+
+<p><strong>Remote host environment parameters</strong></p>
+
+<ul>
+<li><strong>ansible_shell_type</strong>: The shell type of the target system, default commands are formatted using sh</li>
+<li><strong>ansible_python_interpreter</strong>: The target host python path, default /usr/bin/python/</li>
+<li><strong>ansible_*_interpreter</strong>: Works for anything such as ruby or perl and works just like ansible_python_interpreter.</li>
+</ul>
+
+<h3 id="a-name-ansible-playbooks-playbooks-a"><a name="ansible-playbooks">Playbooks</a></h3>
+
+<p>Playbooks are Ansible’s configuration, deployment, and orchestration language. Playbooks are a YAML list of one or more plays.</p>
+
+<blockquote>
+<p>Ansible modules are the tools in your workshop, playbooks are your instruction manuals, and your inventory of hosts are your raw material.</p>
+</blockquote>
+
+<pre><code class="language-sh">---
+- include: playbook.yml
+- &lt;play&gt;
+- ...
+</code></pre>
+
+        </div>
+        <div id="disqus_thread"></div>
+<script>
+
+
+
+
+
+(function() { 
+var d = document, s = d.createElement('script');
+s.src = 'https://anandvyas.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+                            
+    </div>
+    
+    
+    <footer class="sticky-footer">
+    <div class="container">
+        <div class="text-center">
+            <small>Copyright © Anand Vyas 2018</small>
+        </div>
+    </div>
+</footer>
+
+<a class="scroll-to-top rounded" href="#page-top">
+    <i class="fa fa-angle-up"></i>
+</a>
+
+<script src="https://anandvyas.in/js/jquery.min.js"></script>
+<script src="https://anandvyas.in/js/popper.min.js"></script>
+<script src="https://anandvyas.in/js/bootstrap.min.js"></script>
+<script src="https://anandvyas.in/js/highlight.min.js"></script>
+<script src="https://anandvyas.in/js/moment.min.js"></script>
+<script src="https://anandvyas.in/js/clipboard.min.js"></script>
+
+<script src="https://anandvyas.in/js/jquery.easing.min.js"></script>
+
+<script src="https://anandvyas.in/js/sb-admin.js"></script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-108803266-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'UA-108803266-1');
+</script>
+  </div>
+<script data-no-instant>document.write('<script src="/livereload.js?port=1313&mindelay=10"></' + 'script>')</script></body>
+</html>
