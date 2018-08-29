@@ -2,14 +2,34 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Docker on Anand vyas</title>
-    <link>http://anandvyas.in/docker/</link>
+    <link>https://anandvyas.in/docker/</link>
     <description>Recent content in Docker on Anand vyas</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 12 Apr 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://anandvyas.in/docker/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://anandvyas.in/docker/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Docker Intro</title>
+      <link>https://anandvyas.in/docker/intro/</link>
+      <pubDate>Thu, 12 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://anandvyas.in/docker/intro/</guid>
+      <description>Docker is a container management service. Which basic means upload/install required things in one container and ship to any where. Docker announced in March 2013 and since then it has become a major tool in development world.
+Docker Release  Docker EE (Enterprise Edition) [Paid] Docker CE (Community Edition) [Free] Docker for Cloud  Docker Stable and Edge version  Edge (Beta) released monthly, Stable quarterly Stable version rolls in three months of Edge features   Docker Architecture Docker uses a client-server architecture.</description>
+    </item>
+    
+    <item>
+      <title>Install Docker on Ubuntu 16.04</title>
+      <link>https://anandvyas.in/docker/install-docker/</link>
+      <pubDate>Thu, 12 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://anandvyas.in/docker/install-docker/</guid>
+      <description>There are two ways to install Docker CE (Community Edition) are,
+ Install from repository Install from latest edge release  Install from repository # Update the package index sudo apt-get update # Allow apt to use a repository over HTTPS sudo apt-get install apt-transport-https ca-certificates curl software-properties-common # Add Docker’s official GPG key curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add - # Add the Docker repository to APT sources sudo add-apt-repository &amp;quot;deb [arch=amd64] https://download.</description>
+    </item>
     
   </channel>
 </rss>

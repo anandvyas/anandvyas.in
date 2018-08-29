@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Regular Expressions on Anand vyas</title>
-    <link>http://anandvyas.in/tags/regular-expressions/</link>
+    <link>https://anandvyas.in/tags/regular-expressions/</link>
     <description>Recent content in Regular Expressions on Anand vyas</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 11 Apr 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://anandvyas.in/tags/regular-expressions/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://anandvyas.in/tags/regular-expressions/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Regular Expressions - Cheat Sheat</title>
-      <link>http://anandvyas.in/linux/regular-expressions/</link>
+      <link>https://anandvyas.in/linux/regular-expressions/</link>
       <pubDate>Wed, 11 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://anandvyas.in/linux/regular-expressions/</guid>
+      <guid>https://anandvyas.in/linux/regular-expressions/</guid>
       <description>                                
 Anchors Examples    Partten Description Example     ^ Display only those lines which starts with anand grep -w ^anand /etc/passwd   $ Display only those lines which end with anand grep -w anand$ /etc/passwd    </description>
     </item>

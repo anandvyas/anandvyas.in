@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Anand vyas</title>
-    <link>http://anandvyas.in/</link>
+    <link>https://anandvyas.in/</link>
     <description>Recent content on Anand vyas</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 12 Apr 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://anandvyas.in/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://anandvyas.in/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Apache htaccess configuration</title>
-      <link>http://anandvyas.in/linux/apache-htaccess/</link>
+      <link>https://anandvyas.in/linux/apache-htaccess/</link>
       <pubDate>Thu, 12 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://anandvyas.in/linux/apache-htaccess/</guid>
+      <guid>https://anandvyas.in/linux/apache-htaccess/</guid>
       <description>Htaccess (HyperText Access) is a configuration file that allows developers to overide the Apache webserver configuration at directory level.
 Enable .htaccess By default .htaccess is not enable, we have to change in httpd.conf (Apache) configuration file to for enable .htaccess
 Replace AllowOverride None to AllowOverride All
@@ -25,30 +25,50 @@ Examples:
     </item>
     
     <item>
+      <title>Docker Intro</title>
+      <link>https://anandvyas.in/docker/intro/</link>
+      <pubDate>Thu, 12 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://anandvyas.in/docker/intro/</guid>
+      <description>Docker is a container management service. Which basic means upload/install required things in one container and ship to any where. Docker announced in March 2013 and since then it has become a major tool in development world.
+Docker Release  Docker EE (Enterprise Edition) [Paid] Docker CE (Community Edition) [Free] Docker for Cloud  Docker Stable and Edge version  Edge (Beta) released monthly, Stable quarterly Stable version rolls in three months of Edge features   Docker Architecture Docker uses a client-server architecture.</description>
+    </item>
+    
+    <item>
+      <title>Install Docker on Ubuntu 16.04</title>
+      <link>https://anandvyas.in/docker/install-docker/</link>
+      <pubDate>Thu, 12 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://anandvyas.in/docker/install-docker/</guid>
+      <description>There are two ways to install Docker CE (Community Edition) are,
+ Install from repository Install from latest edge release  Install from repository # Update the package index sudo apt-get update # Allow apt to use a repository over HTTPS sudo apt-get install apt-transport-https ca-certificates curl software-properties-common # Add Docker’s official GPG key curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add - # Add the Docker repository to APT sources sudo add-apt-repository &amp;quot;deb [arch=amd64] https://download.</description>
+    </item>
+    
+    <item>
       <title>Regular Expressions - Cheat Sheat</title>
-      <link>http://anandvyas.in/linux/regular-expressions/</link>
+      <link>https://anandvyas.in/linux/regular-expressions/</link>
       <pubDate>Wed, 11 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://anandvyas.in/linux/regular-expressions/</guid>
+      <guid>https://anandvyas.in/linux/regular-expressions/</guid>
       <description>                                
 Anchors Examples    Partten Description Example     ^ Display only those lines which starts with anand grep -w ^anand /etc/passwd   $ Display only those lines which end with anand grep -w anand$ /etc/passwd    </description>
     </item>
     
     <item>
       <title>Shell Script - Cheat Sheat</title>
-      <link>http://anandvyas.in/linux/shell-script/</link>
+      <link>https://anandvyas.in/linux/shell-script/</link>
       <pubDate>Sun, 08 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://anandvyas.in/linux/shell-script/</guid>
+      <guid>https://anandvyas.in/linux/shell-script/</guid>
       <description>Define Variables NAME=&amp;quot;John&amp;quot; echo $NAME #=&amp;gt; John echo &amp;quot;$NAME&amp;quot; #=&amp;gt; John echo &amp;quot;${NAME}!&amp;quot; #=&amp;gt; John! echo &amp;quot;Hi $NAME&amp;quot; #=&amp;gt; Hi John echo &#39;Hi $NAME&#39; #=&amp;gt; Hi $NAME  Conditions    String/Numeric Condition Description     [ -z STRING ] Empty string   [ -n STRING ] Not empty string   [ NUM -eq NUM ] Equal   [ NUM -ne NUM ] Not equal   [ NUM -lt NUM ] Less than   [ NUM -le NUM ] Less than or equal   [ NUM -gt NUM ] Greater than   [ NUM -ge NUM ] Greater than or equal   [[ STRING =~ STRING ]] Regexp   (( NUM &amp;lt; NUM )) Numeric conditions   [ -o noclobber ] If OPTIONNAME is enabled   [ !</description>
     </item>
     
     <item>
       <title>Linux commands</title>
-      <link>http://anandvyas.in/linux/linux-commands/</link>
+      <link>https://anandvyas.in/linux/linux-commands/</link>
       <pubDate>Wed, 04 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://anandvyas.in/linux/linux-commands/</guid>
+      <guid>https://anandvyas.in/linux/linux-commands/</guid>
       <description>Basic commands of linux
    Commands Commands                    
 User management    Commands Description     useradd [USERNAME] Add new user   useradd -G [GROUPNAME] [USERNAME] Add new user in group   passwd [USERNAME] User account is locked until you set a password with the passwd command   usermod -a -G [GROUPNAME] [USERNAME] Add user in group   userdel [USERNAME] Remove the existing user   cat /etc/passwd | sort View username and group information   cat /etc/group | sort View linux group   usermod -d -m [NEW_DIRECTORY] [USERNAME] Change the user home directory location   usermod -u [UID] [USERNAME] Change the user UID</description>
@@ -56,19 +76,19 @@ User management    Commands Description     useradd [USERNAME] Add new user   us
     
     <item>
       <title>About</title>
-      <link>http://anandvyas.in/about/</link>
+      <link>https://anandvyas.in/about/</link>
       <pubDate>Mon, 21 Aug 2017 00:15:00 +0200</pubDate>
       
-      <guid>http://anandvyas.in/about/</guid>
+      <guid>https://anandvyas.in/about/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Custom layout - Resume</title>
-      <link>http://anandvyas.in/resume/</link>
+      <link>https://anandvyas.in/resume/</link>
       <pubDate>Mon, 21 Aug 2017 00:15:00 +0200</pubDate>
       
-      <guid>http://anandvyas.in/resume/</guid>
+      <guid>https://anandvyas.in/resume/</guid>
       <description></description>
     </item>
     
