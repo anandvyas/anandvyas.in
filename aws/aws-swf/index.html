@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>AWS Simple Workflow Service (SWF)*** - Anand vyas</title>
+    <meta content="AWS Simple Workflow Service (SWF)*** - Anand vyas" property="og:title">
+    <meta content="" name="keywords">
+    <meta content="" property="og:description">
+    <meta name="author" content="Anand Vyas">
+
+    
+    <link href="http://localhost:4000/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link href="http://localhost:4000/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    
+    <link href="http://localhost:4000/css/highlighter.css" rel="stylesheet">
+    
+    <link href="http://localhost:4000/css/sb-admin.css" rel="stylesheet">
+    <link href="http://localhost:4000/css/about.css" rel="stylesheet">
+
+    <script src="http://localhost:4000/js/jquery.min.js"></script>
+</head>
+<body class="fixed-nav sticky-footer bg-dark sidenav-toggled" id="page-top">
+  
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+    <a class="navbar-brand" href="http://localhost:4000/">
+        <img src="http://localhost:4000/images/profile/logo.png" />
+        <span>Anand vyas</span>
+    </a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav navbar-sidenav">
+            <li class="nav-item sidebar-profile text-center">
+                <div class="profile-pic">
+                    <img src="http://localhost:4000/images/profile/avatar.jpg" alt="avatar">
+                </div>
+                <div class="profile-detail">
+                    
+                    <span>Solution Architect</span> 
+                    <span>Cloud Architect</span> 
+                    <span>DevOps</span> 
+                    <span>Tech Lead</span> 
+                </div>
+            </li>
+            
+            <li class="nav-item sidebar-menu" data-toggle="tooltip" data-placement="right" title="Home">
+                <a class="nav-link" href="http://localhost:4000/">
+                <i class="fa fa-fw fa fa-home"></i>
+                <span class="nav-link-text">Home</span>
+                </a>
+            </li>
+            
+            <li class="nav-item sidebar-menu" data-toggle="tooltip" data-placement="right" title="About">
+                <a class="nav-link" href="http://localhost:4000/about">
+                <i class="fa fa-fw fa fa-user-circle"></i>
+                <span class="nav-link-text">About</span>
+                </a>
+            </li>
+            
+            <li class="nav-item sidebar-menu" data-toggle="tooltip" data-placement="right" title="Categories">
+                <a class="nav-link" href="http://localhost:4000/categories">
+                <i class="fa fa-fw fa fa-dashboard"></i>
+                <span class="nav-link-text">Categories</span>
+                </a>
+            </li>
+            
+            <li class="nav-item sidebar-menu" data-toggle="tooltip" data-placement="right" title="Tags">
+                <a class="nav-link" href="http://localhost:4000/tags">
+                <i class="fa fa-fw fa fa-tags"></i>
+                <span class="nav-link-text">Tags</span>
+                </a>
+            </li>
+            
+        </ul>
+        <ul class="navbar-nav sidenav-social">
+            
+            <li><a href="#" target="_blank"><i class="fa fa-mobile"></i></a></li>
+            
+            <li><a href="mailto:anandvyas@live.com" target="_blank"><i class="fa fa-envelope"></i></a></li>
+            
+            <li><a href="https://twitter.com/anandvyaas" target="_blank"><i class="fa fa-twitter"></i></a></li>
+            
+            <li><a href="https://www.linkedin.com/in/anandvyaas" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+            
+            <li><a href="https://www.instagram.com/anandvyaas" target="_blank"><i class="fa fa-instagram"></i></a></li>
+            
+            <li><a href="https://github.com/anandvyas" target="_blank"><i class="fa fa-github"></i></a></li>
+            
+            <li><a href="https://stackoverflow.com/users/8208060/anand-vyas" target="_blank"><i class="fa fa-stack-overflow"></i></a></li>
+            
+        </ul>
+        <ul class="navbar-nav sidenav-toggler">
+            <li class="nav-item">
+                <a class="nav-link text-center" id="sidenavToggler">
+            <i class="fa fa-fw fa-angle-left"></i>
+            </a>
+            </li>
+        </ul>
+        
+        
+    </div>
+</nav>
+  
+  <div class="content-wrapper">
+    <div class="container-fluid">
+    
+
+
+<ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="http://localhost:4000/">Home</a></li>
+
+
+    
+    <li class="breadcrumb-item active"><a href='http://localhost:4000/aws'>aws</a></li>
+    
+    
+
+
+    
+    <li class="breadcrumb-item active"><a href='http://localhost:4000/aws/aws-swf'>aws-swf</a></li>
+    
+    
+
+
+    
+
+</ol>
+
+        <div class="post">
+            <h1>AWS Simple Workflow Service (SWF)***</h1>
+            <span class="post-date">Thu, Aug 3, 2017</span>
+            <p>The Amazon Simple Workflow Service (Amazon SWF) makes it easy to build applications that use Amazon&rsquo;s cloud to coordinate work across distributed components.</p>
+
+<div class="text-center">
+    <img class="img-responsive" src="http://localhost:4000/images/aws-swf.png" alt="AWS Databases" />
+</div>
+ 
+
+<h3 id="a-name-aws-swf-is-not-what-is-swf-not-a"><a name="aws-swf-is-not">What is SWF not ?</a></h3>
+
+<ul>
+<li>SWF does not execute any code.</li>
+<li>SWF does not contain the logic of the workflow.</li>
+<li>SWF does not allow you to draw a workflow or a state machine.</li>
+</ul>
+
+<h3 id="a-name-aws-swf-actors-aws-swf-actors-a"><a name="aws-swf-actors">AWS SWF Actors</a></h3>
+
+<p>In the course of its operations, Amazon SWF interacts with a number of different types of programmatic actors. Actors can be</p>
+
+<ul>
+<li><strong>Workflow starters</strong>: A workflow starter is any application that can initiate workflow executions.</li>
+<li><strong>Deciders</strong>: A decider is an implementation of a workflow&rsquo;s coordination logic. Deciders control the flow of activity tasks in a workflow execution.</li>
+<li><strong>Activity workers</strong>: An activity worker is a process or thread that performs the activity tasks that are part of your workflow. The activity task represents one of the tasks that you identified in your application.</li>
+</ul>
+
+<h3 id="a-name-aws-swf-lifecycle-life-cycle-of-an-amazon-swf-workflow-execution-a"><a name="aws-swf-lifecycle">Life Cycle of an Amazon SWF Workflow Execution</a></h3>
+
+<p>The following diagram shows the life cycle of an order-processing workflow execution from the perspective of components that act on it.</p>
+
+<div class="text-center">
+    <img class="img-responsive" src="http://localhost:4000/images/swf-ecommerce.png" alt="AWS Databases" />
+</div>
+ 
+
+<h3 id="a-name-aws-swf-tasks-amazon-swf-tasks-a"><a name="aws-swf-tasks">Amazon SWF Tasks</a></h3>
+
+<p>Amazon SWF interacts with activity workers and deciders by providing them with work assignments known as tasks. There are three types of tasks in Amazon SWF:</p>
+
+<ul>
+<li><strong>Activity task</strong> : An Activity task tells an activity worker to perform its function, such as to check inventory or charge a credit card. The activity task contains all the information that the activity worker needs to perform its function.</li>
+<li><strong>Lambda task</strong> : A Lambda task is similar to an Activity task, but executes a Lambda function instead of a traditional Amazon SWF activity. For more information about how to define a Lambda task, see AWS Lambda Tasks.</li>
+<li><strong>Decision task</strong> : A Decision task tells a decider that the state of the workflow execution has changed so that the decider can determine the next activity that needs to be performed. The decision task contains the current workflow history.</li>
+</ul>
+
+<h3 id="a-name-aws-swf-domains-amazon-swf-domains-a"><a name="aws-swf-domains">Amazon SWF Domains</a></h3>
+
+<p>Domains provide a way of scoping Amazon SWF resources within your AWS account. All the components of a workflow, such as the workflow type and activity types, must be specified to be in a domain. It is possible to have more than one workflow in a domain.</p>
+
+<p>When setting up a new workflow, before you set up any of the other workflow components you need to register a domain if you have not already done so.</p>
+
+<h3 id="a-name-aws-swf-vs-sqs-sqs-v-s-swf-a"><a name="aws-swf-vs-sqs">SQS v/s SWF</a></h3>
+
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>SQS</th>
+<th>SWS</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Retention</td>
+<td>14 days</td>
+<td>1 year</td>
+</tr>
+
+<tr>
+<td>API</td>
+<td>Message Oriented</td>
+<td>Task Oriented</td>
+</tr>
+
+<tr>
+<td>Assignment</td>
+<td>Might be assigned multiple times</td>
+<td>Only once</td>
+</tr>
+
+<tr>
+<td>State</td>
+<td>Write code to implement tracking</td>
+<td>Keeps Track of State &amp; Events</td>
+</tr>
+</tbody>
+</table>
+
+<div align="center">
+    <video width="620" height="440" controls>
+    <source src="http://localhost:4000/videos/services/S902-SWF.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+    </video>
+</div>
+
+<h3 id="a-name-aws-swf-exam-tips-exam-tips-a"><a name="aws-swf-exam-tips">Exam Tips</a></h3>
+
+<ul>
+<li>Each step is a task</li>
+<li>Task coordination and state management service</li>
+<li>A workflow can consist of human events, unlike SQS</li>
+<li>A workflow can last upto 1 year</li>
+<li>It guarantees the order in which activities/tasks occurs</li>
+<li>Domains
+
+<ul>
+<li>Domain helps to determine the scope of work</li>
+<li>Multiple workflows can live inside a domain</li>
+<li>Workflows cannot interact with workflows in other domains</li>
+<li>Workers and deciders</li>
+</ul></li>
+<li>Activity workers - process that performs an activity in the workflow</li>
+<li>Activity workers poll SWF for new tasks that they need to perform</li>
+<li>Activity workers will perform the task and report back to SWF.</li>
+<li>Workers can be servers on EC2 or on premise, or humans</li>
+<li>workers can be run behind firewall</li>
+<li>Activity task is a task assigned to a worker</li>
+<li>Decision task tells the decider that the state has changed. It allows decider to decide next activity.</li>
+<li>Decision task occurs whenever the state of workflow changes ex when task completes</li>
+<li>SQS vs SWF
+
+<ul>
+<li>SQS has best effort message order and potentially has duplicates</li>
+<li>SWF guarantees execution order and uses deciders for next instructions</li>
+<li>SQS messages live upto 14 days, SWF workflow can last upto 1 year</li>
+<li>SWF allows synchronous or asynchronous distributed processing</li>
+<li>SWF is task oriented, whereas SQS is message oriented</li>
+</ul></li>
+<li>Limits
+
+<ul>
+<li>10000 workflow and activity types</li>
+<li>100 SWF domains</li>
+<li>100000 open executions in a domain</li>
+<li>SWF workflow can last maximum for 1 year</li>
+</ul></li>
+</ul>
+
+<h3 id="a-name-aws-swf-quiz-aws-swf-quiz-a"><a name="aws-swf-quiz">AWS SWF: QUIZ</a></h3>
+
+
+
+<script>
+    var quiz = [{"correct":[1],"explanation":"","image":"","options":["Simple Web Flow","Simple Work Flow","Simple Wireless Forms","Simple Web Form"],"question":"What does Amazon SWF stand for?"},{"correct":[1],"explanation":"","image":"","options":["Handler","Decider","Coordinator","Worker"],"question":"Regarding Amazon SWF, the coordination logic in a workflow is contained in a software program called a ____."},{"correct":[1,2],"explanation":"","image":"","options":["Using as an endpoint to collect thousands of data points per hour from a distributed fleet of sensors","Managing a multi-step and multi-decision checkout process of an e-commerce website","Orchestrating the execution of distributed and auditable business processes","Using as an SNS (Simple Notification Service) endpoint to trigger execution of video transcoding jobs","Using as a distributed session store for your web application"],"question":"For which of the following use cases are Simple Workflow Service (SWF) and Amazon EC2 an appropriate solution? Choose 2 answers"},{"correct":[3],"explanation":"","image":"","options":["Design graphical user interface interactions","Manage user identification and authorization","Store Web content","Coordinate synchronous and asynchronous tasks which are distributed and fault tolerant."],"question":"Amazon SWF is designed to help users…"},{"correct":[2],"explanation":"","image":"","options":["A security group in which only tasks inside can communicate with each other","A special type of worker","A collection of related Workflows","The DNS record for the Amazon SWF service"],"question":"What does a “Domain” refer to in Amazon SWF?"},{"correct":[0,1],"explanation":"","image":"","options":["Video encoding using Amazon S3 and Amazon EC2. In this use case, large videos are uploaded to Amazon S3 in chunks. Application is built as a workflow where each video file is handled as one workflow execution.","Processing large product catalogs using Amazon Mechanical Turk. While validating data in large catalogs, the products in the catalog are processed in batches. Different batches can be processed concurrently.","Order processing system with Amazon EC2, SQS, and SimpleDB. Use SWF notifications to orchestrate an order processing system running on EC2, where notifications sent over HTTP can trigger real-time processing in related components such as an inventory system or a shipping service.","Using as an SQS (Simple Queue Service) endpoint to trigger execution of video transcoding jobs."],"question":"Select appropriate use cases for SWF with Amazon EC2? (Choose 2)"},{"correct":[2],"explanation":"","image":"","options":["a name","timeout values","a domain","version"],"question":"When you register an activity in Amazon SWF, you provide the following information, except:"},{"correct":[0],"explanation":"","image":"","options":["Markers","Tags","Hash keys","Events"],"question":"Regarding Amazon SWF, at times you might want to record information in the workflow history of a workflow execution that is specific to your use case. ____ enable you to record information in the workflow execution history that you can use for any custom or scenario-specific purpose."},{"correct":[0,2,4],"explanation":"","image":"","options":["SWF tasks are assigned once and never duplicated","SWF requires an S3 bucket for workflow storage","SWF workflow executions can last up to a year","SWF triggers SNS notifications on task assignment","SWF uses deciders and workers to complete tasks","SWF requires at least 1 EC2 instance per domain"],"question":"Which of the following statements about SWF are true? Choose 3 answers."}];
+    var currentquestion = 0, score = 0, submt=true, picked = [];
+
+    Array.prototype.diff = function(arr2) {
+        var ret = [];
+        for(var i in this) {   
+            if(arr2.indexOf( this[i] ) > -1){
+                ret.push( this[i] );
+            }
+        }
+        return ret;
+    };
+    
+    Array.prototype.equals = function (array) {
+        
+        if (!array)
+            return false;
+
+        
+        if (this.length != array.length)
+            return false;
+
+        for (var i = 0, l=this.length; i < l; i++) {
+            
+            if (this[i] instanceof Array && array[i] instanceof Array) {
+                
+                if (!this[i].equals(array[i]))
+                    return false;       
+            }           
+            else if (this[i] != array[i]) { 
+                
+                return false;   
+            }           
+        }       
+        return true;
+    }
+
+    
+    Object.defineProperty(Array.prototype, "equals", {enumerable: false});
+
+     
+    jQuery(document).ready(function($){
+        
+
+        function htmlEncode(value){
+          return $(document.createElement('div')).text(value).html();
+        }
+        
+
+        function addChoices(choices){
+            if(typeof choices !== "undefined" && $.type(choices) == "array"){
+                $('#choice-block').empty();
+                for(var i=0;i<choices.length; i++){
+                    $(document.createElement('li')).addClass('choice choice-box').attr('data-index', i).text(choices[i]).appendTo('#choice-block');                    
+                }
+            }
+        }
+        
+        
+
+        function nextQuestion(){
+            submt = true;
+            picked = [];
+            $('#explanation').empty();
+            $('#question').text(quiz[currentquestion]['question']);
+            $('#pager').text('Question ' + Number(currentquestion + 1) + ' of ' + quiz.length);
+            if(quiz[currentquestion].hasOwnProperty('image') && quiz[currentquestion]['image'] != ""){
+                if($('#question-image').length == 0){
+                    $(document.createElement('img')).addClass('question-image').attr('id', 'question-image').attr('src', quiz[currentquestion]['image']).attr('alt', htmlEncode(quiz[currentquestion]['question'])).insertAfter('#question');
+                } else {
+                    $('#question-image').attr('src', quiz[currentquestion]['image']).attr('alt', htmlEncode(quiz[currentquestion]['question']));
+                }
+            } else {
+                $('#question-image').remove();
+            }
+            addChoices(quiz[currentquestion]['options']);
+
+            var multichoice = quiz[currentquestion]['correct'].length > 1 ? true : false;
+            setupButtons(multichoice);
+        }
+        
+
+        function processQuestion(choice){
+            var flag = quiz[currentquestion]['correct'].equals(choice);
+            if(flag){
+                $('.choice').eq(choice).css({'background-color':'#50D943'});
+                $('#explanation').html('<strong>Correct!</strong> ' + htmlEncode(quiz[currentquestion]['explanation']));
+                score++;
+            } else {
+                $('.choice').eq(choice).css({'background-color':'#D92623'});
+                $('#explanation').html('<strong>Incorrect.</strong> ' + htmlEncode(quiz[currentquestion]['explanation']));
+            }
+            currentquestion++;
+            $('#submitbutton').html('NEXT QUESTION &raquo;').on('click', function(){
+                if(currentquestion == quiz.length){
+                    endQuiz();
+                } else {
+                    $(this).text('Check Answer').css({'color':'#222'}).off('click');
+                    nextQuestion();
+                }
+            })
+        }
+        
+
+        function setupButtons(multichoice){
+            console.log(multichoice);
+            $('.choice').on('click', function(){
+                var curElement = $(this);
+                var curElementIndex = curElement.attr('data-index');
+                var myClass = curElement.attr("class");
+                
+                if(multichoice){
+                    if(curElement.hasClass("selectedAns")){
+                        var index = picked.indexOf(curElementIndex);
+                        picked.splice(index, 1);
+                        curElement.removeClass("selectedAns");
+                    }else{
+                        picked.push(parseInt(curElementIndex));
+                        curElement.addClass("selectedAns");
+                    }
+                }else{
+                    picked = [];
+                    $('.choice').removeClass("selectedAns");
+                    curElement.addClass("selectedAns");
+                    picked.push(parseInt(curElementIndex));
+                }
+                
+                
+                if(submt){
+                    submt=false;
+                    $('#submitbutton').css({'color':'#000'}).on('click', function(){
+                        $('.choice').off('click');
+                        $(this).off('click');
+                        processQuestion(picked);
+                    });
+                }
+            })
+        }
+        
+        
+
+        function endQuiz(){
+            $('#explanation').empty();
+            $('#question').empty();
+            $('#choice-block').empty();
+            $('#submitbutton').remove();
+            $('#question').text("You got " + score + " out of " + quiz.length + " correct.");
+            $(document.createElement('h2')).css({'text-align':'center', 'font-size':'4em'}).text(Math.round(score/quiz.length * 100) + '%').insertAfter('#question');
+        }
+        
+
+        function init(){
+            
+
+            
+            if(typeof quiz !== "undefined" && $.type(quiz) === "array"){
+                var container = $('#frame');
+                quiz.forEach(function (row) {
+                   
+                });
+                
+                
+                $(document.createElement('p')).addClass('pager').attr('id','pager').text('Question 1 of ' + quiz.length).appendTo('#frame');
+                
+                $(document.createElement('h2')).addClass('question').attr('id', 'question').text(quiz[0]['question']).appendTo('#frame');
+                
+                if(quiz[0].hasOwnProperty('image') && quiz[0]['image'] != ""){
+                    $(document.createElement('img')).addClass('question-image').attr('id', 'question-image').attr('src', quiz[0]['image']).attr('alt', htmlEncode(quiz[0]['question'])).appendTo('#frame');
+                }
+                
+                $(document.createElement('ul')).attr('id', 'choice-block').appendTo('#frame');
+            
+                
+                addChoices(quiz[0]['options']);
+                
+                $(document.createElement('p')).addClass('explanation').attr('id','explanation').html('&nbsp;').appendTo('#frame');
+                
+                
+                $(document.createElement('div')).addClass('choice-box').attr('id', 'submitbutton').text('Check Answer').css({'font-weight':700,'color':'#222','padding':'30px 0'}).appendTo('#frame');
+                
+                var multichoice = quiz[0]['correct'].length > 1 ? true : false;
+                setupButtons(multichoice);
+            }
+        }
+        init();
+    });
+
+</script>
+<style>
+    #frame {
+        background-color: #fff;
+        padding: 12px 20px;
+        border-radius: 4px;
+        border: 1px solid #d3e0e9;
+    }
+
+    .selectedAns {
+        border-color: royalblue;
+        background-color: burlywood;
+    }
+</style>
+<div id="frame" role="content"></div>
+        </div>
+        
+    </div>
+    
+    
+    <footer class="sticky-footer">
+    <div class="container">
+        <div class="text-center">
+            <small>Copyright © Anand Vyas 2019</small>
+        </div>
+    </div>
+</footer>
+
+<a class="scroll-to-top rounded" href="#page-top">
+    <i class="fa fa-angle-up"></i>
+</a>
+
+
+<script src="http://localhost:4000/js/popper.min.js"></script>
+<script src="http://localhost:4000/js/bootstrap.min.js"></script>
+<script src="http://localhost:4000/js/highlight.min.js"></script>
+<script src="http://localhost:4000/js/moment.min.js"></script>
+<script src="http://localhost:4000/js/clipboard.min.js"></script>
+
+<script src="http://localhost:4000/js/jquery.easing.min.js"></script>
+
+<script src="http://localhost:4000/js/sb-admin.js"></script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-108803266-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'UA-108803266-1');
+</script>
+  </div>
+<script data-no-instant>document.write('<script src="/livereload.js?port=4000&mindelay=10"></' + 'script>')</script></body>
+</html>

@@ -2,57 +2,606 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Anand vyas</title>
-    <link>https://anandvyas.in/tags/</link>
+    <link>http://localhost:4000/tags/</link>
     <description>Recent content in Tags on Anand vyas</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 12 Apr 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://anandvyas.in/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://localhost:4000/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Docker</title>
-      <link>https://anandvyas.in/tags/docker/</link>
+      <title>12 Factor Methodology</title>
+      <link>http://localhost:4000/tags/12-factor-methodology/</link>
       <pubDate>Thu, 12 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://anandvyas.in/tags/docker/</guid>
+      <guid>http://localhost:4000/tags/12-factor-methodology/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Amazon Machine Imageami</title>
+      <link>http://localhost:4000/tags/amazon-machine-imageami/</link>
+      <pubDate>Thu, 20 Jul 2017 00:15:00 +0200</pubDate>
+      
+      <guid>http://localhost:4000/tags/amazon-machine-imageami/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ansible</title>
+      <link>http://localhost:4000/tags/ansible/</link>
+      <pubDate>Sat, 26 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:4000/tags/ansible/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Astrology</title>
+      <link>http://localhost:4000/tags/astrology/</link>
+      <pubDate>Thu, 12 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:4000/tags/astrology/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Aws Api Gateway</title>
+      <link>http://localhost:4000/tags/aws-api-gateway/</link>
+      <pubDate>Fri, 04 Aug 2017 00:15:00 +0200</pubDate>
+      
+      <guid>http://localhost:4000/tags/aws-api-gateway/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Aws Auto Scaling</title>
+      <link>http://localhost:4000/tags/aws-auto-scaling/</link>
+      <pubDate>Tue, 25 Jul 2017 00:15:00 +0200</pubDate>
+      
+      <guid>http://localhost:4000/tags/aws-auto-scaling/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Aws Block Storage</title>
+      <link>http://localhost:4000/tags/aws-block-storage/</link>
+      <pubDate>Mon, 10 Jul 2017 00:15:00 +0200</pubDate>
+      
+      <guid>http://localhost:4000/tags/aws-block-storage/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Aws Cloud Computing</title>
+      <link>http://localhost:4000/tags/aws-cloud-computing/</link>
+      <pubDate>Mon, 03 Jul 2017 00:15:00 +0200</pubDate>
+      
+      <guid>http://localhost:4000/tags/aws-cloud-computing/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Aws Cloudformation</title>
+      <link>http://localhost:4000/tags/aws-cloudformation/</link>
+      <pubDate>Tue, 22 Aug 2017 00:15:00 +0200</pubDate>
+      
+      <guid>http://localhost:4000/tags/aws-cloudformation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Aws Cloudfront</title>
+      <link>http://localhost:4000/tags/aws-cloudfront/</link>
+      <pubDate>Thu, 13 Jul 2017 00:15:00 +0200</pubDate>
+      
+      <guid>http://localhost:4000/tags/aws-cloudfront/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Aws Cloudtrail</title>
+      <link>http://localhost:4000/tags/aws-cloudtrail/</link>
+      <pubDate>Thu, 13 Jul 2017 00:15:00 +0200</pubDate>
+      
+      <guid>http://localhost:4000/tags/aws-cloudtrail/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Aws Cloudwatch</title>
+      <link>http://localhost:4000/tags/aws-cloudwatch/</link>
+      <pubDate>Tue, 25 Jul 2017 00:15:00 +0200</pubDate>
+      
+      <guid>http://localhost:4000/tags/aws-cloudwatch/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Aws Config</title>
+      <link>http://localhost:4000/tags/aws-config/</link>
+      <pubDate>Tue, 25 Jul 2017 00:15:00 +0200</pubDate>
+      
+      <guid>http://localhost:4000/tags/aws-config/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Aws Data Pipeline</title>
+      <link>http://localhost:4000/tags/aws-data-pipeline/</link>
+      <pubDate>Thu, 13 Jul 2017 00:15:00 +0200</pubDate>
+      
+      <guid>http://localhost:4000/tags/aws-data-pipeline/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Aws Databases</title>
+      <link>http://localhost:4000/tags/aws-databases/</link>
+      <pubDate>Mon, 24 Jul 2017 00:15:00 +0200</pubDate>
+      
+      <guid>http://localhost:4000/tags/aws-databases/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Aws Dynamodb</title>
+      <link>http://localhost:4000/tags/aws-dynamodb/</link>
+      <pubDate>Thu, 24 Aug 2017 00:15:00 +0200</pubDate>
+      
+      <guid>http://localhost:4000/tags/aws-dynamodb/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Aws Elastic Beanstalk</title>
+      <link>http://localhost:4000/tags/aws-elastic-beanstalk/</link>
+      <pubDate>Tue, 22 Aug 2017 00:15:00 +0200</pubDate>
+      
+      <guid>http://localhost:4000/tags/aws-elastic-beanstalk/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Aws Elastic Block Storage</title>
+      <link>http://localhost:4000/tags/aws-elastic-block-storage/</link>
+      <pubDate>Sat, 15 Jul 2017 00:15:00 +0200</pubDate>
+      
+      <guid>http://localhost:4000/tags/aws-elastic-block-storage/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Aws Elastic Compute Cloud</title>
+      <link>http://localhost:4000/tags/aws-elastic-compute-cloud/</link>
+      <pubDate>Fri, 14 Jul 2017 00:15:00 +0200</pubDate>
+      
+      <guid>http://localhost:4000/tags/aws-elastic-compute-cloud/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Aws Elastic Map Reduce</title>
+      <link>http://localhost:4000/tags/aws-elastic-map-reduce/</link>
+      <pubDate>Thu, 13 Jul 2017 00:15:00 +0200</pubDate>
+      
+      <guid>http://localhost:4000/tags/aws-elastic-map-reduce/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Aws Elastic Transcoder</title>
+      <link>http://localhost:4000/tags/aws-elastic-transcoder/</link>
+      <pubDate>Fri, 04 Aug 2017 00:15:00 +0200</pubDate>
+      
+      <guid>http://localhost:4000/tags/aws-elastic-transcoder/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Aws Elasticache</title>
+      <link>http://localhost:4000/tags/aws-elasticache/</link>
+      <pubDate>Sat, 22 Jul 2017 00:15:00 +0200</pubDate>
+      
+      <guid>http://localhost:4000/tags/aws-elasticache/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Aws Global Infrastructure</title>
+      <link>http://localhost:4000/tags/aws-global-infrastructure/</link>
+      <pubDate>Tue, 04 Jul 2017 00:15:00 +0200</pubDate>
+      
+      <guid>http://localhost:4000/tags/aws-global-infrastructure/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Aws Identity and Access Management</title>
+      <link>http://localhost:4000/tags/aws-identity-and-access-management/</link>
+      <pubDate>Wed, 05 Jul 2017 00:15:00 +0200</pubDate>
+      
+      <guid>http://localhost:4000/tags/aws-identity-and-access-management/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Aws Kinesis</title>
+      <link>http://localhost:4000/tags/aws-kinesis/</link>
+      <pubDate>Thu, 13 Jul 2017 00:15:00 +0200</pubDate>
+      
+      <guid>http://localhost:4000/tags/aws-kinesis/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Aws Object Storage</title>
+      <link>http://localhost:4000/tags/aws-object-storage/</link>
+      <pubDate>Mon, 10 Jul 2017 00:15:00 +0200</pubDate>
+      
+      <guid>http://localhost:4000/tags/aws-object-storage/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Aws Raid Configuration</title>
+      <link>http://localhost:4000/tags/aws-raid-configuration/</link>
+      <pubDate>Wed, 19 Jul 2017 00:15:00 +0200</pubDate>
+      
+      <guid>http://localhost:4000/tags/aws-raid-configuration/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Aws Route53</title>
+      <link>http://localhost:4000/tags/aws-route53/</link>
+      <pubDate>Sat, 22 Jul 2017 00:15:00 +0200</pubDate>
+      
+      <guid>http://localhost:4000/tags/aws-route53/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Aws Simple Notification Service</title>
+      <link>http://localhost:4000/tags/aws-simple-notification-service/</link>
+      <pubDate>Fri, 04 Aug 2017 00:15:00 +0200</pubDate>
+      
+      <guid>http://localhost:4000/tags/aws-simple-notification-service/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Aws Simple Queue Service</title>
+      <link>http://localhost:4000/tags/aws-simple-queue-service/</link>
+      <pubDate>Wed, 02 Aug 2017 00:15:00 +0200</pubDate>
+      
+      <guid>http://localhost:4000/tags/aws-simple-queue-service/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Aws Simple Workflow Service</title>
+      <link>http://localhost:4000/tags/aws-simple-workflow-service/</link>
+      <pubDate>Thu, 03 Aug 2017 00:15:00 +0200</pubDate>
+      
+      <guid>http://localhost:4000/tags/aws-simple-workflow-service/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Aws Snowball</title>
+      <link>http://localhost:4000/tags/aws-snowball/</link>
+      <pubDate>Thu, 13 Jul 2017 00:15:00 +0200</pubDate>
+      
+      <guid>http://localhost:4000/tags/aws-snowball/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Aws Solution Architect</title>
+      <link>http://localhost:4000/tags/aws-solution-architect/</link>
+      <pubDate>Mon, 03 Jul 2017 00:15:00 +0200</pubDate>
+      
+      <guid>http://localhost:4000/tags/aws-solution-architect/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Aws Sucurity Groups</title>
+      <link>http://localhost:4000/tags/aws-sucurity-groups/</link>
+      <pubDate>Tue, 18 Jul 2017 00:15:00 +0200</pubDate>
+      
+      <guid>http://localhost:4000/tags/aws-sucurity-groups/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Aws Trusted Advisor</title>
+      <link>http://localhost:4000/tags/aws-trusted-advisor/</link>
+      <pubDate>Tue, 25 Jul 2017 00:15:00 +0200</pubDate>
+      
+      <guid>http://localhost:4000/tags/aws-trusted-advisor/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Aws Vpc</title>
+      <link>http://localhost:4000/tags/aws-vpc/</link>
+      <pubDate>Tue, 25 Jul 2017 00:15:00 +0200</pubDate>
+      
+      <guid>http://localhost:4000/tags/aws-vpc/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Aws Web Services</title>
+      <link>http://localhost:4000/tags/aws-web-services/</link>
+      <pubDate>Mon, 03 Jul 2017 00:15:00 +0200</pubDate>
+      
+      <guid>http://localhost:4000/tags/aws-web-services/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Cdn</title>
+      <link>http://localhost:4000/tags/cdn/</link>
+      <pubDate>Mon, 10 Jul 2017 00:15:00 +0200</pubDate>
+      
+      <guid>http://localhost:4000/tags/cdn/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Cloud Computing</title>
+      <link>http://localhost:4000/tags/cloud-computing/</link>
+      <pubDate>Mon, 03 Jul 2017 00:15:00 +0200</pubDate>
+      
+      <guid>http://localhost:4000/tags/cloud-computing/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Deployment Strategies</title>
+      <link>http://localhost:4000/tags/deployment-strategies/</link>
+      <pubDate>Mon, 03 Jul 2017 00:15:00 +0200</pubDate>
+      
+      <guid>http://localhost:4000/tags/deployment-strategies/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Docker</title>
+      <link>http://localhost:4000/tags/docker/</link>
+      <pubDate>Thu, 12 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:4000/tags/docker/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Docker Machine</title>
+      <link>http://localhost:4000/tags/docker-machine/</link>
+      <pubDate>Thu, 12 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:4000/tags/docker-machine/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Docker Swarm</title>
+      <link>http://localhost:4000/tags/docker-swarm/</link>
+      <pubDate>Thu, 12 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:4000/tags/docker-swarm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Dockerfile</title>
+      <link>http://localhost:4000/tags/dockerfile/</link>
+      <pubDate>Thu, 12 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:4000/tags/dockerfile/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Elastic Beanstalk</title>
+      <link>http://localhost:4000/tags/elastic-beanstalk/</link>
+      <pubDate>Tue, 27 Mar 2018 00:15:00 +0200</pubDate>
+      
+      <guid>http://localhost:4000/tags/elastic-beanstalk/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Elk</title>
+      <link>http://localhost:4000/tags/elk/</link>
+      <pubDate>Sat, 21 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:4000/tags/elk/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Elk Cheatsheet</title>
+      <link>http://localhost:4000/tags/elk-cheatsheet/</link>
+      <pubDate>Sat, 21 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:4000/tags/elk-cheatsheet/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Elk Elasticsearch</title>
+      <link>http://localhost:4000/tags/elk-elasticsearch/</link>
+      <pubDate>Sat, 21 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:4000/tags/elk-elasticsearch/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Elk Filebeat</title>
+      <link>http://localhost:4000/tags/elk-filebeat/</link>
+      <pubDate>Sat, 21 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:4000/tags/elk-filebeat/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Elk Kibana</title>
+      <link>http://localhost:4000/tags/elk-kibana/</link>
+      <pubDate>Sat, 21 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:4000/tags/elk-kibana/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Elk Logstash</title>
+      <link>http://localhost:4000/tags/elk-logstash/</link>
+      <pubDate>Sat, 21 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:4000/tags/elk-logstash/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>General</title>
+      <link>http://localhost:4000/tags/general/</link>
+      <pubDate>Sat, 12 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:4000/tags/general/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Git</title>
+      <link>http://localhost:4000/tags/git/</link>
+      <pubDate>Sat, 12 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:4000/tags/git/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Htaccess</title>
-      <link>https://anandvyas.in/tags/htaccess/</link>
+      <link>http://localhost:4000/tags/htaccess/</link>
       <pubDate>Thu, 12 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://anandvyas.in/tags/htaccess/</guid>
+      <guid>http://localhost:4000/tags/htaccess/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Iam</title>
+      <link>http://localhost:4000/tags/iam/</link>
+      <pubDate>Wed, 05 Jul 2017 00:15:00 +0200</pubDate>
+      
+      <guid>http://localhost:4000/tags/iam/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Internet Protocol</title>
+      <link>http://localhost:4000/tags/internet-protocol/</link>
+      <pubDate>Thu, 27 Jul 2017 00:15:00 +0200</pubDate>
+      
+      <guid>http://localhost:4000/tags/internet-protocol/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Json</title>
+      <link>http://localhost:4000/tags/json/</link>
+      <pubDate>Sat, 12 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:4000/tags/json/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Kubernetes</title>
+      <link>http://localhost:4000/tags/kubernetes/</link>
+      <pubDate>Sun, 10 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:4000/tags/kubernetes/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Linux Commands</title>
-      <link>https://anandvyas.in/tags/linux-commands/</link>
+      <link>http://localhost:4000/tags/linux-commands/</link>
       <pubDate>Wed, 04 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://anandvyas.in/tags/linux-commands/</guid>
+      <guid>http://localhost:4000/tags/linux-commands/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Regular Expressions</title>
-      <link>https://anandvyas.in/tags/regular-expressions/</link>
+      <link>http://localhost:4000/tags/regular-expressions/</link>
       <pubDate>Wed, 11 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://anandvyas.in/tags/regular-expressions/</guid>
+      <guid>http://localhost:4000/tags/regular-expressions/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Shell Script   Cheat Sheat</title>
-      <link>https://anandvyas.in/tags/shell-script---cheat-sheat/</link>
+      <title>Shell Script Cheat Sheat</title>
+      <link>http://localhost:4000/tags/shell-script-cheat-sheat/</link>
       <pubDate>Sun, 08 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://anandvyas.in/tags/shell-script---cheat-sheat/</guid>
+      <guid>http://localhost:4000/tags/shell-script-cheat-sheat/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Shell Script Examples</title>
+      <link>http://localhost:4000/tags/shell-script-examples/</link>
+      <pubDate>Sun, 08 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:4000/tags/shell-script-examples/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ssh</title>
+      <link>http://localhost:4000/tags/ssh/</link>
+      <pubDate>Sat, 12 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:4000/tags/ssh/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ssh Public Key</title>
+      <link>http://localhost:4000/tags/ssh-public-key/</link>
+      <pubDate>Sat, 12 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:4000/tags/ssh-public-key/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Virtusa</title>
+      <link>http://localhost:4000/tags/virtusa/</link>
+      <pubDate>Wed, 12 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:4000/tags/virtusa/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Yaml</title>
+      <link>http://localhost:4000/tags/yaml/</link>
+      <pubDate>Sat, 12 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:4000/tags/yaml/</guid>
       <description></description>
     </item>
     

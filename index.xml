@@ -2,21 +2,609 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Anand vyas</title>
-    <link>https://anandvyas.in/</link>
+    <link>http://localhost:4000/</link>
     <description>Recent content on Anand vyas</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 12 Apr 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 03 Jul 2017 00:15:00 +0200</lastBuildDate>
     
-	<atom:link href="https://anandvyas.in/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://localhost:4000/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Apache htaccess configuration</title>
-      <link>https://anandvyas.in/linux/apache-htaccess/</link>
+      <title>What is Cloud Computing ?</title>
+      <link>http://localhost:4000/aws/cloud-computing/</link>
+      <pubDate>Mon, 03 Jul 2017 00:15:00 +0200</pubDate>
+      
+      <guid>http://localhost:4000/aws/cloud-computing/</guid>
+      <description>&lt;p&gt;Cloud computing is the delivery of computing services — servers, storage, databases, networking, software, analytics and more—over the Internet (“the cloud”).&lt;/p&gt;
+
+&lt;div class=&#34;text-center&#34;&gt;
+    &lt;img class=&#34;img-responsive&#34; src=&#34;http://localhost:4000/images/aws/cloud-computing-defined.jpg&#34; alt=&#34;AWS Elastic Block Storage&#34; /&gt;
+&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>AWS Global Infrastructure</title>
+      <link>http://localhost:4000/aws/aws-global-infrastructure/</link>
+      <pubDate>Tue, 04 Jul 2017 00:15:00 +0200</pubDate>
+      
+      <guid>http://localhost:4000/aws/aws-global-infrastructure/</guid>
+      <description>&lt;p&gt;Amazon web service is hosted their resources world wide, they provide facilities to place your resources and data in multiple locations to improve performance, high availability and cost optimization. In 2017 AWS Cloud operates 43 Availability Zones within 16 geographic Regions around the world, with announced plans for 11 more Availability Zones and four more Regions.&lt;/p&gt;
+
+&lt;div class=&#34;text-center&#34;&gt;
+    &lt;img class=&#34;img-responsive&#34; src=&#34;http://localhost:4000/images/aws/aws_global_infra.png&#34; alt=&#34;AWS Global Infrastructure&#34; /&gt;
+&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>AWS Web Services - Introduction</title>
+      <link>http://localhost:4000/aws/aws-web-services/</link>
+      <pubDate>Mon, 03 Jul 2017 00:15:00 +0200</pubDate>
+      
+      <guid>http://localhost:4000/aws/aws-web-services/</guid>
+      <description>&lt;p&gt;AWS provides many cloud services that you can combine to meet business or organizational needs.&lt;/p&gt;
+
+&lt;div class=&#34;text-center&#34;&gt;
+    &lt;img class=&#34;img-responsive&#34; src=&#34;http://localhost:4000/images/aws/aws-web-services.png&#34; alt=&#34;AWS Web Services&#34; /&gt;
+&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>AWS Simple Storage Service (S3), RRS, Glacier</title>
+      <link>http://localhost:4000/aws/aws-object-storage-and-cdn/</link>
+      <pubDate>Mon, 10 Jul 2017 00:15:00 +0200</pubDate>
+      
+      <guid>http://localhost:4000/aws/aws-object-storage-and-cdn/</guid>
+      <description>&lt;p&gt;Amazon Web Services (AWS) provides low-cost data storage with high durability
+and availability. AWS offers storage choices for backup, archiving, and disaster
+recovery use cases and provides block, file, and object storage.&lt;/p&gt;
+
+&lt;div class=&#34;text-center&#34;&gt;
+    &lt;img class=&#34;img-responsive&#34; src=&#34;http://localhost:4000/images/aws/aws-s3-storage.png&#34; alt=&#34;AWS Identity and Access Management&#34; /&gt;
+&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>AWS EC2 - Elastic Compute Cloud </title>
+      <link>http://localhost:4000/aws/aws-ec2/</link>
+      <pubDate>Fri, 14 Jul 2017 00:15:00 +0200</pubDate>
+      
+      <guid>http://localhost:4000/aws/aws-ec2/</guid>
+      <description>&lt;p&gt;Provides resizable compute capacity in the cloud. Reduces the time required to obtain and boot new server instances to minutes, allowing you to quickly scale capacity, both up and down, as computing requirements change.&lt;/p&gt;
+
+&lt;div class=&#34;text-center&#34;&gt;
+    &lt;img class=&#34;img-responsive&#34; src=&#34;http://localhost:4000/images/aws/amazon-ec2.png&#34; alt=&#34;AWS EC2 - Elastic Compute Cloud&#34; /&gt;
+&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>AWS EBS - Elastic Block Storage</title>
+      <link>http://localhost:4000/aws/aws-ebs/</link>
+      <pubDate>Sat, 15 Jul 2017 00:15:00 +0200</pubDate>
+      
+      <guid>http://localhost:4000/aws/aws-ebs/</guid>
+      <description>&lt;p&gt;Amazon Elastic Block Store (Amazon EBS) allows you to create storage volumes and attach them to Amazon EC2 instances. Once attached, you can create a file system on top of these volumes, run a database, or use them in any other way you would use a block device. Amazon EBS volumes are places in specific Availability Zone, where they are automatically replicated to protect you from the failure of a single component.&lt;/p&gt;
+
+&lt;div class=&#34;text-center&#34;&gt;
+    &lt;img class=&#34;img-responsive&#34; src=&#34;http://localhost:4000/images/aws/ec2-ebs.jpg&#34; alt=&#34;AWS Elastic Block Storage&#34; /&gt;
+&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>RAID on EBS Volumes</title>
+      <link>http://localhost:4000/aws/raid-configuration/</link>
+      <pubDate>Wed, 19 Jul 2017 00:15:00 +0200</pubDate>
+      
+      <guid>http://localhost:4000/aws/raid-configuration/</guid>
+      <description>&lt;p&gt;RAID is a technology that is used to increase the performance and/or reliability of data storage. The abbreviation stands for Redundant Array of Inexpensive Disks. A RAID system consists of two or more drives working in parallel.&lt;/p&gt;
+
+&lt;div class=&#34;text-center&#34;&gt;
+    &lt;img class=&#34;img-responsive&#34; src=&#34;http://localhost:4000/images/aws/storage_raid_10.png&#34; alt=&#34;AWS Security Groups&#34; /&gt;
+&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>AWS Virtual Private Cloud (VPC)</title>
+      <link>http://localhost:4000/aws/aws-vpc/</link>
+      <pubDate>Tue, 25 Jul 2017 00:15:00 +0200</pubDate>
+      
+      <guid>http://localhost:4000/aws/aws-vpc/</guid>
+      <description>&lt;p&gt;Amazon Virtual Private Cloud (Amazon VPC) lets you provision a logically isolated section of the Amazon Web Services (AWS) cloud where you can launch AWS resources in a virtual network that you define.&lt;/p&gt;
+
+&lt;div class=&#34;text-center&#34;&gt;
+    &lt;img class=&#34;img-responsive&#34; src=&#34;http://localhost:4000/images/aws/vpc.png&#34; alt=&#34;AWS Databases&#34; /&gt;
+&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>AWS VPC NAT</title>
+      <link>http://localhost:4000/aws/aws-vpc-nat/</link>
+      <pubDate>Tue, 25 Jul 2017 00:15:00 +0200</pubDate>
+      
+      <guid>http://localhost:4000/aws/aws-vpc-nat/</guid>
+      <description>You can use a network address translation (NAT) devices to enable instances in a private subnet to connect to the Internet or other AWS services but prevent the Internet from initiating a connection with those instances. Instances in private subnets would need internet connection for performing software updates or trying to access external services NAT device routes the traffic, from the private subnet to the Internet, by replacing the source IP address with its address and for the response traffic it translates the address back to the instances’ private IP addresses.</description>
+    </item>
+    
+    <item>
+      <title>AWS CloudWatch</title>
+      <link>http://localhost:4000/aws/aws-cloudwatch/</link>
+      <pubDate>Tue, 25 Jul 2017 00:15:00 +0200</pubDate>
+      
+      <guid>http://localhost:4000/aws/aws-cloudwatch/</guid>
+      <description>&lt;p&gt;Amazon CloudWatch is a service that monitors AWS Cloud resources and applications running on AWS. It collects and tracks metrics, collects and monitors log files, and sets alarms. Amazon CloudWatch has a basic level of monitoring for no cost and a more detailed level of monitoring for an additional cost.&lt;/p&gt;
+
+&lt;div class=&#34;text-center&#34;&gt;
+    &lt;img class=&#34;img-responsive&#34; src=&#34;http://localhost:4000/images/aws-cloudwatch.png&#34; alt=&#34;AWS Identity and Access Management&#34; /&gt;
+&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>AWS Elastic Load Balancing</title>
+      <link>http://localhost:4000/aws/aws-elastic-load-balancing/</link>
+      <pubDate>Tue, 25 Jul 2017 00:15:00 +0200</pubDate>
+      
+      <guid>http://localhost:4000/aws/aws-elastic-load-balancing/</guid>
+      <description>&lt;p&gt;Elastic Load Balancing automatically distributes your incoming application traffic across multiple targets, such as EC2 instances. It monitors the health of registered targets and routes traffic only to the healthy targets.&lt;/p&gt;
+
+&lt;div class=&#34;text-center&#34;&gt;
+    &lt;img class=&#34;img-responsive&#34; src=&#34;http://localhost:4000/images/aws/aws-elb.png&#34; alt=&#34;AWS Elastic Load Balancing&#34; /&gt;
+&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>AWS Auto Scaling</title>
+      <link>http://localhost:4000/aws/aws-auto-scaling/</link>
+      <pubDate>Tue, 25 Jul 2017 00:15:00 +0200</pubDate>
+      
+      <guid>http://localhost:4000/aws/aws-auto-scaling/</guid>
+      <description>&lt;p&gt;Auto Scaling is a service that allows you to scale your Amazon EC2 capacity automatically by scaling out and scaling in according to criteria that you define. With Auto Scaling, you can ensure that the number of running Amazon EC2 instances increases during demand spikes or peak demand periods to maintain application performance and decreases automatically during demand lulls or troughs to minimize costs.&lt;/p&gt;
+
+&lt;div class=&#34;text-center&#34;&gt;
+    &lt;img class=&#34;img-responsive&#34; src=&#34;http://localhost:4000/images/aws-auto-scaling.jpg&#34; alt=&#34;AWS Auto Scaling&#34; /&gt;
+&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>AWS Identity and Access Management (IAM)</title>
+      <link>http://localhost:4000/aws/aws-identity-and-access-management/</link>
+      <pubDate>Wed, 05 Jul 2017 00:15:00 +0200</pubDate>
+      
+      <guid>http://localhost:4000/aws/aws-identity-and-access-management/</guid>
+      <description>&lt;p&gt;AWS Identity and Access Management (IAM) gives you the facilities to manage users and their access level through AWS console. AWS IAM spacially targeted on an organization who have multiple users and need to assign different access to different users.&lt;/p&gt;
+
+&lt;div class=&#34;text-center&#34;&gt;
+    &lt;img class=&#34;img-responsive&#34; src=&#34;http://localhost:4000/images/aws_iam.png&#34; alt=&#34;AWS Identity and Access Management&#34; /&gt;
+&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>AWS Databases</title>
+      <link>http://localhost:4000/aws/aws-databases/</link>
+      <pubDate>Mon, 24 Jul 2017 00:15:00 +0200</pubDate>
+      
+      <guid>http://localhost:4000/aws/aws-databases/</guid>
+      <description>&lt;p&gt;AWS offers a wide range of database services to fit your application requirements. These database services are fully managed and can be launched in minutes with just a few clicks.&lt;/p&gt;
+
+&lt;div class=&#34;text-center&#34;&gt;
+    &lt;img class=&#34;img-responsive&#34; src=&#34;http://localhost:4000/images/aws-database-services.jpg&#34; alt=&#34;AWS Databases&#34; /&gt;
+&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>AWS Simple Queue Service (SQS)***</title>
+      <link>http://localhost:4000/aws/aws-sqs/</link>
+      <pubDate>Wed, 02 Aug 2017 00:15:00 +0200</pubDate>
+      
+      <guid>http://localhost:4000/aws/aws-sqs/</guid>
+      <description>&lt;p&gt;Amazon Simple Queue Service (SQS) is a fast, reliable, scalable, fully managed message queuing service. SQS makes it simple and cost-effective to decouple the components of a cloud application. You can use SQS to transmit any volume of data, at any level of throughput, without losing messages or requiring other services to be always available.&lt;/p&gt;
+
+&lt;div class=&#34;text-center&#34;&gt;
+    &lt;img class=&#34;img-responsive&#34; src=&#34;http://localhost:4000/images/aws-sqs.jpg&#34; alt=&#34;AWS Databases&#34; /&gt;
+&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>AWS Simple Workflow Service (SWF)***</title>
+      <link>http://localhost:4000/aws/aws-swf/</link>
+      <pubDate>Thu, 03 Aug 2017 00:15:00 +0200</pubDate>
+      
+      <guid>http://localhost:4000/aws/aws-swf/</guid>
+      <description>&lt;p&gt;The Amazon Simple Workflow Service (Amazon SWF) makes it easy to build applications that use Amazon&amp;rsquo;s cloud to coordinate work across distributed components.&lt;/p&gt;
+
+&lt;div class=&#34;text-center&#34;&gt;
+    &lt;img class=&#34;img-responsive&#34; src=&#34;http://localhost:4000/images/aws-swf.png&#34; alt=&#34;AWS Databases&#34; /&gt;
+&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>AWS Simple Notification Service (SNS)***</title>
+      <link>http://localhost:4000/aws/aws-sns/</link>
+      <pubDate>Fri, 04 Aug 2017 00:15:00 +0200</pubDate>
+      
+      <guid>http://localhost:4000/aws/aws-sns/</guid>
+      <description>&lt;p&gt;Amazon Simple Notification Service (Amazon SNS) is a fast, flexible, fully managed push notification service that lets you send individual messages or to fan-out messages to large numbers of recipients. Amazon SNS makes it simple and cost effective to send push notifications to mobile device users, email recipients or even send messages to other distributed services.&lt;/p&gt;
+
+&lt;div class=&#34;text-center&#34;&gt;
+    &lt;img class=&#34;img-responsive&#34; src=&#34;http://localhost:4000/images/aws-sns.png&#34; alt=&#34;AWS Databases&#34; /&gt;
+&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>AWS Route53</title>
+      <link>http://localhost:4000/aws/aws-route53/</link>
+      <pubDate>Sat, 22 Jul 2017 00:15:00 +0200</pubDate>
+      
+      <guid>http://localhost:4000/aws/aws-route53/</guid>
+      <description>&lt;p&gt;Amazon Route 53 is a highly available and scalable DNS service offered by AWS. Like any DNS service, Route 53 handles domain registration and routes users’ Internet requests to your application – whether it’s hosted on AWS or elsewhere. But Route 53 also intelligently directs traffic based on sophisticated routing policies and, through automated health checks, away from servers that might be failing.&lt;/p&gt;
+
+&lt;div class=&#34;text-center&#34;&gt;
+    &lt;img class=&#34;img-responsive&#34; src=&#34;http://localhost:4000/images/route53howitworks.png&#34; alt=&#34;AWS Elastic Block Storage&#34; /&gt;
+&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>AWS ElastiCache</title>
+      <link>http://localhost:4000/aws/aws-elasticache/</link>
+      <pubDate>Sat, 22 Jul 2017 00:15:00 +0200</pubDate>
+      
+      <guid>http://localhost:4000/aws/aws-elasticache/</guid>
+      <description>&lt;p&gt;Amazon ElastiCache is a web service that simplifies the setup and management of distributed in-memory caching environments. This service makes it easy and cost effective to provide a high-performance and scalable caching solution for your cloud applications.&lt;/p&gt;
+
+&lt;div class=&#34;text-center&#34;&gt;
+    &lt;img class=&#34;img-responsive&#34; src=&#34;http://localhost:4000/images/aws-elasticache.png&#34; alt=&#34;AWS Elastic Block Storage&#34; /&gt;
+&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>AWS CloudFront - Global Content Delivery Network</title>
+      <link>http://localhost:4000/aws/aws-cloudfront/</link>
+      <pubDate>Thu, 13 Jul 2017 00:15:00 +0200</pubDate>
+      
+      <guid>http://localhost:4000/aws/aws-cloudfront/</guid>
+      <description>&lt;p&gt;Amazon CloudFront is a web service that speeds up distribution of your static and dynamic web content, such as .html, .css, .php, and image files, to your users. CloudFront delivers your content through a worldwide network of data centers called edge locations.&lt;/p&gt;
+
+&lt;div class=&#34;text-center&#34;&gt;
+    &lt;img class=&#34;img-responsive&#34; src=&#34;http://localhost:4000/images/amazon-cloudfront.png&#34; alt=&#34;AWS CloudFront - Global Content Delivery Network&#34; /&gt;
+&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>AWS CloudTrail</title>
+      <link>http://localhost:4000/aws/aws-cloud-trail/</link>
+      <pubDate>Thu, 13 Jul 2017 00:15:00 +0200</pubDate>
+      
+      <guid>http://localhost:4000/aws/aws-cloud-trail/</guid>
+      <description>&lt;p&gt;AWS CloudTrail provides visibility into user activity by recording API calls made on your account. AWS CloudTrail records important information about each API call, including the name of the API, the identity of the caller, the time of the API call, the request parameters, and the response elements returned by the AWS service.&lt;/p&gt;
+
+&lt;div class=&#34;text-center&#34;&gt;
+    &lt;img class=&#34;img-responsive&#34; src=&#34;http://localhost:4000/images/aws-cloudtrail.jpg&#34; alt=&#34;AWS Snowball&#34; /&gt;
+&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>AWS Kinesis</title>
+      <link>http://localhost:4000/aws/aws-kinesis/</link>
+      <pubDate>Thu, 13 Jul 2017 00:15:00 +0200</pubDate>
+      
+      <guid>http://localhost:4000/aws/aws-kinesis/</guid>
+      <description>&lt;p&gt;Amazon Kinesis is a platform for handling massive streaming data on AWS, offering powerful services to make it easy to load and analyze streaming data and also providing the ability for you to build custom streaming data applications for specialized needs.&lt;/p&gt;
+
+&lt;div class=&#34;text-center&#34;&gt;
+    &lt;img class=&#34;img-responsive&#34; src=&#34;http://localhost:4000/images/aws-kinesis.png&#34; alt=&#34;AWS Snowball&#34; /&gt;
+&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>AWS Elastic Map Reduce</title>
+      <link>http://localhost:4000/aws/aws-emr/</link>
+      <pubDate>Thu, 13 Jul 2017 00:15:00 +0200</pubDate>
+      
+      <guid>http://localhost:4000/aws/aws-emr/</guid>
+      <description>&lt;p&gt;Amazon Elastic MapReduce (Amazon EMR) provides you with a fully managed, on-demand
+Hadoop framework. Amazon EMR reduces the complexity and up-front costs of setting up
+Hadoop and, combined with the scale of AWS, gives you the ability to spin up large Hadoop clusters instantly and start processing within minutes.&lt;/p&gt;
+
+&lt;div class=&#34;text-center&#34;&gt;
+    &lt;img class=&#34;img-responsive&#34; src=&#34;http://localhost:4000/images/aws-emr.jpg&#34; alt=&#34;AWS Snowball&#34; /&gt;
+&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>AWS Data Pipeline</title>
+      <link>http://localhost:4000/aws/aws-data-pipeline/</link>
+      <pubDate>Thu, 13 Jul 2017 00:15:00 +0200</pubDate>
+      
+      <guid>http://localhost:4000/aws/aws-data-pipeline/</guid>
+      <description>&lt;p&gt;AWS Data Pipeline manages and streamlines data-driven workflows, which includes scheduling data movement and processing. The service is useful for customers who want to move data along a defined pipeline of sources, destinations and data-processing activities.&lt;/p&gt;
+
+&lt;div class=&#34;text-center&#34;&gt;
+    &lt;img class=&#34;img-responsive&#34; src=&#34;http://localhost:4000/images/aws-data-pipeline-1.png&#34; alt=&#34;AWS Snowball&#34; /&gt;
+&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>AWS Import/Export</title>
+      <link>http://localhost:4000/aws/aws-import-export/</link>
+      <pubDate>Thu, 13 Jul 2017 00:15:00 +0200</pubDate>
+      
+      <guid>http://localhost:4000/aws/aws-import-export/</guid>
+      <description>&lt;p&gt;AWS Import/Export is a service that accelerates transferring large amounts of data into and out of AWS using physical storage appliances, bypassing the Internet. The data is copied to a device at the source (your data center or an AWS region), shipped via standard shipping mechanisms, and then copied to the destination (your data center or an AWS region).&lt;/p&gt;
+
+&lt;div class=&#34;text-center&#34;&gt;
+    &lt;img class=&#34;img-responsive&#34; src=&#34;http://localhost:4000/images/aws/aws-import-export.jpg&#34; alt=&#34;AWS Snowball&#34; /&gt;
+&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>AWS Cloud Formation***</title>
+      <link>http://localhost:4000/aws/aws-cloud-formation/</link>
+      <pubDate>Tue, 22 Aug 2017 00:15:00 +0200</pubDate>
+      
+      <guid>http://localhost:4000/aws/aws-cloud-formation/</guid>
+      <description>&lt;p&gt;AWS CloudFormation An easy way to create &amp;amp; manage a collection of AWS resources. Allows orderly and predictable provisioning and updating of resources. Allows you to version control your AWS infrastructure. Deploy and update stacks using console, command line or API. You only pay for the resources you create&lt;/p&gt;
+
+&lt;div class=&#34;text-center&#34;&gt;
+    &lt;img class=&#34;img-responsive&#34; src=&#34;http://localhost:4000/images/aws-cloudformation.jpg&#34; alt=&#34;AWS CloudFormation&#34; /&gt;
+&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>AWS Elastic Beanstalk***</title>
+      <link>http://localhost:4000/aws/aws-elastic-beanstalk/</link>
+      <pubDate>Tue, 22 Aug 2017 00:15:00 +0200</pubDate>
+      
+      <guid>http://localhost:4000/aws/aws-elastic-beanstalk/</guid>
+      <description>&lt;p&gt;AWS Elastic Beanstalk is an easy-to-use service for deploying and scaling web applications and services developed with Java, .NET, PHP, Node.js, Python, Ruby, Go, and Docker on familiar servers such as Apache, Nginx, Passenger, and IIS.&lt;/p&gt;
+
+&lt;div class=&#34;text-center&#34;&gt;
+    &lt;img class=&#34;img-responsive&#34; src=&#34;http://localhost:4000/images/aws-elasticbeanstalk.png&#34; alt=&#34;Elastic Beanstalk&#34; /&gt;
+&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>AWS Trusted Advisor</title>
+      <link>http://localhost:4000/aws/aws-trusted-advisor/</link>
+      <pubDate>Tue, 25 Jul 2017 00:15:00 +0200</pubDate>
+      
+      <guid>http://localhost:4000/aws/aws-trusted-advisor/</guid>
+      <description>&lt;p&gt;AWS Trusted Advisor inspects your AWS environment and makes recommendations when opportunities exist to save money, improve system availability and performance, or help close security gaps.&lt;/p&gt;
+
+&lt;div class=&#34;text-center&#34;&gt;
+    &lt;img class=&#34;img-responsive&#34; src=&#34;http://localhost:4000/images/aws-trusted-advisor.png&#34; alt=&#34;AWS Identity and Access Management&#34; /&gt;
+&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>AWS Config</title>
+      <link>http://localhost:4000/aws/aws-config/</link>
+      <pubDate>Tue, 25 Jul 2017 00:15:00 +0200</pubDate>
+      
+      <guid>http://localhost:4000/aws/aws-config/</guid>
+      <description>&lt;p&gt;AWS Config is a fully managed service that provides AWS resource inventory, configuration history, and configuration change notifications to enable security and governance&lt;/p&gt;
+
+&lt;div class=&#34;text-center&#34;&gt;
+    &lt;img class=&#34;img-responsive&#34; src=&#34;http://localhost:4000/images/aws-config.png&#34; alt=&#34;AWS Identity and Access Management&#34; /&gt;
+&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>Virtusa Interview</title>
+      <link>http://localhost:4000/general/virtusa/</link>
+      <pubDate>Wed, 12 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:4000/general/virtusa/</guid>
+      <description> show the shell script to launch the cluster from terminal ibmcloud ks cluster-create --name anand_tmp --zone dal10 --machine-type u3c.2x4 --hardware shared --workers 3 --public-vlan 2632527 --private-vlan 2632529 ## ibmcloud ks cluster-config --cluster anand_tmp export KUBECONFIG=/Users/apple/.bluemix/plugins/container-service/clusters/anand_tmp/kube-config-dal10-anand_tmp.yml kubectl create deployment virtusa --image anandvyas786/virtusa:36 kubectl expose deployment.apps/virtusa --port=80 --name=virtusasvc --type=LoadBalancer kubectl set image -n default deployment.apps/virtusa virtusa=anandvyas786/virtusa:36  </description>
+    </item>
+    
+    <item>
+      <title>Kubernetes - Builder</title>
+      <link>http://localhost:4000/kubernetes/kubernetes-builder/</link>
+      <pubDate>Sun, 10 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:4000/kubernetes/kubernetes-builder/</guid>
+      <description>   .nav-tabslia, .nav-pillslia { margin-left: 10px; } #app { margin: 10px 0 0 0; } pre#output { border: 1px solid; text-shadow: 0 0 0px black; padding: 5px; } fieldset { border: 1px solid rgba(0, 0, 0, .15); padding: 10px; } fieldsetlegend { font-size: 1rem; width: auto; } .fa-times { color: red; margin-top: 14px; } .nav-link { width: 100%; }  [[tab.name]]  Reset                </description>
+    </item>
+    
+    <item>
+      <title>Kubernetes - Cheatsheet</title>
+      <link>http://localhost:4000/kubernetes/kubernetes-cheatsheet/</link>
+      <pubDate>Sun, 10 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:4000/kubernetes/kubernetes-cheatsheet/</guid>
+      <description>Viewing, Finding Resources # Get commands with basic output kubectl get services # List all services in the namespace kubectl get pods --all-namespaces # List all pods in all namespaces kubectl get pods -o wide # List all pods in the namespace, with more details kubectl get deployment my-dep # List a particular deployment kubectl get pods --include-uninitialized # List all pods in the namespace, including uninitialized ones # Describe commands with verbose output kubectl describe nodes my-node kubectl describe pods my-pod kubectl get services --sort-by=.</description>
+    </item>
+    
+    <item>
+      <title>Kubernetes - Cheatsheet</title>
+      <link>http://localhost:4000/kubernetes/kubernetes-commands/</link>
+      <pubDate>Sun, 10 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:4000/kubernetes/kubernetes-commands/</guid>
+      <description>Commands kubectl version : Get the version of kubernetes client and server
+kubectl run hello-minikube &amp;ndash;image=k8s.gcr.io/echoserver:1.10 &amp;ndash;port=8080 kubectl expose deployment hello-minikube &amp;ndash;type=NodePort kubectl get pod curl $(minikube service hello-minikube &amp;ndash;url)
+kubectl cluster-info kubectl cluster-info dump
+minikube start minikube start &amp;ndash;disk-size 2g &amp;ndash;vm-driver=virtualbox &amp;ndash;iso-url=&amp;ldquo;https://storage.googleapis.com/minikube/iso/minikube-v0.33.0.iso&amp;quot;
+rm -rf ~/.minikube/machines
+kubectl run hello-minikube &amp;ndash;image=gcr.io/google_containers/echoserver:1.4 &amp;ndash;port=8080 kubectl expose deployment hello-minikube4 &amp;ndash;type=NodePort kubectl expose deployment hello-minikube4 &amp;ndash;type=LoadBalancer &amp;ndash;port=8080 &amp;ndash;target-port=8080 &amp;ndash;name=app-load-balancer
+kubectl describe pod hello-minikube4
+kubectl delete pods &amp;ndash;all kubectl delete service &amp;ndash;all</description>
+    </item>
+    
+    <item>
+      <title>Git - Basics</title>
+      <link>http://localhost:4000/git/git-basics/</link>
+      <pubDate>Sat, 12 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:4000/git/git-basics/</guid>
+      <description>  Git - Workflow your local repository consists of three &amp;ldquo;trees&amp;rdquo; maintained by git. the first one is your Working Directory which holds the actual files. the second one is the Index which acts as a staging area and finally the main Repository (HEAD) which points to the last commit you&amp;rsquo;ve made.
+ </description>
+    </item>
+    
+    <item>
+      <title>Git - Cheat sheet</title>
+      <link>http://localhost:4000/git/git-cheatsheet/</link>
+      <pubDate>Sat, 12 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:4000/git/git-cheatsheet/</guid>
+      <description>CONFIGURE TOOLING Configure user information for all local repositories
+# Sets the name you want atached to your commit transactions git config --global user.name &amp;quot;[name]&amp;quot; # Sets the email you want atached to your commit transactions git config --global user.email &amp;quot;[email address]&amp;quot; # Enables helpful colorization of command line output git config --global color.ui auto  CREATE REPOSITORIES Start a new repository or obtain one from an existing URL</description>
+    </item>
+    
+    <item>
+      <title>Horizontally and Vertical Scale</title>
+      <link>http://localhost:4000/general/horizontal-vertical-scale/</link>
+      <pubDate>Sat, 12 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:4000/general/horizontal-vertical-scale/</guid>
+      <description>Horizontal scaling means that you scale by adding more machines into your pool of resources whereas Vertical scaling means that you scale by adding more power (CPU, RAM) to an existing machine.
+ Horizontal Scaling Also referred to as &amp;ldquo;scale-out&amp;rdquo; is basically the addition of more machines or setting up a cluster or a distributed environment for your software system. This usually requires a load-balancer program which is a middle-ware component in the standard 3 tier client-server architectural model.</description>
+    </item>
+    
+    <item>
+      <title>JSON (JavaScript Object Notation)</title>
+      <link>http://localhost:4000/general/json/</link>
+      <pubDate>Sat, 12 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:4000/general/json/</guid>
+      <description> JSON (JavaScript Object Notation) is a standard text-based data interchange format that enables applications to exchange data over a computer network.
+Datatypes  String Number Boolean null Object Array  { //comments &amp;quot;string&amp;quot;: &amp;quot;Anand vyas&amp;quot;, // String &amp;quot;number&amp;quot;: { // number, float &amp;quot;age&amp;quot;: 29, &amp;quot;cost&amp;quot;: 299.99, &amp;quot;temperature&amp;quot;: -10.5, &amp;quot;speed_of_light&amp;quot;: 1.23e11 }, &amp;quot;bool&amp;quot;: true, // Boolean &amp;quot;value&amp;quot;: null, // Null value &amp;quot;array&amp;quot;: [&amp;quot;Anand&amp;quot;,&amp;quot;vyas&amp;quot;], // Array example &amp;quot;people&amp;quot; : [ // Array with object { &amp;quot;firstName&amp;quot;: &amp;quot;John&amp;quot;, &amp;quot;lastName&amp;quot;: &amp;quot;Smith&amp;quot;, &amp;quot;age&amp;quot;: 35 }, { &amp;quot;firstName&amp;quot;: &amp;quot;Jane&amp;quot;, &amp;quot;lastName&amp;quot;: &amp;quot;Smith&amp;quot;, &amp;quot;age&amp;quot;: 32 } ], &amp;quot;address&amp;quot; : { // Object &amp;quot;line1&amp;quot; : &amp;quot;555 Main Street&amp;quot;, &amp;quot;city&amp;quot; : &amp;quot;Denver&amp;quot;, &amp;quot;stateOrProvince&amp;quot; : &amp;quot;CO&amp;quot;, &amp;quot;zipOrPostalCode&amp;quot; : &amp;quot;80202&amp;quot;, &amp;quot;country&amp;quot; : &amp;quot;USA&amp;quot; } }  </description>
+    </item>
+    
+    <item>
+      <title>SSH Authentication</title>
+      <link>http://localhost:4000/general/ssh/</link>
+      <pubDate>Sat, 12 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:4000/general/ssh/</guid>
+      <description>SSH provides a mechanism for establishing a cryptographically secured connection between two parties, authenticating each side to the other, and passing commands and output back and forth. SSH using numbers of encryption techniques
+ Symmetric Encryption Asymmetric Encryption Hashes  Symmetric Encryption Symmetrical encryption is a type of encryption where one key can be used to encrypt messages to the opposite party, and also to decrypt the messages received from the other participant.</description>
+    </item>
+    
+    <item>
+      <title>Yaml (YAML Ain’t Markup Language)</title>
+      <link>http://localhost:4000/general/yaml/</link>
+      <pubDate>Sat, 12 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:4000/general/yaml/</guid>
+      <description>YAML (&amp;ldquo;YAML Ain&amp;rsquo;t Markup Language&amp;rdquo;) is a human-readable data serialization language. It is commonly used for configuration files
+Basic Rules  YAML is case sensitive. YAML does not allow the use of tabs. Spaces are used instead as tabs because tabs are not universally supported.  Basic Datatypes Scalars --- a: 123 # an integer b: &amp;quot;123&amp;quot; # a string, disambiguated by quotes c: 123.0 # a float d: !</description>
+    </item>
+    
+    <item>
+      <title>Ansible - Infrastructure as Code</title>
+      <link>http://localhost:4000/ansible/intro/</link>
+      <pubDate>Sat, 26 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:4000/ansible/intro/</guid>
+      <description>Configuration You can configure ansible through ansible configuration variables, there are two ways to change the value of ansible configuration variables
+ Environment variables ini file named ansible.cfg  Ansible configuration variable value are manage in below order
+ 1. ANSIBLE_CONFIG (environment variable if set) 2. ansible.cfg (in the current directory) 3. ~/.ansible.cfg (in the home directory) 4. /etc/ansible/ansible.cfg  Structure of ansible.cfg file [defaults] inventory = ./inventory   In INI format file Both the hash sign (#) and semicolon (;) are allowed as comment markers</description>
+    </item>
+    
+    <item>
+      <title>Elasticsearch</title>
+      <link>http://localhost:4000/elk/elasticsearch/</link>
+      <pubDate>Sat, 21 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:4000/elk/elasticsearch/</guid>
+      <description>Elasticsearch is an open-source, RESTful, distributed search and analytics engine built on Apache Lucene.
+Installation Elasticsearch # update your package index sudo apt-get update # Download latest version # Check version information: https://www.elastic.co/downloads/past-releases wget https://download.elastic.co/elasticsearch/release/org/elasticsearch/distribution/deb/elasticsearch/2.3.1/elasticsearch-2.3.1.deb # Install through dpkg command sudo dpkg -i elasticsearch-2.3.1.deb  Installation Elasticsearch from Repository # update your system sudo apt-get update # install Java sudo apt-get install default-jre # add Elastic’s signing key wget -qO - https://artifacts.</description>
+    </item>
+    
+    <item>
+      <title>Elk - Cheatsheet</title>
+      <link>http://localhost:4000/elk/cheatsheet/</link>
+      <pubDate>Sat, 21 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:4000/elk/cheatsheet/</guid>
+      <description># cat paths /_cat/allocation /_cat/shards /_cat/shards/{index} /_cat/master /_cat/nodes /_cat/indices /_cat/indices/{index} /_cat/segments /_cat/segments/{index} /_cat/count /_cat/count/{index} /_cat/recovery /_cat/recovery/{index} /_cat/health /_cat/pending_tasks /_cat/aliases /_cat/aliases/{alias} /_cat/thread_pool /_cat/plugins /_cat/fielddata /_cat/fielddata/{fields} # Basic bin/elasticsearch # Start Elastic instance curl -X GET &#39;http://localhost:9200/?pretty=true&#39; # View instance metadata curl -X POST &#39;http://localhost:9200/_shutdown&#39; # Shutdown Elastic instance curl -X GET &#39;http://localhost:9200/_cat?pretty=true&#39; # List all admin methods curl -X GET &#39;http://localhost:9200/_cat/indices?pretty=true&#39; # List all indices curl -X GET &#39;http://localhost:9200/_cluster/health?pretty=true&#39; # View Cluster Health # Index, Type Basics curl -X GET &#39;http://localhost:9200/&amp;lt;index name&amp;gt;&#39; # View specific index curl -X POST &#39;http://localhost:9200/&amp;lt;index name&amp;gt;&#39; # Create an index curl -X DELETE &#39;http://localhost:9200/&amp;lt;index name&amp;gt;&#39; # Delete an index curl -X GET &#39;http://locahost:9200/&amp;lt;index name&amp;gt;/&amp;lt;type&amp;gt;/&amp;lt;id&amp;gt;&#39; # Retrieve a specific document curl -X POST &#39;http://locahost:9200/&amp;lt;index name&amp;gt;/&amp;lt;type&amp;gt;/&#39; # Create a document curl -X PUT &#39;http://locahost:9200/&amp;lt;index name&amp;gt;/&amp;lt;type&amp;gt;/&amp;lt;id&amp;gt;&#39; # Create/Update a specific document curl -X DELETE &#39;http://localhost:9200/&amp;lt;index name&amp;gt;/&amp;lt;type&amp;gt;/&amp;lt;id&amp;gt;&#39; # Delete a specific document curl -X GET &#39;http://localhost:9200/&amp;lt;index name&amp;gt;/_mappings&#39; # View mappings for index curl -X GET &#39;http://localhost:9200/&amp;lt;index name&amp;gt;/_settings&#39; # View setting information for an index curl -X GET &#39;http://localhost:9200/&amp;lt;index name&amp;gt;/&amp;lt;type&amp;gt;/_mappings&#39; # View mappings for an index type curl -X GET &#39;http://localhost:9200/&amp;lt;index name&amp;gt;/&amp;lt;type&amp;gt;/_settings&#39; # View setting information for an index type curl -X GET &#39;http://localhost:9200/&amp;lt;index name&amp;gt;/_search&#39; # Search an index curl -X GET &#39;http://localhost:9200/&amp;lt;index name&amp;gt;/&amp;lt;type&amp;gt;/_search&#39; # Search an index type # Bulk API curl -X GET &#39;http://localhost:9200/_bulk&#39; curl -X GET &#39;http://localhost:9200/&amp;lt;index name&amp;gt;/_bulk&#39; curl -X GET &#39;http://localhost:9200/&amp;lt;index name&amp;gt;/&amp;lt;type&amp;gt;/_bulk&#39; # Elastic River Basics curl -X GET &#39;http://localhost:9200/_river/_meta&#39; # View River settings curl -X GET &#39;http://localhost:9200/_river/&amp;lt;index name&amp;gt;/_meta&#39; # View River meta data for index curl -X GET &#39;http://localhost:9200/_river/&amp;lt;index name&amp;gt;/_meta/_source&#39; # View River source for index curl -X GET &#39;http://localhost:9200/_river/&amp;lt;index name&amp;gt;/_status&#39; # View River status curl -X GET &#39;http://localhost:9200/_river/&amp;lt;index name&amp;gt;/_search&#39; # Seach the River Index  </description>
+    </item>
+    
+    <item>
+      <title>Filebeat</title>
+      <link>http://localhost:4000/elk/filebeat/</link>
+      <pubDate>Sat, 21 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:4000/elk/filebeat/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Kibana</title>
+      <link>http://localhost:4000/elk/kibana/</link>
+      <pubDate>Sat, 21 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:4000/elk/kibana/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Kubernetes - Basics</title>
+      <link>http://localhost:4000/kubernetes/basic/</link>
+      <pubDate>Sat, 21 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:4000/kubernetes/basic/</guid>
+      <description>Kubernetes is an open-source system for automating deployment, scaling and management of containerized applications that was originally designed by Google and now maintained by the Cloud Native Computing Foundation
+ Kubernetes Components Master Components Master components provide the cluster’s control plane. Master components make global decisions about the cluster (for example, scheduling), and detecting and responding to cluster events
+ kube-apiserver: Component on the master that exposes the Kubernetes API etcd: Consistent and highly-available key value store used as Kubernetes’ backing store for all cluster data.</description>
+    </item>
+    
+    <item>
+      <title>Kubernetes - Minikube</title>
+      <link>http://localhost:4000/kubernetes/minikube/</link>
+      <pubDate>Sat, 21 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:4000/kubernetes/minikube/</guid>
+      <description>Minikube Minikube is a tool that makes it easy to run Kubernetes locally. Minikube runs a single-node Kubernetes cluster.
+Installation of Minikube on Ubuntu curl -Lo minikube https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64 &amp;amp;&amp;amp; chmod +x minikube sudo cp minikube /usr/local/bin &amp;amp;&amp;amp; rm minikube  Minikube Commands minikube version #Get minikube version minikube start # Start Minikube Service minikube start --cpus 4 --memory 8192 # Start Minikube Service with 4 cpus and 8192 of memory minikube stop # Stop Mikikube Service minikube delete # Clean the configurations and start clean (maybe also you need rm -rf .</description>
+    </item>
+    
+    <item>
+      <title>Logstash</title>
+      <link>http://localhost:4000/elk/logstash/</link>
+      <pubDate>Sat, 21 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:4000/elk/logstash/</guid>
+      <description>Logstash is an open source, server-side data processing pipeline that ingests data from a multitude of sources simultaneously, transforms it, and then sends it to your favorite “stash.”
+Logstash Installation # update your system sudo apt-get update # install Java sudo apt-get install default-jre # add Elastic’s signing key wget -qO - https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add - # install the apt-transport-https package sudo apt-get install apt-transport-https # add the repository definition to your system echo &amp;quot;deb https://artifacts.</description>
+    </item>
+    
+    <item>
+      <title>Ansible Builder</title>
+      <link>http://localhost:4000/ansible/ansible-builder/</link>
       <pubDate>Thu, 12 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://anandvyas.in/linux/apache-htaccess/</guid>
+      <guid>http://localhost:4000/ansible/ansible-builder/</guid>
+      <description>hi this is nanad</description>
+    </item>
+    
+    <item>
+      <title>Ansible Playbook Examples</title>
+      <link>http://localhost:4000/ansible/ansible-playbook-examples/</link>
+      <pubDate>Thu, 12 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:4000/ansible/ansible-playbook-examples/</guid>
+      <description>Example of restart lamp stack Example of Restart the complete stack
+--- - hosts: loadbalancer become: true tasks: - name: Stop nginx server service: name=nginx state=stopped - hosts: webserver become: true tasks: - name: Stop apache2 server service: name=apache2 state=stopped - hosts: database become: true tasks: - name: Restart mysql server service: name=mysql state=restarted - hosts: webserver become: true tasks: - name: Stop apache2 server service: name=apache2 state=started - hosts: loadbalancer become: true tasks: - name: Stop nginx server service: name=nginx state=started  Install Tools --- - hosts: controls become: true tasks: - name: install tools apt: name={{item}} state=present update_cache=yes with_items: - curl - wget - git  Install Apache2 (Ubuntu) and run python application Here we are using below modules</description>
+    </item>
+    
+    <item>
+      <title>Ansible Vagrantfile</title>
+      <link>http://localhost:4000/ansible/ansible-vagrant/</link>
+      <pubDate>Thu, 12 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:4000/ansible/ansible-vagrant/</guid>
+      <description>In this module we are seeing many examples of Ansible, but before that we have to create testing machine. For testing machine we are using ubuntu vagrant box.
+# -*- mode: ruby -*- # vi: set ft=ruby : servers = [ { :name =&amp;gt; &amp;quot;Ansible-master&amp;quot;, :type =&amp;gt; &amp;quot;master&amp;quot;, :box =&amp;gt; &amp;quot;ubuntu/xenial64&amp;quot;, :box_version =&amp;gt; &amp;quot;20180831.0.0&amp;quot;, :eth1 =&amp;gt; &amp;quot;192.168.205.10&amp;quot;, :mem =&amp;gt; &amp;quot;1024&amp;quot;, :cpu =&amp;gt; &amp;quot;2&amp;quot; }, { :name =&amp;gt; &amp;quot;Ansible-node-1&amp;quot;, :type =&amp;gt; &amp;quot;node&amp;quot;, :box =&amp;gt; &amp;quot;ubuntu/xenial64&amp;quot;, :box_version =&amp;gt; &amp;quot;20180831.</description>
+    </item>
+    
+    <item>
+      <title>Apache htaccess configuration</title>
+      <link>http://localhost:4000/linux/apache-htaccess/</link>
+      <pubDate>Thu, 12 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:4000/linux/apache-htaccess/</guid>
       <description>Htaccess (HyperText Access) is a configuration file that allows developers to overide the Apache webserver configuration at directory level.
 Enable .htaccess By default .htaccess is not enable, we have to change in httpd.conf (Apache) configuration file to for enable .htaccess
 Replace AllowOverride None to AllowOverride All
@@ -25,71 +613,296 @@ Examples:
     </item>
     
     <item>
-      <title>Docker Intro</title>
-      <link>https://anandvyas.in/docker/intro/</link>
+      <title>Docker Commands</title>
+      <link>http://localhost:4000/docker/commands/</link>
       <pubDate>Thu, 12 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://anandvyas.in/docker/intro/</guid>
+      <guid>http://localhost:4000/docker/commands/</guid>
+      <description>Docker Global  docker version: see the version of docker client and server. docker info: Display system-wide information.  Docker Containers Lifecycle  docker create: creates a container but does not start it. docker rename: allows the container to be renamed. docker run: creates and starts a container in one operation. docker rm: deletes a container. docker update: updates a container&amp;rsquo;s resource limits.  Starting and Stopping  docker start: starts a container so it is running.</description>
+    </item>
+    
+    <item>
+      <title>Docker Compose</title>
+      <link>http://localhost:4000/docker/docker-compose/</link>
+      <pubDate>Thu, 12 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:4000/docker/docker-compose/</guid>
+      <description>The Compose file is a YAML file which defines services, networks, and volumes. Compose file is located at the following path ./docker-compose.yml.
+Docker-compose Terminal Commands docker-compose logs Displays log output from services.
+# Display the log of service containers docker-compose logs web  docker-compose ps Lists containers.
+# Display the list of total containers which are defined in docker-compose.yaml file docker-compose ps  docker-compose scale Deprecated You will scale from the docker-compose up scale web=3</description>
+    </item>
+    
+    <item>
+      <title>Docker Intro</title>
+      <link>http://localhost:4000/docker/intro/</link>
+      <pubDate>Thu, 12 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:4000/docker/intro/</guid>
       <description>Docker is a container management service. Which basic means upload/install required things in one container and ship to any where. Docker announced in March 2013 and since then it has become a major tool in development world.
 Docker Release  Docker EE (Enterprise Edition) [Paid] Docker CE (Community Edition) [Free] Docker for Cloud  Docker Stable and Edge version  Edge (Beta) released monthly, Stable quarterly Stable version rolls in three months of Edge features   Docker Architecture Docker uses a client-server architecture.</description>
     </item>
     
     <item>
-      <title>Install Docker on Ubuntu 16.04</title>
-      <link>https://anandvyas.in/docker/install-docker/</link>
+      <title>Docker Machine</title>
+      <link>http://localhost:4000/docker/docker-machine/</link>
       <pubDate>Thu, 12 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://anandvyas.in/docker/install-docker/</guid>
-      <description>There are two ways to install Docker CE (Community Edition) are,
- Install from repository Install from latest edge release  Install from repository # Update the package index sudo apt-get update # Allow apt to use a repository over HTTPS sudo apt-get install apt-transport-https ca-certificates curl software-properties-common # Add Docker’s official GPG key curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add - # Add the Docker repository to APT sources sudo add-apt-repository &amp;quot;deb [arch=amd64] https://download.</description>
+      <guid>http://localhost:4000/docker/docker-machine/</guid>
+      <description>Docker Machine is a tool that lets you install Docker Engine on virtual hosts, and manage the hosts with docker-machine commands.
+Docker-machine Installation Docker-machine Commands  docker-machine active: See which machine is “active” docker-machine config: Print the connection config for machine docker-machine create: Create a machine. docker-machine env: Set environment variables docker-machine inspect: Inspect information about a machine docker-machine ip: Get the IP address of one or more machines. docker-machine kill: Kill (abruptly force stop) a machine docker-machine ls: List machines docker-machine mount: Mount directories from a machine to your local host, using sshfs.</description>
+    </item>
+    
+    <item>
+      <title>Docker Swarm</title>
+      <link>http://localhost:4000/docker/docker-swarm/</link>
+      <pubDate>Thu, 12 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:4000/docker/docker-swarm/</guid>
+      <description>Docker-swarm  docker swarm init: Initiate swam cluster docker swarm join-token: Lists join security token to join another node in swarm as worker or manager docker swarm join: Join already running swarm as a worker or manager docker swarm leave: Leave swarm. To be run from node itself docker swarm unlock: Unlocks swarm by providing key after manager restarts docker swarm unlock-key: Display swarm unlock key docker swarm update: Updates swarm configurations  Docker-swarm Node A Node is an instance of the Docker Engine connected to the Swarm.</description>
+    </item>
+    
+    <item>
+      <title>Dockerfile</title>
+      <link>http://localhost:4000/docker/dockerfile/</link>
+      <pubDate>Thu, 12 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:4000/docker/dockerfile/</guid>
+      <description>A Dockerfile is a text document used to create own docker container. A Dockerfile has some commands
+ FROM: Sets the Base Image for subsequent instructions. MAINTAINER: (deprecated - use LABEL instead) Set the Author field of the generated images. RUN: execute any commands in a new layer on top of the current image and commit the results. CMD: provide defaults for an executing container. EXPOSE: informs Docker that the container listens on the specified network ports at runtime.</description>
+    </item>
+    
+    <item>
+      <title>Install Ansible on MAC OS</title>
+      <link>http://localhost:4000/ansible/install-ansible-mac/</link>
+      <pubDate>Thu, 12 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:4000/ansible/install-ansible-mac/</guid>
+      <description>hi this is nanad</description>
+    </item>
+    
+    <item>
+      <title>Install Ansible on Ubuntu 16.04</title>
+      <link>http://localhost:4000/ansible/install-ansible-ubuntu/</link>
+      <pubDate>Thu, 12 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:4000/ansible/install-ansible-ubuntu/</guid>
+      <description>hi this is nanad</description>
+    </item>
+    
+    <item>
+      <title>Install Ansible on Windows</title>
+      <link>http://localhost:4000/ansible/install-ansible-windows/</link>
+      <pubDate>Thu, 12 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:4000/ansible/install-ansible-windows/</guid>
+      <description>hi this is nanad</description>
+    </item>
+    
+    <item>
+      <title>Nakshatra Calulation</title>
+      <link>http://localhost:4000/astrology/nakshatra/</link>
+      <pubDate>Thu, 12 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:4000/astrology/nakshatra/</guid>
+      <description>[[node]]   [[node]]     Final Calulation  [[ node ]]  
+ var app = new Vue({ el: &#34;#app&#34;, delimiters: [&#34;[[&#34;, &#34;]]&#34;], components: { }, data() { return { charanIndex: 0, nakshatraIndex: 0, charan: [&#34;First&#34;,&#34;Second&#34;,&#34;Third&#34;,&#34;Forth&#34;], nakshatra: [&#34;ASHWANI&#34;,&#34;BHARNI&#34;,&#34;KRITIKA&#34;,&#34;ROHNI&#34;,&#34;MRIGSHIRA&#34;,&#34;AARDHA&#34;,&#34;PUNARWASU&#34;,&#34;PUSHYA&#34;,&#34;AASHLESHA&#34;,&#34;MAGHA&#34;,&#34;PURWA FALGUNI&#34;,&#34;UTTRA FALGUNI&#34;,&#34;HASTH&#34;,&#34;CHITRA&#34;,&#34;SWATI&#34;,&#34;VISHAKHA&#34;,&#34;ANURADHA&#34;,&#34;JYESHTHA&#34;,&#34;MULA&#34;,&#34;PURWA SHADHA&#34;,&#34;UTTRA SHADHA&#34;,&#34;SHARAWAN&#34;,&#34;GHANISHATHA&#34;,&#34;SHATBHISHA&#34;,&#34;PURWA BHADRAPAD&#34;,&#34;UTTRA BHADRAPAD&#34;,&#34;REWTI&#34;], firstCharan: [], secondCharan: [], thirdCharan: [], forthCharan: [], diffCalulation: [] } }, beforeMount: function() { this.calulate(1); }, methods: { changeCharan: function(e){ let cur = this.</description>
+    </item>
+    
+    <item>
+      <title>The Twelve-Factor App</title>
+      <link>http://localhost:4000/general/12-factor-methodology/</link>
+      <pubDate>Thu, 12 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:4000/general/12-factor-methodology/</guid>
+      <description>The twelve-factor app is a methodology for building software-as-a-service apps, and its not depend on any languages, its works with every language.
+Why we use 12 Factor Methodology  Minimize time and cost of getting a new dev up to speed Minimize requirements on the underlying OS, maximize portability between different enviroments Ease deployment on modern cloud plateform.  The Twelve Factors  I. Codebase: One codebase tracked in revision control, many deploys II.</description>
+    </item>
+    
+    <item>
+      <title>The Twelve-Factor App</title>
+      <link>http://localhost:4000/topics/rd/</link>
+      <pubDate>Thu, 12 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:4000/topics/rd/</guid>
+      <description>Mailchimp Facts Year of launch: 2001 Total number of Mailchimp users: 14 millions * 30 Number of emails sent through Mailchimp daily: 1 billion Average number of Mailchimp API requests daily: 10 million Number of countries MailChimp has users in: 200 countries
+There are two types of panel in mailchimp - Dashboard panel: - Email template designer - Add your contant list - Generate subscriber form - create campaign</description>
     </item>
     
     <item>
       <title>Regular Expressions - Cheat Sheat</title>
-      <link>https://anandvyas.in/linux/regular-expressions/</link>
+      <link>http://localhost:4000/linux/regular-expressions/</link>
       <pubDate>Wed, 11 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://anandvyas.in/linux/regular-expressions/</guid>
+      <guid>http://localhost:4000/linux/regular-expressions/</guid>
       <description>                                
 Anchors Examples    Partten Description Example     ^ Display only those lines which starts with anand grep -w ^anand /etc/passwd   $ Display only those lines which end with anand grep -w anand$ /etc/passwd    </description>
     </item>
     
     <item>
       <title>Shell Script - Cheat Sheat</title>
-      <link>https://anandvyas.in/linux/shell-script/</link>
+      <link>http://localhost:4000/linux/shell-script/</link>
       <pubDate>Sun, 08 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://anandvyas.in/linux/shell-script/</guid>
+      <guid>http://localhost:4000/linux/shell-script/</guid>
       <description>Define Variables NAME=&amp;quot;John&amp;quot; echo $NAME #=&amp;gt; John echo &amp;quot;$NAME&amp;quot; #=&amp;gt; John echo &amp;quot;${NAME}!&amp;quot; #=&amp;gt; John! echo &amp;quot;Hi $NAME&amp;quot; #=&amp;gt; Hi John echo &#39;Hi $NAME&#39; #=&amp;gt; Hi $NAME  Conditions    String/Numeric Condition Description     [ -z STRING ] Empty string   [ -n STRING ] Not empty string   [ NUM -eq NUM ] Equal   [ NUM -ne NUM ] Not equal   [ NUM -lt NUM ] Less than   [ NUM -le NUM ] Less than or equal   [ NUM -gt NUM ] Greater than   [ NUM -ge NUM ] Greater than or equal   [[ STRING =~ STRING ]] Regexp   (( NUM &amp;lt; NUM )) Numeric conditions   [ -o noclobber ] If OPTIONNAME is enabled   [ !</description>
     </item>
     
     <item>
+      <title>Shell Script - Examples</title>
+      <link>http://localhost:4000/linux/shell-script-examples/</link>
+      <pubDate>Sun, 08 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:4000/linux/shell-script-examples/</guid>
+      <description>SQL Backup and Push to S3 Bucket In this example we are taking the backup from docker mysql instance and also using awscli tool to push backup sql file to S3 bucket.
+#!/bin/bash S3_bucketName=my-database-backup DB_Username=root DB_Password=pass DB_Name=testing mysqlIpAddress=$(docker inspect --format &#39;{{ .NetworkSettings.IPAddress }}&#39; mysql-idp-server) filename=&#39;my-server-&#39; + $(date +%Y-%m-%d-%H.%M.%S) mysqldump -h $mysqlIpAddress -u$DB_Username -p$DB_Password $DB_Name &amp;gt; $filename.sql #Create bucket aws s3 mb s3://$S3_bucketName aws s3 cp $filename.sql s3://$S3_bucketName/ rm -rf $filename.</description>
+    </item>
+    
+    <item>
       <title>Linux commands</title>
-      <link>https://anandvyas.in/linux/linux-commands/</link>
+      <link>http://localhost:4000/linux/linux-commands/</link>
       <pubDate>Wed, 04 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://anandvyas.in/linux/linux-commands/</guid>
+      <guid>http://localhost:4000/linux/linux-commands/</guid>
       <description>Basic commands of linux
    Commands Commands                    
-User management    Commands Description     useradd [USERNAME] Add new user   useradd -G [GROUPNAME] [USERNAME] Add new user in group   passwd [USERNAME] User account is locked until you set a password with the passwd command   usermod -a -G [GROUPNAME] [USERNAME] Add user in group   userdel [USERNAME] Remove the existing user   cat /etc/passwd | sort View username and group information   cat /etc/group | sort View linux group   usermod -d -m [NEW_DIRECTORY] [USERNAME] Change the user home directory location   usermod -u [UID] [USERNAME] Change the user UID</description>
+User management    Commands Description     useradd [USERNAME] Add new user   useradd -G [GROUPNAME][username] Add new user in group   passwd [USERNAME] User account is locked until you set a password with the passwd command   usermod -a -G [GROUPNAME][username] Add user in group   userdel [USERNAME] Remove the existing user   cat /etc/passwd | sort View username and group information   cat /etc/group | sort View linux group   usermod -d -m [NEW_DIRECTORY][username] Change the user home directory location   usermod -u [UID][username] Change the user UID</description>
+    </item>
+    
+    <item>
+      <title>Elastic Beanstalk - Install EB CLI</title>
+      <link>http://localhost:4000/aws-1/elasticbeanstalk-cli/</link>
+      <pubDate>Tue, 27 Mar 2018 00:15:00 +0200</pubDate>
+      
+      <guid>http://localhost:4000/aws-1/elasticbeanstalk-cli/</guid>
+      <description>&lt;p&gt;The Elastic beanstalk is a command line tool, provide to manage EB environment from command line. EB CLI give you facility create, configure and manage the EB environement.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>AWS DynamoDB</title>
+      <link>http://localhost:4000/aws/aws-dynamodb/</link>
+      <pubDate>Thu, 24 Aug 2017 00:15:00 +0200</pubDate>
+      
+      <guid>http://localhost:4000/aws/aws-dynamodb/</guid>
+      <description>&lt;p&gt;Amazon DynamoDB is a fast and flexible NoSQL database service for all applications that need consistent, &lt;strong&gt;single-digit millisecond latency at any scale&lt;/strong&gt;. It is a fully managed cloud database and supports both document and key-value store models.&lt;/p&gt;
+
+&lt;div class=&#34;text-center&#34;&gt;
+    &lt;img class=&#34;img-responsive&#34; src=&#34;http://localhost:4000/images/aws-dynamodb.png&#34; alt=&#34;Elastic Beanstalk&#34; /&gt;
+&lt;/div&gt;</description>
     </item>
     
     <item>
       <title>About</title>
-      <link>https://anandvyas.in/about/</link>
+      <link>http://localhost:4000/about/</link>
       <pubDate>Mon, 21 Aug 2017 00:15:00 +0200</pubDate>
       
-      <guid>https://anandvyas.in/about/</guid>
+      <guid>http://localhost:4000/about/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Custom layout - Resume</title>
-      <link>https://anandvyas.in/resume/</link>
+      <link>http://localhost:4000/resume/</link>
       <pubDate>Mon, 21 Aug 2017 00:15:00 +0200</pubDate>
       
-      <guid>https://anandvyas.in/resume/</guid>
+      <guid>http://localhost:4000/resume/</guid>
       <description></description>
+    </item>
+    
+    <item>
+      <title>AWS API Gateway</title>
+      <link>http://localhost:4000/aws/aws-api-gateway/</link>
+      <pubDate>Fri, 04 Aug 2017 00:15:00 +0200</pubDate>
+      
+      <guid>http://localhost:4000/aws/aws-api-gateway/</guid>
+      <description>&lt;p&gt;Amazon API Gateway is an AWS service that enables developers to create, publish, maintain, monitor, and secure APIs at any scale. You can create APIs that access AWS or other web services, as well as data stored in the AWS Cloud.&lt;/p&gt;
+
+&lt;div class=&#34;text-center&#34;&gt;
+    &lt;img class=&#34;img-responsive&#34; src=&#34;http://localhost:4000/images/aws-api-gateway-process.png&#34; alt=&#34;AWS Databases&#34; /&gt;
+&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>AWS Elastic Transcoder</title>
+      <link>http://localhost:4000/aws/aws-elastic-transcoder/</link>
+      <pubDate>Fri, 04 Aug 2017 00:15:00 +0200</pubDate>
+      
+      <guid>http://localhost:4000/aws/aws-elastic-transcoder/</guid>
+      <description>&lt;p&gt;Amazon Elastic Transcoder is a highly scalable, easy-to-use and cost-effective way for developers and businesses to convert (or “transcode”) video files from their source format into versions that will play back on multiple devices like smartphones, tablets and PCs.&lt;/p&gt;
+
+&lt;div class=&#34;text-center&#34;&gt;
+    &lt;img class=&#34;img-responsive&#34; src=&#34;http://localhost:4000/images/aws-elastic-transcoder.jpg&#34; alt=&#34;AWS Databases&#34; /&gt;
+&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>IP - Internet Protocol</title>
+      <link>http://localhost:4000/aws/ip-address/</link>
+      <pubDate>Thu, 27 Jul 2017 00:15:00 +0200</pubDate>
+      
+      <guid>http://localhost:4000/aws/ip-address/</guid>
+      <description>&lt;p&gt;The Internet Protocol (IP) is the method or protocol by which data is sent from one computer to another on the Internet. Each computer (known as a host) on the Internet has at least one IP address that uniquely identifies it from all other computers on the Internet.&lt;/p&gt;
+
+&lt;div class=&#34;text-center&#34;&gt;
+    &lt;img class=&#34;img-responsive&#34; src=&#34;http://localhost:4000/images/aws/ip-address.jpg&#34; alt=&#34;IP - Internet Protocol&#34; /&gt;
+&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>Amazon Machine Images (AMIs)</title>
+      <link>http://localhost:4000/aws/aws-ami/</link>
+      <pubDate>Thu, 20 Jul 2017 00:15:00 +0200</pubDate>
+      
+      <guid>http://localhost:4000/aws/aws-ami/</guid>
+      <description>&lt;p&gt;An Amazon Machine Image (AMI) provides the information required to launch an instance, which is a virtual server in the cloud. You specify an AMI when you launch an instance,and you can launch as many instances from the AMI as you need.&lt;/p&gt;
+
+&lt;div class=&#34;text-center&#34;&gt;
+    &lt;img class=&#34;img-responsive&#34; src=&#34;http://localhost:4000/images/aws-ami-lifecycle.png&#34; alt=&#34;Elastic Beanstalk&#34; /&gt;
+&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>AWS Security Groups</title>
+      <link>http://localhost:4000/aws/aws-security-groups/</link>
+      <pubDate>Tue, 18 Jul 2017 00:15:00 +0200</pubDate>
+      
+      <guid>http://localhost:4000/aws/aws-security-groups/</guid>
+      <description>&lt;p&gt;A security group acts as a virtual firewall that controls the traffic for one or more instances. When you launch an instance, you associate one or more security groups with the instance. You add rules to each security group that allow traffic to or from its associated instances. You can modify the rules for a security group at any time; the new rules are automatically applied to all instances that are associated with the security group.&lt;/p&gt;
+
+&lt;div class=&#34;text-center&#34;&gt;
+    &lt;img class=&#34;img-responsive&#34; src=&#34;http://localhost:4000/images/aws-security-group.jpg&#34; alt=&#34;AWS Security Groups&#34; /&gt;
+&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>AWS General Questions</title>
+      <link>http://localhost:4000/aws/aws-general/</link>
+      <pubDate>Tue, 04 Jul 2017 00:15:00 +0200</pubDate>
+      
+      <guid>http://localhost:4000/aws/aws-general/</guid>
+      <description>AWS Certified Developer  At least two questions about specific request and response parameters/fields for SQS and SNS Optimizing S3 key names HTTP status codes Fixing session state problems using something other than ELB sticky sessions Elastic beanstalk supported platforms SDK languages and default region Efficient usage of DynamoDB throughput DynamoDB key questions, but always using the old terms hash/range instead of the new terms partition/sort.  AWS Config  One of the challenges in managing AWS resources is to keep track of changes in the resource configuration over time.</description>
+    </item>
+    
+    <item>
+      <title>Cloud Computing</title>
+      <link>http://localhost:4000/general/cloud-computing/</link>
+      <pubDate>Mon, 03 Jul 2017 00:15:00 +0200</pubDate>
+      
+      <guid>http://localhost:4000/general/cloud-computing/</guid>
+      <description>&lt;p&gt;Cloud computing is the delivery of computing services — servers, storage, databases, networking, software, analytics and more—over the Internet (“the cloud”).&lt;/p&gt;
+
+&lt;div class=&#34;text-center&#34;&gt;
+    &lt;img class=&#34;img-responsive&#34; src=&#34;http://localhost:4000/images/blog/aws-cloud-computing-defined.jpg&#34; alt=&#34;cloud computing&#34; /&gt;
+&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>Deployment Strategies</title>
+      <link>http://localhost:4000/general/deployment-strategies/</link>
+      <pubDate>Mon, 03 Jul 2017 00:15:00 +0200</pubDate>
+      
+      <guid>http://localhost:4000/general/deployment-strategies/</guid>
+      <description> &amp;ldquo;Big Bang&amp;rdquo; Deployment Rolling Deployment Blue-Green, Red-Black or A/B Deployment Canary Deployment  Canary release strategy vs. Blue/Green Blue-green releasing is simpler and faster.  </description>
     </item>
     
   </channel>

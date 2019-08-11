@@ -6,25 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Ansible - Infrastructure as Code - Anand vyas</title>
     <meta content="Ansible - Infrastructure as Code - Anand vyas" property="og:title">
-    <meta content="Linux, Ansible" name="keywords">
+    <meta content="Ansible" name="keywords">
     <meta content="Ansible intro" property="og:description">
     <meta name="author" content="Anand Vyas">
 
     
-    <link href="https://anandvyas.in/css/bootstrap.min.css" rel="stylesheet">
+    <link href="http://localhost:4000/css/bootstrap.min.css" rel="stylesheet">
     
-    <link href="https://anandvyas.in/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://localhost:4000/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     
-    <link href="https://anandvyas.in/css/highlighter.css" rel="stylesheet">
+    <link href="http://localhost:4000/css/highlighter.css" rel="stylesheet">
     
-    <link href="https://anandvyas.in/css/sb-admin.css" rel="stylesheet">
-    <link href="https://anandvyas.in/css/about.css" rel="stylesheet">
+    <link href="http://localhost:4000/css/sb-admin.css" rel="stylesheet">
+    <link href="http://localhost:4000/css/about.css" rel="stylesheet">
+
+    <script src="http://localhost:4000/js/jquery.min.js"></script>
 </head>
 <body class="fixed-nav sticky-footer bg-dark sidenav-toggled" id="page-top">
   
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
-    <a class="navbar-brand" href="https://anandvyas.in/">
-        <img src="https://anandvyas.in/images/profile/logo.png" />
+    <a class="navbar-brand" href="http://localhost:4000/">
+        <img src="http://localhost:4000/images/profile/logo.png" />
         <span>Anand vyas</span>
     </a>
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive"
@@ -35,7 +37,7 @@
         <ul class="navbar-nav navbar-sidenav">
             <li class="nav-item sidebar-profile text-center">
                 <div class="profile-pic">
-                    <img src="https://anandvyas.in/images/profile/avatar.jpg" alt="avatar">
+                    <img src="http://localhost:4000/images/profile/avatar.jpg" alt="avatar">
                 </div>
                 <div class="profile-detail">
                     
@@ -47,28 +49,28 @@
             </li>
             
             <li class="nav-item sidebar-menu" data-toggle="tooltip" data-placement="right" title="Home">
-                <a class="nav-link" href="https://anandvyas.in/">
+                <a class="nav-link" href="http://localhost:4000/">
                 <i class="fa fa-fw fa fa-home"></i>
                 <span class="nav-link-text">Home</span>
                 </a>
             </li>
             
             <li class="nav-item sidebar-menu" data-toggle="tooltip" data-placement="right" title="About">
-                <a class="nav-link" href="https://anandvyas.in/about">
+                <a class="nav-link" href="http://localhost:4000/about">
                 <i class="fa fa-fw fa fa-user-circle"></i>
                 <span class="nav-link-text">About</span>
                 </a>
             </li>
             
             <li class="nav-item sidebar-menu" data-toggle="tooltip" data-placement="right" title="Categories">
-                <a class="nav-link" href="https://anandvyas.in/categories">
+                <a class="nav-link" href="http://localhost:4000/categories">
                 <i class="fa fa-fw fa fa-dashboard"></i>
                 <span class="nav-link-text">Categories</span>
                 </a>
             </li>
             
             <li class="nav-item sidebar-menu" data-toggle="tooltip" data-placement="right" title="Tags">
-                <a class="nav-link" href="https://anandvyas.in/tags">
+                <a class="nav-link" href="http://localhost:4000/tags">
                 <i class="fa fa-fw fa fa-tags"></i>
                 <span class="nav-link-text">Tags</span>
                 </a>
@@ -110,17 +112,17 @@
 
 
 <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="https://anandvyas.in/">Home</a></li>
+    <li class="breadcrumb-item"><a href="http://localhost:4000/">Home</a></li>
 
 
     
-    <li class="breadcrumb-item active"><a href='https://anandvyas.in/ansible'>ansible</a></li>
+    <li class="breadcrumb-item active"><a href='http://localhost:4000/ansible'>ansible</a></li>
     
     
 
 
     
-    <li class="breadcrumb-item active"><a href='https://anandvyas.in/ansible/intro'>intro</a></li>
+    <li class="breadcrumb-item active"><a href='http://localhost:4000/ansible/intro'>intro</a></li>
     
     
 
@@ -133,6 +135,11 @@
             <h1>Ansible - Infrastructure as Code</h1>
             <span class="post-date">Sat, May 26, 2018</span>
             
+
+<div class="text-center">
+    <img class="img-responsive" src="http://localhost:4000/images/ansible/ansible-architechture.png" alt="Ansible Architecture" />
+</div>
+ 
 
 <h3 id="a-name-ansible-configuration-configuration-a"><a name="ansible-configuration">Configuration</a></h3>
 
@@ -224,6 +231,30 @@ lb01
 <li><strong>ansible_*_interpreter</strong>: Works for anything such as ruby or perl and works just like ansible_python_interpreter.</li>
 </ul>
 
+<p><strong>Examples</strong></p>
+
+<pre><code class="language-sh">[master]
+master ansible_ssh_user=vagrant ansible_host=127.0.0.1 ansible_port=2222 ansible_ssh_private_key_file=/Users/private_key
+
+[node]
+node1 ansible_ssh_user=vagrant ansible_host=127.0.0.1 ansible_port=2200 ansible_ssh_private_key_file=/Users/private_key
+node2 ansible_ssh_user=vagrant ansible_host=127.0.0.1 ansible_port=2201 ansible_ssh_private_key_file=/Users/private_key
+
+[webservers]
+www[01:50].example.com
+
+[databases]
+db-[a:f].example.com
+
+# host with variables
+[atlanta]
+host
+
+[atlanta:vars]
+ntp_server=ntp.atlanta.example.com
+proxy=proxy.atlanta.example.com
+</code></pre>
+
 <h3 id="a-name-ansible-playbooks-playbooks-a"><a name="ansible-playbooks">Playbooks</a></h3>
 
 <p>Playbooks are Ansible’s configuration, deployment, and orchestration language. Playbooks are a YAML list of one or more plays.</p>
@@ -232,35 +263,28 @@ lb01
 <p>Ansible modules are the tools in your workshop, playbooks are your instruction manuals, and your inventory of hosts are your raw material.</p>
 </blockquote>
 
-<pre><code class="language-sh">---
-- include: playbook.yml
-- &lt;play&gt;
-- ...
+<pre><code class="language-yaml">---
+- hosts: webserver
+  become: true
+  tasks:
+    - name: install apache2
+      apt: name={{item}} state=present update_cache=yes
+      with_items:
+        - apache2
+        - libapache2-mod-wsgi
+        - python-pip
+        - python-virtualenv
 </code></pre>
 
         </div>
-        <div id="disqus_thread"></div>
-<script>
-
-
-
-
-
-(function() { 
-var d = document, s = d.createElement('script');
-s.src = 'https://anandvyas.disqus.com/embed.js';
-s.setAttribute('data-timestamp', +new Date());
-(d.head || d.body).appendChild(s);
-})();
-</script>
-                            
+        
     </div>
     
     
     <footer class="sticky-footer">
     <div class="container">
         <div class="text-center">
-            <small>Copyright © Anand Vyas 2018</small>
+            <small>Copyright © Anand Vyas 2019</small>
         </div>
     </div>
 </footer>
@@ -269,16 +293,16 @@ s.setAttribute('data-timestamp', +new Date());
     <i class="fa fa-angle-up"></i>
 </a>
 
-<script src="https://anandvyas.in/js/jquery.min.js"></script>
-<script src="https://anandvyas.in/js/popper.min.js"></script>
-<script src="https://anandvyas.in/js/bootstrap.min.js"></script>
-<script src="https://anandvyas.in/js/highlight.min.js"></script>
-<script src="https://anandvyas.in/js/moment.min.js"></script>
-<script src="https://anandvyas.in/js/clipboard.min.js"></script>
 
-<script src="https://anandvyas.in/js/jquery.easing.min.js"></script>
+<script src="http://localhost:4000/js/popper.min.js"></script>
+<script src="http://localhost:4000/js/bootstrap.min.js"></script>
+<script src="http://localhost:4000/js/highlight.min.js"></script>
+<script src="http://localhost:4000/js/moment.min.js"></script>
+<script src="http://localhost:4000/js/clipboard.min.js"></script>
 
-<script src="https://anandvyas.in/js/sb-admin.js"></script>
+<script src="http://localhost:4000/js/jquery.easing.min.js"></script>
+
+<script src="http://localhost:4000/js/sb-admin.js"></script>
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-108803266-1"></script>
 <script>
@@ -288,5 +312,5 @@ s.setAttribute('data-timestamp', +new Date());
     gtag('config', 'UA-108803266-1');
 </script>
   </div>
-<script data-no-instant>document.write('<script src="/livereload.js?port=1313&mindelay=10"></' + 'script>')</script></body>
+<script data-no-instant>document.write('<script src="/livereload.js?port=4000&mindelay=10"></' + 'script>')</script></body>
 </html>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Shell Script Examples on Anand vyas</title>
+    <link>http://localhost:4000/tags/shell-script-examples/</link>
+    <description>Recent content in Shell Script Examples on Anand vyas</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 08 Apr 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://localhost:4000/tags/shell-script-examples/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Shell Script - Examples</title>
+      <link>http://localhost:4000/linux/shell-script-examples/</link>
+      <pubDate>Sun, 08 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:4000/linux/shell-script-examples/</guid>
+      <description>SQL Backup and Push to S3 Bucket In this example we are taking the backup from docker mysql instance and also using awscli tool to push backup sql file to S3 bucket.
+#!/bin/bash S3_bucketName=my-database-backup DB_Username=root DB_Password=pass DB_Name=testing mysqlIpAddress=$(docker inspect --format &#39;{{ .NetworkSettings.IPAddress }}&#39; mysql-idp-server) filename=&#39;my-server-&#39; + $(date +%Y-%m-%d-%H.%M.%S) mysqldump -h $mysqlIpAddress -u$DB_Username -p$DB_Password $DB_Name &amp;gt; $filename.sql #Create bucket aws s3 mb s3://$S3_bucketName aws s3 cp $filename.sql s3://$S3_bucketName/ rm -rf $filename.</description>
+    </item>
+    
+  </channel>
+</rss>

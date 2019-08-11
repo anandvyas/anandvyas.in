@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Git on Anand vyas</title>
+    <link>http://localhost:4000/categories/git/</link>
+    <description>Recent content in Git on Anand vyas</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 12 Jan 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://localhost:4000/categories/git/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Git - Basics</title>
+      <link>http://localhost:4000/git/git-basics/</link>
+      <pubDate>Sat, 12 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:4000/git/git-basics/</guid>
+      <description>  Git - Workflow your local repository consists of three &amp;ldquo;trees&amp;rdquo; maintained by git. the first one is your Working Directory which holds the actual files. the second one is the Index which acts as a staging area and finally the main Repository (HEAD) which points to the last commit you&amp;rsquo;ve made.
+ </description>
+    </item>
+    
+    <item>
+      <title>Git - Cheat sheet</title>
+      <link>http://localhost:4000/git/git-cheatsheet/</link>
+      <pubDate>Sat, 12 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:4000/git/git-cheatsheet/</guid>
+      <description>CONFIGURE TOOLING Configure user information for all local repositories
+# Sets the name you want atached to your commit transactions git config --global user.name &amp;quot;[name]&amp;quot; # Sets the email you want atached to your commit transactions git config --global user.email &amp;quot;[email address]&amp;quot; # Enables helpful colorization of command line output git config --global color.ui auto  CREATE REPOSITORIES Start a new repository or obtain one from an existing URL</description>
+    </item>
+    
+  </channel>
+</rss>

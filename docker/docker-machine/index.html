@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Docker Machine - Anand vyas</title>
+    <meta content="Docker Machine - Anand vyas" property="og:title">
+    <meta content="Docker, Docker Machine" name="keywords">
+    <meta content="Docker Machine" property="og:description">
+    <meta name="author" content="Anand Vyas">
+
+    
+    <link href="http://localhost:4000/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link href="http://localhost:4000/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    
+    <link href="http://localhost:4000/css/highlighter.css" rel="stylesheet">
+    
+    <link href="http://localhost:4000/css/sb-admin.css" rel="stylesheet">
+    <link href="http://localhost:4000/css/about.css" rel="stylesheet">
+
+    <script src="http://localhost:4000/js/jquery.min.js"></script>
+</head>
+<body class="fixed-nav sticky-footer bg-dark sidenav-toggled" id="page-top">
+  
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+    <a class="navbar-brand" href="http://localhost:4000/">
+        <img src="http://localhost:4000/images/profile/logo.png" />
+        <span>Anand vyas</span>
+    </a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav navbar-sidenav">
+            <li class="nav-item sidebar-profile text-center">
+                <div class="profile-pic">
+                    <img src="http://localhost:4000/images/profile/avatar.jpg" alt="avatar">
+                </div>
+                <div class="profile-detail">
+                    
+                    <span>Solution Architect</span> 
+                    <span>Cloud Architect</span> 
+                    <span>DevOps</span> 
+                    <span>Tech Lead</span> 
+                </div>
+            </li>
+            
+            <li class="nav-item sidebar-menu" data-toggle="tooltip" data-placement="right" title="Home">
+                <a class="nav-link" href="http://localhost:4000/">
+                <i class="fa fa-fw fa fa-home"></i>
+                <span class="nav-link-text">Home</span>
+                </a>
+            </li>
+            
+            <li class="nav-item sidebar-menu" data-toggle="tooltip" data-placement="right" title="About">
+                <a class="nav-link" href="http://localhost:4000/about">
+                <i class="fa fa-fw fa fa-user-circle"></i>
+                <span class="nav-link-text">About</span>
+                </a>
+            </li>
+            
+            <li class="nav-item sidebar-menu" data-toggle="tooltip" data-placement="right" title="Categories">
+                <a class="nav-link" href="http://localhost:4000/categories">
+                <i class="fa fa-fw fa fa-dashboard"></i>
+                <span class="nav-link-text">Categories</span>
+                </a>
+            </li>
+            
+            <li class="nav-item sidebar-menu" data-toggle="tooltip" data-placement="right" title="Tags">
+                <a class="nav-link" href="http://localhost:4000/tags">
+                <i class="fa fa-fw fa fa-tags"></i>
+                <span class="nav-link-text">Tags</span>
+                </a>
+            </li>
+            
+        </ul>
+        <ul class="navbar-nav sidenav-social">
+            
+            <li><a href="#" target="_blank"><i class="fa fa-mobile"></i></a></li>
+            
+            <li><a href="mailto:anandvyas@live.com" target="_blank"><i class="fa fa-envelope"></i></a></li>
+            
+            <li><a href="https://twitter.com/anandvyaas" target="_blank"><i class="fa fa-twitter"></i></a></li>
+            
+            <li><a href="https://www.linkedin.com/in/anandvyaas" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+            
+            <li><a href="https://www.instagram.com/anandvyaas" target="_blank"><i class="fa fa-instagram"></i></a></li>
+            
+            <li><a href="https://github.com/anandvyas" target="_blank"><i class="fa fa-github"></i></a></li>
+            
+            <li><a href="https://stackoverflow.com/users/8208060/anand-vyas" target="_blank"><i class="fa fa-stack-overflow"></i></a></li>
+            
+        </ul>
+        <ul class="navbar-nav sidenav-toggler">
+            <li class="nav-item">
+                <a class="nav-link text-center" id="sidenavToggler">
+            <i class="fa fa-fw fa-angle-left"></i>
+            </a>
+            </li>
+        </ul>
+        
+        
+    </div>
+</nav>
+  
+  <div class="content-wrapper">
+    <div class="container-fluid">
+    
+
+
+<ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="http://localhost:4000/">Home</a></li>
+
+
+    
+    <li class="breadcrumb-item active"><a href='http://localhost:4000/docker'>docker</a></li>
+    
+    
+
+
+    
+    <li class="breadcrumb-item active"><a href='http://localhost:4000/docker/docker-machine'>docker-machine</a></li>
+    
+    
+
+
+    
+
+</ol>
+
+        <div class="post">
+            <h1>Docker Machine</h1>
+            <span class="post-date">Thu, Apr 12, 2018</span>
+            
+
+<p>Docker Machine is a tool that lets you install Docker Engine on virtual hosts, and manage the hosts with docker-machine commands.</p>
+
+<h3 id="a-name-docker-machine-installation-docker-machine-installation-a"><a name="docker-machine-installation">Docker-machine Installation</a></h3>
+
+<h3 id="a-name-docker-machine-commands-docker-machine-commands-a"><a name="docker-machine-commands">Docker-machine Commands</a></h3>
+
+<ul>
+<li><a href="#docker-machine-active">docker-machine active</a>: See which machine is “active”</li>
+<li><a href="#docker-machine-config">docker-machine config</a>: Print the connection config for machine</li>
+<li><a href="#docker-machine-create">docker-machine create</a>: Create a machine.</li>
+<li><a href="#docker-machine-env">docker-machine env</a>: Set environment variables</li>
+<li><a href="#docker-machine-inspect">docker-machine inspect</a>: Inspect information about a machine</li>
+<li><a href="#docker-machine-ip">docker-machine ip</a>: Get the IP address of one or more machines.</li>
+<li><a href="#docker-machine-kill">docker-machine kill</a>: Kill (abruptly force stop) a machine</li>
+<li><a href="#docker-machine-ls">docker-machine ls</a>: List machines</li>
+<li><a href="#docker-machine-mount">docker-machine mount</a>: Mount directories from a machine to your local host, using sshfs.</li>
+<li><a href="#docker-machine-regenerate-certs">docker-machine regenerate-certs</a>: Regenerate TLS Certificates for a machine</li>
+<li><a href="#docker-machine-restart">docker-machine restart</a>: Restart a machine</li>
+<li><a href="#docker-machine-rm">docker-machine rm</a>: Remove a machine</li>
+<li><a href="#docker-machine-scp">docker-machine scp</a>: Copy files from your local host to a machine, from machine to machine, or from a machine to your local host using scp</li>
+<li><a href="#docker-machine-ssh">docker-machine ssh</a>: Log into or run a command on a machine using SSH.</li>
+<li><a href="#docker-machine-start">docker-machine start</a>: Start a machine</li>
+<li><a href="#docker-machine-status">docker-machine status</a>: Get the status of a machine</li>
+<li><a href="#docker-machine-stop">docker-machine stop</a>: Gracefully Stop a machine</li>
+<li><a href="#docker-machine-url">docker-machine url</a>: Get the URL of a host</li>
+</ul>
+
+<h3 id="a-name-docker-machine-active-docker-machine-active-a"><a name="docker-machine-active">docker-machine active</a></h3>
+
+<h3 id="a-name-docker-machine-config-docker-machine-config-a"><a name="docker-machine-config">docker-machine config</a></h3>
+
+<h3 id="a-name-docker-machine-create-docker-machine-create-a"><a name="docker-machine-create">docker-machine create</a></h3>
+
+<h3 id="a-name-docker-machine-env-docker-machine-env-a"><a name="docker-machine-env">docker-machine env</a></h3>
+
+<h3 id="a-name-docker-machine-inspect-docker-machine-inspect-a"><a name="docker-machine-inspect">docker-machine inspect</a></h3>
+
+<h3 id="a-name-docker-machine-ip-docker-machine-ip-a"><a name="docker-machine-ip">docker-machine ip</a></h3>
+
+<h3 id="a-name-docker-machine-kill-docker-machine-kill-a"><a name="docker-machine-kill">docker-machine kill</a></h3>
+
+<h3 id="a-name-docker-machine-ls-docker-machine-ls-a"><a name="docker-machine-ls">docker-machine ls</a></h3>
+
+<h3 id="a-name-docker-machine-mount-docker-machine-mount-a"><a name="docker-machine-mount">docker-machine mount</a></h3>
+
+<h3 id="a-name-docker-machine-regenerate-certs-docker-machine-regenerate-certs-a"><a name="docker-machine-regenerate-certs">docker-machine regenerate-certs</a></h3>
+
+<h3 id="a-name-docker-machine-restart-docker-machine-restart-a"><a name="docker-machine-restart">docker-machine restart</a></h3>
+
+<h3 id="a-name-docker-machine-rm-docker-machine-rm-a"><a name="docker-machine-rm">docker-machine rm</a></h3>
+
+<h3 id="a-name-docker-machine-scp-docker-machine-scp-a"><a name="docker-machine-scp">docker-machine scp</a></h3>
+
+<h3 id="a-name-docker-machine-ssh-docker-machine-ssh-a"><a name="docker-machine-ssh">docker-machine ssh</a></h3>
+
+<h3 id="a-name-docker-machine-start-docker-machine-start-a"><a name="docker-machine-start">docker-machine start</a></h3>
+
+<h3 id="a-name-docker-machine-status-docker-machine-status-a"><a name="docker-machine-status">docker-machine status</a></h3>
+
+<h3 id="a-name-docker-machine-stop-docker-machine-stop-a"><a name="docker-machine-stop">docker-machine stop</a></h3>
+
+<h3 id="a-name-docker-machine-url-docker-machine-url-a"><a name="docker-machine-url">docker-machine url</a></h3>
+
+        </div>
+        
+    </div>
+    
+    
+    <footer class="sticky-footer">
+    <div class="container">
+        <div class="text-center">
+            <small>Copyright © Anand Vyas 2019</small>
+        </div>
+    </div>
+</footer>
+
+<a class="scroll-to-top rounded" href="#page-top">
+    <i class="fa fa-angle-up"></i>
+</a>
+
+
+<script src="http://localhost:4000/js/popper.min.js"></script>
+<script src="http://localhost:4000/js/bootstrap.min.js"></script>
+<script src="http://localhost:4000/js/highlight.min.js"></script>
+<script src="http://localhost:4000/js/moment.min.js"></script>
+<script src="http://localhost:4000/js/clipboard.min.js"></script>
+
+<script src="http://localhost:4000/js/jquery.easing.min.js"></script>
+
+<script src="http://localhost:4000/js/sb-admin.js"></script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-108803266-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'UA-108803266-1');
+</script>
+  </div>
+<script data-no-instant>document.write('<script src="/livereload.js?port=4000&mindelay=10"></' + 'script>')</script></body>
+</html>

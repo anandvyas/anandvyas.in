@@ -2,21 +2,41 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Linux on Anand vyas</title>
-    <link>https://anandvyas.in/categories/linux/</link>
+    <link>http://localhost:4000/categories/linux/</link>
     <description>Recent content in Linux on Anand vyas</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 12 Apr 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 21 Apr 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://anandvyas.in/categories/linux/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://localhost:4000/categories/linux/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>Kibana</title>
+      <link>http://localhost:4000/elk/kibana/</link>
+      <pubDate>Sat, 21 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:4000/elk/kibana/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Kubernetes - Basics</title>
+      <link>http://localhost:4000/kubernetes/basic/</link>
+      <pubDate>Sat, 21 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:4000/kubernetes/basic/</guid>
+      <description>Kubernetes is an open-source system for automating deployment, scaling and management of containerized applications that was originally designed by Google and now maintained by the Cloud Native Computing Foundation
+ Kubernetes Components Master Components Master components provide the cluster’s control plane. Master components make global decisions about the cluster (for example, scheduling), and detecting and responding to cluster events
+ kube-apiserver: Component on the master that exposes the Kubernetes API etcd: Consistent and highly-available key value store used as Kubernetes’ backing store for all cluster data.</description>
+    </item>
+    
+    <item>
       <title>Apache htaccess configuration</title>
-      <link>https://anandvyas.in/linux/apache-htaccess/</link>
+      <link>http://localhost:4000/linux/apache-htaccess/</link>
       <pubDate>Thu, 12 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://anandvyas.in/linux/apache-htaccess/</guid>
+      <guid>http://localhost:4000/linux/apache-htaccess/</guid>
       <description>Htaccess (HyperText Access) is a configuration file that allows developers to overide the Apache webserver configuration at directory level.
 Enable .htaccess By default .htaccess is not enable, we have to change in httpd.conf (Apache) configuration file to for enable .htaccess
 Replace AllowOverride None to AllowOverride All
@@ -26,52 +46,52 @@ Examples:
     
     <item>
       <title>Docker Intro</title>
-      <link>https://anandvyas.in/docker/intro/</link>
+      <link>http://localhost:4000/docker/intro/</link>
       <pubDate>Thu, 12 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://anandvyas.in/docker/intro/</guid>
+      <guid>http://localhost:4000/docker/intro/</guid>
       <description>Docker is a container management service. Which basic means upload/install required things in one container and ship to any where. Docker announced in March 2013 and since then it has become a major tool in development world.
 Docker Release  Docker EE (Enterprise Edition) [Paid] Docker CE (Community Edition) [Free] Docker for Cloud  Docker Stable and Edge version  Edge (Beta) released monthly, Stable quarterly Stable version rolls in three months of Edge features   Docker Architecture Docker uses a client-server architecture.</description>
     </item>
     
     <item>
-      <title>Install Docker on Ubuntu 16.04</title>
-      <link>https://anandvyas.in/docker/install-docker/</link>
-      <pubDate>Thu, 12 Apr 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://anandvyas.in/docker/install-docker/</guid>
-      <description>There are two ways to install Docker CE (Community Edition) are,
- Install from repository Install from latest edge release  Install from repository # Update the package index sudo apt-get update # Allow apt to use a repository over HTTPS sudo apt-get install apt-transport-https ca-certificates curl software-properties-common # Add Docker’s official GPG key curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add - # Add the Docker repository to APT sources sudo add-apt-repository &amp;quot;deb [arch=amd64] https://download.</description>
-    </item>
-    
-    <item>
       <title>Regular Expressions - Cheat Sheat</title>
-      <link>https://anandvyas.in/linux/regular-expressions/</link>
+      <link>http://localhost:4000/linux/regular-expressions/</link>
       <pubDate>Wed, 11 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://anandvyas.in/linux/regular-expressions/</guid>
+      <guid>http://localhost:4000/linux/regular-expressions/</guid>
       <description>                                
 Anchors Examples    Partten Description Example     ^ Display only those lines which starts with anand grep -w ^anand /etc/passwd   $ Display only those lines which end with anand grep -w anand$ /etc/passwd    </description>
     </item>
     
     <item>
       <title>Shell Script - Cheat Sheat</title>
-      <link>https://anandvyas.in/linux/shell-script/</link>
+      <link>http://localhost:4000/linux/shell-script/</link>
       <pubDate>Sun, 08 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://anandvyas.in/linux/shell-script/</guid>
+      <guid>http://localhost:4000/linux/shell-script/</guid>
       <description>Define Variables NAME=&amp;quot;John&amp;quot; echo $NAME #=&amp;gt; John echo &amp;quot;$NAME&amp;quot; #=&amp;gt; John echo &amp;quot;${NAME}!&amp;quot; #=&amp;gt; John! echo &amp;quot;Hi $NAME&amp;quot; #=&amp;gt; Hi John echo &#39;Hi $NAME&#39; #=&amp;gt; Hi $NAME  Conditions    String/Numeric Condition Description     [ -z STRING ] Empty string   [ -n STRING ] Not empty string   [ NUM -eq NUM ] Equal   [ NUM -ne NUM ] Not equal   [ NUM -lt NUM ] Less than   [ NUM -le NUM ] Less than or equal   [ NUM -gt NUM ] Greater than   [ NUM -ge NUM ] Greater than or equal   [[ STRING =~ STRING ]] Regexp   (( NUM &amp;lt; NUM )) Numeric conditions   [ -o noclobber ] If OPTIONNAME is enabled   [ !</description>
     </item>
     
     <item>
+      <title>Shell Script - Examples</title>
+      <link>http://localhost:4000/linux/shell-script-examples/</link>
+      <pubDate>Sun, 08 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:4000/linux/shell-script-examples/</guid>
+      <description>SQL Backup and Push to S3 Bucket In this example we are taking the backup from docker mysql instance and also using awscli tool to push backup sql file to S3 bucket.
+#!/bin/bash S3_bucketName=my-database-backup DB_Username=root DB_Password=pass DB_Name=testing mysqlIpAddress=$(docker inspect --format &#39;{{ .NetworkSettings.IPAddress }}&#39; mysql-idp-server) filename=&#39;my-server-&#39; + $(date +%Y-%m-%d-%H.%M.%S) mysqldump -h $mysqlIpAddress -u$DB_Username -p$DB_Password $DB_Name &amp;gt; $filename.sql #Create bucket aws s3 mb s3://$S3_bucketName aws s3 cp $filename.sql s3://$S3_bucketName/ rm -rf $filename.</description>
+    </item>
+    
+    <item>
       <title>Linux commands</title>
-      <link>https://anandvyas.in/linux/linux-commands/</link>
+      <link>http://localhost:4000/linux/linux-commands/</link>
       <pubDate>Wed, 04 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://anandvyas.in/linux/linux-commands/</guid>
+      <guid>http://localhost:4000/linux/linux-commands/</guid>
       <description>Basic commands of linux
    Commands Commands                    
-User management    Commands Description     useradd [USERNAME] Add new user   useradd -G [GROUPNAME] [USERNAME] Add new user in group   passwd [USERNAME] User account is locked until you set a password with the passwd command   usermod -a -G [GROUPNAME] [USERNAME] Add user in group   userdel [USERNAME] Remove the existing user   cat /etc/passwd | sort View username and group information   cat /etc/group | sort View linux group   usermod -d -m [NEW_DIRECTORY] [USERNAME] Change the user home directory location   usermod -u [UID] [USERNAME] Change the user UID</description>
+User management    Commands Description     useradd [USERNAME] Add new user   useradd -G [GROUPNAME][username] Add new user in group   passwd [USERNAME] User account is locked until you set a password with the passwd command   usermod -a -G [GROUPNAME][username] Add user in group   userdel [USERNAME] Remove the existing user   cat /etc/passwd | sort View username and group information   cat /etc/group | sort View linux group   usermod -d -m [NEW_DIRECTORY][username] Change the user home directory location   usermod -u [UID][username] Change the user UID</description>
     </item>
     
   </channel>

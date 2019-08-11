@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>AWS Web Services - Introduction - Anand vyas</title>
+    <meta content="AWS Web Services - Introduction - Anand vyas" property="og:title">
+    <meta content="" name="keywords">
+    <meta content="" property="og:description">
+    <meta name="author" content="Anand Vyas">
+
+    
+    <link href="http://localhost:4000/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link href="http://localhost:4000/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    
+    <link href="http://localhost:4000/css/highlighter.css" rel="stylesheet">
+    
+    <link href="http://localhost:4000/css/sb-admin.css" rel="stylesheet">
+    <link href="http://localhost:4000/css/about.css" rel="stylesheet">
+
+    <script src="http://localhost:4000/js/jquery.min.js"></script>
+</head>
+<body class="fixed-nav sticky-footer bg-dark sidenav-toggled" id="page-top">
+  
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+    <a class="navbar-brand" href="http://localhost:4000/">
+        <img src="http://localhost:4000/images/profile/logo.png" />
+        <span>Anand vyas</span>
+    </a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav navbar-sidenav">
+            <li class="nav-item sidebar-profile text-center">
+                <div class="profile-pic">
+                    <img src="http://localhost:4000/images/profile/avatar.jpg" alt="avatar">
+                </div>
+                <div class="profile-detail">
+                    
+                    <span>Solution Architect</span> 
+                    <span>Cloud Architect</span> 
+                    <span>DevOps</span> 
+                    <span>Tech Lead</span> 
+                </div>
+            </li>
+            
+            <li class="nav-item sidebar-menu" data-toggle="tooltip" data-placement="right" title="Home">
+                <a class="nav-link" href="http://localhost:4000/">
+                <i class="fa fa-fw fa fa-home"></i>
+                <span class="nav-link-text">Home</span>
+                </a>
+            </li>
+            
+            <li class="nav-item sidebar-menu" data-toggle="tooltip" data-placement="right" title="About">
+                <a class="nav-link" href="http://localhost:4000/about">
+                <i class="fa fa-fw fa fa-user-circle"></i>
+                <span class="nav-link-text">About</span>
+                </a>
+            </li>
+            
+            <li class="nav-item sidebar-menu" data-toggle="tooltip" data-placement="right" title="Categories">
+                <a class="nav-link" href="http://localhost:4000/categories">
+                <i class="fa fa-fw fa fa-dashboard"></i>
+                <span class="nav-link-text">Categories</span>
+                </a>
+            </li>
+            
+            <li class="nav-item sidebar-menu" data-toggle="tooltip" data-placement="right" title="Tags">
+                <a class="nav-link" href="http://localhost:4000/tags">
+                <i class="fa fa-fw fa fa-tags"></i>
+                <span class="nav-link-text">Tags</span>
+                </a>
+            </li>
+            
+        </ul>
+        <ul class="navbar-nav sidenav-social">
+            
+            <li><a href="#" target="_blank"><i class="fa fa-mobile"></i></a></li>
+            
+            <li><a href="mailto:anandvyas@live.com" target="_blank"><i class="fa fa-envelope"></i></a></li>
+            
+            <li><a href="https://twitter.com/anandvyaas" target="_blank"><i class="fa fa-twitter"></i></a></li>
+            
+            <li><a href="https://www.linkedin.com/in/anandvyaas" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+            
+            <li><a href="https://www.instagram.com/anandvyaas" target="_blank"><i class="fa fa-instagram"></i></a></li>
+            
+            <li><a href="https://github.com/anandvyas" target="_blank"><i class="fa fa-github"></i></a></li>
+            
+            <li><a href="https://stackoverflow.com/users/8208060/anand-vyas" target="_blank"><i class="fa fa-stack-overflow"></i></a></li>
+            
+        </ul>
+        <ul class="navbar-nav sidenav-toggler">
+            <li class="nav-item">
+                <a class="nav-link text-center" id="sidenavToggler">
+            <i class="fa fa-fw fa-angle-left"></i>
+            </a>
+            </li>
+        </ul>
+        
+        
+    </div>
+</nav>
+  
+  <div class="content-wrapper">
+    <div class="container-fluid">
+    
+
+
+<ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="http://localhost:4000/">Home</a></li>
+
+
+    
+    <li class="breadcrumb-item active"><a href='http://localhost:4000/aws'>aws</a></li>
+    
+    
+
+
+    
+    <li class="breadcrumb-item active"><a href='http://localhost:4000/aws/aws-web-services'>aws-web-services</a></li>
+    
+    
+
+
+    
+
+</ol>
+
+        <div class="post">
+            <h1>AWS Web Services - Introduction</h1>
+            <span class="post-date">Mon, Jul 3, 2017</span>
+            <p>AWS provides many cloud services that you can combine to meet business or organizational needs.</p>
+
+<div class="text-center">
+    <img class="img-responsive" src="http://localhost:4000/images/aws/aws-web-services.png" alt="AWS Web Services" />
+</div>
+ 
+
+<h3 id="a-name-aws-web-services-aws-web-services-by-category-a"><a name="aws-web-services">AWS Web Services By Category</a></h3>
+
+<ul>
+<li><strong>Compute and Networking Services</strong>
+
+<ul>
+<li><strong>Amazon Elastic Compute Cloud (Amazon EC2)</strong>: Amazon Elastic Compute Cloud (Amazon EC2) is a web service that provides resizable compute capacity in the cloud. It allows organizations to obtain and configure virtual servers in Amazon’s data centers and to harness those resources to build and host software systems.</li>
+<li><strong>AWS Lambda</strong>: AWS Lambda is a zero-administration compute platform for back-end web developers that runs your code for you on the AWS Cloud and provides you with a fine-grained pricing structure. AWS Lambda runs your back-end code on its own AWS compute fleet of Amazon EC2 instances across multiple Availability Zones in a region, which provides the high availability, security, performance, and scalability of the AWS infrastructure.</li>
+<li><strong>Auto Scaling</strong>: Auto Scaling allows organizations to scale Amazon EC2 capacity up or down automatically according to conditions defined for the particular workload.</li>
+<li><strong>Elastic Load Balancing</strong>: Elastic Load Balancing automatically distributes incoming application traffic across multiple Amazon EC2 instances in the cloud.</li>
+<li><strong>AWS Elastic Beanstalk</strong>: AWS Elastic Beanstalk is the fastest and simplest way to get a web application up and running on AWS. Developers can simply upload their application code, and the service automatically handles all the details, such as resource provisioning, load balancing, Auto Scaling, and monitoring.    - Amazon Virtual Private Cloud (Amazon VPC)</li>
+<li><strong>Amazon Virtual Private Cloud (Amazon VPC)</strong>: Amazon Virtual Private Cloud (Amazon VPC) lets organizations provision a logically isolated section of the AWS Cloud where they can launch AWS resources in a virtual network that they define. Organizations have complete control over the virtual environment, including selection of the IP address range, creation of subnets, and configuration of route tables and network gateways. In addition, organizations can extend their corporate data center networks to AWS by using hardware or software virtual private network (VPN) connections or dedicated circuits by using AWS Direct Connect.<br /></li>
+<li><strong>AWS Direct Connect</strong>: AWS Direct Connect allows organizations to establish a dedicated network connection from their data center to AWS. Using AWS Direct Connect, organizations can establish private connectivity between AWS and their data center, office, or colocation environment, which in many cases can reduce network costs, increase bandwidth throughput, and provide a more consistent network experience than Internet-based VPN connections.<br /></li>
+<li><strong>Amazon Route 53</strong>: Amazon Route 53 is a highly available and scalable Domain Name System (DNS) web service. It is designed to give developers and businesses an extremely reliable and cost-effective way to route end users to Internet applications by translating human readable names, such as www.example.com, into the numeric IP addresses, such as 192.0.2.1, that computers use to connect to each other. Amazon Route 53 also serves as domain registrar, allowing you to purchase and manage domains directly from AWS.</li>
+</ul></li>
+<li><strong>Storage and Content Delivery</strong>
+
+<ul>
+<li><strong>Amazon Simple Storage Service (Amazon S3)</strong>: Amazon Simple Storage Service (Amazon S3) provides developers and IT teams with highly durable and scalable object storage that handles virtually unlimited amounts of data and large numbers of concurrent users. Organizations can store any number of objects of any type, such as HTML pages, source code files, image files, and encrypted data, and access them using HTTP-based protocols. Amazon S3 provides cost-effective object storage for a wide variety of use cases, including backup and recovery, nearline archive, big data analytics, disaster recovery, cloud applications, and content distribution.</li>
+<li><strong>Amazon Glacier</strong>: Amazon Glacier is a secure, durable, and extremely low-cost storage service for data archiving and long-term backup. Organizations can reliably store large or small amounts of data for a very low cost per gigabyte per month. To keep costs low for customers, Amazon Glacier is optimized for infrequently accessed data where a retrieval time of several hours is suitable. Amazon S3 integrates closely with Amazon Glacier to allow organizations to choose the right storage tier for their workloads.</li>
+<li><strong>Amazon Elastic Block Store (Amazon EBS)</strong>: Amazon Elastic Block Store (Amazon EBS) provides persistent block-level storage volumes for use with Amazon EC2 instances. Each Amazon EBS volume is automatically replicated within its Availability Zone to protect organizations from component failure, offering high availability and durability. By delivering consistent and low-latency performance, Amazon EBS provides the disk storage needed to run a wide variety of workloads.</li>
+<li><strong>AWS Storage Gateway</strong>: AWS Storage Gateway is a service connecting an on-premises software appliance with cloudbased storage to provide seamless and secure integration between an organization’s onpremises IT environment and the AWS storage infrastructure. The service supports industrystandard storage protocols that work with existing applications. It provides low-latency performance by maintaining a cache of frequently accessed data on-premises while securely storing all of your data encrypted in Amazon S3 or Amazon Glacier.</li>
+<li><strong>Amazon CloudFront</strong>: Amazon CloudFront is a content delivery web service. It integrates with other AWS Cloud services to give developers and businesses an easy way to distribute content to users across the world with low latency, high data transfer speeds, and no minimum usage commitments. Amazon CloudFront can be used to deliver your entire website, including dynamic, static, streaming, and interactive content, using a global network of edge locations. Requests for content are automatically routed to the nearest edge location, so content is delivered with the best possible performance to end users around the globe.</li>
+</ul></li>
+<li><strong>Database Services</strong>
+
+<ul>
+<li><strong>Amazon Relational Database Service (Amazon RDS)</strong>: Amazon Relational Database Service (Amazon RDS) provides a fully managed relational database with support for many popular open source and commercial database engines. It’s a cost-efficient service that allows organizations to launch secure, highly available, faulttolerant, production-ready databases in minutes. Because Amazon RDS manages timeconsuming administration tasks, including backups, software patching, monitoring, scaling, and replication, organizational resources can focus on revenue-generating applications and business instead of mundane operational tasks.</li>
+<li><strong>Amazon DynamoDB</strong>: Amazon DynamoDB is a fast and flexible NoSQL database service for all applications that need consistent, single-digit millisecond latency at any scale. It is a fully managed database and supports both document and key/value data models. Its flexible data model and reliable performance make it a great fit for mobile, web, gaming, ad-tech, Internet of Things, and many other applications.</li>
+<li><strong>Amazon Redshift</strong>: Amazon Redshift is a fast, fully managed, petabyte-scale data warehouse service that makes it simple and cost effective to analyze structured data. Amazon Redshift provides a standard SQL interface that lets organizations use existing business intelligence tools. By leveraging columnar storage technology that improves I/O efficiency and parallelizing queries across multiple nodes, Amazon Redshift is able to deliver fast query performance. The Amazon Redshift architecture allows organizations to automate most of the common administrative tasks associated with provisioning, configuring, and monitoring a cloud data warehouse.<br /></li>
+<li><strong>Amazon ElastiCache</strong>: Amazon ElastiCache is a web service that simplifies deployment, operation, and scaling of an in-memory cache in the cloud. The service improves the performance of web applications by allowing organizations to retrieve information from fast, managed, in-memory caches, instead of relying entirely on slower, disk-based databases. As of this writing, Amazon ElastiCache supports Memcached and Redis cache engines.</li>
+</ul></li>
+<li><strong>Management Tools</strong>
+
+<ul>
+<li><strong>Amazon CloudWatch</strong>: Amazon CloudWatch is a monitoring service for AWS Cloud resources and the applications running on AWS. It allows organizations to collect and track metrics, collect and monitor log files, and set alarms. By leveraging Amazon CloudWatch, organizations can gain system-wide visibility into resource utilization, application performance, and operational health. By using these insights, organizations can react, as necessary, to keep applications running smoothly</li>
+<li><strong>AWS CloudFormation</strong>: AWS CloudFormation gives developers and systems administrators an effective way to create and manage a collection of related AWS resources, provisioning and updating them in an orderly and predictable fashion. AWS CloudFormation defines a JSON-based templating language that can be used to describe all the AWS resources that are necessary for a workload. Templates can be submitted to AWS CloudFormation and the service will take care of provisioning and configuring those resources in appropriate order<br /></li>
+<li><strong>AWS CloudTrail</strong>: AWS CloudTrail is a web service that records AWS API calls for an account and delivers log files for audit and review. The recorded information includes the identity of the API caller, the time of the API call, the source IP address of the API caller, the request parameters, and the response elements returned by the service.</li>
+<li><strong>AWS Config</strong>: AWS Config is a fully managed service that provides organizations with an AWS resource inventory, configuration history, and configuration change notifications to enable security and governance. With AWS Config, organizations can discover existing AWS resources, export an inventory of their AWS resources with all configuration details, and determine how a resource was configured at any point in time. These capabilities enable compliance auditing, security analysis, resource change tracking, and troubleshooting.</li>
+</ul></li>
+<li><strong>Security and Identity</strong>
+
+<ul>
+<li><strong>AWS Identity and Access Management (IAM)</strong>: AWS Identity and Access Management (IAM) enables organizations to securely control access to AWS Cloud services and resources for their users. Using IAM, organizations can create and manage AWS users and groups and use permissions to allow and deny their access to AWS resources.</li>
+<li><strong>AWS Key Management Service (KMS)</strong>: AWS Key Management Service (KMS) is a managed service that makes it easy for organizations to create and control the encryption keys used to encrypt their data and uses Hardware Security Modules (HSMs) to protect the security of your keys. AWS KMS is integrated with several other AWS Cloud services to help protect data stored with these services.</li>
+<li><strong>AWS Directory Service</strong>: AWS Directory Service allows organizations to set up and run Microsoft Active Directory on the AWS Cloud or connect their AWS resources with an existing on-premises Microsoft Active Directory. Organizations can use it to manage users and groups, provide single sign-on to applications and services, create and apply Group Policies, domain join Amazon EC2 instances, and simplify the deployment and management of cloud-based Linux and Microsoft Windows workloads.</li>
+<li><strong>AWS Certificate Manager</strong>: AWS Certificate Manager is a service that lets organizations easily provision, manage, and deploy Secure Sockets Layer/Transport Layer Security (SSL/TLS) certificates for use with AWS Cloud services. It removes the time-consuming manual process of purchasing, uploading, and renewing SSL/TLS certificates. With AWS Certificate Manager, organizations can quickly request a certificate, deploy it on AWS resources such as Elastic Load Balancing or Amazon CloudFront distributions, and let AWS Certificate Manager handle certificate renewals.</li>
+<li><strong>AWS Web Application Firewall (WAF)</strong>: AWS Web Application Firewall (WAF) helps protect web applications from common attacks and exploits that could affect application availability, compromise security, or consume excessive resources. AWS WAF gives organizations control over which traffic to allow or block to their web applications by defining customizable web security rules.</li>
+</ul></li>
+<li><strong>Application Services</strong>
+
+<ul>
+<li><strong>Amazon API Gateway</strong>: Amazon API Gateway is a fully managed service that makes it easy for developers to create, publish, maintain, monitor, and secure APIs at any scale. Organizations can create an API that acts as a “front door” for applications to access data, business logic, or functionality from back-end services, such as workloads running on Amazon EC2, code running on AWS Lambda, or any web application. Amazon API Gateway handles all the tasks involved in accepting and processing up to hundreds of thousands of concurrent API calls, including traffic management, authorization and access control, monitoring, and API version management.</li>
+<li><strong>Amazon Elastic Transcoder</strong>: Amazon Elastic Transcoder is media transcoding in the cloud. It is designed to be a highly scalable and cost-effective way for developers and businesses to convert (or transcode) media files from their source formats into versions that will play back on devices like smartphones, tablets, and PCs.</li>
+<li><strong>Amazon Simple Notification Service (Amazon SNS)</strong>: Amazon Simple Notification Service (Amazon SNS) is a web service that coordinates and manages the delivery or sending of messages to recipients. In Amazon SNS, there are two types of clients—publishers and subscribers—also referred to as producers and consumers. Publishers communicate asynchronously with subscribers by producing and sending a message to a topic, which is a logical access point and communication channel. Subscribers consume or receive the message or notification over one of the supported protocols when they are subscribed to the topic.</li>
+<li><strong>Amazon Simple Email Service (Amazon SES)</strong>: Amazon Simple Email Service (Amazon SES) is a cost-effective email service that organizations can use to send transactional email, marketing messages, or any other type of content to their customers. Amazon SES can also be used to receive messages and deliver them to an Amazon S3 bucket, call custom code via an AWS Lambda function, or publish notifications to Amazon SNS.</li>
+<li><strong>Amazon Simple Workflow Service (Amazon SWF)</strong>: Amazon Simple Workflow Service (Amazon SWF) helps developers build, run, and scale background jobs that have parallel or sequential steps. Amazon SWF can be thought of as a fully managed state tracker and task coordinator on the cloud. In common architectural patterns, if your application’s steps take more than 500 milliseconds to complete, it is vitally important to track the state of processing and to provide the ability to recover or retry if a task fails. Amazon SWF helps organizations achieve this reliability.</li>
+<li><strong>Amazon Simple Queue Service (Amazon SQS)</strong>: Amazon Simple Queue Service (Amazon SQS) is a fast, reliable, scalable, fully managed message queuing service. Amazon SQS makes it simple and cost effective to decouple the components of a cloud application. With Amazon SQS, organizations can transmit any volume of data, at any level of throughput, without losing messages or requiring other services to be always available.</li>
+</ul></li>
+</ul>
+
+<h3 id="a-name-aws-web-services-accessing-platform-accessing-platform-a"><a name="aws-web-services-accessing-platform">Accessing Platform</a></h3>
+
+<p>There are three ways to access AWS Platform</p>
+
+<ul>
+<li><strong>AWS Management Console</strong>: The AWS Management Console is a web application for managing AWS Cloud services. Each service has its own console, which can be accessed from the AWS Management Console. The console also provides information about the account and billing.</li>
+<li><strong>Command line interface (CLI)</strong>: The AWS Command Line Interface (CLI) is a unified tool used to manage AWS Cloud services.</li>
+<li><strong>AWS Software development kits (SDK)</strong>: The AWS Software Development Kits (SDKs) provide an application programming interface (API) that interacts with the web services that fundamentally make up the AWS platform. The SDKs provide support for many different programming languages and platforms to allow you to work with your preferred language.</li>
+</ul>
+
+<h3 id="a-name-aws-web-services-by-resources-aws-global-vs-regional-vs-az-resources-a"><a name="aws-web-services-by-resources">AWS Global vs Regional vs AZ resources</a></h3>
+
+<p>AWS provides a lot of services and these services are either Global, Regional or specific to the Availability Zone and cannot be accessed outside. Most of the AWS managed services are regional based services (except for IAM, Route53, CloudFront, WAF etc).
+<div class="text-center">
+    <img class="img-responsive" src="http://localhost:4000/images/AWS-Global-vs-Regional-vs-AZs.png" alt="Availability zones" />
+</div>
+ </p>
+
+<ul>
+<li><strong>IAM</strong>
+
+<ul>
+<li>Users, Groups, Roles, Accounts – <strong>Global</strong>
+
+<ul>
+<li>Same AWS accounts, users, groups and roles can be used in all regions</li>
+</ul></li>
+<li>Key Pairs – <strong>Global or Regional</strong>
+
+<ul>
+<li>Amazon EC2 created key pairs are specific to the region</li>
+<li>RSA key pair can be created and uploaded that can be used in all regions</li>
+</ul></li>
+</ul></li>
+<li><strong>Virtual Private Cloud</strong>
+
+<ul>
+<li>VPC – <strong>Regional</strong>
+
+<ul>
+<li>VPC are created within a region</li>
+</ul></li>
+<li>Subnet – <strong>Availability Zone</strong>
+
+<ul>
+<li>Subnet can span only a single Availability Zone</li>
+</ul></li>
+<li>Security groups – <strong>Regional</strong>
+
+<ul>
+<li>A security group is tied to a region and can be assigned only to instances in the same region.</li>
+</ul></li>
+<li>VPC Endpoints – <strong>Regional</strong>
+
+<ul>
+<li>You cannot create an endpoint between a VPC and an AWS service in a different region.</li>
+</ul></li>
+<li>VPC Peering – <strong>Regional</strong>
+
+<ul>
+<li>VPC Peering can be performed across VPC in the same account of different AWS accounts but only within the same region. They cannot span across regions</li>
+</ul></li>
+<li>Elastic IP Address – <strong>Regional</strong>
+
+<ul>
+<li>Elastic IP address created within the region can be assigned to instances within the region only</li>
+</ul></li>
+</ul></li>
+<li><strong>EC2</strong>
+
+<ul>
+<li>Resource Identifiers – <strong>Regional</strong>
+
+<ul>
+<li>Each resource identifier, such as an AMI ID, instance ID, EBS volume ID, or EBS snapshot ID, is tied to its region and can be used only in the region where you created the resource.</li>
+</ul></li>
+<li>Instances – <strong>Availability Zone</strong>
+
+<ul>
+<li>An instance is tied to the Availability Zones in which you launched it. However, note that its instance ID is tied to the region.</li>
+</ul></li>
+<li>EBS Volumes – <strong>Availability Zone</strong>
+
+<ul>
+<li>Amazon EBS volume is tied to its Availability Zone and can be attached only to instances in the same Availability Zone.</li>
+</ul></li>
+<li>EBS Snapshot – <strong>Regional</strong>
+
+<ul>
+<li>An EBS snapshot is tied to its region and can only be used to create volumes in the same region and has to be copied from One region to other if needed</li>
+</ul></li>
+<li>AMIs – <strong>Regional</strong>
+
+<ul>
+<li>AMI provides templates to launch EC2 instances</li>
+<li>AMI is tied to the Region where its files are located with Amazon S3. For using AMI in different regions, the AMI can be copied to other regions</li>
+</ul></li>
+<li>Auto Scaling – <strong>Regional</strong>
+
+<ul>
+<li>Auto Scaling spans across multiple Availability Zones within the same region but cannot span across regions</li>
+</ul></li>
+<li>Elastic Load Balancer – <strong>Regional</strong>
+
+<ul>
+<li>Elastic Load Balancer distributes traffic across instances in multiple Availability Zones in the same region</li>
+</ul></li>
+<li>Placement Groups – <strong>Availability Zone</strong>
+
+<ul>
+<li>Placement groups can be span across Instances within the same Availability Zones</li>
+</ul></li>
+</ul></li>
+<li><strong>S3</strong> – <strong>Global but Data is Regional</strong>
+
+<ul>
+<li>S3 buckets are created within the selected region</li>
+<li>Objects stored are replicated across Availability Zones to provide high durability but are not cross region replicated unless done explicitly</li>
+</ul></li>
+<li><strong>Route53</strong> – <strong>Global</strong>
+
+<ul>
+<li>Route53 services are offered at AWS edge locations and are global</li>
+</ul></li>
+<li><strong>DynamoDb</strong> – <strong>Regional</strong>
+
+<ul>
+<li>All data objects are stored within the same region and replicated across multiple - Availability Zones in the same region</li>
+<li>Data objects can be explicitly replicated across regions using cross-region replication</li>
+</ul></li>
+<li><strong>WAF</strong> – <strong>Global</strong>
+
+<ul>
+<li>Web Application Firewall (WAF) services protects web applications from common web exploits are offered at AWS edge locations and are global</li>
+</ul></li>
+<li><strong>CloudFront</strong> – <strong>Global</strong>
+
+<ul>
+<li>CloudFront is the global content delivery network (CDN) services are offered at AWS edge locations</li>
+</ul></li>
+<li><strong>Storage Gateway</strong> – <strong>Regional</strong>
+
+<ul>
+<li>AWS Storage Gateway stores volume, snapshot, and tape data in the AWS region in which the gateway is activated<br /></li>
+</ul></li>
+</ul>
+
+<h3 id="a-name-aws-web-services-quiz-quiz-aws-web-services-a"><a name="aws-web-services-quiz">Quiz: AWS Web Services</a></h3>
+
+
+
+<script>
+    var quiz = [{"correct":[3,2],"explanation":"A region is a named set of AWS resources in the same geographical area. A region comprises at least two Availability Zones. Endpoint, Collection, and Fleet do not describe a physical location around the world where AWS clusters data centers.","image":"","options":["Endpoint","Collection","Fleet","Region"],"question":"Which of the following describes a physical location around the world where AWS clusters data centers?"},{"correct":[0],"explanation":"An Availability Zone is a distinct location within a region that is insulated from failures in other Availability Zones and provides inexpensive, low-latency network connectivity to other Availability Zones in the same region. Replication areas, geographic districts, and compute centers are not terms used to describe AWS data center locations.","image":"","options":["Availability Zones","Replication areas","Geographic districts","Compute centers"],"question":"Each AWS region is composed of two or more locations that offer organizations the         ability to operate production systems that are more highly available, fault tolerant, and         scalable than would be possible using a single data center. What are these locations called?"},{"correct":[1],"explanation":"A hybrid deployment is a way to connect infrastructure and applications between cloud-based resources and existing resources that are not located in the cloud. An all-in deployment refers to an environment that exclusively runs in the cloud. An on-premises deployment refers to an environment that runs exclusively in an organization’s data center.","image":"","options":["All-in deployment","Hybrid deployment","On-premises deployment","Scatter deployment"],"question":"What is the deployment term for an environment that extends an existing on-premises infrastructure into the cloud to connect cloud resources to internal systems?"},{"correct":[2],"explanation":"Amazon CloudWatch is a monitoring service for AWS Cloud resources and the applications organizations run on AWS. It allows organizations to collect and track metrics, collect and monitor log files, and set alarms. AWS IAM, Amazon SNS, and AWS CloudFormation do not provide visibility into resource utilization, application performance, and the operational health of your AWS resources.","image":"","options":["AWS Identity and Access Management (IAM)","Amazon Simple Notification Service (Amazon SNS)","Amazon CloudWatch","AWS CloudFormation"],"question":"Which AWS Cloud service allows organizations to gain system-wide visibility into resource utilization, application performance, and operational health?"},{"correct":[1],"explanation":"Amazon DynamoDB is a fully managed, fast, and flexible NoSQL database service for all applications that need consistent, single-digit millisecond latency at any scale. Amazon SQS, Amazon ElastiCache, and Amazon RDS do not provide a NoSQL database service. Amazon SQS is a managed message queuing service. Amazon ElastiCache is a service that provides in-memory cache in the cloud. Finally, Amazon RDS provides managed relational databases.","image":"","options":["Amazon Simple Queue Service (Amazon SQS)","Amazon DynamoDB","Amazon ElastiCache","Amazon Relational Database Service (Amazon RDS)"],"question":"Which of the following AWS Cloud services is a fully managed NoSQL database service?"},{"correct":[0],"explanation":"Auto Scaling helps maintain application availability and allows organizations to scale Amazon Elastic Compute Cloud (Amazon EC2) capacity up or down automatically according to conditions defined for the particular workload. Not only can it be used to help ensure that the desired number of Amazon EC2 instances are running, but it also allows resources to scale in and out to match the demands of dynamic workloads. Amazon Glacier, Amazon SNS, and Amazon VPC do not provide services to scale compute capacity automatically.","image":"","options":["Auto Scaling","Amazon Glacier","Amazon Simple Notification Service (Amazon SNS)","Amazon Virtual Private Cloud (Amazon VPC)"],"question":"Your company experiences fluctuations in traffic patterns to their e-commerce website based on flash sales. What service can help your company dynamically match the required compute capacity to the spike in traffic during flash sales?"},{"correct":[3],"explanation":"Amazon CloudFront is a web service that provides a CDN to speed up distribution of your static and dynamic web content—for example, .html, .css, .php, image, and media files—to end users. Amazon CloudFront delivers content through a worldwide network of edge locations. Amazon EC2, Amazon Route 53, and AWS Storage Gateway do not provide CDN services that are required to meet the needs for the photo sharing service.","image":"","options":["Amazon Elastic Compute Cloud (Amazon EC2)","Amazon Route 53","AWS Storage Gateway","Amazon CloudFront"],"question":"Your company provides an online photo sharing service. The development team is looking for ways to deliver image files with the lowest latency to end users so the website content is delivered with the best possible performance. What service can help speed up distribution of these image files to end users around the world?"},{"correct":[0],"explanation":"Amazon EBS provides persistent block-level storage volumes for use with Amazon EC2 instances on the AWS Cloud. Amazon DynamoDB, Amazon Glacier, and AWS CloudFormation do not provide persistent block-level storage for Amazon EC2 instances. Amazon DynamoDB provides managed NoSQL databases. Amazon Glacier provides lowcost archival storage. AWS CloudFormation gives developers and systems administrators an easy way to create and manage a collection of related AWS resources.","image":"","options":["Amazon Elastic Block Store (Amazon EBS)","Amazon DynamoDB","Amazon Glacier","AWS CloudFormation"],"question":"Your company runs an Amazon Elastic Compute Cloud (Amazon EC2) instance periodically to perform a batch processing job on a large and growing filesystem. At the end of the batch job, you shut down the Amazon EC2 instance to save money but need to persist the filesystem on the Amazon EC2 instance from the previous batch runs. What AWS Cloud service can you leverage to meet these requirements?"},{"correct":[2],"explanation":"Amazon VPC lets organizations provision a logically isolated section of the AWS Cloud where they can launch AWS resources in a virtual network that they define. Amazon SWF, Amazon Route 53, and AWS CloudFormation do not provide a virtual network. Amazon SWF helps developers build, run, and scale background jobs that have parallel or sequential steps. Amazon Route 53 provides a highly available and scalable cloud Domain Name System (DNS) web service. Amazon CloudFormation gives developers and systems administrators an easy way to create and manage a collection of related AWS resources.","image":"","options":["Amazon Simple Workflow Service (Amazon SWF)","Amazon Route 53","Amazon Virtual Private Cloud (Amazon VPC)","AWS CloudFormation"],"question":"What AWS Cloud service provides a logically isolated section of the AWS Cloud where organizations can launch AWS resources in a virtual network that they define?"},{"correct":[1],"explanation":"Amazon SQS is a fast, reliable, scalable, fully managed message queuing service that allows organizations to decouple the components of a cloud application. With Amazon SQS, organizations can transmit any volume of data, at any level of throughput, without losing messages or requiring other services to be always available. AWS CloudTrail records AWS API calls, and Amazon Redshift is a data warehouse, neither of which would be useful as an architecture component for decoupling components. Amazon SNS provides a messaging bus complement to Amazon SQS; however, it doesn’t provide the decoupling of components necessary for this scenario.","image":"","options":["AWS CloudTrail","Amazon Simple Queue Service (Amazon SQS)","Amazon Redshift","Amazon Simple Notification Service (Amazon SNS)"],"question":"Your company provides a mobile voting application for a popular TV show, and 5 to 25 million viewers all vote in a 15-second timespan. What mechanism can you use to decouple the voting application from your back-end services that tally the votes?"},{"correct":[3],"explanation":"An Availability Zone is represented by a region code followed by a letter identifier; for example, us-east-1a. To ensure that resources are distributed across the Availability Zones for a region, we independently map Availability Zones to identifiers for each account. For example, your Availability Zone us-east-1a might not be the same location as us-east-1a for another account. There’s no way for you to coordinate Availability Zones between accounts","image":"","options":["The instances of George and Ray will be running in the same data centre","All the instances of George and Ray can communicate over a private IP with a minimal cost","All the instances of George and Ray can communicate over a private IP without any cost","us-east-1a region of George and Ray can be different availability zones"],"question":"George has launched three EC2 instances inside the US-East-1a zone with his AWS account. Ray has launched two EC2 instances in the US-East-1a zone with his AWS account. Which of the below entioned statements will help George and Ray understand the availability zone (AZ) concept better ?"},{"correct":[1,2],"explanation":"","image":"","options":["Amazon DynamoDB","Amazon Elastic Compute Cloud","Amazon Elastic Load Balancing","Amazon Simple Notification Service (SNS)","Amazon Simple Storage Service (S3)"],"question":"When using the following AWS services, which should be implemented in multiple Availability Zones for high availability solutions?"},{"correct":[0,1],"explanation":"","image":"","options":["Route 53 Record Sets","IAM Roles","Elastic IP Addresses (EIP)","EC2 Key Pairs","Launch configurations","Security Groups"],"question":"You would like to create a mirror image of your production environment in another region for disaster recovery purposes. Which of the following AWS resources do not need to be recreated in the second region ?"},{"correct":[3],"explanation":"","image":"","options":["VPC","Region","Placement Group","Availability Zone"],"question":"What is the scope of an EBS volume?"},{"correct":[0],"explanation":"IAM resources are all global; there is not regional constraint","image":"","options":["Global","Availability Zone","Region","Placement Group"],"question":"What is the scope of AWS IAM?"},{"correct":[1],"explanation":"An Elastic IP address is tied to a region and can be associated only with an instance in the same region","image":"","options":["Placement Group","Region","Availability Zone","VPC"],"question":"What is the scope of an EC2 EIP?"},{"correct":[1],"explanation":"A security group is tied to a region and can be assigned only to instances in the same region","image":"","options":["Placement Group","Region","Availability Zone","VPC"],"question":"What is the scope of an EC2 security group?"}];
+    var currentquestion = 0, score = 0, submt=true, picked = [];
+
+    Array.prototype.diff = function(arr2) {
+        var ret = [];
+        for(var i in this) {   
+            if(arr2.indexOf( this[i] ) > -1){
+                ret.push( this[i] );
+            }
+        }
+        return ret;
+    };
+    
+    Array.prototype.equals = function (array) {
+        
+        if (!array)
+            return false;
+
+        
+        if (this.length != array.length)
+            return false;
+
+        for (var i = 0, l=this.length; i < l; i++) {
+            
+            if (this[i] instanceof Array && array[i] instanceof Array) {
+                
+                if (!this[i].equals(array[i]))
+                    return false;       
+            }           
+            else if (this[i] != array[i]) { 
+                
+                return false;   
+            }           
+        }       
+        return true;
+    }
+
+    
+    Object.defineProperty(Array.prototype, "equals", {enumerable: false});
+
+     
+    jQuery(document).ready(function($){
+        
+
+        function htmlEncode(value){
+          return $(document.createElement('div')).text(value).html();
+        }
+        
+
+        function addChoices(choices){
+            if(typeof choices !== "undefined" && $.type(choices) == "array"){
+                $('#choice-block').empty();
+                for(var i=0;i<choices.length; i++){
+                    $(document.createElement('li')).addClass('choice choice-box').attr('data-index', i).text(choices[i]).appendTo('#choice-block');                    
+                }
+            }
+        }
+        
+        
+
+        function nextQuestion(){
+            submt = true;
+            picked = [];
+            $('#explanation').empty();
+            $('#question').text(quiz[currentquestion]['question']);
+            $('#pager').text('Question ' + Number(currentquestion + 1) + ' of ' + quiz.length);
+            if(quiz[currentquestion].hasOwnProperty('image') && quiz[currentquestion]['image'] != ""){
+                if($('#question-image').length == 0){
+                    $(document.createElement('img')).addClass('question-image').attr('id', 'question-image').attr('src', quiz[currentquestion]['image']).attr('alt', htmlEncode(quiz[currentquestion]['question'])).insertAfter('#question');
+                } else {
+                    $('#question-image').attr('src', quiz[currentquestion]['image']).attr('alt', htmlEncode(quiz[currentquestion]['question']));
+                }
+            } else {
+                $('#question-image').remove();
+            }
+            addChoices(quiz[currentquestion]['options']);
+
+            var multichoice = quiz[currentquestion]['correct'].length > 1 ? true : false;
+            setupButtons(multichoice);
+        }
+        
+
+        function processQuestion(choice){
+            var flag = quiz[currentquestion]['correct'].equals(choice);
+            if(flag){
+                $('.choice').eq(choice).css({'background-color':'#50D943'});
+                $('#explanation').html('<strong>Correct!</strong> ' + htmlEncode(quiz[currentquestion]['explanation']));
+                score++;
+            } else {
+                $('.choice').eq(choice).css({'background-color':'#D92623'});
+                $('#explanation').html('<strong>Incorrect.</strong> ' + htmlEncode(quiz[currentquestion]['explanation']));
+            }
+            currentquestion++;
+            $('#submitbutton').html('NEXT QUESTION &raquo;').on('click', function(){
+                if(currentquestion == quiz.length){
+                    endQuiz();
+                } else {
+                    $(this).text('Check Answer').css({'color':'#222'}).off('click');
+                    nextQuestion();
+                }
+            })
+        }
+        
+
+        function setupButtons(multichoice){
+            console.log(multichoice);
+            $('.choice').on('click', function(){
+                var curElement = $(this);
+                var curElementIndex = curElement.attr('data-index');
+                var myClass = curElement.attr("class");
+                
+                if(multichoice){
+                    if(curElement.hasClass("selectedAns")){
+                        var index = picked.indexOf(curElementIndex);
+                        picked.splice(index, 1);
+                        curElement.removeClass("selectedAns");
+                    }else{
+                        picked.push(parseInt(curElementIndex));
+                        curElement.addClass("selectedAns");
+                    }
+                }else{
+                    picked = [];
+                    $('.choice').removeClass("selectedAns");
+                    curElement.addClass("selectedAns");
+                    picked.push(parseInt(curElementIndex));
+                }
+                
+                
+                if(submt){
+                    submt=false;
+                    $('#submitbutton').css({'color':'#000'}).on('click', function(){
+                        $('.choice').off('click');
+                        $(this).off('click');
+                        processQuestion(picked);
+                    });
+                }
+            })
+        }
+        
+        
+
+        function endQuiz(){
+            $('#explanation').empty();
+            $('#question').empty();
+            $('#choice-block').empty();
+            $('#submitbutton').remove();
+            $('#question').text("You got " + score + " out of " + quiz.length + " correct.");
+            $(document.createElement('h2')).css({'text-align':'center', 'font-size':'4em'}).text(Math.round(score/quiz.length * 100) + '%').insertAfter('#question');
+        }
+        
+
+        function init(){
+            
+
+            
+            if(typeof quiz !== "undefined" && $.type(quiz) === "array"){
+                var container = $('#frame');
+                quiz.forEach(function (row) {
+                   
+                });
+                
+                
+                $(document.createElement('p')).addClass('pager').attr('id','pager').text('Question 1 of ' + quiz.length).appendTo('#frame');
+                
+                $(document.createElement('h2')).addClass('question').attr('id', 'question').text(quiz[0]['question']).appendTo('#frame');
+                
+                if(quiz[0].hasOwnProperty('image') && quiz[0]['image'] != ""){
+                    $(document.createElement('img')).addClass('question-image').attr('id', 'question-image').attr('src', quiz[0]['image']).attr('alt', htmlEncode(quiz[0]['question'])).appendTo('#frame');
+                }
+                
+                $(document.createElement('ul')).attr('id', 'choice-block').appendTo('#frame');
+            
+                
+                addChoices(quiz[0]['options']);
+                
+                $(document.createElement('p')).addClass('explanation').attr('id','explanation').html('&nbsp;').appendTo('#frame');
+                
+                
+                $(document.createElement('div')).addClass('choice-box').attr('id', 'submitbutton').text('Check Answer').css({'font-weight':700,'color':'#222','padding':'30px 0'}).appendTo('#frame');
+                
+                var multichoice = quiz[0]['correct'].length > 1 ? true : false;
+                setupButtons(multichoice);
+            }
+        }
+        init();
+    });
+
+</script>
+<style>
+    #frame {
+        background-color: #fff;
+        padding: 12px 20px;
+        border-radius: 4px;
+        border: 1px solid #d3e0e9;
+    }
+
+    .selectedAns {
+        border-color: royalblue;
+        background-color: burlywood;
+    }
+</style>
+<div id="frame" role="content"></div>
+        </div>
+        
+    </div>
+    
+    
+    <footer class="sticky-footer">
+    <div class="container">
+        <div class="text-center">
+            <small>Copyright © Anand Vyas 2019</small>
+        </div>
+    </div>
+</footer>
+
+<a class="scroll-to-top rounded" href="#page-top">
+    <i class="fa fa-angle-up"></i>
+</a>
+
+
+<script src="http://localhost:4000/js/popper.min.js"></script>
+<script src="http://localhost:4000/js/bootstrap.min.js"></script>
+<script src="http://localhost:4000/js/highlight.min.js"></script>
+<script src="http://localhost:4000/js/moment.min.js"></script>
+<script src="http://localhost:4000/js/clipboard.min.js"></script>
+
+<script src="http://localhost:4000/js/jquery.easing.min.js"></script>
+
+<script src="http://localhost:4000/js/sb-admin.js"></script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-108803266-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'UA-108803266-1');
+</script>
+  </div>
+<script data-no-instant>document.write('<script src="/livereload.js?port=4000&mindelay=10"></' + 'script>')</script></body>
+</html>
