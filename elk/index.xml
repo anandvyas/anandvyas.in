@@ -2,58 +2,58 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>ELK on Anand vyas</title>
-    <link>http://localhost:4000/elk/</link>
+    <link>https://anandvyas.in/elk/</link>
     <description>Recent content in ELK on Anand vyas</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 12 Apr 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://localhost:4000/elk/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://anandvyas.in/elk/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Elasticsearch</title>
-      <link>http://localhost:4000/elk/elasticsearch/</link>
+      <link>https://anandvyas.in/elk/elasticsearch/</link>
       <pubDate>Sat, 21 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:4000/elk/elasticsearch/</guid>
+      <guid>https://anandvyas.in/elk/elasticsearch/</guid>
       <description>Elasticsearch is an open-source, RESTful, distributed search and analytics engine built on Apache Lucene.
 Installation Elasticsearch # update your package index sudo apt-get update # Download latest version # Check version information: https://www.elastic.co/downloads/past-releases wget https://download.elastic.co/elasticsearch/release/org/elasticsearch/distribution/deb/elasticsearch/2.3.1/elasticsearch-2.3.1.deb # Install through dpkg command sudo dpkg -i elasticsearch-2.3.1.deb  Installation Elasticsearch from Repository # update your system sudo apt-get update # install Java sudo apt-get install default-jre # add Elastic’s signing key wget -qO - https://artifacts.</description>
     </item>
     
     <item>
       <title>Elk - Cheatsheet</title>
-      <link>http://localhost:4000/elk/cheatsheet/</link>
+      <link>https://anandvyas.in/elk/cheatsheet/</link>
       <pubDate>Sat, 21 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:4000/elk/cheatsheet/</guid>
+      <guid>https://anandvyas.in/elk/cheatsheet/</guid>
       <description># cat paths /_cat/allocation /_cat/shards /_cat/shards/{index} /_cat/master /_cat/nodes /_cat/indices /_cat/indices/{index} /_cat/segments /_cat/segments/{index} /_cat/count /_cat/count/{index} /_cat/recovery /_cat/recovery/{index} /_cat/health /_cat/pending_tasks /_cat/aliases /_cat/aliases/{alias} /_cat/thread_pool /_cat/plugins /_cat/fielddata /_cat/fielddata/{fields} # Basic bin/elasticsearch # Start Elastic instance curl -X GET &#39;http://localhost:9200/?pretty=true&#39; # View instance metadata curl -X POST &#39;http://localhost:9200/_shutdown&#39; # Shutdown Elastic instance curl -X GET &#39;http://localhost:9200/_cat?pretty=true&#39; # List all admin methods curl -X GET &#39;http://localhost:9200/_cat/indices?pretty=true&#39; # List all indices curl -X GET &#39;http://localhost:9200/_cluster/health?pretty=true&#39; # View Cluster Health # Index, Type Basics curl -X GET &#39;http://localhost:9200/&amp;lt;index name&amp;gt;&#39; # View specific index curl -X POST &#39;http://localhost:9200/&amp;lt;index name&amp;gt;&#39; # Create an index curl -X DELETE &#39;http://localhost:9200/&amp;lt;index name&amp;gt;&#39; # Delete an index curl -X GET &#39;http://locahost:9200/&amp;lt;index name&amp;gt;/&amp;lt;type&amp;gt;/&amp;lt;id&amp;gt;&#39; # Retrieve a specific document curl -X POST &#39;http://locahost:9200/&amp;lt;index name&amp;gt;/&amp;lt;type&amp;gt;/&#39; # Create a document curl -X PUT &#39;http://locahost:9200/&amp;lt;index name&amp;gt;/&amp;lt;type&amp;gt;/&amp;lt;id&amp;gt;&#39; # Create/Update a specific document curl -X DELETE &#39;http://localhost:9200/&amp;lt;index name&amp;gt;/&amp;lt;type&amp;gt;/&amp;lt;id&amp;gt;&#39; # Delete a specific document curl -X GET &#39;http://localhost:9200/&amp;lt;index name&amp;gt;/_mappings&#39; # View mappings for index curl -X GET &#39;http://localhost:9200/&amp;lt;index name&amp;gt;/_settings&#39; # View setting information for an index curl -X GET &#39;http://localhost:9200/&amp;lt;index name&amp;gt;/&amp;lt;type&amp;gt;/_mappings&#39; # View mappings for an index type curl -X GET &#39;http://localhost:9200/&amp;lt;index name&amp;gt;/&amp;lt;type&amp;gt;/_settings&#39; # View setting information for an index type curl -X GET &#39;http://localhost:9200/&amp;lt;index name&amp;gt;/_search&#39; # Search an index curl -X GET &#39;http://localhost:9200/&amp;lt;index name&amp;gt;/&amp;lt;type&amp;gt;/_search&#39; # Search an index type # Bulk API curl -X GET &#39;http://localhost:9200/_bulk&#39; curl -X GET &#39;http://localhost:9200/&amp;lt;index name&amp;gt;/_bulk&#39; curl -X GET &#39;http://localhost:9200/&amp;lt;index name&amp;gt;/&amp;lt;type&amp;gt;/_bulk&#39; # Elastic River Basics curl -X GET &#39;http://localhost:9200/_river/_meta&#39; # View River settings curl -X GET &#39;http://localhost:9200/_river/&amp;lt;index name&amp;gt;/_meta&#39; # View River meta data for index curl -X GET &#39;http://localhost:9200/_river/&amp;lt;index name&amp;gt;/_meta/_source&#39; # View River source for index curl -X GET &#39;http://localhost:9200/_river/&amp;lt;index name&amp;gt;/_status&#39; # View River status curl -X GET &#39;http://localhost:9200/_river/&amp;lt;index name&amp;gt;/_search&#39; # Seach the River Index  </description>
     </item>
     
     <item>
       <title>Filebeat</title>
-      <link>http://localhost:4000/elk/filebeat/</link>
+      <link>https://anandvyas.in/elk/filebeat/</link>
       <pubDate>Sat, 21 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:4000/elk/filebeat/</guid>
+      <guid>https://anandvyas.in/elk/filebeat/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Kibana</title>
-      <link>http://localhost:4000/elk/kibana/</link>
+      <link>https://anandvyas.in/elk/kibana/</link>
       <pubDate>Sat, 21 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:4000/elk/kibana/</guid>
+      <guid>https://anandvyas.in/elk/kibana/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Logstash</title>
-      <link>http://localhost:4000/elk/logstash/</link>
+      <link>https://anandvyas.in/elk/logstash/</link>
       <pubDate>Sat, 21 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:4000/elk/logstash/</guid>
+      <guid>https://anandvyas.in/elk/logstash/</guid>
       <description>Logstash is an open source, server-side data processing pipeline that ingests data from a multitude of sources simultaneously, transforms it, and then sends it to your favorite “stash.”
 Logstash Installation # update your system sudo apt-get update # install Java sudo apt-get install default-jre # add Elastic’s signing key wget -qO - https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add - # install the apt-transport-https package sudo apt-get install apt-transport-https # add the repository definition to your system echo &amp;quot;deb https://artifacts.</description>
     </item>

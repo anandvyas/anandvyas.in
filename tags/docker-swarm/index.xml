@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Docker Swarm on Anand vyas</title>
-    <link>http://localhost:4000/tags/docker-swarm/</link>
+    <link>https://anandvyas.in/tags/docker-swarm/</link>
     <description>Recent content in Docker Swarm on Anand vyas</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 12 Apr 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://localhost:4000/tags/docker-swarm/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://anandvyas.in/tags/docker-swarm/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Docker Swarm</title>
-      <link>http://localhost:4000/docker/docker-swarm/</link>
+      <link>https://anandvyas.in/docker/docker-swarm/</link>
       <pubDate>Thu, 12 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:4000/docker/docker-swarm/</guid>
+      <guid>https://anandvyas.in/docker/docker-swarm/</guid>
       <description>Docker-swarm  docker swarm init: Initiate swam cluster docker swarm join-token: Lists join security token to join another node in swarm as worker or manager docker swarm join: Join already running swarm as a worker or manager docker swarm leave: Leave swarm. To be run from node itself docker swarm unlock: Unlocks swarm by providing key after manager restarts docker swarm unlock-key: Display swarm unlock key docker swarm update: Updates swarm configurations  Docker-swarm Node A Node is an instance of the Docker Engine connected to the Swarm.</description>
     </item>
     

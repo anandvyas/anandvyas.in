@@ -2,25 +2,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Aws Cloudformation on Anand vyas</title>
-    <link>http://localhost:4000/tags/aws-cloudformation/</link>
+    <link>https://anandvyas.in/tags/aws-cloudformation/</link>
     <description>Recent content in Aws Cloudformation on Anand vyas</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 22 Aug 2017 00:15:00 +0200</lastBuildDate>
     
-	<atom:link href="http://localhost:4000/tags/aws-cloudformation/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://anandvyas.in/tags/aws-cloudformation/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>AWS Cloud Formation***</title>
-      <link>http://localhost:4000/aws/aws-cloud-formation/</link>
+      <link>https://anandvyas.in/aws/aws-cloud-formation/</link>
       <pubDate>Tue, 22 Aug 2017 00:15:00 +0200</pubDate>
       
-      <guid>http://localhost:4000/aws/aws-cloud-formation/</guid>
+      <guid>https://anandvyas.in/aws/aws-cloud-formation/</guid>
       <description>&lt;p&gt;AWS CloudFormation An easy way to create &amp;amp; manage a collection of AWS resources. Allows orderly and predictable provisioning and updating of resources. Allows you to version control your AWS infrastructure. Deploy and update stacks using console, command line or API. You only pay for the resources you create&lt;/p&gt;
 
 &lt;div class=&#34;text-center&#34;&gt;
-    &lt;img class=&#34;img-responsive&#34; src=&#34;http://localhost:4000/images/aws-cloudformation.jpg&#34; alt=&#34;AWS CloudFormation&#34; /&gt;
+    &lt;img class=&#34;img-responsive&#34; src=&#34;https://anandvyas.in/images/aws-cloudformation.jpg&#34; alt=&#34;AWS CloudFormation&#34; /&gt;
 &lt;/div&gt;</description>
     </item>
     

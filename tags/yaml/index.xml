@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Yaml on Anand vyas</title>
-    <link>http://localhost:4000/tags/yaml/</link>
+    <link>https://anandvyas.in/tags/yaml/</link>
     <description>Recent content in Yaml on Anand vyas</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 12 Jan 2019 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://localhost:4000/tags/yaml/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://anandvyas.in/tags/yaml/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Horizontally and Vertical Scale</title>
-      <link>http://localhost:4000/general/horizontal-vertical-scale/</link>
+      <link>https://anandvyas.in/general/horizontal-vertical-scale/</link>
       <pubDate>Sat, 12 Jan 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:4000/general/horizontal-vertical-scale/</guid>
+      <guid>https://anandvyas.in/general/horizontal-vertical-scale/</guid>
       <description>Horizontal scaling means that you scale by adding more machines into your pool of resources whereas Vertical scaling means that you scale by adding more power (CPU, RAM) to an existing machine.
  Horizontal Scaling Also referred to as &amp;ldquo;scale-out&amp;rdquo; is basically the addition of more machines or setting up a cluster or a distributed environment for your software system. This usually requires a load-balancer program which is a middle-ware component in the standard 3 tier client-server architectural model.</description>
     </item>
     
     <item>
       <title>Yaml (YAML Ain’t Markup Language)</title>
-      <link>http://localhost:4000/general/yaml/</link>
+      <link>https://anandvyas.in/general/yaml/</link>
       <pubDate>Sat, 12 Jan 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:4000/general/yaml/</guid>
+      <guid>https://anandvyas.in/general/yaml/</guid>
       <description>YAML (&amp;ldquo;YAML Ain&amp;rsquo;t Markup Language&amp;rdquo;) is a human-readable data serialization language. It is commonly used for configuration files
 Basic Rules  YAML is case sensitive. YAML does not allow the use of tabs. Spaces are used instead as tabs because tabs are not universally supported.  Basic Datatypes Scalars --- a: 123 # an integer b: &amp;quot;123&amp;quot; # a string, disambiguated by quotes c: 123.0 # a float d: !</description>
     </item>

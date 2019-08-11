@@ -2,84 +2,84 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>General on Anand vyas</title>
-    <link>http://localhost:4000/categories/general/</link>
+    <link>https://anandvyas.in/categories/general/</link>
     <description>Recent content in General on Anand vyas</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 12 Jan 2019 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://localhost:4000/categories/general/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://anandvyas.in/categories/general/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Horizontally and Vertical Scale</title>
-      <link>http://localhost:4000/general/horizontal-vertical-scale/</link>
+      <link>https://anandvyas.in/general/horizontal-vertical-scale/</link>
       <pubDate>Sat, 12 Jan 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:4000/general/horizontal-vertical-scale/</guid>
+      <guid>https://anandvyas.in/general/horizontal-vertical-scale/</guid>
       <description>Horizontal scaling means that you scale by adding more machines into your pool of resources whereas Vertical scaling means that you scale by adding more power (CPU, RAM) to an existing machine.
  Horizontal Scaling Also referred to as &amp;ldquo;scale-out&amp;rdquo; is basically the addition of more machines or setting up a cluster or a distributed environment for your software system. This usually requires a load-balancer program which is a middle-ware component in the standard 3 tier client-server architectural model.</description>
     </item>
     
     <item>
       <title>JSON (JavaScript Object Notation)</title>
-      <link>http://localhost:4000/general/json/</link>
+      <link>https://anandvyas.in/general/json/</link>
       <pubDate>Sat, 12 Jan 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:4000/general/json/</guid>
+      <guid>https://anandvyas.in/general/json/</guid>
       <description> JSON (JavaScript Object Notation) is a standard text-based data interchange format that enables applications to exchange data over a computer network.
 Datatypes  String Number Boolean null Object Array  { //comments &amp;quot;string&amp;quot;: &amp;quot;Anand vyas&amp;quot;, // String &amp;quot;number&amp;quot;: { // number, float &amp;quot;age&amp;quot;: 29, &amp;quot;cost&amp;quot;: 299.99, &amp;quot;temperature&amp;quot;: -10.5, &amp;quot;speed_of_light&amp;quot;: 1.23e11 }, &amp;quot;bool&amp;quot;: true, // Boolean &amp;quot;value&amp;quot;: null, // Null value &amp;quot;array&amp;quot;: [&amp;quot;Anand&amp;quot;,&amp;quot;vyas&amp;quot;], // Array example &amp;quot;people&amp;quot; : [ // Array with object { &amp;quot;firstName&amp;quot;: &amp;quot;John&amp;quot;, &amp;quot;lastName&amp;quot;: &amp;quot;Smith&amp;quot;, &amp;quot;age&amp;quot;: 35 }, { &amp;quot;firstName&amp;quot;: &amp;quot;Jane&amp;quot;, &amp;quot;lastName&amp;quot;: &amp;quot;Smith&amp;quot;, &amp;quot;age&amp;quot;: 32 } ], &amp;quot;address&amp;quot; : { // Object &amp;quot;line1&amp;quot; : &amp;quot;555 Main Street&amp;quot;, &amp;quot;city&amp;quot; : &amp;quot;Denver&amp;quot;, &amp;quot;stateOrProvince&amp;quot; : &amp;quot;CO&amp;quot;, &amp;quot;zipOrPostalCode&amp;quot; : &amp;quot;80202&amp;quot;, &amp;quot;country&amp;quot; : &amp;quot;USA&amp;quot; } }  </description>
     </item>
     
     <item>
       <title>SSH Authentication</title>
-      <link>http://localhost:4000/general/ssh/</link>
+      <link>https://anandvyas.in/general/ssh/</link>
       <pubDate>Sat, 12 Jan 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:4000/general/ssh/</guid>
+      <guid>https://anandvyas.in/general/ssh/</guid>
       <description>SSH provides a mechanism for establishing a cryptographically secured connection between two parties, authenticating each side to the other, and passing commands and output back and forth. SSH using numbers of encryption techniques
  Symmetric Encryption Asymmetric Encryption Hashes  Symmetric Encryption Symmetrical encryption is a type of encryption where one key can be used to encrypt messages to the opposite party, and also to decrypt the messages received from the other participant.</description>
     </item>
     
     <item>
       <title>Yaml (YAML Ain’t Markup Language)</title>
-      <link>http://localhost:4000/general/yaml/</link>
+      <link>https://anandvyas.in/general/yaml/</link>
       <pubDate>Sat, 12 Jan 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:4000/general/yaml/</guid>
+      <guid>https://anandvyas.in/general/yaml/</guid>
       <description>YAML (&amp;ldquo;YAML Ain&amp;rsquo;t Markup Language&amp;rdquo;) is a human-readable data serialization language. It is commonly used for configuration files
 Basic Rules  YAML is case sensitive. YAML does not allow the use of tabs. Spaces are used instead as tabs because tabs are not universally supported.  Basic Datatypes Scalars --- a: 123 # an integer b: &amp;quot;123&amp;quot; # a string, disambiguated by quotes c: 123.0 # a float d: !</description>
     </item>
     
     <item>
       <title>The Twelve-Factor App</title>
-      <link>http://localhost:4000/general/12-factor-methodology/</link>
+      <link>https://anandvyas.in/general/12-factor-methodology/</link>
       <pubDate>Thu, 12 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:4000/general/12-factor-methodology/</guid>
+      <guid>https://anandvyas.in/general/12-factor-methodology/</guid>
       <description>The twelve-factor app is a methodology for building software-as-a-service apps, and its not depend on any languages, its works with every language.
 Why we use 12 Factor Methodology  Minimize time and cost of getting a new dev up to speed Minimize requirements on the underlying OS, maximize portability between different enviroments Ease deployment on modern cloud plateform.  The Twelve Factors  I. Codebase: One codebase tracked in revision control, many deploys II.</description>
     </item>
     
     <item>
       <title>Cloud Computing</title>
-      <link>http://localhost:4000/general/cloud-computing/</link>
+      <link>https://anandvyas.in/general/cloud-computing/</link>
       <pubDate>Mon, 03 Jul 2017 00:15:00 +0200</pubDate>
       
-      <guid>http://localhost:4000/general/cloud-computing/</guid>
+      <guid>https://anandvyas.in/general/cloud-computing/</guid>
       <description>&lt;p&gt;Cloud computing is the delivery of computing services — servers, storage, databases, networking, software, analytics and more—over the Internet (“the cloud”).&lt;/p&gt;
 
 &lt;div class=&#34;text-center&#34;&gt;
-    &lt;img class=&#34;img-responsive&#34; src=&#34;http://localhost:4000/images/blog/aws-cloud-computing-defined.jpg&#34; alt=&#34;cloud computing&#34; /&gt;
+    &lt;img class=&#34;img-responsive&#34; src=&#34;https://anandvyas.in/images/blog/aws-cloud-computing-defined.jpg&#34; alt=&#34;cloud computing&#34; /&gt;
 &lt;/div&gt;</description>
     </item>
     
     <item>
       <title>Deployment Strategies</title>
-      <link>http://localhost:4000/general/deployment-strategies/</link>
+      <link>https://anandvyas.in/general/deployment-strategies/</link>
       <pubDate>Mon, 03 Jul 2017 00:15:00 +0200</pubDate>
       
-      <guid>http://localhost:4000/general/deployment-strategies/</guid>
+      <guid>https://anandvyas.in/general/deployment-strategies/</guid>
       <description> &amp;ldquo;Big Bang&amp;rdquo; Deployment Rolling Deployment Blue-Green, Red-Black or A/B Deployment Canary Deployment  Canary release strategy vs. Blue/Green Blue-green releasing is simpler and faster.  </description>
     </item>
     

@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Virtusa on Anand vyas</title>
-    <link>http://localhost:4000/categories/virtusa/</link>
+    <link>https://anandvyas.in/categories/virtusa/</link>
     <description>Recent content in Virtusa on Anand vyas</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 12 Jun 2019 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://localhost:4000/categories/virtusa/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://anandvyas.in/categories/virtusa/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Virtusa Interview</title>
-      <link>http://localhost:4000/general/virtusa/</link>
+      <link>https://anandvyas.in/general/virtusa/</link>
       <pubDate>Wed, 12 Jun 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:4000/general/virtusa/</guid>
+      <guid>https://anandvyas.in/general/virtusa/</guid>
       <description> show the shell script to launch the cluster from terminal ibmcloud ks cluster-create --name anand_tmp --zone dal10 --machine-type u3c.2x4 --hardware shared --workers 3 --public-vlan 2632527 --private-vlan 2632529 ## ibmcloud ks cluster-config --cluster anand_tmp export KUBECONFIG=/Users/apple/.bluemix/plugins/container-service/clusters/anand_tmp/kube-config-dal10-anand_tmp.yml kubectl create deployment virtusa --image anandvyas786/virtusa:36 kubectl expose deployment.apps/virtusa --port=80 --name=virtusasvc --type=LoadBalancer kubectl set image -n default deployment.apps/virtusa virtusa=anandvyas786/virtusa:36  </description>
     </item>
     

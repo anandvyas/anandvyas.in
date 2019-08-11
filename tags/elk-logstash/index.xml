@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Elk Logstash on Anand vyas</title>
-    <link>http://localhost:4000/tags/elk-logstash/</link>
+    <link>https://anandvyas.in/tags/elk-logstash/</link>
     <description>Recent content in Elk Logstash on Anand vyas</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 21 Apr 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://localhost:4000/tags/elk-logstash/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://anandvyas.in/tags/elk-logstash/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Logstash</title>
-      <link>http://localhost:4000/elk/logstash/</link>
+      <link>https://anandvyas.in/elk/logstash/</link>
       <pubDate>Sat, 21 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:4000/elk/logstash/</guid>
+      <guid>https://anandvyas.in/elk/logstash/</guid>
       <description>Logstash is an open source, server-side data processing pipeline that ingests data from a multitude of sources simultaneously, transforms it, and then sends it to your favorite “stash.”
 Logstash Installation # update your system sudo apt-get update # install Java sudo apt-get install default-jre # add Elastic’s signing key wget -qO - https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add - # install the apt-transport-https package sudo apt-get install apt-transport-https # add the repository definition to your system echo &amp;quot;deb https://artifacts.</description>
     </item>

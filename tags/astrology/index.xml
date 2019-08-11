@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Astrology on Anand vyas</title>
-    <link>http://localhost:4000/tags/astrology/</link>
+    <link>https://anandvyas.in/tags/astrology/</link>
     <description>Recent content in Astrology on Anand vyas</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 12 Apr 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://localhost:4000/tags/astrology/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://anandvyas.in/tags/astrology/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Nakshatra Calulation</title>
-      <link>http://localhost:4000/astrology/nakshatra/</link>
+      <link>https://anandvyas.in/astrology/nakshatra/</link>
       <pubDate>Thu, 12 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:4000/astrology/nakshatra/</guid>
+      <guid>https://anandvyas.in/astrology/nakshatra/</guid>
       <description>[[node]]   [[node]]     Final Calulation  [[ node ]]  
  var app = new Vue({ el: &#34;#app&#34;, delimiters: [&#34;[[&#34;, &#34;]]&#34;], components: { }, data() { return { charanIndex: 0, nakshatraIndex: 0, charan: [&#34;First&#34;,&#34;Second&#34;,&#34;Third&#34;,&#34;Forth&#34;], nakshatra: [&#34;ASHWANI&#34;,&#34;BHARNI&#34;,&#34;KRITIKA&#34;,&#34;ROHNI&#34;,&#34;MRIGSHIRA&#34;,&#34;AARDHA&#34;,&#34;PUNARWASU&#34;,&#34;PUSHYA&#34;,&#34;AASHLESHA&#34;,&#34;MAGHA&#34;,&#34;PURWA FALGUNI&#34;,&#34;UTTRA FALGUNI&#34;,&#34;HASTH&#34;,&#34;CHITRA&#34;,&#34;SWATI&#34;,&#34;VISHAKHA&#34;,&#34;ANURADHA&#34;,&#34;JYESHTHA&#34;,&#34;MULA&#34;,&#34;PURWA SHADHA&#34;,&#34;UTTRA SHADHA&#34;,&#34;SHARAWAN&#34;,&#34;GHANISHATHA&#34;,&#34;SHATBHISHA&#34;,&#34;PURWA BHADRAPAD&#34;,&#34;UTTRA BHADRAPAD&#34;,&#34;REWTI&#34;], firstCharan: [], secondCharan: [], thirdCharan: [], forthCharan: [], diffCalulation: [] } }, beforeMount: function() { this.calulate(1); }, methods: { changeCharan: function(e){ let cur = this.</description>
     </item>

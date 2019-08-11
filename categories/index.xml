@@ -2,138 +2,138 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Anand vyas</title>
-    <link>http://localhost:4000/categories/</link>
+    <link>https://anandvyas.in/categories/</link>
     <description>Recent content in Categories on Anand vyas</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 26 May 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://localhost:4000/categories/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://anandvyas.in/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Ansible</title>
-      <link>http://localhost:4000/categories/ansible/</link>
+      <link>https://anandvyas.in/categories/ansible/</link>
       <pubDate>Sat, 26 May 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:4000/categories/ansible/</guid>
+      <guid>https://anandvyas.in/categories/ansible/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Astrology</title>
-      <link>http://localhost:4000/categories/astrology/</link>
+      <link>https://anandvyas.in/categories/astrology/</link>
       <pubDate>Thu, 12 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:4000/categories/astrology/</guid>
+      <guid>https://anandvyas.in/categories/astrology/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Aws</title>
-      <link>http://localhost:4000/categories/aws/</link>
+      <link>https://anandvyas.in/categories/aws/</link>
       <pubDate>Mon, 03 Jul 2017 00:15:00 +0200</pubDate>
       
-      <guid>http://localhost:4000/categories/aws/</guid>
+      <guid>https://anandvyas.in/categories/aws/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Cloud</title>
-      <link>http://localhost:4000/categories/cloud/</link>
+      <link>https://anandvyas.in/categories/cloud/</link>
       <pubDate>Mon, 03 Jul 2017 00:15:00 +0200</pubDate>
       
-      <guid>http://localhost:4000/categories/cloud/</guid>
+      <guid>https://anandvyas.in/categories/cloud/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Docker</title>
-      <link>http://localhost:4000/categories/docker/</link>
+      <link>https://anandvyas.in/categories/docker/</link>
       <pubDate>Thu, 12 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:4000/categories/docker/</guid>
+      <guid>https://anandvyas.in/categories/docker/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Elastic Beanstalk</title>
-      <link>http://localhost:4000/categories/elastic-beanstalk/</link>
+      <link>https://anandvyas.in/categories/elastic-beanstalk/</link>
       <pubDate>Tue, 27 Mar 2018 00:15:00 +0200</pubDate>
       
-      <guid>http://localhost:4000/categories/elastic-beanstalk/</guid>
+      <guid>https://anandvyas.in/categories/elastic-beanstalk/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Elk</title>
-      <link>http://localhost:4000/categories/elk/</link>
+      <link>https://anandvyas.in/categories/elk/</link>
       <pubDate>Sat, 21 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:4000/categories/elk/</guid>
+      <guid>https://anandvyas.in/categories/elk/</guid>
       <description></description>
     </item>
     
     <item>
       <title>General</title>
-      <link>http://localhost:4000/categories/general/</link>
+      <link>https://anandvyas.in/categories/general/</link>
       <pubDate>Sat, 12 Jan 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:4000/categories/general/</guid>
+      <guid>https://anandvyas.in/categories/general/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Git</title>
-      <link>http://localhost:4000/categories/git/</link>
+      <link>https://anandvyas.in/categories/git/</link>
       <pubDate>Sat, 12 Jan 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:4000/categories/git/</guid>
+      <guid>https://anandvyas.in/categories/git/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Htaccess</title>
-      <link>http://localhost:4000/categories/htaccess/</link>
+      <link>https://anandvyas.in/categories/htaccess/</link>
       <pubDate>Thu, 12 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:4000/categories/htaccess/</guid>
+      <guid>https://anandvyas.in/categories/htaccess/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Kubernetes</title>
-      <link>http://localhost:4000/categories/kubernetes/</link>
+      <link>https://anandvyas.in/categories/kubernetes/</link>
       <pubDate>Sun, 10 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:4000/categories/kubernetes/</guid>
+      <guid>https://anandvyas.in/categories/kubernetes/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Linux</title>
-      <link>http://localhost:4000/categories/linux/</link>
+      <link>https://anandvyas.in/categories/linux/</link>
       <pubDate>Sat, 21 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:4000/categories/linux/</guid>
+      <guid>https://anandvyas.in/categories/linux/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Methodology</title>
-      <link>http://localhost:4000/categories/methodology/</link>
+      <link>https://anandvyas.in/categories/methodology/</link>
       <pubDate>Thu, 12 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:4000/categories/methodology/</guid>
+      <guid>https://anandvyas.in/categories/methodology/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Virtusa</title>
-      <link>http://localhost:4000/categories/virtusa/</link>
+      <link>https://anandvyas.in/categories/virtusa/</link>
       <pubDate>Wed, 12 Jun 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:4000/categories/virtusa/</guid>
+      <guid>https://anandvyas.in/categories/virtusa/</guid>
       <description></description>
     </item>
     

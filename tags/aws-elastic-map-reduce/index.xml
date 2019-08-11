@@ -2,27 +2,27 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Aws Elastic Map Reduce on Anand vyas</title>
-    <link>http://localhost:4000/tags/aws-elastic-map-reduce/</link>
+    <link>https://anandvyas.in/tags/aws-elastic-map-reduce/</link>
     <description>Recent content in Aws Elastic Map Reduce on Anand vyas</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 13 Jul 2017 00:15:00 +0200</lastBuildDate>
     
-	<atom:link href="http://localhost:4000/tags/aws-elastic-map-reduce/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://anandvyas.in/tags/aws-elastic-map-reduce/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>AWS Elastic Map Reduce</title>
-      <link>http://localhost:4000/aws/aws-emr/</link>
+      <link>https://anandvyas.in/aws/aws-emr/</link>
       <pubDate>Thu, 13 Jul 2017 00:15:00 +0200</pubDate>
       
-      <guid>http://localhost:4000/aws/aws-emr/</guid>
+      <guid>https://anandvyas.in/aws/aws-emr/</guid>
       <description>&lt;p&gt;Amazon Elastic MapReduce (Amazon EMR) provides you with a fully managed, on-demand
 Hadoop framework. Amazon EMR reduces the complexity and up-front costs of setting up
 Hadoop and, combined with the scale of AWS, gives you the ability to spin up large Hadoop clusters instantly and start processing within minutes.&lt;/p&gt;
 
 &lt;div class=&#34;text-center&#34;&gt;
-    &lt;img class=&#34;img-responsive&#34; src=&#34;http://localhost:4000/images/aws-emr.jpg&#34; alt=&#34;AWS Snowball&#34; /&gt;
+    &lt;img class=&#34;img-responsive&#34; src=&#34;https://anandvyas.in/images/aws-emr.jpg&#34; alt=&#34;AWS Snowball&#34; /&gt;
 &lt;/div&gt;</description>
     </item>
     

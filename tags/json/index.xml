@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Json on Anand vyas</title>
-    <link>http://localhost:4000/tags/json/</link>
+    <link>https://anandvyas.in/tags/json/</link>
     <description>Recent content in Json on Anand vyas</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 12 Jan 2019 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://localhost:4000/tags/json/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://anandvyas.in/tags/json/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>JSON (JavaScript Object Notation)</title>
-      <link>http://localhost:4000/general/json/</link>
+      <link>https://anandvyas.in/general/json/</link>
       <pubDate>Sat, 12 Jan 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:4000/general/json/</guid>
+      <guid>https://anandvyas.in/general/json/</guid>
       <description> JSON (JavaScript Object Notation) is a standard text-based data interchange format that enables applications to exchange data over a computer network.
 Datatypes  String Number Boolean null Object Array  { //comments &amp;quot;string&amp;quot;: &amp;quot;Anand vyas&amp;quot;, // String &amp;quot;number&amp;quot;: { // number, float &amp;quot;age&amp;quot;: 29, &amp;quot;cost&amp;quot;: 299.99, &amp;quot;temperature&amp;quot;: -10.5, &amp;quot;speed_of_light&amp;quot;: 1.23e11 }, &amp;quot;bool&amp;quot;: true, // Boolean &amp;quot;value&amp;quot;: null, // Null value &amp;quot;array&amp;quot;: [&amp;quot;Anand&amp;quot;,&amp;quot;vyas&amp;quot;], // Array example &amp;quot;people&amp;quot; : [ // Array with object { &amp;quot;firstName&amp;quot;: &amp;quot;John&amp;quot;, &amp;quot;lastName&amp;quot;: &amp;quot;Smith&amp;quot;, &amp;quot;age&amp;quot;: 35 }, { &amp;quot;firstName&amp;quot;: &amp;quot;Jane&amp;quot;, &amp;quot;lastName&amp;quot;: &amp;quot;Smith&amp;quot;, &amp;quot;age&amp;quot;: 32 } ], &amp;quot;address&amp;quot; : { // Object &amp;quot;line1&amp;quot; : &amp;quot;555 Main Street&amp;quot;, &amp;quot;city&amp;quot; : &amp;quot;Denver&amp;quot;, &amp;quot;stateOrProvince&amp;quot; : &amp;quot;CO&amp;quot;, &amp;quot;zipOrPostalCode&amp;quot; : &amp;quot;80202&amp;quot;, &amp;quot;country&amp;quot; : &amp;quot;USA&amp;quot; } }  </description>
     </item>

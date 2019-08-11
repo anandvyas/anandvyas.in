@@ -2,25 +2,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Aws Web Services on Anand vyas</title>
-    <link>http://localhost:4000/tags/aws-web-services/</link>
+    <link>https://anandvyas.in/tags/aws-web-services/</link>
     <description>Recent content in Aws Web Services on Anand vyas</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 03 Jul 2017 00:15:00 +0200</lastBuildDate>
     
-	<atom:link href="http://localhost:4000/tags/aws-web-services/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://anandvyas.in/tags/aws-web-services/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>AWS Web Services - Introduction</title>
-      <link>http://localhost:4000/aws/aws-web-services/</link>
+      <link>https://anandvyas.in/aws/aws-web-services/</link>
       <pubDate>Mon, 03 Jul 2017 00:15:00 +0200</pubDate>
       
-      <guid>http://localhost:4000/aws/aws-web-services/</guid>
+      <guid>https://anandvyas.in/aws/aws-web-services/</guid>
       <description>&lt;p&gt;AWS provides many cloud services that you can combine to meet business or organizational needs.&lt;/p&gt;
 
 &lt;div class=&#34;text-center&#34;&gt;
-    &lt;img class=&#34;img-responsive&#34; src=&#34;http://localhost:4000/images/aws/aws-web-services.png&#34; alt=&#34;AWS Web Services&#34; /&gt;
+    &lt;img class=&#34;img-responsive&#34; src=&#34;https://anandvyas.in/images/aws/aws-web-services.png&#34; alt=&#34;AWS Web Services&#34; /&gt;
 &lt;/div&gt;</description>
     </item>
     

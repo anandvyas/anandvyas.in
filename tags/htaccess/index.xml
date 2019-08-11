@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Htaccess on Anand vyas</title>
-    <link>http://localhost:4000/tags/htaccess/</link>
+    <link>https://anandvyas.in/tags/htaccess/</link>
     <description>Recent content in Htaccess on Anand vyas</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 12 Apr 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://localhost:4000/tags/htaccess/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://anandvyas.in/tags/htaccess/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Apache htaccess configuration</title>
-      <link>http://localhost:4000/linux/apache-htaccess/</link>
+      <link>https://anandvyas.in/linux/apache-htaccess/</link>
       <pubDate>Thu, 12 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:4000/linux/apache-htaccess/</guid>
+      <guid>https://anandvyas.in/linux/apache-htaccess/</guid>
       <description>Htaccess (HyperText Access) is a configuration file that allows developers to overide the Apache webserver configuration at directory level.
 Enable .htaccess By default .htaccess is not enable, we have to change in httpd.conf (Apache) configuration file to for enable .htaccess
 Replace AllowOverride None to AllowOverride All
@@ -26,10 +26,10 @@ Examples:
     
     <item>
       <title>The Twelve-Factor App</title>
-      <link>http://localhost:4000/topics/rd/</link>
+      <link>https://anandvyas.in/topics/rd/</link>
       <pubDate>Thu, 12 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:4000/topics/rd/</guid>
+      <guid>https://anandvyas.in/topics/rd/</guid>
       <description>Mailchimp Facts Year of launch: 2001 Total number of Mailchimp users: 14 millions * 30 Number of emails sent through Mailchimp daily: 1 billion Average number of Mailchimp API requests daily: 10 million Number of countries MailChimp has users in: 200 countries
 There are two types of panel in mailchimp - Dashboard panel: - Email template designer - Add your contant list - Generate subscriber form - create campaign</description>
     </item>

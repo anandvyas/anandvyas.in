@@ -2,25 +2,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Aws Route53 on Anand vyas</title>
-    <link>http://localhost:4000/tags/aws-route53/</link>
+    <link>https://anandvyas.in/tags/aws-route53/</link>
     <description>Recent content in Aws Route53 on Anand vyas</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 22 Jul 2017 00:15:00 +0200</lastBuildDate>
     
-	<atom:link href="http://localhost:4000/tags/aws-route53/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://anandvyas.in/tags/aws-route53/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>AWS Route53</title>
-      <link>http://localhost:4000/aws/aws-route53/</link>
+      <link>https://anandvyas.in/aws/aws-route53/</link>
       <pubDate>Sat, 22 Jul 2017 00:15:00 +0200</pubDate>
       
-      <guid>http://localhost:4000/aws/aws-route53/</guid>
+      <guid>https://anandvyas.in/aws/aws-route53/</guid>
       <description>&lt;p&gt;Amazon Route 53 is a highly available and scalable DNS service offered by AWS. Like any DNS service, Route 53 handles domain registration and routes users’ Internet requests to your application – whether it’s hosted on AWS or elsewhere. But Route 53 also intelligently directs traffic based on sophisticated routing policies and, through automated health checks, away from servers that might be failing.&lt;/p&gt;
 
 &lt;div class=&#34;text-center&#34;&gt;
-    &lt;img class=&#34;img-responsive&#34; src=&#34;http://localhost:4000/images/route53howitworks.png&#34; alt=&#34;AWS Elastic Block Storage&#34; /&gt;
+    &lt;img class=&#34;img-responsive&#34; src=&#34;https://anandvyas.in/images/route53howitworks.png&#34; alt=&#34;AWS Elastic Block Storage&#34; /&gt;
 &lt;/div&gt;</description>
     </item>
     
