@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>AWS Cloud Formation*** - Anand vyas</title>
+    <meta content="AWS Cloud Formation*** - Anand vyas" property="og:title">
+    <meta content="" name="keywords">
+    <meta content="" property="og:description">
+    <meta name="author" content="Anand Vyas">
+
+    
+    <link href="http://localhost:4000/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link href="http://localhost:4000/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    
+    <link href="http://localhost:4000/css/highlighter.css" rel="stylesheet">
+    
+    <link href="http://localhost:4000/css/sb-admin.css" rel="stylesheet">
+    <link href="http://localhost:4000/css/about.css" rel="stylesheet">
+
+    <script src="http://localhost:4000/js/jquery.min.js"></script>
+</head>
+<body class="fixed-nav sticky-footer bg-dark sidenav-toggled" id="page-top">
+  
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+    <a class="navbar-brand" href="http://localhost:4000/">
+        <img src="http://localhost:4000/images/profile/logo.png" />
+        <span>Anand vyas</span>
+    </a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav navbar-sidenav">
+            <li class="nav-item sidebar-profile text-center">
+                <div class="profile-pic">
+                    <img src="http://localhost:4000/images/profile/avatar.jpg" alt="avatar">
+                </div>
+                <div class="profile-detail">
+                    
+                    <span>Solution Architect</span> 
+                    <span>Cloud Architect</span> 
+                    <span>DevOps</span> 
+                    <span>Tech Lead</span> 
+                </div>
+            </li>
+            
+            <li class="nav-item sidebar-menu" data-toggle="tooltip" data-placement="right" title="Home">
+                <a class="nav-link" href="http://localhost:4000/">
+                <i class="fa fa-fw fa fa-home"></i>
+                <span class="nav-link-text">Home</span>
+                </a>
+            </li>
+            
+            <li class="nav-item sidebar-menu" data-toggle="tooltip" data-placement="right" title="About">
+                <a class="nav-link" href="http://localhost:4000/about">
+                <i class="fa fa-fw fa fa-user-circle"></i>
+                <span class="nav-link-text">About</span>
+                </a>
+            </li>
+            
+            <li class="nav-item sidebar-menu" data-toggle="tooltip" data-placement="right" title="Categories">
+                <a class="nav-link" href="http://localhost:4000/categories">
+                <i class="fa fa-fw fa fa-dashboard"></i>
+                <span class="nav-link-text">Categories</span>
+                </a>
+            </li>
+            
+            <li class="nav-item sidebar-menu" data-toggle="tooltip" data-placement="right" title="Tags">
+                <a class="nav-link" href="http://localhost:4000/tags">
+                <i class="fa fa-fw fa fa-tags"></i>
+                <span class="nav-link-text">Tags</span>
+                </a>
+            </li>
+            
+        </ul>
+        <ul class="navbar-nav sidenav-social">
+            
+            <li><a href="#" target="_blank"><i class="fa fa-mobile"></i></a></li>
+            
+            <li><a href="mailto:anandvyas@live.com" target="_blank"><i class="fa fa-envelope"></i></a></li>
+            
+            <li><a href="https://twitter.com/anandvyaas" target="_blank"><i class="fa fa-twitter"></i></a></li>
+            
+            <li><a href="https://www.linkedin.com/in/anandvyaas" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+            
+            <li><a href="https://www.instagram.com/anandvyaas" target="_blank"><i class="fa fa-instagram"></i></a></li>
+            
+            <li><a href="https://github.com/anandvyas" target="_blank"><i class="fa fa-github"></i></a></li>
+            
+            <li><a href="https://stackoverflow.com/users/8208060/anand-vyas" target="_blank"><i class="fa fa-stack-overflow"></i></a></li>
+            
+        </ul>
+        <ul class="navbar-nav sidenav-toggler">
+            <li class="nav-item">
+                <a class="nav-link text-center" id="sidenavToggler">
+            <i class="fa fa-fw fa-angle-left"></i>
+            </a>
+            </li>
+        </ul>
+        
+        
+    </div>
+</nav>
+  
+  <div class="content-wrapper">
+    <div class="container-fluid">
+    
+
+
+<ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="http://localhost:4000/">Home</a></li>
+
+
+    
+    <li class="breadcrumb-item active"><a href='http://localhost:4000/aws'>aws</a></li>
+    
+    
+
+
+    
+    <li class="breadcrumb-item active"><a href='http://localhost:4000/aws/aws-cloud-formation'>aws-cloud-formation</a></li>
+    
+    
+
+
+    
+
+</ol>
+
+        <div class="post">
+            <h1>AWS Cloud Formation***</h1>
+            <span class="post-date">Tue, Aug 22, 2017</span>
+            <p>AWS CloudFormation An easy way to create &amp; manage a collection of AWS resources. Allows orderly and predictable provisioning and updating of resources. Allows you to version control your AWS infrastructure. Deploy and update stacks using console, command line or API. You only pay for the resources you create</p>
+
+<div class="text-center">
+    <img class="img-responsive" src="http://localhost:4000/images/aws-cloudformation.jpg" alt="AWS CloudFormation" />
+</div>
+ 
+
+<ul>
+<li>CloudFormation supports Chef &amp; Puppet Integration, meaning that you can deploy and configure right down the application layer.</li>
+<li>CloudFormation provides a set of application bootstrapping scripts that enable you to install packages, files, and services on the EC2 instances by simply describing them in the CloudFormation template</li>
+</ul>
+
+<p><strong>CloudFormation consists of</strong></p>
+
+<ul>
+<li>Template
+
+<ul>
+<li>Act as blueprints for building AWS resources.</li>
+<li>Is a JSON or YAML formatted text file, saved with any extension, such as .json, .yaml, .template, or .txt.</li>
+<li>Have additional capabilities to build complex sets of resources and reuse those templates in multiple contexts for e.g. use input parameters to create generic and reusable templates</li>
+<li>Name used for a resource within the template is a logical name but when CloudFormation creates the resource, it generates a physical name that is based on the combination of the logical name, the stack name, and a unique ID</li>
+</ul></li>
+<li>Stack
+
+<ul>
+<li><strong>Stacks manage related resources as a single unit</strong>,</li>
+<li>Collection of resources can be created, updated, and deleted by creating, updating, and deleting stacks.</li>
+<li>All the resources in a stack are defined by the stack’s AWS CloudFormation template</li>
+<li>CloudFormation makes underlying service calls to AWS to provision and configure the resources in the stack and can perform only actions that the users have permission to do.</li>
+<li>is the end result of that diagram, which is actually provisioned</li>
+</ul></li>
+<li>Change Sets
+
+<ul>
+<li>Change Sets presents a summary of the proposed changes CloudFormation will make when a stack is updated</li>
+<li>Change sets help check how the changes might impact running resources, especially critical resources, before implementing them</li>
+</ul></li>
+</ul>
+
+<p><strong>AWS CloudFormation Template consists of elements</strong></p>
+
+<ul>
+<li>List of AWS resources and their configuration values</li>
+<li>An optional template file format version number</li>
+<li>An optional list of template parameters (input values supplied at stack creation time)</li>
+<li>An optional list of output values like public IP address using the Fn::GetAtt function</li>
+<li>An optional list of data tables used to lookup static configuration values for e.g. AMI names per AZ</li>
+</ul>
+
+<h3 id="a-name-aws-cloudformation-template-resource-attributes-template-resource-attributes-a"><a name="aws-cloudformation-template-resource-attributes">Template Resource Attributes</a></h3>
+
+<ul>
+<li>CreationPolicy Attribute
+
+<ul>
+<li>is invoked during the associated resource creation</li>
+<li>can be associated with a resource to prevent its status from reaching create complete until AWS CloudFormation receives a specified number of success signals or the timeout period is exceeded</li>
+<li>helps to wait on resource configuration actions before stack creation proceeds for e.g. software installation on an EC2 instance</li>
+</ul></li>
+<li>DeletionPolicy Attribute
+
+<ul>
+<li>preserve or (in some cases) backup a resource when its stack is deleted</li>
+<li>By default, if a resource has no DeletionPolicy attribute, AWS CloudFormation deletes the resource</li>
+<li>To keep a resource when its stack is deleted,
+
+<ul>
+<li>specify Retain for that resource, to prevent deletion</li>
+<li>specify Snapshot to create a snapshot before deleting the resource, if the snapshot capability is supported for e.g RDS, EC2 volume etc.</li>
+</ul></li>
+</ul></li>
+<li>DependsOn Attribute
+
+<ul>
+<li>helps specify that the creation of a specific resource follows another</li>
+<li>resource is created only after the creation of the resource specified in the DependsOn attribute</li>
+</ul></li>
+<li>Metadata Attribute
+
+<ul>
+<li>enables association of structured data with a resource</li>
+</ul></li>
+<li>UpdatePolicy Attribute
+
+<ul>
+<li>defines AWS CloudFormation handles updates to the AWS::AutoScaling::AutoScalingGroup resource</li>
+</ul></li>
+</ul>
+
+<div align="center">
+    <video width="620" height="440" controls>
+    <source src="http://localhost:4000/videos/cloudformation/cloudformation.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+    </video>
+</div>
+
+<h3 id="a-name-aws-cloudformation-intrinsic-functions-intrinsic-functions-a"><a name="aws-cloudformation-intrinsic-functions">Intrinsic Functions</a></h3>
+
+<p>AWS Cloudformation provides serveral built-in functions that help you mange your stack. Use <strong>Intrinsic functions</strong> in your template to assign values to properties that are not avialable until runtime.</p>
+
+<p><strong>Comman Intrinsic functions</strong></p>
+
+<ul>
+<li>Fn::Base64: Returns the Base64 representation of the input string.</li>
+<li>Condition Functions
+
+<ul>
+<li>Fn::And</li>
+<li>Fn::Equals</li>
+<li>Fn::If</li>
+<li>Fn::Not</li>
+<li>Fn::Or</li>
+</ul></li>
+<li>Fn::FindInMap: Returns the value corresponding to keys in a two-level map that is declared in the Mappings section.</li>
+<li>Fn::GetAtt: Returns the value of an attribute from a resource in the template.</li>
+<li>Fn::GetAZs: Returns an array that lists Availability Zones for a specified region.</li>
+<li>Fn::ImportValue: Returns the value of an output exported by another stack.</li>
+<li>Fn::Join: Appends a set of values into a single value, separated by the specified delimiter.</li>
+<li>Fn::Select: Returns a single object from a list of objects by index.</li>
+<li>Fn::Split: To split a string into a list of string values so that you can select an element from the resulting string list</li>
+<li>Fn::Sub: Substitutes variables in an input string with values that you specify.</li>
+</ul>
+
+<h3 id="a-name-aws-cloudformation-exam-tips-exam-tips-a"><a name="aws-cloudformation-exam-tips">Exam Tips</a></h3>
+
+<ul>
+<li>Essentials
+
+<ul>
+<li>Allows you to create and provision resources in a reusable template fashion</li>
+<li>The template can build a complete stack</li>
+<li>Stack is set of resources that are created and managed as a single unit when cloud formation instantiated a template</li>
+<li>The AWS resourced which are a part of the stack can be individually managed</li>
+<li>Turns resources into stacks that work as a &ldquo;unit&rdquo;</li>
+<li>Allows to source control infrastructure</li>
+<li>Allows us to deploy resources through a json template</li>
+<li>Allows for cloud-init scripts for EC2 resources</li>
+<li>Rollback
+
+<ul>
+<li>If a stack fails to create resource, it will by default rollback</li>
+<li>Can be disabled from the API</li>
+</ul></li>
+<li>CLI commands
+
+<ul>
+<li>cfn- prefix has been deprecated, however may be found on exam questions</li>
+<li>cfn-describe-stacks: Same as API call DescribeStacks. Describes stacks</li>
+<li>cfn-list-stacks: As above, but with ability to filter through different stacks statuses</li>
+</ul></li>
+<li>API calls
+
+<ul>
+<li>ListStackResources: List all resources that belong to a cloudformation stack</li>
+<li>DescribeStacks: List description for specified stack, or all stacks if no stack defined.</li>
+<li>ListStacks: Returns summary informatino for stacks whose status matches the specified StackStatusFilter. Summary info is kept for 90 days past deletion of a stack.</li>
+</ul></li>
+</ul></li>
+<li>Template anatomy
+
+<ul>
+<li>AWSTemplateFormatVersion (optional)
+
+<ul>
+<li>Specifies which AWS template version you want to use</li>
+</ul></li>
+<li>Description (optional)
+
+<ul>
+<li>Follows template version section</li>
+<li>AWSTemplateFormatVersion REQUIRED if Description specified.</li>
+<li>Descriptions help clearly differentiate between templates</li>
+</ul></li>
+<li>Metadata (optional)
+
+<ul>
+<li>JSON objects that provide details about the template</li>
+</ul></li>
+<li>Parameters (optional)
+
+<ul>
+<li>Values you can pass in right before template creation</li>
+<li>Allows customization of template</li>
+<li>Can have default values as well as allowed values</li>
+</ul></li>
+<li>Mappings (optional)
+
+<ul>
+<li>Maps keys to values. (e.g. make different values for different regions)</li>
+</ul></li>
+<li>Conditions (optional)
+
+<ul>
+<li>Can check values before deciding what to do</li>
+<li>Can create different resources in same template depending on condition evaluation</li>
+<li>Example: Different environments for dev, test and prod.</li>
+</ul></li>
+<li>Resources
+
+<ul>
+<li>Where you create resources (S3, EC2, Lambda, etc.)</li>
+</ul></li>
+<li>Outputs (optional)
+
+<ul>
+<li>Can output values you&rsquo;d like to see from the console or from API calls</li>
+<li>Example: Can return the S3 bucket name created by the template</li>
+</ul></li>
+</ul></li>
+
+<li><p>Intrinsic Functions</p>
+
+<ul>
+<li>Used to pass in values that are not available until run time
+
+<ul>
+<li>Example: Need ARN value of resource.. You need to create resource before ARN available. E.g. for SNS coupled on other services</li>
+</ul></li>
+<li>Can only be used in Resource properties, Metadata attributes and Update Policy attributes.</li>
+
+<li><p>Fn::GetAtt (GetAttribute)</p>
+
+<ul>
+<li>Get Website URL for just created S3 bucket:</li>
+</ul>
+
+<pre><code class="language-json">&quot;Resources&quot;: { &quot;S3Bucket&quot; : { ... } },
+&quot;Outputs&quot;: { &quot;WebsiteURL&quot; : {
+    &quot;Value&quot;: { &quot;Fn::GetAtt&quot;: [ &quot;S3Bucket&quot;, &quot;WebsiteURL&quot; ] },
+    &quot;Description&quot;: &quot;URL for website hosted on S3&quot;
+}
+</code></pre></li>
+
+<li><p>Fn::FindInMap</p>
+
+<ul>
+<li>E.g. get AMI ID for various regions and architecture
+<br /></li>
+</ul>
+
+<pre><code class="language-json">&quot;Mappings&quot; {
+    &quot;RegionMap&quot;: {
+        &quot;us-east-1&quot;: { &quot;32&quot;: &quot;ami-12346578&quot;, &quot;64&quot;: &quot;ami-87654321&quot; },
+        &quot;us-west-1&quot;: { &quot;32&quot;: &quot;ami-23456789&quot;, &quot;64&quot;: &quot;ami-98765432&quot; }
+    }
+}
+&quot;Resources&quot;: {
+    &quot;myEC2Instance&quot;: {
+        &quot;Type&quot;: &quot;AWS::EC2::Instance&quot;,
+        &quot;Properties&quot;: {
+            &quot;ImageId&quot;: { 
+                &quot;Fn::FindInMap&quot;: [ &quot;RegionMap&quot;, 
+                                   { &quot;Ref&quot;: &quot;AWS::Region&quot; }, 
+                                   &quot;32&quot;]
+                        },
+            &quot;InstanceType&quot;: &quot;m1.small&quot;
+        }
+    }
+}
+</code></pre></li>
+
+<li><p>Fn::Join (Concatenates elements, separated by specified delimiter)</p></li>
+
+<li><p>Ref (returns a resource or value based on a logical name or parameter)</p></li>
+
+<li><p>Fn::GetAZs (get availability zones for specified region)</p></li>
+
+<li><p>Fn::Select (Returns a single object from a list of objects by index)</p></li>
+
+<li><p>cfn-list-stacks : lists all current stacks in your cloud formation</p></li>
+</ul></li>
+
+<li><p>Sections:</p>
+
+<ul>
+<li>Resources: <strong>Required field</strong></li>
+<li>Parameters: Optional field</li>
+<li>Outputs: Optional field</li>
+<li>AWSTemplateFormatVersion: Optional field</li>
+<li>Description: Optional field</li>
+<li>Mappings: Optional field</li>
+</ul></li>
+
+<li><p>Resources section in the template is the only thing required for it to work</p></li>
+
+<li><p>If error happens, then a rollback takes place. However charges may apply for the time the resources were created</p></li>
+
+<li><p>Template description cannot be added if AWSTemplateFormatVersion is not declared at the top</p></li>
+
+<li><p>Deletion policy can be specified, and snapshots can be taken before deletion</p></li>
+
+<li><p>Stack can be modified after creation</p></li>
+
+<li><p>Stacks can be created in VPC</p></li>
+
+<li><p>Limits</p>
+
+<ul>
+<li>There are no limits on number of templates</li>
+<li>Each Cloudformation account is limited to a maximum of 200 stack</li>
+<li>Template, parameters, output and resource description are limited to 4096 characters</li>
+<li>you can have 60 parameters and 60 outputs in a template</li>
+<li>Each cloudformation account is limited to 20 stacks. Can be increased by contacting AWS via form</li>
+</ul></li>
+</ul>
+
+<h3 id="a-name-aws-cloudformation-quiz-cloudformation-quiz-a"><a name="aws-cloudformation-quiz">CloudFormation: Quiz</a></h3>
+
+
+
+<script>
+    var quiz = [{"correct":[1],"explanation":"","image":"","options":["The ability to setup Autoscaling for Amazon EC2 instances.","A templated resource creation for Amazon Web Services.","A template to map network resources for Amazon Web Services","None of these"],"question":"What does Amazon CloudFormation provide?"},{"correct":[3],"explanation":"","image":"","options":["Parameters","Outputs","Template version","Resources"],"question":"A user is planning to use AWS CloudFormation for his automatic deployment requirements. Which of the below mentioned components are required as a part of the template?"},{"correct":[2],"explanation":"","image":"","options":["Set of AWS templates that are created and managed as a template","Set of AWS resources that are created and managed as a template","Set of AWS resources that are created and managed as a single unit","Set of AWS templates that are created and managed as a single unit"],"question":"In regard to AWS CloudFormation, what is a stack?"},{"correct":[3],"explanation":"","image":"","options":["Use cost allocation reports and AWS Opsworks to deploy and manage your infrastructure.","Use AWS CloudWatch metrics and alerts along with resource tagging to deploy and manage your infrastructure.","Use AWS Beanstalk and a version control system like GIT to deploy and manage your infrastructure.","Use AWS CloudFormation and a version control system like GIT to deploy and manage your infrastructure."],"question":"Your team is excited about the use of AWS because now they have access to programmable infrastructure. You have been asked to manage your AWS infrastructure in a manner similar to the way you might manage application code. You want to be able to deploy exact copies of different versions of your infrastructure, stage changes into different environments, revert back to previous versions, and identify what versions are running at any particular time (development, test, QA, production). Which approach addresses this requirement?"},{"correct":[3],"explanation":"","image":"","options":["It is not possible that the stack creation will wait until one service is created and launched","The user can use the HoldCondition resource to wait for the creation of the other dependent resources","The user can use the DependentCondition resource to hold the creation of the other dependent resources","The user can use the WaitCondition resource to hold the creation of the other dependent resources"],"question":"A user is usingCloudFormation to launch an EC2 instance and then configure an application after the instance is launched. The user wants the stack creation of ELB and AutoScaling to wait until the EC2 instance is launched and configured properly. How can the user configure this?"},{"correct":[2],"explanation":"","image":"","options":["CloudFormation can never throw an error after launching a few services since it verifies all the steps before launching","It will warn the user about the error and ask the user to manually create RDS","Rollback all the changes and terminate all the created services","It will wait for the user’s input about the error and correct the mistake after the input"],"question":"A user has created a CloudFormation stack. The stack creates AWS services, such as EC2 instances, ELB, AutoScaling, and RDS. While creating the stack it created EC2, ELB and AutoScaling but failed to create RDS. What will CloudFormation do in this scenario?"},{"correct":[0],"explanation":"","image":"","options":["CloudFormation follows the DevOps model for the creation of Dev \u0026 Test","AWS CloudFormation does not charge the user for its service but only charges for the AWS resources created with it","CloudFormation works with a wide variety of AWS services, such as EC2, EBS, VPC, IAM, S3, RDS, ELB, etc","CloudFormation provides a set of application bootstrapping scripts which enables the user to install Software"],"question":"A user is planning to use AWS CloudFormation. Which of the below mentioned functionalities does not help him to correctly understand CloudFormation?"},{"correct":[1],"explanation":"","image":"","options":["Create a stack","Configure a service","Create and upload the template","Provide the parameters configured as part of the template"],"question":"A customer is using AWS for Dev and Test. The customer wants to setup the Dev environment with CloudFormation. Which of the below mentioned steps are not required while using CloudFormation?"},{"correct":[2],"explanation":"","image":"","options":["500","50","20","10"],"question":"When working with AWS CloudFormation Templates what is the maximum number of stacks that you can create?"},{"correct":[1],"explanation":"","image":"","options":["Previously created resources are kept but the stack creation terminates","Previously created resources are deleted and the stack creation terminates","Stack creation continues, and the final results indicate which steps failed","CloudFormation templates are parsed in advance so stack creation is guaranteed to succeed."],"question":"What happens, by default, when one of the resources in a CloudFormation stack cannot be created?"},{"correct":[2],"explanation":"","image":"","options":["When a Template references an earlier version of itself.","When Nested Stacks depend on each other.","When Resources form a DependOn loop. (Refer link, to resolve a dependency error, add a DependsOn attribute to resources that depend on other resources in the template. Some cases for e.g. EIP and VPC with IGW where EIP depends on IGW need explicitly declaration for the resources to be created in correct order)","When a Template references a region, which references the original Template."],"question":"What is a circular dependency in AWS CloudFormation?"},{"correct":[1],"explanation":"","image":"","options":["Model an AWS EMR job in AWS Elastic Beanstalk.","Model an AWS EMR job in AWS CloudFormation. (EMR cluster can be modeled using CloudFormation. Refer link)","Model an AWS EMR job in AWS OpsWorks.","Model an AWS EMR job in AWS CLI Composer."],"question":"You need to run a very large batch data processing job one time per day. The source data exists entirely in S3, and the output of the processing job should also be written to S3 when finished. If you need to version control this processing job and all setup and teardown logic for the system, what approach should you use?"},{"correct":[0],"explanation":"","image":"","options":["“Fn::Join” : [“”. [ “http://”, {“Fn::GetAtt” : [ “ElasticLoadBalancer”,”DNSName”]}]]","“Fn::Join” : [“”. [ “http://”, {“Fn::GetAtt” : [ “ElasticLoadBalancer”,”Url”]}]]","“Fn::Join” : [“”. [ “http://”, {“Ref” : “ElasticLoadBalancerUrl”}]]","“Fn::Join” : [“.”, [ “http://”, {“Ref” : “ElasticLoadBalancerDNSName”}]]"],"question":"Which code snippet below returns the URL of a load balanced web site created in CloudFormation with an AWS::ElasticLoadBalancing::LoadBalancer resource name “ElasticLoad Balancer”?"},{"correct":[0],"explanation":"","image":"","options":["UPDATE_ROLLBACK_FAILED","UPDATE_ROLLBACK_COMPLETE","UPDATE_COMPLETE","CREATE_COMPLETE"],"question":"For AWS CloudFormation, which stack state refuses UpdateStack calls?"},{"correct":[2],"explanation":"Refer \u003ca href='http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/pseudo-parameter-reference.html'\u003elink\u003c/a\u003e","image":"","options":["AWS::StackName","AWS::AccountId","AWS::StackArn","AWS::NotificationARNs"],"question":"Which of these is not a Pseudo Parameter in AWS CloudFormation?"}];
+    var currentquestion = 0, score = 0, submt=true, picked = [];
+
+    Array.prototype.diff = function(arr2) {
+        var ret = [];
+        for(var i in this) {   
+            if(arr2.indexOf( this[i] ) > -1){
+                ret.push( this[i] );
+            }
+        }
+        return ret;
+    };
+    
+    Array.prototype.equals = function (array) {
+        
+        if (!array)
+            return false;
+
+        
+        if (this.length != array.length)
+            return false;
+
+        for (var i = 0, l=this.length; i < l; i++) {
+            
+            if (this[i] instanceof Array && array[i] instanceof Array) {
+                
+                if (!this[i].equals(array[i]))
+                    return false;       
+            }           
+            else if (this[i] != array[i]) { 
+                
+                return false;   
+            }           
+        }       
+        return true;
+    }
+
+    
+    Object.defineProperty(Array.prototype, "equals", {enumerable: false});
+
+     
+    jQuery(document).ready(function($){
+        
+
+        function htmlEncode(value){
+          return $(document.createElement('div')).text(value).html();
+        }
+        
+
+        function addChoices(choices){
+            if(typeof choices !== "undefined" && $.type(choices) == "array"){
+                $('#choice-block').empty();
+                for(var i=0;i<choices.length; i++){
+                    $(document.createElement('li')).addClass('choice choice-box').attr('data-index', i).text(choices[i]).appendTo('#choice-block');                    
+                }
+            }
+        }
+        
+        
+
+        function nextQuestion(){
+            submt = true;
+            picked = [];
+            $('#explanation').empty();
+            $('#question').text(quiz[currentquestion]['question']);
+            $('#pager').text('Question ' + Number(currentquestion + 1) + ' of ' + quiz.length);
+            if(quiz[currentquestion].hasOwnProperty('image') && quiz[currentquestion]['image'] != ""){
+                if($('#question-image').length == 0){
+                    $(document.createElement('img')).addClass('question-image').attr('id', 'question-image').attr('src', quiz[currentquestion]['image']).attr('alt', htmlEncode(quiz[currentquestion]['question'])).insertAfter('#question');
+                } else {
+                    $('#question-image').attr('src', quiz[currentquestion]['image']).attr('alt', htmlEncode(quiz[currentquestion]['question']));
+                }
+            } else {
+                $('#question-image').remove();
+            }
+            addChoices(quiz[currentquestion]['options']);
+
+            var multichoice = quiz[currentquestion]['correct'].length > 1 ? true : false;
+            setupButtons(multichoice);
+        }
+        
+
+        function processQuestion(choice){
+            var flag = quiz[currentquestion]['correct'].equals(choice);
+            if(flag){
+                $('.choice').eq(choice).css({'background-color':'#50D943'});
+                $('#explanation').html('<strong>Correct!</strong> ' + htmlEncode(quiz[currentquestion]['explanation']));
+                score++;
+            } else {
+                $('.choice').eq(choice).css({'background-color':'#D92623'});
+                $('#explanation').html('<strong>Incorrect.</strong> ' + htmlEncode(quiz[currentquestion]['explanation']));
+            }
+            currentquestion++;
+            $('#submitbutton').html('NEXT QUESTION &raquo;').on('click', function(){
+                if(currentquestion == quiz.length){
+                    endQuiz();
+                } else {
+                    $(this).text('Check Answer').css({'color':'#222'}).off('click');
+                    nextQuestion();
+                }
+            })
+        }
+        
+
+        function setupButtons(multichoice){
+            console.log(multichoice);
+            $('.choice').on('click', function(){
+                var curElement = $(this);
+                var curElementIndex = curElement.attr('data-index');
+                var myClass = curElement.attr("class");
+                
+                if(multichoice){
+                    if(curElement.hasClass("selectedAns")){
+                        var index = picked.indexOf(curElementIndex);
+                        picked.splice(index, 1);
+                        curElement.removeClass("selectedAns");
+                    }else{
+                        picked.push(parseInt(curElementIndex));
+                        curElement.addClass("selectedAns");
+                    }
+                }else{
+                    picked = [];
+                    $('.choice').removeClass("selectedAns");
+                    curElement.addClass("selectedAns");
+                    picked.push(parseInt(curElementIndex));
+                }
+                
+                
+                if(submt){
+                    submt=false;
+                    $('#submitbutton').css({'color':'#000'}).on('click', function(){
+                        $('.choice').off('click');
+                        $(this).off('click');
+                        processQuestion(picked);
+                    });
+                }
+            })
+        }
+        
+        
+
+        function endQuiz(){
+            $('#explanation').empty();
+            $('#question').empty();
+            $('#choice-block').empty();
+            $('#submitbutton').remove();
+            $('#question').text("You got " + score + " out of " + quiz.length + " correct.");
+            $(document.createElement('h2')).css({'text-align':'center', 'font-size':'4em'}).text(Math.round(score/quiz.length * 100) + '%').insertAfter('#question');
+        }
+        
+
+        function init(){
+            
+
+            
+            if(typeof quiz !== "undefined" && $.type(quiz) === "array"){
+                var container = $('#frame');
+                quiz.forEach(function (row) {
+                   
+                });
+                
+                
+                $(document.createElement('p')).addClass('pager').attr('id','pager').text('Question 1 of ' + quiz.length).appendTo('#frame');
+                
+                $(document.createElement('h2')).addClass('question').attr('id', 'question').text(quiz[0]['question']).appendTo('#frame');
+                
+                if(quiz[0].hasOwnProperty('image') && quiz[0]['image'] != ""){
+                    $(document.createElement('img')).addClass('question-image').attr('id', 'question-image').attr('src', quiz[0]['image']).attr('alt', htmlEncode(quiz[0]['question'])).appendTo('#frame');
+                }
+                
+                $(document.createElement('ul')).attr('id', 'choice-block').appendTo('#frame');
+            
+                
+                addChoices(quiz[0]['options']);
+                
+                $(document.createElement('p')).addClass('explanation').attr('id','explanation').html('&nbsp;').appendTo('#frame');
+                
+                
+                $(document.createElement('div')).addClass('choice-box').attr('id', 'submitbutton').text('Check Answer').css({'font-weight':700,'color':'#222','padding':'30px 0'}).appendTo('#frame');
+                
+                var multichoice = quiz[0]['correct'].length > 1 ? true : false;
+                setupButtons(multichoice);
+            }
+        }
+        init();
+    });
+
+</script>
+<style>
+    #frame {
+        background-color: #fff;
+        padding: 12px 20px;
+        border-radius: 4px;
+        border: 1px solid #d3e0e9;
+    }
+
+    .selectedAns {
+        border-color: royalblue;
+        background-color: burlywood;
+    }
+</style>
+<div id="frame" role="content"></div>
+        </div>
+        
+    </div>
+    
+    
+    <footer class="sticky-footer">
+    <div class="container">
+        <div class="text-center">
+            <small>Copyright © Anand Vyas 2019</small>
+        </div>
+    </div>
+</footer>
+
+<a class="scroll-to-top rounded" href="#page-top">
+    <i class="fa fa-angle-up"></i>
+</a>
+
+
+<script src="http://localhost:4000/js/popper.min.js"></script>
+<script src="http://localhost:4000/js/bootstrap.min.js"></script>
+<script src="http://localhost:4000/js/highlight.min.js"></script>
+<script src="http://localhost:4000/js/moment.min.js"></script>
+<script src="http://localhost:4000/js/clipboard.min.js"></script>
+
+<script src="http://localhost:4000/js/jquery.easing.min.js"></script>
+
+<script src="http://localhost:4000/js/sb-admin.js"></script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-108803266-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'UA-108803266-1');
+</script>
+  </div>
+<script data-no-instant>document.write('<script src="/livereload.js?port=4000&mindelay=10"></' + 'script>')</script></body>
+</html>

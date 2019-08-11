@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Aws Databases on Anand vyas</title>
+    <link>http://localhost:4000/tags/aws-databases/</link>
+    <description>Recent content in Aws Databases on Anand vyas</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 24 Jul 2017 00:15:00 +0200</lastBuildDate>
+    
+	<atom:link href="http://localhost:4000/tags/aws-databases/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>AWS Databases</title>
+      <link>http://localhost:4000/aws/aws-databases/</link>
+      <pubDate>Mon, 24 Jul 2017 00:15:00 +0200</pubDate>
+      
+      <guid>http://localhost:4000/aws/aws-databases/</guid>
+      <description>&lt;p&gt;AWS offers a wide range of database services to fit your application requirements. These database services are fully managed and can be launched in minutes with just a few clicks.&lt;/p&gt;
+
+&lt;div class=&#34;text-center&#34;&gt;
+    &lt;img class=&#34;img-responsive&#34; src=&#34;http://localhost:4000/images/aws-database-services.jpg&#34; alt=&#34;AWS Databases&#34; /&gt;
+&lt;/div&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

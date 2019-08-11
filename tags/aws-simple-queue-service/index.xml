@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Aws Simple Queue Service on Anand vyas</title>
+    <link>http://localhost:4000/tags/aws-simple-queue-service/</link>
+    <description>Recent content in Aws Simple Queue Service on Anand vyas</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 02 Aug 2017 00:15:00 +0200</lastBuildDate>
+    
+	<atom:link href="http://localhost:4000/tags/aws-simple-queue-service/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>AWS Simple Queue Service (SQS)***</title>
+      <link>http://localhost:4000/aws/aws-sqs/</link>
+      <pubDate>Wed, 02 Aug 2017 00:15:00 +0200</pubDate>
+      
+      <guid>http://localhost:4000/aws/aws-sqs/</guid>
+      <description>&lt;p&gt;Amazon Simple Queue Service (SQS) is a fast, reliable, scalable, fully managed message queuing service. SQS makes it simple and cost-effective to decouple the components of a cloud application. You can use SQS to transmit any volume of data, at any level of throughput, without losing messages or requiring other services to be always available.&lt;/p&gt;
+
+&lt;div class=&#34;text-center&#34;&gt;
+    &lt;img class=&#34;img-responsive&#34; src=&#34;http://localhost:4000/images/aws-sqs.jpg&#34; alt=&#34;AWS Databases&#34; /&gt;
+&lt;/div&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

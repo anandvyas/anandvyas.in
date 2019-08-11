@@ -4,27 +4,29 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Install Docker on Ubuntu 16.04 - Anand vyas</title>
-    <meta content="Install Docker on Ubuntu 16.04 - Anand vyas" property="og:title">
-    <meta content="Linux, Docker" name="keywords">
-    <meta content="Docker intro" property="og:description">
+    <title>Install Ansible on Ubuntu 16.04 - Anand vyas</title>
+    <meta content="Install Ansible on Ubuntu 16.04 - Anand vyas" property="og:title">
+    <meta content="Linux, Ansible" name="keywords">
+    <meta content="Ansible intro" property="og:description">
     <meta name="author" content="Anand Vyas">
 
     
-    <link href="https://anandvyas.in/css/bootstrap.min.css" rel="stylesheet">
+    <link href="http://localhost:4000/css/bootstrap.min.css" rel="stylesheet">
     
-    <link href="https://anandvyas.in/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://localhost:4000/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     
-    <link href="https://anandvyas.in/css/highlighter.css" rel="stylesheet">
+    <link href="http://localhost:4000/css/highlighter.css" rel="stylesheet">
     
-    <link href="https://anandvyas.in/css/sb-admin.css" rel="stylesheet">
-    <link href="https://anandvyas.in/css/about.css" rel="stylesheet">
+    <link href="http://localhost:4000/css/sb-admin.css" rel="stylesheet">
+    <link href="http://localhost:4000/css/about.css" rel="stylesheet">
+
+    <script src="http://localhost:4000/js/jquery.min.js"></script>
 </head>
 <body class="fixed-nav sticky-footer bg-dark sidenav-toggled" id="page-top">
   
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
-    <a class="navbar-brand" href="https://anandvyas.in/">
-        <img src="https://anandvyas.in/images/profile/logo.png" />
+    <a class="navbar-brand" href="http://localhost:4000/">
+        <img src="http://localhost:4000/images/profile/logo.png" />
         <span>Anand vyas</span>
     </a>
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive"
@@ -35,7 +37,7 @@
         <ul class="navbar-nav navbar-sidenav">
             <li class="nav-item sidebar-profile text-center">
                 <div class="profile-pic">
-                    <img src="https://anandvyas.in/images/profile/avatar.jpg" alt="avatar">
+                    <img src="http://localhost:4000/images/profile/avatar.jpg" alt="avatar">
                 </div>
                 <div class="profile-detail">
                     
@@ -47,28 +49,28 @@
             </li>
             
             <li class="nav-item sidebar-menu" data-toggle="tooltip" data-placement="right" title="Home">
-                <a class="nav-link" href="https://anandvyas.in/">
+                <a class="nav-link" href="http://localhost:4000/">
                 <i class="fa fa-fw fa fa-home"></i>
                 <span class="nav-link-text">Home</span>
                 </a>
             </li>
             
             <li class="nav-item sidebar-menu" data-toggle="tooltip" data-placement="right" title="About">
-                <a class="nav-link" href="https://anandvyas.in/about">
+                <a class="nav-link" href="http://localhost:4000/about">
                 <i class="fa fa-fw fa fa-user-circle"></i>
                 <span class="nav-link-text">About</span>
                 </a>
             </li>
             
             <li class="nav-item sidebar-menu" data-toggle="tooltip" data-placement="right" title="Categories">
-                <a class="nav-link" href="https://anandvyas.in/categories">
+                <a class="nav-link" href="http://localhost:4000/categories">
                 <i class="fa fa-fw fa fa-dashboard"></i>
                 <span class="nav-link-text">Categories</span>
                 </a>
             </li>
             
             <li class="nav-item sidebar-menu" data-toggle="tooltip" data-placement="right" title="Tags">
-                <a class="nav-link" href="https://anandvyas.in/tags">
+                <a class="nav-link" href="http://localhost:4000/tags">
                 <i class="fa fa-fw fa fa-tags"></i>
                 <span class="nav-link-text">Tags</span>
                 </a>
@@ -110,17 +112,17 @@
 
 
 <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="https://anandvyas.in/">Home</a></li>
+    <li class="breadcrumb-item"><a href="http://localhost:4000/">Home</a></li>
 
 
     
-    <li class="breadcrumb-item active"><a href='https://anandvyas.in/ansible'>ansible</a></li>
+    <li class="breadcrumb-item active"><a href='http://localhost:4000/ansible'>ansible</a></li>
     
     
 
 
     
-    <li class="breadcrumb-item active"><a href='https://anandvyas.in/ansible/install-ansible'>install-ansible</a></li>
+    <li class="breadcrumb-item active"><a href='http://localhost:4000/ansible/install-ansible'>install-ansible</a></li>
     
     
 
@@ -130,72 +132,19 @@
 </ol>
 
         <div class="post">
-            <h1>Install Docker on Ubuntu 16.04</h1>
+            <h1>Install Ansible on Ubuntu 16.04</h1>
             <span class="post-date">Thu, Apr 12, 2018</span>
-            
-
-<p>There are two ways to install Docker CE (Community Edition) are,</p>
-
-<ul>
-<li>Install from repository</li>
-<li>Install from latest edge release</li>
-</ul>
-
-<h3 id="install-from-repository">Install from repository</h3>
-
-<pre><code class="language-sh"># Update the package index
-sudo apt-get update
-
-# Allow apt to use a repository over HTTPS
-sudo apt-get install apt-transport-https ca-certificates curl software-properties-common
-
-# Add Docker’s official GPG key
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-
-# Add the Docker repository to APT sources
-sudo add-apt-repository &quot;deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable&quot;
-
-# Update the package database with the Docker packages
-sudo apt-get update
-
-# Make sure you are about to install from the Docker repo
-apt-cache policy docker-ce
-
-# Finally, install Docker
-sudo apt-get install -y docker-ce=&lt;version&gt;
-
-# Now Docker installed, and daemon started and the process enable to start the boot 
-# Check Docker status 
-sudo systemctl status docker
-
-# Execute Docker without Sudo command you have to include current user to docker group
-sudo usermod -aG docker ${USER}
-
-</code></pre>
+            <p>hi this is nanad</p>
 
         </div>
-        <div id="disqus_thread"></div>
-<script>
-
-
-
-
-
-(function() { 
-var d = document, s = d.createElement('script');
-s.src = 'https://anandvyas.disqus.com/embed.js';
-s.setAttribute('data-timestamp', +new Date());
-(d.head || d.body).appendChild(s);
-})();
-</script>
-                            
+        
     </div>
     
     
     <footer class="sticky-footer">
     <div class="container">
         <div class="text-center">
-            <small>Copyright © Anand Vyas 2018</small>
+            <small>Copyright © Anand Vyas 2019</small>
         </div>
     </div>
 </footer>
@@ -204,16 +153,16 @@ s.setAttribute('data-timestamp', +new Date());
     <i class="fa fa-angle-up"></i>
 </a>
 
-<script src="https://anandvyas.in/js/jquery.min.js"></script>
-<script src="https://anandvyas.in/js/popper.min.js"></script>
-<script src="https://anandvyas.in/js/bootstrap.min.js"></script>
-<script src="https://anandvyas.in/js/highlight.min.js"></script>
-<script src="https://anandvyas.in/js/moment.min.js"></script>
-<script src="https://anandvyas.in/js/clipboard.min.js"></script>
 
-<script src="https://anandvyas.in/js/jquery.easing.min.js"></script>
+<script src="http://localhost:4000/js/popper.min.js"></script>
+<script src="http://localhost:4000/js/bootstrap.min.js"></script>
+<script src="http://localhost:4000/js/highlight.min.js"></script>
+<script src="http://localhost:4000/js/moment.min.js"></script>
+<script src="http://localhost:4000/js/clipboard.min.js"></script>
 
-<script src="https://anandvyas.in/js/sb-admin.js"></script>
+<script src="http://localhost:4000/js/jquery.easing.min.js"></script>
+
+<script src="http://localhost:4000/js/sb-admin.js"></script>
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-108803266-1"></script>
 <script>
@@ -223,5 +172,5 @@ s.setAttribute('data-timestamp', +new Date());
     gtag('config', 'UA-108803266-1');
 </script>
   </div>
-<script data-no-instant>document.write('<script src="/livereload.js?port=1313&mindelay=10"></' + 'script>')</script></body>
+<script data-no-instant>document.write('<script src="/livereload.js?port=4000&mindelay=10"></' + 'script>')</script></body>
 </html>

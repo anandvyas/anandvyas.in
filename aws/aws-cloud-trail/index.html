@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>AWS CloudTrail - Anand vyas</title>
+    <meta content="AWS CloudTrail - Anand vyas" property="og:title">
+    <meta content="" name="keywords">
+    <meta content="" property="og:description">
+    <meta name="author" content="Anand Vyas">
+
+    
+    <link href="http://localhost:4000/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link href="http://localhost:4000/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    
+    <link href="http://localhost:4000/css/highlighter.css" rel="stylesheet">
+    
+    <link href="http://localhost:4000/css/sb-admin.css" rel="stylesheet">
+    <link href="http://localhost:4000/css/about.css" rel="stylesheet">
+
+    <script src="http://localhost:4000/js/jquery.min.js"></script>
+</head>
+<body class="fixed-nav sticky-footer bg-dark sidenav-toggled" id="page-top">
+  
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+    <a class="navbar-brand" href="http://localhost:4000/">
+        <img src="http://localhost:4000/images/profile/logo.png" />
+        <span>Anand vyas</span>
+    </a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav navbar-sidenav">
+            <li class="nav-item sidebar-profile text-center">
+                <div class="profile-pic">
+                    <img src="http://localhost:4000/images/profile/avatar.jpg" alt="avatar">
+                </div>
+                <div class="profile-detail">
+                    
+                    <span>Solution Architect</span> 
+                    <span>Cloud Architect</span> 
+                    <span>DevOps</span> 
+                    <span>Tech Lead</span> 
+                </div>
+            </li>
+            
+            <li class="nav-item sidebar-menu" data-toggle="tooltip" data-placement="right" title="Home">
+                <a class="nav-link" href="http://localhost:4000/">
+                <i class="fa fa-fw fa fa-home"></i>
+                <span class="nav-link-text">Home</span>
+                </a>
+            </li>
+            
+            <li class="nav-item sidebar-menu" data-toggle="tooltip" data-placement="right" title="About">
+                <a class="nav-link" href="http://localhost:4000/about">
+                <i class="fa fa-fw fa fa-user-circle"></i>
+                <span class="nav-link-text">About</span>
+                </a>
+            </li>
+            
+            <li class="nav-item sidebar-menu" data-toggle="tooltip" data-placement="right" title="Categories">
+                <a class="nav-link" href="http://localhost:4000/categories">
+                <i class="fa fa-fw fa fa-dashboard"></i>
+                <span class="nav-link-text">Categories</span>
+                </a>
+            </li>
+            
+            <li class="nav-item sidebar-menu" data-toggle="tooltip" data-placement="right" title="Tags">
+                <a class="nav-link" href="http://localhost:4000/tags">
+                <i class="fa fa-fw fa fa-tags"></i>
+                <span class="nav-link-text">Tags</span>
+                </a>
+            </li>
+            
+        </ul>
+        <ul class="navbar-nav sidenav-social">
+            
+            <li><a href="#" target="_blank"><i class="fa fa-mobile"></i></a></li>
+            
+            <li><a href="mailto:anandvyas@live.com" target="_blank"><i class="fa fa-envelope"></i></a></li>
+            
+            <li><a href="https://twitter.com/anandvyaas" target="_blank"><i class="fa fa-twitter"></i></a></li>
+            
+            <li><a href="https://www.linkedin.com/in/anandvyaas" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+            
+            <li><a href="https://www.instagram.com/anandvyaas" target="_blank"><i class="fa fa-instagram"></i></a></li>
+            
+            <li><a href="https://github.com/anandvyas" target="_blank"><i class="fa fa-github"></i></a></li>
+            
+            <li><a href="https://stackoverflow.com/users/8208060/anand-vyas" target="_blank"><i class="fa fa-stack-overflow"></i></a></li>
+            
+        </ul>
+        <ul class="navbar-nav sidenav-toggler">
+            <li class="nav-item">
+                <a class="nav-link text-center" id="sidenavToggler">
+            <i class="fa fa-fw fa-angle-left"></i>
+            </a>
+            </li>
+        </ul>
+        
+        
+    </div>
+</nav>
+  
+  <div class="content-wrapper">
+    <div class="container-fluid">
+    
+
+
+<ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="http://localhost:4000/">Home</a></li>
+
+
+    
+    <li class="breadcrumb-item active"><a href='http://localhost:4000/aws'>aws</a></li>
+    
+    
+
+
+    
+    <li class="breadcrumb-item active"><a href='http://localhost:4000/aws/aws-cloud-trail'>aws-cloud-trail</a></li>
+    
+    
+
+
+    
+
+</ol>
+
+        <div class="post">
+            <h1>AWS CloudTrail</h1>
+            <span class="post-date">Thu, Jul 13, 2017</span>
+            <p>AWS CloudTrail provides visibility into user activity by recording API calls made on your account. AWS CloudTrail records important information about each API call, including the name of the API, the identity of the caller, the time of the API call, the request parameters, and the response elements returned by the AWS service.</p>
+
+<div class="text-center">
+    <img class="img-responsive" src="http://localhost:4000/images/aws-cloudtrail.jpg" alt="AWS Snowball" />
+</div>
+ 
+
+<ul>
+<li><strong>A service that logs all AWS API calls in your account</strong></li>
+<li>This information helps you to track changes made to your AWS resources and to troubleshoot operational issues. AWS CloudTrail makes it easier to ensure compliance with internal policies and regulatory standards.</li>
+<li>CloudTrail tracking includes calls made by using the AWS Management Console, AWS SDKs, command line tools, and higher-level AWS services (such as AWS CloudFormation)</li>
+<li>AWS CloudTrail captures AWS API calls and related events made by or on behalf of an AWS account and delivers log files to an specified S3 bucket.</li>
+<li><strong>Log files contain API calls from all of the account’s CloudTrail supported services</strong></li>
+<li>Log files from all the regions can be delivered to a single S3 bucket and are encrypted, by default, using S3 server-side encryption (SSE)</li>
+<li>CloudTrail typically delivers log files within 15 minutes of an API call and publishes new log files multiple times an hour, usually about every 5 mins.</li>
+<li>CloudTrail can be configured, optionally, to deliver events to a log group to be monitored by CloudWatch Logs.</li>
+<li>Amazon SNS notifications can be configured to be sent each time a log file is delivered to your bucket.</li>
+<li>A trail, which is a configuration, needs to be created that enables logging of the AWS API activity and related events in your account.</li>
+<li>Trail can be created with CloudTrail console, AWS CLI, or CloudTrail API.</li>
+<li>You can create two types of trails:
+
+<ul>
+<li><strong>A Trail That Applies to All Regions</strong>
+
+<ul>
+<li>When a trail is created that applies to all regions, CloudTrail creates the same trail in each region, records the log files in each region, and delivers the log files to the specified single S3 bucket (and optionally to the CloudWatch Logs log group)</li>
+</ul></li>
+<li><strong>A Trail That Applies to One Region</strong>
+
+<ul>
+<li>A S3 bucket can be specified that receives events only from that region and it can be in any region that you specify.</li>
+<li>Additional individual trails created that apply to specific regions, those trails can deliver event logs to a single S3 bucket.</li>
+</ul></li>
+</ul></li>
+</ul>
+
+<h3 id="a-name-aws-cloudtrail-lab-aws-cloudtrail-lab-a"><a name="aws-cloudtrail-lab">AWS CloudTrail: Lab</a></h3>
+
+<div align="center">
+<div class="embed video-player">
+    <iframe class="youtube-player anand" type="text/html" width="640" height="385" src="http://www.youtube.com/embed/vBku_8b-Tak" allowfullscreen frameborder="0">
+    </iframe>
+</div>
+</div>
+
+<h3 id="a-name-aws-cloudtrail-quiz-aws-cloudtrail-quiz-a"><a name="aws-cloudtrail-quiz">AWS CloudTrail: Quiz</a></h3>
+
+<ul>
+<li><p>You currently operate a web application in the AWS US-East region. The application runs on an auto-scaled layer of EC2 instances and an RDS Multi-AZ database. Your IT security compliance officer has tasked you to develop a reliable and durable logging solution to track changes made to your EC2, IAM and RDS resources. The solution must ensure the integrity and confidentiality of your log data. Which of these solutions would you recommend?</p>
+
+<ul>
+<li><strong>Create a new CloudTrail trail with one new S3 bucket to store the logs and with the global services option selected. Use IAM roles, S3 bucket policies and Multi Factor Authentication (MFA) Delete on the S3 bucket that stores your logs.</strong> (Single New bucket with global services option for IAM and MFA delete for confidentiality)</li>
+<li>Create a new CloudTrail with one new S3 bucket to store the logs. Configure SNS to send log file delivery notifications to your management system. Use IAM roles and S3 bucket policies on the S3 bucket that stores your logs. (Missing Global Services for IAM)</li>
+<li>Create a new CloudTrail trail with an existing S3 bucket to store the logs and with the global services option selected Use S3 ACLs and Multi Factor Authentication (MFA) Delete on the S3 bucket that stores your logs. (Existing bucket prevents confidentiality)</li>
+<li>Create three new CloudTrail trails with three new S3 buckets to store the logs one for the AWS Management console, one for AWS SDKs and one for command line tools. Use IAM roles and S3 bucket policies on the S3 buckets that store your logs (3 buckets not needed, Missing Global services options)</li>
+</ul></li>
+
+<li><p>Which of the following are true regarding AWS CloudTrail? Choose 3 answers</p>
+
+<ul>
+<li><strong>CloudTrail is enabled globally</strong> (it can be enabled for all regions and also per region basis)</li>
+<li>CloudTrail is enabled by default (was not enabled by default, however, it is enabled by default as per the latest AWS enhancements)</li>
+<li><strong>CloudTrail is enabled on a per-region basis</strong> (it can be enabled for all regions and also per region basis)</li>
+<li>CloudTrail is enabled on a per-service basis (once enabled it is applicable for all the supported services, service can’t be selected)</li>
+<li><strong>Logs can be delivered to a single Amazon S3 bucket for aggregation</strong></li>
+<li>CloudTrail is enabled for all available services within a region. (is enabled only for CloudTrail supported services)</li>
+<li>Logs can only be processed and delivered to the region in which they are generated. (can be logged to bucket in any region)</li>
+</ul></li>
+
+<li><p>An organization has configured the custom metric upload with CloudWatch. The organization has given permission to its employees to upload data using CLI as well SDK. How can the user track the calls made to CloudWatch?</p>
+
+<ul>
+<li>The user can enable logging with CloudWatch which logs all the activities</li>
+<li><strong>Use CloudTrail to monitor the API calls</strong></li>
+<li>Create an IAM user and allow each user to log the data using the S3 bucket</li>
+<li>Enable detailed monitoring with CloudWatch</li>
+</ul></li>
+
+<li><p>A user is trying to understand the CloudWatch metrics for the AWS services. It is required that the user should first understand the namespace for the AWS services. Which of the below mentioned is not a valid namespace for the AWS services?</p>
+
+<ul>
+<li>AWS/StorageGateway</li>
+<li><strong>AWS/CloudTrail</strong> (CloudWatch supported namespaces)</li>
+<li>AWS/ElastiCache</li>
+<li>AWS/SWF</li>
+</ul></li>
+
+<li><p>Your CTO thinks your AWS account was hacked. What is the only way to know for certain if there was unauthorized access and what they did, assuming your hackers are very sophisticated AWS engineers and doing everything they can to cover their tracks?</p>
+
+<ul>
+<li><strong>Use CloudTrail Log File Integrity Validation.</strong></li>
+<li>Use AWS Config SNS Subscriptions and process events in real time.</li>
+<li>Use CloudTrail backed up to AWS S3 and Glacier.</li>
+<li>Use AWS Config Timeline forensics.</li>
+</ul></li>
+
+<li><p>Your CTO has asked you to make sure that you know what all users of your AWS account are doing to change resources at all times. She wants a report of who is doing what over time, reported to her once per week, for as broad a resource type group as possible. How should you do this?</p>
+
+<ul>
+<li><strong>Create a global AWS CloudTrail Trail. Configure a script to aggregate the log data delivered to S3 once per week and deliver this to the CTO.</strong></li>
+<li>Use CloudWatch Events Rules with an SNS topic subscribed to all AWS API calls. Subscribe the CTO to an email type delivery on this SNS Topic.</li>
+<li>Use AWS IAM credential reports to deliver a CSV of all uses of IAM User Tokens over time to the CTO.</li>
+<li>Use AWS Config with an SNS subscription on a Lambda, and insert these changes over time into a DynamoDB table. Generate reports based on the contents of this table.</li>
+</ul></li>
+</ul>
+        </div>
+        
+    </div>
+    
+    
+    <footer class="sticky-footer">
+    <div class="container">
+        <div class="text-center">
+            <small>Copyright © Anand Vyas 2019</small>
+        </div>
+    </div>
+</footer>
+
+<a class="scroll-to-top rounded" href="#page-top">
+    <i class="fa fa-angle-up"></i>
+</a>
+
+
+<script src="http://localhost:4000/js/popper.min.js"></script>
+<script src="http://localhost:4000/js/bootstrap.min.js"></script>
+<script src="http://localhost:4000/js/highlight.min.js"></script>
+<script src="http://localhost:4000/js/moment.min.js"></script>
+<script src="http://localhost:4000/js/clipboard.min.js"></script>
+
+<script src="http://localhost:4000/js/jquery.easing.min.js"></script>
+
+<script src="http://localhost:4000/js/sb-admin.js"></script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-108803266-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'UA-108803266-1');
+</script>
+  </div>
+<script data-no-instant>document.write('<script src="/livereload.js?port=4000&mindelay=10"></' + 'script>')</script></body>
+</html>

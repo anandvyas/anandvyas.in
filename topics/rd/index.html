@@ -1,0 +1,1045 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>The Twelve-Factor App - Anand vyas</title>
+    <meta content="The Twelve-Factor App - Anand vyas" property="og:title">
+    <meta content="Linux, htaccess" name="keywords">
+    <meta content="htaccess configuration" property="og:description">
+    <meta name="author" content="Anand Vyas">
+
+    
+    <link href="http://localhost:4000/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link href="http://localhost:4000/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    
+    <link href="http://localhost:4000/css/highlighter.css" rel="stylesheet">
+    
+    <link href="http://localhost:4000/css/sb-admin.css" rel="stylesheet">
+    <link href="http://localhost:4000/css/about.css" rel="stylesheet">
+
+    <script src="http://localhost:4000/js/jquery.min.js"></script>
+</head>
+<body class="fixed-nav sticky-footer bg-dark sidenav-toggled" id="page-top">
+  
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+    <a class="navbar-brand" href="http://localhost:4000/">
+        <img src="http://localhost:4000/images/profile/logo.png" />
+        <span>Anand vyas</span>
+    </a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav navbar-sidenav">
+            <li class="nav-item sidebar-profile text-center">
+                <div class="profile-pic">
+                    <img src="http://localhost:4000/images/profile/avatar.jpg" alt="avatar">
+                </div>
+                <div class="profile-detail">
+                    
+                    <span>Solution Architect</span> 
+                    <span>Cloud Architect</span> 
+                    <span>DevOps</span> 
+                    <span>Tech Lead</span> 
+                </div>
+            </li>
+            
+            <li class="nav-item sidebar-menu" data-toggle="tooltip" data-placement="right" title="Home">
+                <a class="nav-link" href="http://localhost:4000/">
+                <i class="fa fa-fw fa fa-home"></i>
+                <span class="nav-link-text">Home</span>
+                </a>
+            </li>
+            
+            <li class="nav-item sidebar-menu" data-toggle="tooltip" data-placement="right" title="About">
+                <a class="nav-link" href="http://localhost:4000/about">
+                <i class="fa fa-fw fa fa-user-circle"></i>
+                <span class="nav-link-text">About</span>
+                </a>
+            </li>
+            
+            <li class="nav-item sidebar-menu" data-toggle="tooltip" data-placement="right" title="Categories">
+                <a class="nav-link" href="http://localhost:4000/categories">
+                <i class="fa fa-fw fa fa-dashboard"></i>
+                <span class="nav-link-text">Categories</span>
+                </a>
+            </li>
+            
+            <li class="nav-item sidebar-menu" data-toggle="tooltip" data-placement="right" title="Tags">
+                <a class="nav-link" href="http://localhost:4000/tags">
+                <i class="fa fa-fw fa fa-tags"></i>
+                <span class="nav-link-text">Tags</span>
+                </a>
+            </li>
+            
+        </ul>
+        <ul class="navbar-nav sidenav-social">
+            
+            <li><a href="#" target="_blank"><i class="fa fa-mobile"></i></a></li>
+            
+            <li><a href="mailto:anandvyas@live.com" target="_blank"><i class="fa fa-envelope"></i></a></li>
+            
+            <li><a href="https://twitter.com/anandvyaas" target="_blank"><i class="fa fa-twitter"></i></a></li>
+            
+            <li><a href="https://www.linkedin.com/in/anandvyaas" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+            
+            <li><a href="https://www.instagram.com/anandvyaas" target="_blank"><i class="fa fa-instagram"></i></a></li>
+            
+            <li><a href="https://github.com/anandvyas" target="_blank"><i class="fa fa-github"></i></a></li>
+            
+            <li><a href="https://stackoverflow.com/users/8208060/anand-vyas" target="_blank"><i class="fa fa-stack-overflow"></i></a></li>
+            
+        </ul>
+        <ul class="navbar-nav sidenav-toggler">
+            <li class="nav-item">
+                <a class="nav-link text-center" id="sidenavToggler">
+            <i class="fa fa-fw fa-angle-left"></i>
+            </a>
+            </li>
+        </ul>
+        
+        
+    </div>
+</nav>
+  
+  <div class="content-wrapper">
+    <div class="container-fluid">
+    
+
+
+<ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="http://localhost:4000/">Home</a></li>
+
+
+    
+    <li class="breadcrumb-item active"><a href='http://localhost:4000/topics'>topics</a></li>
+    
+    
+
+
+    
+    <li class="breadcrumb-item active"><a href='http://localhost:4000/topics/rd'>rd</a></li>
+    
+    
+
+
+    
+
+</ol>
+
+        <div class="post">
+            <h1>The Twelve-Factor App</h1>
+            <span class="post-date">Thu, Apr 12, 2018</span>
+            
+
+<h3 id="mailchimp-facts">Mailchimp Facts</h3>
+
+<p>Year of launch: 2001
+Total number of Mailchimp users: 14 millions * 30
+Number of emails sent through Mailchimp daily: 1 billion
+Average number of Mailchimp API requests daily: 10 million
+Number of countries MailChimp has users in: 200 countries</p>
+
+<p>There are two types of panel in mailchimp
+- Dashboard panel:
+    - Email template designer
+    - Add your contant list
+    - Generate subscriber form
+    - create campaign</p>
+
+<pre><code>- and send mail to those list 
+</code></pre>
+
+<h3 id="you-email-consists-of-almost-only-html-and-a-link-that-smells-like-spam">You email consists of almost only HTML and a link. That smells like spam.</h3>
+
+<p>Suggestions:
+- Send a plaintext email (less likely to be considered spam - and more comfortable for many users)
+- If you use HTML, always include a plaintext version
+- Improve the text-to-links/html ratio.</p>
+
+<p>My name is Anand, and my company is working on to create an email marketing tool to send more than 10 million emails per day. So they need a solution. I went through your profile and I found, you have a very good experience in the mail system.</p>
+
+<p>sudo apt-get install -y apache2
+sudo apt-get install -y php7.0 libapache2-mod-php7.0 php7.0-cli php7.0-common php7.0-mbstring php7.0-gd php7.0-intl php7.0-xml php7.0-mysql php7.0-mcrypt php7.0-zip
+A</p>
+
+<ul>
+<li>strain    तनाव</li>
+<li>aggravate छेड़ना</li>
+<li>medicinal औषधीय</li>
+<li>numerous  अनेक</li>
+<li>visibly   प्रत्यक्षत:</li>
+<li>cuisine   भोजन</li>
+<li>smell गंध</li>
+<li>pleasant  सुखद</li>
+<li>lend  उधार देना</li>
+<li>rosemary  मेंहदी</li>
+<li>exfoliate छूटना</li>
+<li>remedy    उपाय</li>
+<li>rinse कुल्ला</li>
+<li>vinegar   सिरका</li>
+<li>assumed   कल्पित</li>
+<li>usually   आमतौर पर</li>
+<li>crush कुचलना</li>
+<li>infect    संक्रमित</li>
+<li>inflame   भड़काना</li>
+<li>inflamed  सूजन</li>
+<li>revoke    वापस लेना</li>
+<li>plead वकालत करना</li>
+<li>stubborn  जिद्दी</li>
+<li>competence    क्षमता</li>
+<li>hobble    लंगड़ाना</li>
+<li>shortage  कमी</li>
+<li>squandered    गंवा</li>
+<li>assess    आकलन</li>
+<li>ruined    तबाह</li>
+<li>cliff चट्टान</li>
+<li>argue बहस</li>
+<li>prudent   विवेकी</li>
+<li>fungal    फंगल</li>
+<li>rid   छुटकारा पा</li>
+<li>evaluation    मूल्यांकन</li>
+<li>optimistic    आशावादी</li>
+<li>emphasis  जोर</li>
+<li>disclose  खुलासा</li>
+<li>illustration  उदाहरण</li>
+<li>dismantle गिराना</li>
+<li>humiliate विनीत करना</li>
+<li>humiliated    बेआबरू</li>
+<li>belated   विलम्बित</li>
+<li>courage   साहस</li>
+<li>consensus आम राय</li>
+<li>convene   बुलाना</li>
+<li>oppose    विरोध करना</li>
+<li>torn  नोचा हुआ</li>
+<li>defend    रक्षा करना</li>
+<li>feared    आशंका जताई</li>
+<li>undermine कमजोर</li>
+<li>Percentiles   प्रतिशतक</li>
+<li>mediocre  औसत दर्जे का</li>
+<li>obstacle  बाधा</li>
+<li>tossed    फेंक दिया</li>
+<li>notion    धारणा</li>
+<li>fickle    चंचल</li>
+<li>spotlight रोशनी</li>
+<li>until जब तक</li>
+<li>arrive    पहुंचना</li>
+<li>personality   व्यक्तित्व</li>
+<li>applicant आवेदक</li>
+<li>invitation    निमंत्रण</li>
+<li>complement    पूरक</li>
+<li>ordinance अध्यादेश</li>
+<li>concentration एकाग्रता</li>
+<li>portrayal निरूपण</li>
+<li>realistic यथार्थवादी</li>
+<li>resistant प्रतिरोधी</li>
+<li>immediately   तुरंत</li>
+<li>gain  लाभ</li>
+<li>pimples   मुँहासे</li>
+<li>leading   प्रमुख</li>
+<li>pore  ताकना</li>
+<li>clog  रोकना</li>
+<li>scalp खोपड़ी</li>
+<li>flaky परतदार</li>
+<li>fed up    तंग आ गया</li>
+<li>confession    पाप - स्वीकारोक्ति</li>
+<li>Recur पुनरावृत्ति होना</li>
+<li>Reflux    भाटा</li>
+<li>insult    अपमान</li>
+<li>Awkward   अनाड़ी</li>
+<li>cuddle    cuddle</li>
+<li>alimony   रोटी - कपड़ा</li>
+<li>epidural  दृढ़तानिका के ऊपर</li>
+<li>irrational    तर्कहीन</li>
+<li>scratch   खरोंच</li>
+<li>regretting    पछता</li>
+<li>tuck  टक</li>
+<li>fart  पादना</li>
+<li>virgin    कुंआरी</li>
+<li>chasing   पीछा</li>
+<li>swipe ज़ोर से मारना</li>
+<li>detention निरोध</li>
+<li>appreciate    सराहना</li>
+<li>determine निर्धारित</li>
+<li>reiterate दोहराना</li>
+<li>periodically  समय - समय</li>
+<li>intend    इरादा</li>
+<li>unprecedented अभूतपूर्व</li>
+<li>intervention  हस्तक्षेप</li>
+<li>groping   तलाशने</li>
+<li>allegedly कथित तौर पर</li>
+<li>graft कलम</li>
+<li>struggle  संघर्ष</li>
+<li>allegation    आरोप</li>
+<li>acquise   प्राप्त</li>
+<li>endorse   समर्थन करना</li>
+<li>expose    बेनकाब</li>
+<li>victim    शिकार</li>
+<li>leap  छलांग</li>
+<li>plash डबरी</li>
+<li>proprietary   मालिकाना</li>
+<li>blow  झटका</li>
+<li>lane  लेन</li>
+<li>lame  लंगड़ा</li>
+<li>psychopathic  मनोरोगी</li>
+<li>simulating    अनुकरण</li>
+<li>screw स्क्रू</li>
+<li>astray    गुमराह</li>
+<li>ceasefire युद्धविराम</li>
+<li>violation उल्लंघन</li>
+<li>signification अर्थ</li>
+<li>delegation    प्रत्यायोजन</li>
+<li>cooperation   सहयोग</li>
+<li>thorny    कांटेदार</li>
+<li>deficit   घाटा</li>
+<li>inflation मुद्रास्फीति</li>
+<li>haunt अड्डा</li>
+<li>council   कौंसिल</li>
+<li>stimulate प्रोत्साहित करना</li>
+<li>conjunction   संयोजन</li>
+<li>unintended    अनायास</li>
+<li>prevent   रोकना</li>
+<li>specify   निर्दिष्ट</li>
+<li>consistency   स्थिरता</li>
+<li>concurrently  साथ - साथ</li>
+<li>preliminary   प्रारंभिक</li>
+<li>repository    कोष</li>
+<li>Although  हालांकि</li>
+<li>outlines  रूपरेखा</li>
+<li>architecture  स्थापत्य</li>
+<li>upcoming  आगामी</li>
+<li>Release   रिलीज</li>
+<li>constant  स्थिर</li>
+<li>thorough  संपूर्ण</li>
+<li>procedure प्रक्रिया</li>
+<li>consider  विचार करना</li>
+<li>scurrility    गाली - गलौज</li>
+<li>conceit   दंभ</li>
+<li>indecency अभद्रता</li>
+<li>affectation   स्वांग</li>
+<li>regret    खेद</li>
+<li>amazing   अद्भुत</li>
+<li>experience    अनुभव</li>
+<li>prest पुजारी</li>
+<li>reveal    प्रकट</li>
+<li>inappropriate अनुचित</li>
+<li>fumble    टटोलना</li>
+<li>sack  बोरा</li>
+<li>defender  रक्षक</li>
+<li>ingredient    संघटक</li>
+<li>swept बह</li>
+<li>realization   अहसास</li>
+<li>ethic नैतिक</li>
+<li>testament वसीयतनामा</li>
+<li>remade    पुनर्निर्माण</li>
+<li>franchise मताधिकार</li>
+<li>disgruntled   असंतुष्ट</li>
+<li>whopping  whopping</li>
+<li>trade व्यापार</li>
+<li>struck    मारा</li>
+<li>soak  भिगोना</li>
+<li>reward    इनाम</li>
+<li>injury    चोट</li>
+<li>pitch पिच</li>
+<li>raucous   फटा</li>
+<li>clinch    कड़ी</li>
+<li>sentiment भाव</li>
+<li>bearded   दढ़ियल</li>
+<li>improbable    असंभव</li>
+<li>fasten    जकड़ना</li>
+<li>fond in   में शौकीन</li>
+<li>intriguing    लुभावना</li>
+<li>adulation मनुहार</li>
+<li>curious   जिज्ञासु</li>
+<li>instead   बजाय</li>
+<li>intrigue  साज़िश</li>
+<li>mystic    रहस्यवादी</li>
+<li>held  आयोजित</li>
+<li>privilege विशेषाधिकार</li>
+<li>imagined  कल्पना</li>
+<li>turban    पगडी</li>
+<li>renowned  प्रसिद्ध</li>
+<li>Soreness  व्यथा</li>
+<li>address   पता</li>
+<li>determination दृढ़ संकल्प</li>
+<li>conservation  संरक्षण</li>
+<li>unfortunate   बदकिस्मत</li>
+<li>empower   सशक्त बनाना</li>
+<li>conclude  निष्कर्ष निकालना</li>
+<li>Reformer  सुधारक</li>
+<li>hails निवासी</li>
+<li>rousing   गर्मजोशी</li>
+<li>massive   विशाल</li>
+<li>convocation   दीक्षान्त समारोह</li>
+<li>inaugurate    उद्घाटन करना</li>
+<li>lay down  निर्धारित करना</li>
+<li>compulsive    बाध्यकारी</li>
+<li>momentum  गति</li>
+<li>terrible  भयानक</li>
+<li>conquer   जीतना</li>
+<li>lasting   स्थायी</li>
+<li>discriminatory    चुनाव का</li>
+<li>apprehension  शंका</li>
+<li>greed लालच</li>
+<li>grab  हथियाना</li>
+<li>tier  स्तर</li>
+<li>utter बोलना</li>
+<li>tremendous    जबरदस्त</li>
+<li>transit   पारगमन</li>
+<li>defeat    हार</li>
+<li>letting   दे</li>
+<li>aspect    पहलू</li>
+<li>collaborate   सहयोग</li>
+<li>precious  अनमोल</li>
+<li>irritation    जलन</li>
+<li>endurance सहनशीलता</li>
+<li>calibrate जांचना</li>
+<li>disengage छुड़ाना</li>
+<li>penetrate घुसना</li>
+<li>distraction   व्याकुलता</li>
+<li>deceive   धोखा देना</li>
+<li>composite संयुक्त</li>
+<li>deterrent निवारक</li>
+<li>perception    अनुभूति</li>
+<li>miserable दुखी</li>
+<li>manifest  प्रकट</li>
+<li>duplicity कपट</li>
+<li>stipulate शर्त लगाना</li>
+<li>deception धोखा</li>
+<li>steady    स्थिर</li>
+<li>conscious जागरूक</li>
+<li>exhalation    साँस छोड़ना</li>
+<li>inhalation    साँस लेना</li>
+<li>substantial   पर्याप्त</li>
+<li>empowerment   सशक्तिकरण</li>
+<li>underestimate बहुत मूल्यवान समझना</li>
+<li>estimate  आकलन</li>
+<li>raise उठाना</li>
+<li>happened  हुआ</li>
+<li>crack दरार</li>
+<li>beyond    परे</li>
+<li>either    भी</li>
+<li>significance  महत्व</li>
+<li>elaborate विस्तृत</li>
+<li>phenomena घटना</li>
+<li>constitute    का गठन</li>
+<li>arrogant  अभिमानी</li>
+<li>strategist    रणनीतिज्ञ</li>
+<li>mince क़ीमा</li>
+<li>substantiate  सिद्ध करना</li>
+<li>lick  चाटना</li>
+<li>Empower   सशक्त</li>
+<li>consequence   परिणाम
+rebel   बागी
+tolerance   सहिष्णुता
+impose  थोपना
+denied  वंचित
+mob भीड़
+stampede    भगदड़
+rumour  अफवाह
+assembled   इकट्ठे
+pilgrim तीर्थयात्री
+mercy   दया
+eyelet  सुराख़
+cues    संकेतों
+sprint  पूरे वेग से दौड़ना
+bleeding    खून बहना
+stitch  टांका
+stiffness   कठोरता
+pace    गति
+economical  किफायती
+engage  लगाना
+stride  छलाँग
+drill   ड्रिल
+collision   टक्कर
+essentially अनिवार्य रूप से
+starving    भूख से मर
+amongst बीच में
+slight  थोड़ा
+endorsed    पृष्ठांकित
+pollution   प्रदूषण
+availed लाभ उठाया
+Descriptor  वर्णनकर्ता
+Minimalistic    minimalistic
+Glimpse झलक
+Conservative    रूढ़िवादी
+Convenient  सुविधाजनक
+Dissect काटना
+Intend  इरादा
+Incarnation अवतार
+Nevertheless    फिर भी
+finicky नकचढ़ा
+weird   अजीब
+snapping    तड़क
+grumpy  क्रोधी
+daunting    चुनौतीपूर्ण
+springtime  बहार
+concrete    कंक्रीट
+sneeze  छींक
+owlet   उल्लू
+squirrel    गिलहरी
+motorable   मोटर योग्य
+legend  किंवदंती
+authenticity    प्रामाणिकता
+vouch   साक्ष्य देना
+abandoned   परित्यक्त
+shelter आश्रय
+Contribution    योगदान
+Imperfect   अपूर्ण
+Joyous  सानन्द
+Honored सम्मानित
+Delight आनंद
+Bribe   घूस
+Beneficiary लाभार्थी
+Reimbursement   प्रतिपूर्ति
+Contemporary    समकालीन
+Journal पत्रिका
+treatise    निबंध
+uttering    बोले
+disgust घृणा
+sermons उपदेश
+beast   जानवर
+recited पाठ
+begged  विनती
+lash    जोर से मारना
+negotiation बातचीत
+narration   कथा
+sabotage    तोड़ - फोड़
+topically   विषयानुसार
+accountability  जवाबदेही
+peel    छाल
+foetus  भ्रूण
+womb    कोख
+discretion  विवेक
+mindlessly  आंख मूंदकर
+firmer  मजबूत
+gradually   धीरे - धीरे
+ligament    बंध
+improve में सुधार
+barefoot    नंगे पैर
+hesitate    संकोच
+consuming   खपत
+although    हालांकि
+imply   मतलब
+implying    जिसका अर्थ
+material    सामग्री
+Misunderstanding    गलतफहमी
+Insane  पागल
+compulsory  अनिवार्य
+shivering   कंपकपाहट
+relieve को राहत देने
+devotion    भक्ति
+forgiveness क्षमा
+beg भीख माँगना
+crushed कुचल
+crumple टूट जाना
+aggravation उत्तेजना
+straight    सीधे
+furious उग्र
+hectic  व्यस्त
+sip घूंट
+petal   पत्ती
+dipping डुबकी
+enhance बढ़ाना
+immunity    प्रतिरक्षा
+combat  मुकाबला
+substance   पदार्थ
+patch   पैच
+presence    उपस्थिति
+feeble  कमजोर
+bedridden   शय्याग्रस्त
+dotage  साठियापा
+bother  परेशानी
+succeeded   सफल
+steadfast   दृढ़
+stricken    घायल
+poverty निर्धनता
+worsening   बिगड़ती
+worse   बदतर
+starvation  अकाल
+former  पूर्व
+perspiration    पसीना
+thermos थरमस
+poured  डाला
+dawn    भोर
+accompanied के साथ
+wintry  शीत ऋतु का
+beside  बगल में
+nutritious  पौष्टिक
+hope    आशा
+Grocery किराना
+consequences    परिणाम
+appearance  उपस्थिति
+roughly लगभग
+culture संस्कृति
+originate   उत्पन्न करना
+ancient प्राचीन
+mural   भित्ति - चित्र
+spectacular शानदार
+Melt    पिघलना
+locomotion  हरकत
+monster राक्षस
+drain   नाली
+Commence    प्रारंभ
+chopped कटा हुआ
+staple  प्रधान
+smoothie    ठग
+cinnamon    दालचीनी
+yogurt  दही
+guilty  दोषी
+dessert मिठाई
+combine गठबंधन
+ample   पर्याप्त
+Even though यद्यपि
+hang around मंडलाना
+amendment   संशोधन
+Constituency    निर्वाचन - क्षेत्र
+tenure  कार्यकाल
+bury    दफनाना
+pervade पठैना
+gloom   उदासी
+strenuous   ज़ोरदार
+cater   पूरा करने के
+exert   खींचना
+exertion    परिश्रम
+propel  प्रेरित करना
+battle  लड़ाई
+praised प्रशंसा की
+imbue   गहरे रंग से रंगना
+cling   चिपटना
+explanation स्पष्टीकरण
+entrepreneur    उद्यमी
+separate    अलग
+trapped फंसे
+strike  हड़ताल
+curate  ठीक
+accurate    सही
+Marionette  कठपुतली
+Thorough    संपूर्ण
+illustrate  समझाना
+appropriate उपयुक्त
+jurisdictions   न्यायालय
+jurisdiction    अधिकार - क्षेत्र
+circumstance    परिस्थिति
+circumstances   हालत
+scenario    परिदृश्य
+consume उपभोग
+abstraction मतिहीनता
+still   अब तक
+lifting उत्तोलक
+expect  उम्मीद
+expected    अपेक्षित
+critical    आलोचनात्मक
+misusing    दुरूपयोग
+expensive   महंगा
+adhered पालन
+comprehensive   व्यापक
+ensure  सुनिश्चित करना
+inadequate  अपर्याप्त
+era युग
+woes    संकट
+dominant    प्रमुख
+mousetrap   चूहादानी
+emergence   उभार
+legitimate  वैध
+dominance   प्रभुत्व
+piece   टुकड़ा
+threat  धमकी
+opinion राय
+plenty  बहुत सारे
+non routine गैर दिनचर्या
+take away   ले जाना
+renewable   अक्षय
+opposed विरोधी
+fossil  जीवाश्म
+extent  सीमा
+Instead बजाय
+skepticism  अविश्वास
+prospect    संभावना
+giant   विशाल
+giants  दिग्गज
+summarize   संक्षेप में प्रस्तुत करना
+consumer    उपभोक्ता
+excitement  उत्तेजना
+proved  साबित
+crowd   भीड़
+recipient   प्राप्तकर्ता
+tackled घेरने की कोशिश
+collaboration   सहयोग
+speculation सट्टा
+levied  लगाया
+pretend नाटक
+fictitious  काल्पनिक
+generous    उदार
+aspiration  आकांक्षा
+gladly  ख़ुशी से
+tenderly    नम्रता से
+thoughts    विचारों
+coincide    मेल खाता है
+leisure अवकाश
+awaken  जगाना
+rigid   कठोर
+thought विचार
+advisability    औचित्य
+utterances  बयान
+confined    सीमित
+hypothetical    काल्पनिक
+volition    इच्छा
+anxious चिंतित
+acquainted  परिचित
+wicked  दुष्ट
+mess    गड़बड़
+worth   मूल्य
+accent  उच्चारण
+landed  उतरा
+fictional   कल्पित
+rake    जेली
+deserve लायक
+probably    शायद
+confronted  सामना
+guts    हिम्मत
+housekeeper घरबारी
+keeper  रक्षक
+roar    गर्जन
+gratifying  तृप्तिदायी
+intimate    अन्तरंग
+appeal  अपील
+inspirational   प्रेरणादायक
+heard   सुना
+especially  विशेष रूप से
+conveyed    जानकारी दी
+predecessor पूर्ववर्ती
+irk थकाना
+ideology    विचारधारा
+cornucopia  बकरी का सींग
+itinerary   यात्रा कार्यक्रम
+surveyed    सर्वेक्षण
+smiling मुस्कुरा
+Citing  का हवाला देते हुए
+concern चिंता
+certainly   निश्चित रूप से
+qualified   योग्य
+doubt   पर शक
+phrases वाक्यांश
+albeit  यद्यपि
+negotiations    वार्ता
+persuade    मनाना
+objections  आपत्ति
+Jewish  यहूदी
+opposes का विरोध
+influence   प्रभाव
+endorsement बेचान
+opponent    प्रतिद्वंद्वी
+minority    अल्पसंख्यक
+criticize   आलोचना करना
+liberalization  उदारीकरण
+damnation   फटकार
+pragmatic   धृष्ट
+hotbed  क्यारी
+insight अन्तर्दृष्टि
+potential   संभावित
+retail  खुदरा
+leverage    उत्तोलन
+demonstrate दिखाना
+grocery stores  किराने की दुकान
+grocery किराना
+attendees   उपस्थितगण
+drew    आकर्षित किया
+receptive   ग्रहणशील
+however तथापि
+conversion  रूपांतरण
+canyon  घाटी
+increasingly    तेजी
+reality वास्तविकता
+promotional प्रचार
+huge    विशाल
+traction    कर्षण
+salivating  मुँह में पानी
+meanwhile   तब तक
+Meanwhile   तब तक
+ultimately  अंत में
+ultimate    परम
+strive  प्रयास करना
+disruption  विघटन
+competitive प्रतियोगी
+enormous    भारी
+initially   शुरू में
+foreseen    सोच
+alleviate   कम करना
+unmanageable    असहनीय
+therefore   इसलिए
+sheer   निरा
+strategic   सामरिक
+spectrum    स्पेक्ट्रम
+efficient   कुशल
+among   के बीच में
+despite के बावजूद
+consideration   विचार
+regardless  बेपरवाह
+disruptive  हानिकारक
+barometer   बैरोमीटर
+adoption    दत्तक ग्रहण
+widespread  बड़े पैमाने पर
+augmented   संवर्धित
+worn    पहना
+Hug आलिंगन
+traject मार्ग
+trajectory  प्रक्षेपवक्र
+aligned गठबंधन
+potentially संभावित
+gesture इशारा
+dictation   श्रुतलेख
+judging पहचानने
+philosophically दर्शनानुसार
+drift   बहाव
+unveiling   अनावरण
+Notably विशेषकर
+seem    लग रहे हो
+cozy    आरामदायक
+meantime    तब तक
+imply   मतलब है
+endorsing   पुष्टि
+sour    खट्टा
+Inspiring   प्रेरणादायक
+ingenious   सरल
+awe भय
+praise  प्रशंसा
+even    और भी
+sick    बीमार
+intensity   तीव्रता
+grudge  असन्तोष
+irrelevant  अप्रासंगिक
+choke   गला घोंटना
+chase   पीछा
+indeed  वास्तव में
+often   अक्सर
+Curiosity   जिज्ञासा
+advert  विज्ञापन
+revered श्रद्धेय
+airing  वायु - सेवन
+sake    खातिर
+precise यथार्थ
+rely    भरोसा करना
+relies  निर्भर करता है
+Fortunately,    सौभाग्य से,
+annoying    कष्टप्रद
+riots   दंगों
+voilent घूंघट
+convulse    ऐंठना
+seeking मांग
+seek    की तलाश
+polarizing  ध्रुवीकरण
+polar   ध्रुवीय
+relatively  अपेक्षाकृत
+draw    खींचना
+partial आंशिक
+distinguish भेद करना
+frizz   घुंघराले बाल
+relevant    प्रासंगिक
+infrastructure  बुनियादी ढांचे
+Coverage    व्याप्ति
+toward  की ओर
+soul    आत्मा
+mate    दोस्त
+Destiny भाग्य
+passionate  आवेशपूर्ण
+enigma  पहेली
+ironically  विडम्बना से
+routinely   नियमित तौर पर
+dominate    पर हावी
+integral    अभिन्न
+stress  तनाव
+pursue  पीछा करना
+abundance   प्रचुरता
+embrace आलिंगन
+enlightenment   प्रबोधन
+manifestation   अभिव्यक्ति
+shelves अलमारियों
+Sprinkle    छिड़क देना
+a while थोड़ी देर के
+turpentine  तारपीन का तेल
+griddle रोटी पकाने का तवा
+Soak    भिगोना
+wilting कारण कमजोर पड़ गया
+invert  पलटना
+molest  छेड़छाड़ करना
+quote   उद्धरण
+rags    लत्ता
+deserves    के हकदार हैं
+lead    नेतृत्व
+decency शालीनता
+comment टिप्पणी
+newcomers   नए चेहरे
+enthusiasm  उत्साह
+accomplished    पूरा
+obsession   ग्रस्तता
+resemble    सदृश होना
+stardom प्रसिद्ध अभिनेत्रियाँ
+acknowledge स्वीकार करना
+willing तैयार
+willingness स्वेच्छा
+prejudice   पूर्वाग्रह
+bother  परेशान करना
+further आगे
+relevance   प्रासंगिकता
+bencher उच्च श्रेणी का बैरिस्टर
+evidence    सबूत
+contrast    इसके विपरीत
+fond    पृष्ठभूमि
+insulate    पृथक करना
+cherish संजोना
+mediocrity  सामान्यता
+instinct    वृत्ति
+pressure    दबाव
+nostalgic   उदासीन
+grew    बढ़ी
+grew up पले
+Excerpts    कुछ अंशः
+readiness   तत्परता
+optimist    आशावादी
+exemplify   उदाहरण देना
+leveraging  लाभ
+Strategic   सामरिक
+humour  हास्य
+versatile   बहुमुखी
+express व्यक्त
+strengthen  को मजबूत बनाने के
+strength    शक्ति
+evolve  विकसित करना
+obsess  सताना
+energetic   शक्तिशाली
+contours    आकृति
+lively  रोचक
+subtle  सूक्ष्म
+impact  प्रभाव
+first glance    पहली नज़र
+glance  ग्लांस
+innovation  नवीनता
+overdo  थका मारना
+tactile स्पर्शनीय
+pleasing    मनभावन
+delicate    नाजुक
+mimic   की नकल
+variation   परिवर्तन
+mildly  हल्का
+mild    नरम
+appealing   अपील
+diverse विविध
+glue    गोंद
+elegant सुरुचिपूर्ण
+fascinated  मोहित
+encourage   प्रोत्साहित करना
+allegiance  निष्ठा
+excessively अत्यंत
+tightrope   संभलकर
+bias    पूर्वाग्रह
+bound   सीमित
+alienate    पराया करना
+vital   महत्वपूर्ण
+incredibly  अविश्वसनीय
+sought  की मांग की
+summed  अभिव्यक्त किया
+penalize    दंडित करना
+opposing    विरोधी
+sensation   सनसनी
+curiosity   जिज्ञासा
+sincere ईमानदार
+temperament स्वभाव
+lying   लेटा हुआ
+adorable    आराध्य
+trapped फंस
+rescue  बचाव
+Sneaky  डरपोक
+smuggle तस्करी करना
+Gregarious  यूथचारी
+Mount   माउंट
+Mounted घुड़सवार
+passed out  मर जाना
+noble   महान
+suspended   निलंबित
+getaway भगदड़
+serve   सेवा करना
+dense   सघन
+wilderness  जंगल
+minimal न्यूनतम
+stunning    तेजस्वी
+vibe    खिंचाव
+drainage tube   जल निकासी नली
+concrete    ठोस
+accents लहजे
+playful चंचल
+pops    फ़ैशनवाला
+sleek   चिकना
+venture वेंचर
+fairytale   कहानी
+Arctic  उत्तरी ध्रुवी
+beat    हराना
+ruin    नाश
+foray   धावा
+pioneer अग्रणी
+foliage पत्ते
+hike    वृद्धि
+grandeur    वैभव
+glimpse झलक
+renovations जीर्णोद्धार
+contemporary    समकालीन
+CRUISES यात्राएँ
+Delightful  रमणीय
+facade  मुखौटा
+headed  अध्यक्षता में
+Dorm    छात्रावास
+amble   टहलना
+laid    रखी
+timber  लकड़ी
+lid ढक्कन
+dresser ड्रेसर
+reckon  मानना
+caution सावधानी
+ramble  विचरना
+porch   पोर्च
+unto    पर्यत
+charity परोपकार</li>
+</ul>
+
+        </div>
+        
+    </div>
+    
+    
+    <footer class="sticky-footer">
+    <div class="container">
+        <div class="text-center">
+            <small>Copyright © Anand Vyas 2019</small>
+        </div>
+    </div>
+</footer>
+
+<a class="scroll-to-top rounded" href="#page-top">
+    <i class="fa fa-angle-up"></i>
+</a>
+
+
+<script src="http://localhost:4000/js/popper.min.js"></script>
+<script src="http://localhost:4000/js/bootstrap.min.js"></script>
+<script src="http://localhost:4000/js/highlight.min.js"></script>
+<script src="http://localhost:4000/js/moment.min.js"></script>
+<script src="http://localhost:4000/js/clipboard.min.js"></script>
+
+<script src="http://localhost:4000/js/jquery.easing.min.js"></script>
+
+<script src="http://localhost:4000/js/sb-admin.js"></script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-108803266-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'UA-108803266-1');
+</script>
+  </div>
+<script data-no-instant>document.write('<script src="/livereload.js?port=4000&mindelay=10"></' + 'script>')</script></body>
+</html>

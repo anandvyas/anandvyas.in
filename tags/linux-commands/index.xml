@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Linux Commands on Anand vyas</title>
-    <link>https://anandvyas.in/tags/linux-commands/</link>
+    <link>http://localhost:4000/tags/linux-commands/</link>
     <description>Recent content in Linux Commands on Anand vyas</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 04 Apr 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://anandvyas.in/tags/linux-commands/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://localhost:4000/tags/linux-commands/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Linux commands</title>
-      <link>https://anandvyas.in/linux/linux-commands/</link>
+      <link>http://localhost:4000/linux/linux-commands/</link>
       <pubDate>Wed, 04 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://anandvyas.in/linux/linux-commands/</guid>
+      <guid>http://localhost:4000/linux/linux-commands/</guid>
       <description>Basic commands of linux
    Commands Commands                    
-User management    Commands Description     useradd [USERNAME] Add new user   useradd -G [GROUPNAME] [USERNAME] Add new user in group   passwd [USERNAME] User account is locked until you set a password with the passwd command   usermod -a -G [GROUPNAME] [USERNAME] Add user in group   userdel [USERNAME] Remove the existing user   cat /etc/passwd | sort View username and group information   cat /etc/group | sort View linux group   usermod -d -m [NEW_DIRECTORY] [USERNAME] Change the user home directory location   usermod -u [UID] [USERNAME] Change the user UID</description>
+User management    Commands Description     useradd [USERNAME] Add new user   useradd -G [GROUPNAME][username] Add new user in group   passwd [USERNAME] User account is locked until you set a password with the passwd command   usermod -a -G [GROUPNAME][username] Add user in group   userdel [USERNAME] Remove the existing user   cat /etc/passwd | sort View username and group information   cat /etc/group | sort View linux group   usermod -d -m [NEW_DIRECTORY][username] Change the user home directory location   usermod -u [UID][username] Change the user UID</description>
     </item>
     
   </channel>

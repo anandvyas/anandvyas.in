@@ -1,0 +1,968 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>AWS DynamoDB - Anand vyas</title>
+    <meta content="AWS DynamoDB - Anand vyas" property="og:title">
+    <meta content="" name="keywords">
+    <meta content="" property="og:description">
+    <meta name="author" content="Anand Vyas">
+
+    
+    <link href="http://localhost:4000/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link href="http://localhost:4000/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    
+    <link href="http://localhost:4000/css/highlighter.css" rel="stylesheet">
+    
+    <link href="http://localhost:4000/css/sb-admin.css" rel="stylesheet">
+    <link href="http://localhost:4000/css/about.css" rel="stylesheet">
+
+    <script src="http://localhost:4000/js/jquery.min.js"></script>
+</head>
+<body class="fixed-nav sticky-footer bg-dark sidenav-toggled" id="page-top">
+  
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+    <a class="navbar-brand" href="http://localhost:4000/">
+        <img src="http://localhost:4000/images/profile/logo.png" />
+        <span>Anand vyas</span>
+    </a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav navbar-sidenav">
+            <li class="nav-item sidebar-profile text-center">
+                <div class="profile-pic">
+                    <img src="http://localhost:4000/images/profile/avatar.jpg" alt="avatar">
+                </div>
+                <div class="profile-detail">
+                    
+                    <span>Solution Architect</span> 
+                    <span>Cloud Architect</span> 
+                    <span>DevOps</span> 
+                    <span>Tech Lead</span> 
+                </div>
+            </li>
+            
+            <li class="nav-item sidebar-menu" data-toggle="tooltip" data-placement="right" title="Home">
+                <a class="nav-link" href="http://localhost:4000/">
+                <i class="fa fa-fw fa fa-home"></i>
+                <span class="nav-link-text">Home</span>
+                </a>
+            </li>
+            
+            <li class="nav-item sidebar-menu" data-toggle="tooltip" data-placement="right" title="About">
+                <a class="nav-link" href="http://localhost:4000/about">
+                <i class="fa fa-fw fa fa-user-circle"></i>
+                <span class="nav-link-text">About</span>
+                </a>
+            </li>
+            
+            <li class="nav-item sidebar-menu" data-toggle="tooltip" data-placement="right" title="Categories">
+                <a class="nav-link" href="http://localhost:4000/categories">
+                <i class="fa fa-fw fa fa-dashboard"></i>
+                <span class="nav-link-text">Categories</span>
+                </a>
+            </li>
+            
+            <li class="nav-item sidebar-menu" data-toggle="tooltip" data-placement="right" title="Tags">
+                <a class="nav-link" href="http://localhost:4000/tags">
+                <i class="fa fa-fw fa fa-tags"></i>
+                <span class="nav-link-text">Tags</span>
+                </a>
+            </li>
+            
+        </ul>
+        <ul class="navbar-nav sidenav-social">
+            
+            <li><a href="#" target="_blank"><i class="fa fa-mobile"></i></a></li>
+            
+            <li><a href="mailto:anandvyas@live.com" target="_blank"><i class="fa fa-envelope"></i></a></li>
+            
+            <li><a href="https://twitter.com/anandvyaas" target="_blank"><i class="fa fa-twitter"></i></a></li>
+            
+            <li><a href="https://www.linkedin.com/in/anandvyaas" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+            
+            <li><a href="https://www.instagram.com/anandvyaas" target="_blank"><i class="fa fa-instagram"></i></a></li>
+            
+            <li><a href="https://github.com/anandvyas" target="_blank"><i class="fa fa-github"></i></a></li>
+            
+            <li><a href="https://stackoverflow.com/users/8208060/anand-vyas" target="_blank"><i class="fa fa-stack-overflow"></i></a></li>
+            
+        </ul>
+        <ul class="navbar-nav sidenav-toggler">
+            <li class="nav-item">
+                <a class="nav-link text-center" id="sidenavToggler">
+            <i class="fa fa-fw fa-angle-left"></i>
+            </a>
+            </li>
+        </ul>
+        
+        
+    </div>
+</nav>
+  
+  <div class="content-wrapper">
+    <div class="container-fluid">
+    
+
+
+<ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="http://localhost:4000/">Home</a></li>
+
+
+    
+    <li class="breadcrumb-item active"><a href='http://localhost:4000/aws'>aws</a></li>
+    
+    
+
+
+    
+    <li class="breadcrumb-item active"><a href='http://localhost:4000/aws/aws-dynamodb'>aws-dynamodb</a></li>
+    
+    
+
+
+    
+
+</ol>
+
+        <div class="post">
+            <h1>AWS DynamoDB</h1>
+            <span class="post-date">Thu, Aug 24, 2017</span>
+            <p>Amazon DynamoDB is a fast and flexible NoSQL database service for all applications that need consistent, <strong>single-digit millisecond latency at any scale</strong>. It is a fully managed cloud database and supports both document and key-value store models.</p>
+
+<div class="text-center">
+    <img class="img-responsive" src="http://localhost:4000/images/aws-dynamodb.png" alt="Elastic Beanstalk" />
+</div>
+ 
+
+<p>Its flexible data model, reliable performance, and automatic scaling of throughput capacity, makes it a great fit for mobile, web, gaming, ad tech, IoT, and many other applications.</p>
+
+<h3 id="a-name-aws-dymanodb-components-dynamodb-core-components-a"><a name="aws-dymanodb-components">DynamoDB Core Components</a></h3>
+
+<ul>
+<li><strong>Table</strong>: A table is a collection of items</li>
+<li><strong>Items</strong>:  An item is a group of attributes that is uniquely identifiable among all of the other items.</li>
+<li><strong>Attributes</strong>: An attribute is a fundamental data element, something that does not need to be broken down any further.</li>
+<li><strong><a href="#primarykey">Primary Key</a></strong></li>
+<li><strong><a href="#secondary-indexs">Secondary Indexes</a></strong></li>
+<li><strong><a href="#dynamodb-streams">DynamoDB Streams</a></strong></li>
+</ul>
+
+<h3 id="a-name-primarykey-primary-key-a"><a name="primarykey">Primary Key</a></h3>
+
+<p>DynamoDB supports two types of primary keys:</p>
+
+<ul>
+<li><strong>Partition key</strong>: The partition key is composed of a single attribute. Attributes in DynamoDB are similar in many ways to fields or columns in other database systems. No two items in a table can have the same partition key value.</li>
+</ul>
+
+<blockquote>
+<p>The partition key of an item is also known as its hash attribute. The term hash attribute derives from DynamoDB&rsquo;s usage of an internal hash function to evenly distribute data items across partitions, based on their partition key values.</p>
+</blockquote>
+
+<ul>
+<li><strong>Partition key and sort key</strong>: Referred to as a composite primary key or hash-range key, this type of key is composed of two attributes. The first attribute is the partition key, and the second attribute is the sort key. All items with the same partition key are stored together, in sorted order by sort key value.
+<u>It is possible for two items to have the same partition key value, but those two items must have different sort key values.</u></li>
+</ul>
+
+<blockquote>
+<p>The sort key of an item is also known as its range attribute. The term range attribute derives from the way DynamoDB stores items with the same partition key physically close together, in sorted order by the sort key value.</p>
+</blockquote>
+
+<div class="text-center">
+    <img class="img-responsive" src="http://localhost:4000/images/aws-dynamodb-partition-key.png" alt="DynamoDB Primary Key" />
+</div>
+ 
+
+<h3 id="a-name-secondary-indexs-secondary-indexes-a"><a name="secondary-indexs">Secondary Indexes</a></h3>
+
+<p>A secondary index lets you query the data in the table using an alternate key, in addition to queries against the primary key. DynamoDB does not require that you use indexes, but they give your applications more flexibility when it comes to querying your data.</p>
+
+<p>DynamoDB supports two kinds of secondary indexes:</p>
+
+<ul>
+<li><strong>Global secondary index</strong> – an index with a partition key and sort key that can be different from those on the table. A <u>global secondary index</u> is considered &ldquo;global&rdquo; because queries on the index can span all of the data in the base table, across all partitions.</li>
+</ul>
+
+<div class="text-center">
+    <img class="img-responsive" src="http://localhost:4000/images/aws-dynamodb-gsi.jpg" alt="DynamoDB Primary Key" />
+</div>
+ 
+
+<ul>
+<li><strong>Local secondary index</strong> – an index that has the same partition key as the table, but a different sort key. A local secondary index is &ldquo;local&rdquo; in the sense that every partition of a local secondary index is scoped to a base table partition that has the same partition key value.</li>
+</ul>
+
+<div class="text-center">
+    <img class="img-responsive" src="http://localhost:4000/images/aws-dynamodb-lsi.jpg" alt="DynamoDB Primary Key" />
+</div>
+ 
+
+<h3 id="a-name-dynamodb-gsi-vs-lsi-gsi-v-s-lsi-a"><a name="dynamodb-gsi-vs-lsi">GSI V/S LSI</a></h3>
+
+<div class="text-center">
+    <img class="img-responsive" src="http://localhost:4000/images/aws-dynamodb-gsi-lsi.png" alt="DynamoDB Primary Key" />
+</div>
+ 
+
+<h3 id="a-name-dynamodb-streams-dynamodb-streams-a"><a name="dynamodb-streams">DynamoDB Streams</a></h3>
+
+<p>DynamoDB Streams is an optional feature that captures data modification events in DynamoDB tables. The data about these events appear in the stream in near real time, and in the order that the events occurred.</p>
+
+<p>Each event is represented by a stream record. If you enable a stream on a table, DynamoDB Streams will write a stream record whenever one of the following events occurs:</p>
+
+<ul>
+<li>If a new item is added to the table, the stream captures an image of the entire item, including all of its attributes.</li>
+<li>If an item is updated, the stream captures the &ldquo;before&rdquo; and &ldquo;after&rdquo; image of any attributes that were modified in the item.</li>
+<li>If an item is deleted from the table, the stream captures an image of the entire item before it was deleted.</li>
+</ul>
+
+<p>Each stream record also contains the name of the table, the event timestamp, and other metadata. Stream records have a lifetime of 24 hours; after that, they are automatically removed from the stream. You can use DynamoDB Streams together with AWS Lambda to create a trigger—code that executes automatically whenever an event of interest appears in a stream.</p>
+
+<div class="text-center">
+    <img class="img-responsive" src="http://localhost:4000/images/aws-dynamodb-stream-trigger.png" alt="DynamoDB Primary Key" />
+</div>
+ 
+
+<h3 id="a-name-aws-dymanodb-throughput-capacity-throughput-capacity-for-reads-and-writes-a"><a name="aws-dymanodb-throughput-capacity">Throughput Capacity for Reads and Writes</a></h3>
+
+<p>When you create a table or index in Amazon DynamoDB, you must specify your capacity requirements for read and write activity. By defining your throughput capacity in advance, DynamoDB can reserve the necessary resources to meet the read and write activity your application requires, while ensuring consistent, low-latency performance.</p>
+
+<p><strong>Example of Read Capacity</strong></p>
+
+<p>Now suppose that you want to read 80 items per second from a table. The items are 3 KB in size, and you want strongly consistent reads. To determine this, you divide the item size of the operation by 4 KB, and then round up to the nearest whole number, as in this example:</p>
+
+<ul>
+<li>3 KB / 4 KB = 0.75, or 1 read capacity unit</li>
+</ul>
+
+<p>For this scenario, you have to set the table&rsquo;s provisioned read throughput to 80 read capacity units:</p>
+
+<ul>
+<li>1 read capacity unit per item × 80 reads per second = 80 read capacity units</li>
+</ul>
+
+<p><strong>Example of Write Capacity</strong></p>
+
+<p>Now suppose that you want to write 100 items per second to your table, and that the items are 512 bytes in size. To determine this, you divide the item size of the operation by 1 KB, and then round up to the nearest whole number:</p>
+
+<ul>
+<li>512 bytes / 1 KB = 0.5, or 1</li>
+</ul>
+
+<p>For this scenario, you would want to set the table&rsquo;s provisioned write throughput to 100 write capacity units:</p>
+
+<ul>
+<li>1 write capacity unit per item × 100 writes per second = 100 write capacity units</li>
+</ul>
+
+<h3 id="a-name-aws-dymanodb-lab-dynamodb-lab-a"><a name="aws-dymanodb-lab">DynamoDB Lab</a></h3>
+
+<div align="center">
+    <video width="620" height="440" controls>
+    <source src="http://localhost:4000/videos/elastic-beanstalk/elastic-beanstalk.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+    </video>
+</div>
+
+<h3 id="a-name-aws-dymanodb-exam-tips-exam-tips-a"><a name="aws-dymanodb-exam-tips">Exam Tips</a></h3>
+
+<ul>
+<li>Components
+
+<ul>
+<li>Table: Collection of data (items). Think DB table.</li>
+<li>Item: Collection of attributes. Think tuples.</li>
+<li>Attribute: Fundamental data element. Think DB fields/columns.</li>
+<li>Schemaless: Each item can have its own distinct attributes - other than primary key!</li>
+<li>Scalar attributes: Most attributes are scalar meaning they can only have one value. (Strings, numbers &amp; Binary)</li>
+<li>Nested attributes: Nested attributes can support up to 32 levels nesting depth</li>
+<li>Primary Key
+
+<ul>
+<li>Partition key: A single attribute that distinguish the item from all others. Also known as the &ldquo;hash attribute&rdquo;.</li>
+<li>Composite key (partition key + sort key): Partition key is fed to hash function to determine physical storage location. Multiple items with same partition key will be placed on same partition sorted according to the sort key! Sort key also known as the &ldquo;range attribute&rdquo;.</li>
+<li>Must be of scalar value: String, Number, Binary.</li>
+</ul></li>
+<li>Secondary indexes: Allows quering using alternate key (in addition to queries on primary key)
+
+<ul>
+<li>Global (GSI): Index with partition key + sort key that can be different from those on the table (max 5 per table)
+
+<ul>
+<li>Consume THEIR OWN provision throughput for read/write (specified upon index creation)</li>
+<li>Can be created AFTER table creation</li>
+<li>Updated asynchronuously =&gt; changes are EVENTUALLY CONSISTENT</li>
+</ul></li>
+<li>Local (LSI): Index that has same partition key as the table, but different sort key. (max 5 per table)
+
+<ul>
+<li>Consume SAME read/write throughput from original table
+
+<ul>
+<li>Every partition is scoped to a table partition with the same partition key value</li>
+</ul></li>
+<li>Can only be created DURING table creation</li>
+<li>Can be queried using either eventual consistent or strongly consistent.</li>
+</ul></li>
+<li>Index will belong to a table (the base table).</li>
+<li>Can hold 5 LSI and 5 GSI for a total of 10 indexes per table.</li>
+<li>Indexes are maintained automatically by DynamoDB.</li>
+<li>Upon Index creation you can specify which attributes should be &ldquo;projected&rdquo; or copied from base table to index. DynamoDB will as a minimum project key attributes (partition key + sort key)
+
+<ul>
+<li>KEYS_ONLY (default. Smallest index, more performant)</li>
+<li>INCLUDE (custom attributes included)</li>
+<li>ALL  (INCLUDE *.. Biggest index, least performance)</li>
+</ul></li>
+<li>Querying an attribute not in primary key/secondary indexes is still possible, but will be queried on main table - NOT index. Will cost more latency+read capacity</li>
+</ul></li>
+<li>Read/Write capacity
+
+<ul>
+<li>Used for partitioning across multiple servers</li>
+</ul></li>
+<li>Streams
+
+<ul>
+<li>Optional</li>
+<li>Captures data modification events represented by a &ldquo;stream record&rdquo; on:
+
+<ul>
+<li>New item added: Stream captures an image of the entire item.</li>
+<li>Item updated: Stream captures before and after image of modified attributes.</li>
+<li>Item deleted: Stream captures image of entire item before deletion.</li>
+</ul></li>
+<li>Contains:
+
+<ul>
+<li>Name of table</li>
+<li>Event timestamp</li>
+<li>other metadata</li>
+</ul></li>
+<li>A record lives for 24 hours and is then removed from the stream</li>
+<li>Can be used as a trigger for AWS Lambda.
+
+<ul>
+<li>Example: New Customer entries trigger Lambda which in turn trigger Simple Email Service (SES) to send welcome mail to said customer.</li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li>Overview &amp; limits
+
+<ul>
+<li>Fully managed NoSQL</li>
+<li>Built in Monitoring</li>
+<li>Consistent and performance
+
+<ul>
+<li>Data stored on SSDs</li>
+<li>Can control throughput read/write capacity</li>
+<li>Can spread load between servers/tables</li>
+<li>Replication across multiple availability zones in an AWS region</li>
+</ul></li>
+<li>Different levels of consistency
+
+<ul>
+<li>Eventually consistent</li>
+<li>Strongly consistent</li>
+</ul></li>
+<li>Conditional updates &amp; concurrency control
+
+<ul>
+<li>Conditional writes</li>
+<li>Atomic counter</li>
+</ul></li>
+<li>Integration with Elastic MapReduce &amp; RedShift</li>
+<li>Streams</li>
+<li>Provisioned Throughput
+
+<ul>
+<li>Flexible read/write performance capacity
+
+<ul>
+<li>Set during table creation</li>
+<li>Can be changed at anytime without downtime or performance degradation</li>
+</ul></li>
+<li>Ability to reserve capacity</li>
+</ul></li>
+<li>Limits
+
+<ul>
+<li>Smallest amount of reserved capacity is 100</li>
+<li>Expression are allowed in query and scan</li>
+<li>DynamoDB does not allow secondary index limit increase</li>
+<li>256 tables per region (increase upon request)</li>
+<li>partition key length: 2048 byte max (2kb), 1 byte min</li>
+<li>Sort key length: 1024 byte max (1kb), 1 byte min</li>
+<li>Item size: 400kb including attribute name + value</li>
+<li>API specific limits
+
+<ul>
+<li>Table updates (CreateTable, UpdateTable, DeleteTable): 10 simultaneous actions</li>
+<li>BatchGetItem returns max 100 items
+
+<ul>
+<li>Must be less than 16mb</li>
+</ul></li>
+<li>BatchWriteItem can contain 25 PutItem or DeleteItem
+
+<ul>
+<li>Must be less than 16mb</li>
+</ul></li>
+<li>Query &amp; Scan result set is limited to 1mb of data per call
+
+<ul>
+<li>LastEvaluatedKey included in response to continue retrieval from last returned element</li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li>Provisioned Throughput
+
+<ul>
+<li>Unit of read capacity
+
+<ul>
+<li>For items up to 4kb:
+
+<ul>
+<li>1 strongly consistent read per second</li>
+<li>2 eventually consistent read per second</li>
+</ul></li>
+</ul></li>
+<li>Unit of write capacity
+
+<ul>
+<li>For items up to 1kb
+
+<ul>
+<li>1 write per second</li>
+</ul></li>
+</ul></li>
+<li>Calculating read capacity
+
+<ul>
+<li>Round up to nearest 4kb multiplier
+
+<ul>
+<li>Items that are 3kb in size still use 4kb data. Can do 1 strongly consistent read or 2 eventually consistent reads per second</li>
+</ul></li>
+<li>Example:
+
+<ul>
+<li>item size 3kb</li>
+<li>Want to read 80 items per second from the table</li>
+<li>how many read capacity units required?
+
+<ul>
+<li>Take 1 item, round UP to nearest 4kb multiplier.</li>
+<li>Take that number divide by 4 =&gt; this is how many reads you need for ONE item</li>
+<li>Multiply with items to read per second. Divide by 1 for STRONG consistency, 2 for eventual consistency:
+
+<ul>
+<li>80 * (3kb [rounded to 4] / 4kb) / 1 read/s = 80 units of STRONGLY CONSISTENT read capacity</li>
+<li>80 * (3kb [rounded to 4] / 4kb) / 2 read/s = 40 units of EVENTUALLY CONSISTENT read capacity</li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li>Local secondary indexes
+
+<ul>
+<li>Uses read/write capacity from parent table</li>
+<li>If only reading index keys and projected attributes the calculations are equal to regular reads
+
+<ul>
+<li>Calculate using the size of index entry, NOT table item size</li>
+<li>Rounded up to nearest 4kb</li>
+<li>Cost saving because =&gt; index entry size &lt; table item size!</li>
+</ul></li>
+<li>If querying non-projected attributes / non-keys we get extra latency and read capacity cost:
+
+<ul>
+<li>Uses read capacity from index and EVERY item from the table - not just the attribute needed</li>
+<li>Attribute projection VERY important</li>
+</ul></li>
+</ul></li>
+<li>Global secondary indexes
+
+<ul>
+<li>Have their own throughput capacity</li>
+<li>Only support eventually consistent reads =&gt; 8kb/read capacity unit (4 kb * 2 reads/s)</li>
+<li>Calculate using the size of index entry, NOT table item entry</li>
+<li>Cost saving because =&gt; index entry size &lt; table item size!</li>
+</ul></li>
+</ul></li>
+<li>Calculating write capacity
+
+<ul>
+<li>Round up to nearest 1kb multiplier</li>
+<li>Example:
+
+<ul>
+<li>item size 1.5kb</li>
+<li>10 writes per second</li>
+<li>how many write capacity units required?
+
+<ul>
+<li>Take 1 item, round UP to nearest 1kb multiplier</li>
+<li>Take that number, divide by 1 =&gt; this is how many writes you need for ONE item</li>
+<li>Multiply with items to read per second.
+
+<ul>
+<li>10 * (1.5kb [rounded to 2] / 1kb / 1 write/s) = 20 units of write capacity</li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li>Local secondary indexes
+
+<ul>
+<li>Uses read/write capacity from parent table</li>
+<li>ADDing items, UPDATEing items and DELETEing items also uses table write capacity
+
+<ul>
+<li>Adding item with projected attribute costs 1 write operation to put into index
+
+<ul>
+<li>Add</li>
+</ul></li>
+<li>Updating item with previously undefined attribute that is projected to index: 1 write operation
+
+<ul>
+<li>Add</li>
+</ul></li>
+<li>Updating item with previously DEFINED attribute that is projected to index: 2 writes
+
+<ul>
+<li>Delete</li>
+<li>Add</li>
+</ul></li>
+<li>Delete item with attribute projected to index: 1 write
+
+<ul>
+<li>Delete</li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li>Global secondary indexes
+
+<ul>
+<li>Have their own throughput capacity</li>
+<li>Follow same capacity rules as local secondary indexes</li>
+</ul></li>
+</ul></li>
+<li>Exceeding throughput
+
+<ul>
+<li>Requests exceeding throughput may be throttled</li>
+<li>For global secondary indexes, ALL indexes must have enough write capacity or the WRITE may be throttled &ndash; even if the write doesn&rsquo;t affect the index
+
+<ul>
+<li>This includes any local secondary indexes as well as keys</li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li>Query vs. Scan API calls
+
+<ul>
+<li>Query
+
+<ul>
+<li>Finds items using PRIMARY KEY values from table or secondary index</li>
+<li>Defaults to return all matching items</li>
+<li>Will only return result up to 1mb. Will include lastEvaluatedKey entry to continue retrieval from last returned element
+
+<ul>
+<li>If LastEvaluatedKey == null =&gt; reached last matching item</li>
+</ul></li>
+<li>Defaults to Eventually consistent, can be set to strongly consistent
+
+<ul>
+<li>Global secondary indexes (GSI) only support EVENTUALLY consistent</li>
+</ul></li>
+<li>Can use conditional operators and filters to return precise results</li>
+<li>Returns all attributes of an item, or only the ones you want</li>
+<li>Data returned in sorted order by sort key value (ascending default)</li>
+</ul></li>
+<li>Scan
+
+<ul>
+<li>Reads every item in a table</li>
+<li>Can only return ResultSets up to 1mb in size</li>
+<li>Benefits
+
+<ul>
+<li>Can apply filters to the results to refine values</li>
+<li>Can return only specific attributes with the &ldquo;ProjectionExpression&rdquo; parameter</li>
+<li>ResultSet includes LastEvaluatedKey entry to continue retrieval from last returned element</li>
+</ul></li>
+<li>Negatives
+
+<ul>
+<li>Filters applied after data has been scanned
+
+<ul>
+<li>The more filters the slower performance.</li>
+<li>The larger the data the slower performance.</li>
+</ul></li>
+<li>Returns only filtered results</li>
+<li>Only eventual consistent reads available</li>
+</ul></li>
+<li>Keep in mind
+
+<ul>
+<li>Can reduce Page Size with the &ldquo;Limit&rdquo; parameter, to limit how much data you try to retrieve at the same time
+
+<ul>
+<li>Reduce chance of being throttled</li>
+</ul></li>
+<li>Avoid performing scans on mission-critical tables
+
+<ul>
+<li>Throughput allocated per table! =&gt; Scans may impact available read/writes for the application!!</li>
+<li>Possible to create tables with duplicated contents. Application can then rotate which table to pull data from and perform scans on &ldquo;non-active&rdquo; tables</li>
+</ul></li>
+<li>If throttled (response code: You exceeded your provisioned throughput) try again with exponential backoff</li>
+<li>Can program logic to increase throughput (using Update Table operation)
+
+<ul>
+<li>Once requests die down a bit =&gt; back off on provision throughput</li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li>Conditional Writes &amp; Atomic Counters
+
+<ul>
+<li>Atomic Counters
+
+<ul>
+<li>Increment/decrement value of an attribute without interfering with other write requests</li>
+<li>Requests are applied in order they are received</li>
+<li>Updates are NOT idempotent - it will update teh value each time it is called</li>
+<li>use case: Increasing view count</li>
+</ul></li>
+<li>Conditional Writes
+
+<ul>
+<li>Checks for a condition before proceeding with the operation</li>
+<li>Supported for PutItem, DeleteItem, UpdateItem operations</li>
+<li>Specify conditions in ConditionExpression
+
+<ul>
+<li>Can contain attribute names, conditional operators, and built-in functions</li>
+</ul></li>
+<li>For this reason updates ARE idempotent!!</li>
+<li>Failed conditional writes return ConditionalCheckFailedException</li>
+</ul></li>
+</ul></li>
+<li>Connecting to DynamoDB from your app using Identity Providers
+
+<ul>
+<li>Can use temporary security credentials to make calls to AWS services</li>
+<li>Example:
+
+<ul>
+<li>Users on mobile app need ability to communicate with DynamoDB.</li>
+<li>No hardcoded credentials in the app =&gt; would need to push new client in case of updated credentials</li>
+</ul></li>
+<li>Options:
+
+<ul>
+<li>Web Identity Federation
+
+<ul>
+<li>Authentication token provided from:
+
+<ul>
+<li>Web identity federation: Facebook, Google, etc. (OpenID Connect 2.0 &ndash; OIDC) providers</li>
+<li>Enterprise identity federation: Authentication of users in organizations network</li>
+</ul></li>
+<li>Authentication token exchanged for temporary credentials in AWS which in turn map to an IAM role with permission to use DynamoDB.</li>
+</ul></li>
+<li>Amazon Cognito
+
+<ul>
+<li>Preferred way to manage identities
+
+<ul>
+<li>Handles identity federation work for us</li>
+</ul></li>
+<li>Cognito Identity
+
+<ul>
+<li>Create unique identities for users</li>
+<li>Authenticate identities with identity providers - or our own auth process</li>
+<li>Supports unauthenticated identities (anonymous)</li>
+<li>Save mobile user data</li>
+<li>Use credentials obtained to sync data with Cognito Sync</li>
+</ul></li>
+<li>Cognito Sync
+
+<ul>
+<li>Sync user data across mobile devices and the web</li>
+<li>Client libraries cache data locally</li>
+</ul></li>
+</ul></li>
+<li>IAM roles
+
+<ul>
+<li>We need roles for our users to assume</li>
+<li>Role gives access to DynamoDB</li>
+<li>Temporary credentials are associated with a specific IAM role.</li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+
+<h3 id="a-name-aws-cloudformation-quiz-cloudformation-quiz-a"><a name="aws-cloudformation-quiz">CloudFormation: Quiz</a></h3>
+
+
+
+<script>
+    var quiz = [{"correct":[0],"explanation":"","image":"","options":["AWS Elastic Beanstalk","AWS CloudFront","AWS CloudFormation","AWS DevOps"],"question":"An organization is planning to use AWS for their production roll out. The organization wants to implement automation for deployment such that it will automatically create a LAMP stack, download the latest PHP installable from S3 and setup the ELB. Which of the below mentioned AWS services meets the requirement for making an orderly deployment of the software?"},{"correct":[1],"explanation":"","image":"","options":["A scalable storage appliance on top of Amazon Web Services.","An application container on top of Amazon Web Services","A service by this name doesn’t exist.","A scalable cluster of EC2 instances"],"question":"What does Amazon Elastic Beanstalk provide?"},{"correct":[2],"explanation":"","image":"","options":["However if you have 2 AWS accounts this can be done","AWS Elastic Beanstalk is not designed to support multiple running environments","AWS Elastic Beanstalk is designed to support a number of multiple running environments","However AWS Elastic Beanstalk is designed to support only 2 multiple running environments"],"question":"You want to have multiple versions of your application running at the same time, with all versions launched via AWS Elastic Beanstalk. Is this possible?"},{"correct":[1],"explanation":"","image":"","options":["Access the log files directly from Elastic Beanstalk","Enable log file rotation to S3 within the Elastic Beanstalk configuration","Ask your developers to enable log file rotation in the applications web.config file","Connect to each Instance launched by Elastic Beanstalk and create a Windows Scheduled task to rotate the log files to S3"],"question":"A .NET application that you manage is running in Elastic Beanstalk. Your developers tell you they will need access to application log files to debug issues that arise. The infrastructure will scale up and down. How can you ensure the developers will be able to access only the log files?"},{"correct":[0],"explanation":"","image":"","options":["Those who want to deploy and manage their applications within minutes in the AWS cloud.","Those who want to privately store and manage Git repositories in the AWS cloud.","Those who want to automate the deployment of applications to instances and to update the applications as required.","Those who want to model, visualize, and automate the steps required to release software."],"question":"Which of the following groups is AWS Elastic Beanstalk best suited for?"},{"correct":[2],"explanation":"Applications group logical services. Environments belong to Applications, and typically represent different deployment levels (dev, stage, prod, forth). Deployments belong to environments, and are pushes of bundles of code for the environments to run.","image":"","options":["Applications have many deployments, deployments have many environments.","Environments have many applications, applications have many deployments.","Applications have many environments, environments have many deployments.","Deployments have many environments, environments have many applications."],"question":"When thinking of AWS Elastic Beanstalk’s model, which is true?"},{"correct":[3],"explanation":"Elastic Beanstalk worker environments support SQS dead letter queues, where worker can send messages that for some reason could not be successfully processed. Dead letter queue provides the ability to sideline, isolate and analyze the unsuccessfully processed messages","image":"","options":["Configure Rolling Deployments.","Configure Enhanced Health Reporting","Configure Blue-Green Deployments.","Configure a Dead Letter Queue"],"question":"If you’re trying to configure an AWS Elastic Beanstalk worker tier for easy debugging if there are problems finishing queue jobs, what should you configure?"},{"correct":[3],"explanation":"Elastic Beanstalk installs a daemon on each EC2 instance in the Auto Scaling group to process SQS messages in the worker environment.","image":"","options":["Worker tiers pull jobs from SNS.","Worker tiers pull jobs from HTTP.","Worker tiers pull jobs from JSON.","Worker tiers pull jobs from SQS."],"question":"When thinking of AWS Elastic Beanstalk, which statement is true?"},{"correct":[3],"explanation":"","image":"","options":["AWS CloudFormation","AWS OpsWorks","AWS ELB + EC2 with CLI Push","AWS Elastic Beanstalk"],"question":"You are building a Ruby on Rails application for internal, non-production use, which uses MySQL as a database. You want developers without very much AWS experience to be able to deploy new code with a single command line push. You also want to set this up as simply as possible. Which tool is ideal for this setup?"},{"correct":[0,2,3],"explanation":"","image":"","options":["Auto scaling groups","Route 53 hosted zones","Elastic Load Balancers","RDS Instances","Elastic IP addresses","SQS Queues"],"question":"What AWS products and features can be deployed by Elastic Beanstalk? "},{"correct":[3],"explanation":"","image":"","options":["Amazon Storage Gateway","Amazon Glacier","Amazon EC2","Amazon S3"],"question":"AWS Elastic Beanstalk stores your application files and optionally server log files in ____."},{"correct":[2],"explanation":"","image":"","options":["Need to upload each file separately","Need to create each file and path","Need to upload a source bundle","Need to create each file"],"question":"When you use the AWS Elastic Beanstalk console to deploy a new application ____."}];
+    var currentquestion = 0, score = 0, submt=true, picked = [];
+
+    Array.prototype.diff = function(arr2) {
+        var ret = [];
+        for(var i in this) {   
+            if(arr2.indexOf( this[i] ) > -1){
+                ret.push( this[i] );
+            }
+        }
+        return ret;
+    };
+    
+    Array.prototype.equals = function (array) {
+        
+        if (!array)
+            return false;
+
+        
+        if (this.length != array.length)
+            return false;
+
+        for (var i = 0, l=this.length; i < l; i++) {
+            
+            if (this[i] instanceof Array && array[i] instanceof Array) {
+                
+                if (!this[i].equals(array[i]))
+                    return false;       
+            }           
+            else if (this[i] != array[i]) { 
+                
+                return false;   
+            }           
+        }       
+        return true;
+    }
+
+    
+    Object.defineProperty(Array.prototype, "equals", {enumerable: false});
+
+     
+    jQuery(document).ready(function($){
+        
+
+        function htmlEncode(value){
+          return $(document.createElement('div')).text(value).html();
+        }
+        
+
+        function addChoices(choices){
+            if(typeof choices !== "undefined" && $.type(choices) == "array"){
+                $('#choice-block').empty();
+                for(var i=0;i<choices.length; i++){
+                    $(document.createElement('li')).addClass('choice choice-box').attr('data-index', i).text(choices[i]).appendTo('#choice-block');                    
+                }
+            }
+        }
+        
+        
+
+        function nextQuestion(){
+            submt = true;
+            picked = [];
+            $('#explanation').empty();
+            $('#question').text(quiz[currentquestion]['question']);
+            $('#pager').text('Question ' + Number(currentquestion + 1) + ' of ' + quiz.length);
+            if(quiz[currentquestion].hasOwnProperty('image') && quiz[currentquestion]['image'] != ""){
+                if($('#question-image').length == 0){
+                    $(document.createElement('img')).addClass('question-image').attr('id', 'question-image').attr('src', quiz[currentquestion]['image']).attr('alt', htmlEncode(quiz[currentquestion]['question'])).insertAfter('#question');
+                } else {
+                    $('#question-image').attr('src', quiz[currentquestion]['image']).attr('alt', htmlEncode(quiz[currentquestion]['question']));
+                }
+            } else {
+                $('#question-image').remove();
+            }
+            addChoices(quiz[currentquestion]['options']);
+
+            var multichoice = quiz[currentquestion]['correct'].length > 1 ? true : false;
+            setupButtons(multichoice);
+        }
+        
+
+        function processQuestion(choice){
+            var flag = quiz[currentquestion]['correct'].equals(choice);
+            if(flag){
+                $('.choice').eq(choice).css({'background-color':'#50D943'});
+                $('#explanation').html('<strong>Correct!</strong> ' + htmlEncode(quiz[currentquestion]['explanation']));
+                score++;
+            } else {
+                $('.choice').eq(choice).css({'background-color':'#D92623'});
+                $('#explanation').html('<strong>Incorrect.</strong> ' + htmlEncode(quiz[currentquestion]['explanation']));
+            }
+            currentquestion++;
+            $('#submitbutton').html('NEXT QUESTION &raquo;').on('click', function(){
+                if(currentquestion == quiz.length){
+                    endQuiz();
+                } else {
+                    $(this).text('Check Answer').css({'color':'#222'}).off('click');
+                    nextQuestion();
+                }
+            })
+        }
+        
+
+        function setupButtons(multichoice){
+            console.log(multichoice);
+            $('.choice').on('click', function(){
+                var curElement = $(this);
+                var curElementIndex = curElement.attr('data-index');
+                var myClass = curElement.attr("class");
+                
+                if(multichoice){
+                    if(curElement.hasClass("selectedAns")){
+                        var index = picked.indexOf(curElementIndex);
+                        picked.splice(index, 1);
+                        curElement.removeClass("selectedAns");
+                    }else{
+                        picked.push(parseInt(curElementIndex));
+                        curElement.addClass("selectedAns");
+                    }
+                }else{
+                    picked = [];
+                    $('.choice').removeClass("selectedAns");
+                    curElement.addClass("selectedAns");
+                    picked.push(parseInt(curElementIndex));
+                }
+                
+                
+                if(submt){
+                    submt=false;
+                    $('#submitbutton').css({'color':'#000'}).on('click', function(){
+                        $('.choice').off('click');
+                        $(this).off('click');
+                        processQuestion(picked);
+                    });
+                }
+            })
+        }
+        
+        
+
+        function endQuiz(){
+            $('#explanation').empty();
+            $('#question').empty();
+            $('#choice-block').empty();
+            $('#submitbutton').remove();
+            $('#question').text("You got " + score + " out of " + quiz.length + " correct.");
+            $(document.createElement('h2')).css({'text-align':'center', 'font-size':'4em'}).text(Math.round(score/quiz.length * 100) + '%').insertAfter('#question');
+        }
+        
+
+        function init(){
+            
+
+            
+            if(typeof quiz !== "undefined" && $.type(quiz) === "array"){
+                var container = $('#frame');
+                quiz.forEach(function (row) {
+                   
+                });
+                
+                
+                $(document.createElement('p')).addClass('pager').attr('id','pager').text('Question 1 of ' + quiz.length).appendTo('#frame');
+                
+                $(document.createElement('h2')).addClass('question').attr('id', 'question').text(quiz[0]['question']).appendTo('#frame');
+                
+                if(quiz[0].hasOwnProperty('image') && quiz[0]['image'] != ""){
+                    $(document.createElement('img')).addClass('question-image').attr('id', 'question-image').attr('src', quiz[0]['image']).attr('alt', htmlEncode(quiz[0]['question'])).appendTo('#frame');
+                }
+                
+                $(document.createElement('ul')).attr('id', 'choice-block').appendTo('#frame');
+            
+                
+                addChoices(quiz[0]['options']);
+                
+                $(document.createElement('p')).addClass('explanation').attr('id','explanation').html('&nbsp;').appendTo('#frame');
+                
+                
+                $(document.createElement('div')).addClass('choice-box').attr('id', 'submitbutton').text('Check Answer').css({'font-weight':700,'color':'#222','padding':'30px 0'}).appendTo('#frame');
+                
+                var multichoice = quiz[0]['correct'].length > 1 ? true : false;
+                setupButtons(multichoice);
+            }
+        }
+        init();
+    });
+
+</script>
+<style>
+    #frame {
+        background-color: #fff;
+        padding: 12px 20px;
+        border-radius: 4px;
+        border: 1px solid #d3e0e9;
+    }
+
+    .selectedAns {
+        border-color: royalblue;
+        background-color: burlywood;
+    }
+</style>
+<div id="frame" role="content"></div>
+        </div>
+        
+    </div>
+    
+    
+    <footer class="sticky-footer">
+    <div class="container">
+        <div class="text-center">
+            <small>Copyright © Anand Vyas 2019</small>
+        </div>
+    </div>
+</footer>
+
+<a class="scroll-to-top rounded" href="#page-top">
+    <i class="fa fa-angle-up"></i>
+</a>
+
+
+<script src="http://localhost:4000/js/popper.min.js"></script>
+<script src="http://localhost:4000/js/bootstrap.min.js"></script>
+<script src="http://localhost:4000/js/highlight.min.js"></script>
+<script src="http://localhost:4000/js/moment.min.js"></script>
+<script src="http://localhost:4000/js/clipboard.min.js"></script>
+
+<script src="http://localhost:4000/js/jquery.easing.min.js"></script>
+
+<script src="http://localhost:4000/js/sb-admin.js"></script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-108803266-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'UA-108803266-1');
+</script>
+  </div>
+<script data-no-instant>document.write('<script src="/livereload.js?port=4000&mindelay=10"></' + 'script>')</script></body>
+</html>

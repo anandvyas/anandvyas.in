@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Kubernetes - Basics - Anand vyas</title>
+    <meta content="Kubernetes - Basics - Anand vyas" property="og:title">
+    <meta content="linux, kubernetes" name="keywords">
+    <meta content="kubernetes" property="og:description">
+    <meta name="author" content="Anand Vyas">
+
+    
+    <link href="http://localhost:4000/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link href="http://localhost:4000/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    
+    <link href="http://localhost:4000/css/highlighter.css" rel="stylesheet">
+    
+    <link href="http://localhost:4000/css/sb-admin.css" rel="stylesheet">
+    <link href="http://localhost:4000/css/about.css" rel="stylesheet">
+
+    <script src="http://localhost:4000/js/jquery.min.js"></script>
+</head>
+<body class="fixed-nav sticky-footer bg-dark sidenav-toggled" id="page-top">
+  
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+    <a class="navbar-brand" href="http://localhost:4000/">
+        <img src="http://localhost:4000/images/profile/logo.png" />
+        <span>Anand vyas</span>
+    </a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav navbar-sidenav">
+            <li class="nav-item sidebar-profile text-center">
+                <div class="profile-pic">
+                    <img src="http://localhost:4000/images/profile/avatar.jpg" alt="avatar">
+                </div>
+                <div class="profile-detail">
+                    
+                    <span>Solution Architect</span> 
+                    <span>Cloud Architect</span> 
+                    <span>DevOps</span> 
+                    <span>Tech Lead</span> 
+                </div>
+            </li>
+            
+            <li class="nav-item sidebar-menu" data-toggle="tooltip" data-placement="right" title="Home">
+                <a class="nav-link" href="http://localhost:4000/">
+                <i class="fa fa-fw fa fa-home"></i>
+                <span class="nav-link-text">Home</span>
+                </a>
+            </li>
+            
+            <li class="nav-item sidebar-menu" data-toggle="tooltip" data-placement="right" title="About">
+                <a class="nav-link" href="http://localhost:4000/about">
+                <i class="fa fa-fw fa fa-user-circle"></i>
+                <span class="nav-link-text">About</span>
+                </a>
+            </li>
+            
+            <li class="nav-item sidebar-menu" data-toggle="tooltip" data-placement="right" title="Categories">
+                <a class="nav-link" href="http://localhost:4000/categories">
+                <i class="fa fa-fw fa fa-dashboard"></i>
+                <span class="nav-link-text">Categories</span>
+                </a>
+            </li>
+            
+            <li class="nav-item sidebar-menu" data-toggle="tooltip" data-placement="right" title="Tags">
+                <a class="nav-link" href="http://localhost:4000/tags">
+                <i class="fa fa-fw fa fa-tags"></i>
+                <span class="nav-link-text">Tags</span>
+                </a>
+            </li>
+            
+        </ul>
+        <ul class="navbar-nav sidenav-social">
+            
+            <li><a href="#" target="_blank"><i class="fa fa-mobile"></i></a></li>
+            
+            <li><a href="mailto:anandvyas@live.com" target="_blank"><i class="fa fa-envelope"></i></a></li>
+            
+            <li><a href="https://twitter.com/anandvyaas" target="_blank"><i class="fa fa-twitter"></i></a></li>
+            
+            <li><a href="https://www.linkedin.com/in/anandvyaas" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+            
+            <li><a href="https://www.instagram.com/anandvyaas" target="_blank"><i class="fa fa-instagram"></i></a></li>
+            
+            <li><a href="https://github.com/anandvyas" target="_blank"><i class="fa fa-github"></i></a></li>
+            
+            <li><a href="https://stackoverflow.com/users/8208060/anand-vyas" target="_blank"><i class="fa fa-stack-overflow"></i></a></li>
+            
+        </ul>
+        <ul class="navbar-nav sidenav-toggler">
+            <li class="nav-item">
+                <a class="nav-link text-center" id="sidenavToggler">
+            <i class="fa fa-fw fa-angle-left"></i>
+            </a>
+            </li>
+        </ul>
+        
+        
+    </div>
+</nav>
+  
+  <div class="content-wrapper">
+    <div class="container-fluid">
+    
+
+
+<ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="http://localhost:4000/">Home</a></li>
+
+
+    
+    <li class="breadcrumb-item active"><a href='http://localhost:4000/kubernetes'>kubernetes</a></li>
+    
+    
+
+
+    
+    <li class="breadcrumb-item active"><a href='http://localhost:4000/kubernetes/basic'>basic</a></li>
+    
+    
+
+
+    
+
+</ol>
+
+        <div class="post">
+            <h1>Kubernetes - Basics</h1>
+            <span class="post-date">Sat, Apr 21, 2018</span>
+            
+
+<p>Kubernetes is an open-source system for automating deployment, scaling and management of containerized applications that was originally designed by Google and now maintained by the Cloud Native Computing Foundation</p>
+
+<div class="text-center">
+    <img class="img-responsive" src="http://localhost:4000/images/kubernetes/kubernetes-architecture.png" alt="kubernetes architecture" />
+</div>
+ 
+
+<h3 id="kubernetes-components">Kubernetes Components</h3>
+
+<h4 id="master-components">Master Components</h4>
+
+<p>Master components provide the cluster’s control plane. Master components make global decisions about the cluster (for example, scheduling), and detecting and responding to cluster events</p>
+
+<ul>
+<li><strong>kube-apiserver</strong>: Component on the master that exposes the Kubernetes API</li>
+<li><strong>etcd</strong>: Consistent and highly-available key value store used as Kubernetes’ backing store for all cluster data.</li>
+<li><strong>kube-scheduler</strong>: Scheduler is responsible for workload utilization and allocating pod to new node.</li>
+<li><strong>kube-controller-manager</strong>: This component is responsible for most of the collectors that regulates the state of cluster and performs a task. Logically, each controller is a separate process, but to reduce complexity, they are all compiled into a single binary and run in a single process.
+
+<ul>
+<li><strong>Node Controller</strong>: Responsible for noticing and responding when nodes go down.</li>
+<li><strong>Replication Controller</strong>: Responsible for maintaining the correct number of pods for every replication controller object in the system.</li>
+<li><strong>Endpoints Controller</strong>: Populates the Endpoints object (that is, joins Services &amp; Pods).</li>
+<li><strong>Service Account &amp; Token Controllers</strong>: Create default accounts and API access tokens for new namespaces.</li>
+</ul></li>
+<li><strong>cloud-controller-manager</strong>: cloud-controller-manager runs controllers that interact with the underlying cloud providers. The following controllers have cloud provider dependencies:
+
+<ul>
+<li><strong>Node Controller</strong>: For checking the cloud provider to determine if a node has been deleted in the cloud after it stops responding</li>
+<li><strong>Route Controller</strong>: For setting up routes in the underlying cloud infrastructure</li>
+<li><strong>Service Controller</strong>: For creating, updating and deleting cloud provider load balancers</li>
+<li><strong>Volume Controller</strong>: For creating, attaching, and mounting volumes, and interacting with the cloud provider to orchestrate volumes</li>
+</ul></li>
+</ul>
+
+<h4 id="node-components">Node Components</h4>
+
+<ul>
+<li><strong>kubelet</strong>: An agent that runs on each node in the cluster. It makes sure that containers are running in a pod.</li>
+<li><strong>kube-proxy</strong>: kube-proxy enables the Kubernetes service abstraction by maintaining network rules on the host and performing connection forwarding.</li>
+<li><strong>Container Runtime</strong>: The container runtime is the software that is responsible for running containers. Kubernetes supports several runtimes: Docker, containerd, cri-o, rktlet</li>
+</ul>
+
+<h4 id="addons">Addons</h4>
+
+<p>Addons are pods and services that implement cluster features. The pods may be managed by Deployments, ReplicationControllers, and so on. Namespaced addon objects are created in the kube-system namespace.</p>
+
+<ul>
+<li><strong>DNS</strong>: Cluster DNS is a DNS server, in addition to the other DNS server(s) in your environment, which serves DNS records for Kubernetes services.</li>
+<li><strong>Web UI (Dashboard)</strong>: Dashboard is a general purpose, web-based UI for Kubernetes clusters.</li>
+<li><strong>Container Resource Monitoring</strong>: Container Resource Monitoring records generic time-series metrics about containers in a central database, and provides a UI for browsing that data.</li>
+<li><strong>Cluster-level Logging</strong>: A Cluster-level logging mechanism is responsible for saving container logs to a central log store with search/browsing interface.</li>
+</ul>
+
+<h3 id="installation-of-kubernetes-on-ubuntu">Installation of Kubernetes on Ubuntu</h3>
+
+<pre><code class="language-sh">sudo apt-get update &amp;&amp; sudo apt-get install -y apt-transport-https
+curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
+echo &quot;deb https://apt.kubernetes.io/ kubernetes-xenial main&quot; | sudo tee -a /etc/apt/sources.list.d/kubernetes.list
+sudo apt-get update
+sudo apt-get install -y kubectl 
+</code></pre>
+
+<h3 id="pods">Pods</h3>
+
+<p>A pod is a collection of containers and its storage inside a node of a Kubernetes cluster. Pods are the smallest deployable units in Kubernetes.</p>
+
+<p>There are two types of Pods</p>
+
+<ul>
+<li><strong>Single Container Pod</strong>: Only single container per pod</li>
+<li><strong>Multi Container Pod</strong>: More than one container per pod</li>
+</ul>
+
+<h4 id="single-container">Single Container</h4>
+
+<p>Single container we will create through two ways</p>
+
+<ul>
+<li>Command line (kubectl command)</li>
+<li>Yaml file</li>
+</ul>
+
+<pre><code># Command line example
+  # Start a single instance of nginx.
+  kubectl run nginx --image=nginx
+
+  # Start a single instance of hazelcast and let the container expose port 5701 .
+  kubectl run hazelcast --image=hazelcast --port=5701
+
+  # Start a single instance of hazelcast and set environment variables &quot;DNS_DOMAIN=cluster&quot; and &quot;POD_NAMESPACE=default&quot; in the container.
+  kubectl run hazelcast --image=hazelcast --env=&quot;DNS_DOMAIN=cluster&quot; --env=&quot;POD_NAMESPACE=default&quot;
+
+  # Start a single instance of hazelcast and set labels &quot;app=hazelcast&quot; and &quot;env=prod&quot; in the container.
+  kubectl run hazelcast --image=hazelcast --labels=&quot;app=hazelcast,env=prod&quot;
+
+  # Start a replicated instance of nginx.
+  kubectl run nginx --image=nginx --replicas=5
+
+  # Dry run. Print the corresponding API objects without creating them.
+  kubectl run nginx --image=nginx --dry-run
+
+  # Start a single instance of nginx, but overload the spec of the deployment with a partial set of values parsed from JSON.
+  kubectl run nginx --image=nginx --overrides='{ &quot;apiVersion&quot;: &quot;v1&quot;, &quot;spec&quot;: { ... } }'
+
+  # Start a pod of busybox and keep it in the foreground, don't restart it if it exits.
+  kubectl run -i -t busybox --image=busybox --restart=Never
+
+  # Start the nginx container using the default command, but use custom arguments (arg1 .. argN) for that command.
+  kubectl run nginx --image=nginx -- &lt;arg1&gt; &lt;arg2&gt; ... &lt;argN&gt;
+
+  # Start the nginx container using a different command and custom arguments.
+  kubectl run nginx --image=nginx --command -- &lt;cmd&gt; &lt;arg1&gt; ... &lt;argN&gt;
+
+  # Start the perl container to compute π to 2000 places and print it out.
+  kubectl run pi --image=perl --restart=OnFailure -- perl -Mbignum=bpi -wle 'print bpi(2000)'
+
+  # Start the cron job to compute π to 2000 places and print it out every 5 minutes.
+  kubectl run pi --schedule=&quot;0/5 * * * ?&quot; --image=perl --restart=OnFailure -- perl -Mbignum=bpi -wle 'print bpi(2000)'
+</code></pre>
+
+<p>We are not able to create multiple containers within single POD with the command line for that we have to use YAML file. Below is the example to create multiple containers within the single POD</p>
+
+<pre><code>apiVersion: latest
+kind: Pod
+metadata:
+  name: nginx
+spec:
+  containers:
+  - name: webserver
+    image: nginx:latest
+    ports:
+    - containerPort: 8080
+    resources:
+      requests:
+        memory: &quot;16Mi&quot;
+        cpu: &quot;100m&quot;
+      limits:
+        memory: &quot;64Mi&quot;
+        cpu: &quot;500m&quot;
+  - name: database
+    image: mongo:latest
+    ports:
+    - containerPort: 27017  
+</code></pre>
+
+<!-- 
+
+### Terminology 
+
+- **Annotation**: A key-value pair that is used to attach arbitrary non-identifying metadata to objects.
+- **Cluster**: A set of machines, called nodes, that run containerized applications managed by Kubernetes.
+- **Container**: A lightweight and portable executable image that contains software and all of its dependencies.
+- **Container Environment Variables**: Container environment variables are name=value pairs that provide useful information into containers running in a Pod.
+- **Controller**: A control loop that watches the shared state of the cluster through the apiserver and makes changes attempting to move the current state towards the desired state.
+- **CustomResourceDefinition**: Custom code that defines a resource to add to your Kubernetes API server without building a complete custom server.
+- **DaemonSet**: Ensures a copy of a Pod is running across a set of nodes in a cluster.
+- **Deployment**: Deployments are used to define HA policies to your containers by defining policies around how many of each container must be running at any one time.
+- **Device Plugin**: Device Plugins are containers running in Kubernetes that provide access to a vendor specific resource.
+- **Extensions**: Extensions are software components that extend and deeply integrate with Kubernetes to support new types of hardware.
+- **Image**: Stored instance of a container that holds a set of software needed to run an application.
+- **Init Container**: One or more initialization containers that must run to completion before any app containers run.
+- **Job**: A finite or batch task that runs to completion.
+- **Kubectl**: A command line tool for communicating with a Kubernetes API server.
+- **Kubelet**: An agent that runs on each node in the cluster. It makes sure that containers are running in a pod.
+- **Kubernetes API**: The application that serves Kubernetes functionality through a RESTful interface and stores the state of the cluster.
+- **Label**: Tags objects with identifying attributes that are meaningful and relevant to users.
+- **Minikube**: A tool for running Kubernetes locally.
+- **Name**: A client-provided string that refers to an object in a resource URL, such as /api/v1/pods/some-name.
+- **Namespace**: An abstraction used by Kubernetes to support multiple virtual clusters on the same physical cluster .
+- **Node**: A node is a worker machine in Kubernetes.
+- **Pod**: The smallest and simplest Kubernetes object. A Pod represents a set of running containers on your cluster.
+- **Pod Lifecycle**: The Pod Lifecycle is a high level summary of where a Pod is in its lifecyle. A Pod’s status field is a PodStatus object, which has a phase field that displays one of the following phases: Running, Pending, Succeeded, Failed, Unknown, Completed, or CrashLoopBackOff. 
+- **Pod Security Policy**: Enables fine-grained authorization of Pod Lifecycle creation and updates.
+- **RBAC (Role-Based Access Control)**: Manages authorization decisions, allowing admins to dynamically configure access policies through the Kubernetes API .
+- **ReplicaSet**: A Kubernetes replica set ensures that the specified number of pods in a replica set are running at all times.
+- **Resource Quotas**: Provides constraints that limit aggregate resource consumption per Namespace .
+- **Selector**: Allows users to filter a list of resources based on labels.
+- **Service**: An API object that describes how to access applications, such as a set of Pods , and can describe ports and load-balancers.
+- **Service Account**: Provides an identity for processes that run in a Pod .
+- **StatefulSet**: Manages the deployment and scaling of a set of Pods , and provides guarantees about the ordering and uniqueness of these Pods.
+- **Taint**: A key-value pair and an effect to prevent the scheduling of pods on nodes or node groups.
+- **Toleration**: A key-value pair and an effect to enable the scheduling of pods on nodes or node groups that have a matching taints .
+- **UID**: A Kubernetes systems-generated string to uniquely identify objects.
+- **Volume**: A directory containing data, accessible to the containers in a pod .
+- **docker**: Docker is a software technology providing operating-system-level virtualization also known as containers.
+- **kube-apiserver**: Component on the master that exposes the Kubernetes API. It is the front-end for the Kubernetes control plane.
+- **kube-controller-manager**: Component on the master that runs controllers .
+- **kube-proxy**: kube-proxy is a network proxy that runs on each node in the cluster.
+
+-->
+
+        </div>
+        
+    </div>
+    
+    
+    <footer class="sticky-footer">
+    <div class="container">
+        <div class="text-center">
+            <small>Copyright © Anand Vyas 2019</small>
+        </div>
+    </div>
+</footer>
+
+<a class="scroll-to-top rounded" href="#page-top">
+    <i class="fa fa-angle-up"></i>
+</a>
+
+
+<script src="http://localhost:4000/js/popper.min.js"></script>
+<script src="http://localhost:4000/js/bootstrap.min.js"></script>
+<script src="http://localhost:4000/js/highlight.min.js"></script>
+<script src="http://localhost:4000/js/moment.min.js"></script>
+<script src="http://localhost:4000/js/clipboard.min.js"></script>
+
+<script src="http://localhost:4000/js/jquery.easing.min.js"></script>
+
+<script src="http://localhost:4000/js/sb-admin.js"></script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-108803266-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'UA-108803266-1');
+</script>
+  </div>
+<script data-no-instant>document.write('<script src="/livereload.js?port=4000&mindelay=10"></' + 'script>')</script></body>
+</html>

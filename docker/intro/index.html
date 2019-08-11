@@ -11,20 +11,22 @@
     <meta name="author" content="Anand Vyas">
 
     
-    <link href="https://anandvyas.in/css/bootstrap.min.css" rel="stylesheet">
+    <link href="http://localhost:4000/css/bootstrap.min.css" rel="stylesheet">
     
-    <link href="https://anandvyas.in/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://localhost:4000/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     
-    <link href="https://anandvyas.in/css/highlighter.css" rel="stylesheet">
+    <link href="http://localhost:4000/css/highlighter.css" rel="stylesheet">
     
-    <link href="https://anandvyas.in/css/sb-admin.css" rel="stylesheet">
-    <link href="https://anandvyas.in/css/about.css" rel="stylesheet">
+    <link href="http://localhost:4000/css/sb-admin.css" rel="stylesheet">
+    <link href="http://localhost:4000/css/about.css" rel="stylesheet">
+
+    <script src="http://localhost:4000/js/jquery.min.js"></script>
 </head>
 <body class="fixed-nav sticky-footer bg-dark sidenav-toggled" id="page-top">
   
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
-    <a class="navbar-brand" href="https://anandvyas.in/">
-        <img src="https://anandvyas.in/images/profile/logo.png" />
+    <a class="navbar-brand" href="http://localhost:4000/">
+        <img src="http://localhost:4000/images/profile/logo.png" />
         <span>Anand vyas</span>
     </a>
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive"
@@ -35,7 +37,7 @@
         <ul class="navbar-nav navbar-sidenav">
             <li class="nav-item sidebar-profile text-center">
                 <div class="profile-pic">
-                    <img src="https://anandvyas.in/images/profile/avatar.jpg" alt="avatar">
+                    <img src="http://localhost:4000/images/profile/avatar.jpg" alt="avatar">
                 </div>
                 <div class="profile-detail">
                     
@@ -47,28 +49,28 @@
             </li>
             
             <li class="nav-item sidebar-menu" data-toggle="tooltip" data-placement="right" title="Home">
-                <a class="nav-link" href="https://anandvyas.in/">
+                <a class="nav-link" href="http://localhost:4000/">
                 <i class="fa fa-fw fa fa-home"></i>
                 <span class="nav-link-text">Home</span>
                 </a>
             </li>
             
             <li class="nav-item sidebar-menu" data-toggle="tooltip" data-placement="right" title="About">
-                <a class="nav-link" href="https://anandvyas.in/about">
+                <a class="nav-link" href="http://localhost:4000/about">
                 <i class="fa fa-fw fa fa-user-circle"></i>
                 <span class="nav-link-text">About</span>
                 </a>
             </li>
             
             <li class="nav-item sidebar-menu" data-toggle="tooltip" data-placement="right" title="Categories">
-                <a class="nav-link" href="https://anandvyas.in/categories">
+                <a class="nav-link" href="http://localhost:4000/categories">
                 <i class="fa fa-fw fa fa-dashboard"></i>
                 <span class="nav-link-text">Categories</span>
                 </a>
             </li>
             
             <li class="nav-item sidebar-menu" data-toggle="tooltip" data-placement="right" title="Tags">
-                <a class="nav-link" href="https://anandvyas.in/tags">
+                <a class="nav-link" href="http://localhost:4000/tags">
                 <i class="fa fa-fw fa fa-tags"></i>
                 <span class="nav-link-text">Tags</span>
                 </a>
@@ -110,17 +112,17 @@
 
 
 <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="https://anandvyas.in/">Home</a></li>
+    <li class="breadcrumb-item"><a href="http://localhost:4000/">Home</a></li>
 
 
     
-    <li class="breadcrumb-item active"><a href='https://anandvyas.in/docker'>docker</a></li>
+    <li class="breadcrumb-item active"><a href='http://localhost:4000/docker'>docker</a></li>
     
     
 
 
     
-    <li class="breadcrumb-item active"><a href='https://anandvyas.in/docker/intro'>intro</a></li>
+    <li class="breadcrumb-item active"><a href='http://localhost:4000/docker/intro'>intro</a></li>
     
     
 
@@ -136,7 +138,7 @@
 
 <p>Docker is a container management service. Which basic means upload/install required things in one container and ship to any where. Docker announced in <strong>March 2013</strong> and since then it has become a major tool in development world.</p>
 
-<h3 id="docker-release">Docker Release</h3>
+<h3 id="a-name-docker-release-docker-release-a"><a name="docker-release">Docker Release</a></h3>
 
 <ul>
 <li>Docker EE (Enterprise Edition) [Paid]</li>
@@ -144,7 +146,7 @@
 <li>Docker for Cloud</li>
 </ul>
 
-<h3 id="docker-stable-and-edge-version">Docker Stable and Edge version</h3>
+<h3 id="a-name-docker-version-docker-stable-and-edge-version-a"><a name="docker-version">Docker Stable and Edge version</a></h3>
 
 <ul>
 <li>Edge (Beta) released monthly, Stable quarterly</li>
@@ -152,16 +154,16 @@
 </ul>
 
 <div class="text-center">
-    <img class="img-responsive" src="https://anandvyas.in/images/docker/stable-edge-version.png" alt="Stable and Edge version" />
+    <img class="img-responsive" src="http://localhost:4000/images/docker/stable-edge-version.png" alt="Stable and Edge version" />
 </div>
  
 
-<h3 id="docker-architecture">Docker Architecture</h3>
+<h3 id="a-name-docker-architecture-docker-architecture-a"><a name="docker-architecture">Docker Architecture</a></h3>
 
 <p>Docker uses a client-server architecture. The Docker client talks to the Docker daemon (dockerd), which does the heavy lifting of building, running, and distributing your Docker containers. The Docker client and daemon can run on the same system, or you can connect a Docker client to a remote Docker daemon. The Docker client and daemon communicate using a REST API, over UNIX sockets or a network interface.</p>
 
 <div class="text-center">
-    <img class="img-responsive" src="https://anandvyas.in/images/docker/architecture.svg" alt="Docker Architecture" />
+    <img class="img-responsive" src="http://localhost:4000/images/docker/architecture.svg" alt="Docker Architecture" />
 </div>
  
 
@@ -173,29 +175,49 @@
 
 <p><strong>The Docker registry</strong>: stores Docker images. Docker Hub and Docker Cloud are public registries that anyone can use, and Docker is configured to look for images on Docker Hub by default. You can even run your own private registry. If you use Docker Datacenter (DDC), it includes Docker Trusted Registry (DTR).</p>
 
+<h3 id="a-name-docker-installation-docker-installation-a"><a name="docker-installation">Docker Installation</a></h3>
+
+<h4 id="docker-install-on-ubuntu">Docker - Install on Ubuntu</h4>
+
+<pre><code class="language-sh"># Update the package index
+sudo apt-get update
+
+# Allow apt to use a repository over HTTPS
+sudo apt-get install apt-transport-https ca-certificates curl software-properties-common
+
+# Add Docker’s official GPG key
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+
+# Add the Docker repository to APT sources
+sudo add-apt-repository &quot;deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable&quot;
+
+# Update the package database with the Docker packages
+sudo apt-get update
+
+# Make sure you are about to install from the Docker repo
+apt-cache policy docker-ce
+
+# Finally, install Docker
+sudo apt-get install -y docker-ce=&lt;version&gt;
+
+# Now Docker installed, and daemon started and the process enable to start the boot 
+# Check Docker status 
+sudo systemctl status docker
+
+# Execute Docker without Sudo command you have to include current user to docker group
+sudo usermod -aG docker ${USER}
+
+</code></pre>
+
         </div>
-        <div id="disqus_thread"></div>
-<script>
-
-
-
-
-
-(function() { 
-var d = document, s = d.createElement('script');
-s.src = 'https://anandvyas.disqus.com/embed.js';
-s.setAttribute('data-timestamp', +new Date());
-(d.head || d.body).appendChild(s);
-})();
-</script>
-                            
+        
     </div>
     
     
     <footer class="sticky-footer">
     <div class="container">
         <div class="text-center">
-            <small>Copyright © Anand Vyas 2018</small>
+            <small>Copyright © Anand Vyas 2019</small>
         </div>
     </div>
 </footer>
@@ -204,16 +226,16 @@ s.setAttribute('data-timestamp', +new Date());
     <i class="fa fa-angle-up"></i>
 </a>
 
-<script src="https://anandvyas.in/js/jquery.min.js"></script>
-<script src="https://anandvyas.in/js/popper.min.js"></script>
-<script src="https://anandvyas.in/js/bootstrap.min.js"></script>
-<script src="https://anandvyas.in/js/highlight.min.js"></script>
-<script src="https://anandvyas.in/js/moment.min.js"></script>
-<script src="https://anandvyas.in/js/clipboard.min.js"></script>
 
-<script src="https://anandvyas.in/js/jquery.easing.min.js"></script>
+<script src="http://localhost:4000/js/popper.min.js"></script>
+<script src="http://localhost:4000/js/bootstrap.min.js"></script>
+<script src="http://localhost:4000/js/highlight.min.js"></script>
+<script src="http://localhost:4000/js/moment.min.js"></script>
+<script src="http://localhost:4000/js/clipboard.min.js"></script>
 
-<script src="https://anandvyas.in/js/sb-admin.js"></script>
+<script src="http://localhost:4000/js/jquery.easing.min.js"></script>
+
+<script src="http://localhost:4000/js/sb-admin.js"></script>
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-108803266-1"></script>
 <script>
@@ -223,5 +245,5 @@ s.setAttribute('data-timestamp', +new Date());
     gtag('config', 'UA-108803266-1');
 </script>
   </div>
-<script data-no-instant>document.write('<script src="/livereload.js?port=1313&mindelay=10"></' + 'script>')</script></body>
+<script data-no-instant>document.write('<script src="/livereload.js?port=4000&mindelay=10"></' + 'script>')</script></body>
 </html>
