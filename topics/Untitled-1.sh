@@ -1,8 +1,8 @@
 #!/bin/bash
 
-S3_bucketName=trustlogics-database-backup
-DB_Username=root
-DB_Password=42a6p90ev53cat5h
+S3_bucketName=******
+DB_Username=****
+DB_Password=*****
 DB_Name=keycloak
 mysqlIpAddress=$(docker inspect --format '{{ .NetworkSettings.IPAddress }}' mysql-idp-server)
 filename='trustlogics-idp-server-' + $(date +%Y-%m-%d-%H.%M.%S)
