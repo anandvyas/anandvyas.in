@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Aws Global Infrastructure on Anand vyas</title>
+    <link>https://anandvyas.in/tags/aws-global-infrastructure/</link>
+    <description>Recent content in Aws Global Infrastructure on Anand vyas</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 04 Jul 2017 00:15:00 +0200</lastBuildDate>
+    
+	<atom:link href="https://anandvyas.in/tags/aws-global-infrastructure/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>AWS General Questions</title>
+      <link>https://anandvyas.in/aws/aws-general/</link>
+      <pubDate>Tue, 04 Jul 2017 00:15:00 +0200</pubDate>
+      
+      <guid>https://anandvyas.in/aws/aws-general/</guid>
+      <description>AWS Certified Developer  At least two questions about specific request and response parameters/fields for SQS and SNS Optimizing S3 key names HTTP status codes Fixing session state problems using something other than ELB sticky sessions Elastic beanstalk supported platforms SDK languages and default region Efficient usage of DynamoDB throughput DynamoDB key questions, but always using the old terms hash/range instead of the new terms partition/sort.  AWS Config  One of the challenges in managing AWS resources is to keep track of changes in the resource configuration over time.</description>
+    </item>
+    
+    <item>
+      <title>AWS Global Infrastructure</title>
+      <link>https://anandvyas.in/aws/aws-global-infrastructure/</link>
+      <pubDate>Tue, 04 Jul 2017 00:15:00 +0200</pubDate>
+      
+      <guid>https://anandvyas.in/aws/aws-global-infrastructure/</guid>
+      <description>&lt;p&gt;Amazon web service is hosted their resources world wide, they provide facilities to place your resources and data in multiple locations to improve performance, high availability and cost optimization. In 2017 AWS Cloud operates 43 Availability Zones within 16 geographic Regions around the world, with announced plans for 11 more Availability Zones and four more Regions.&lt;/p&gt;
+
+&lt;div class=&#34;text-center&#34;&gt;
+    &lt;img class=&#34;img-responsive&#34; src=&#34;https://anandvyas.in/images/aws/aws_global_infra.png&#34; alt=&#34;AWS Global Infrastructure&#34; /&gt;
+&lt;/div&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

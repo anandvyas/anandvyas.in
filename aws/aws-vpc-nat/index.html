@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>AWS VPC NAT - Anand vyas</title>
+    <meta content="AWS VPC NAT - Anand vyas" property="og:title">
+    <meta content="" name="keywords">
+    <meta content="" property="og:description">
+    <meta name="author" content="Anand Vyas">
+
+    
+    <link href="https://anandvyas.in/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link href="https://anandvyas.in/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    
+    <link href="https://anandvyas.in/css/highlighter.css" rel="stylesheet">
+    
+    <link href="https://anandvyas.in/css/sb-admin.css" rel="stylesheet">
+    <link href="https://anandvyas.in/css/about.css" rel="stylesheet">
+
+    <script src="https://anandvyas.in/js/jquery.min.js"></script>
+</head>
+<body class="fixed-nav sticky-footer bg-dark sidenav-toggled" id="page-top">
+  
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+    <a class="navbar-brand" href="https://anandvyas.in/">
+        <img src="https://anandvyas.in/images/profile/logo.png" />
+        <span>Anand vyas</span>
+    </a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav navbar-sidenav">
+            <li class="nav-item sidebar-profile text-center">
+                <div class="profile-pic">
+                    <img src="https://anandvyas.in/images/profile/avatar.jpg" alt="avatar">
+                </div>
+                <div class="profile-detail">
+                    
+                    <span>Solution Architect</span> 
+                    <span>Cloud Architect</span> 
+                    <span>DevOps</span> 
+                    <span>Tech Lead</span> 
+                </div>
+            </li>
+            
+            <li class="nav-item sidebar-menu" data-toggle="tooltip" data-placement="right" title="Home">
+                <a class="nav-link" href="https://anandvyas.in/">
+                <i class="fa fa-fw fa fa-home"></i>
+                <span class="nav-link-text">Home</span>
+                </a>
+            </li>
+            
+            <li class="nav-item sidebar-menu" data-toggle="tooltip" data-placement="right" title="About">
+                <a class="nav-link" href="https://anandvyas.in/about">
+                <i class="fa fa-fw fa fa-user-circle"></i>
+                <span class="nav-link-text">About</span>
+                </a>
+            </li>
+            
+            <li class="nav-item sidebar-menu" data-toggle="tooltip" data-placement="right" title="Categories">
+                <a class="nav-link" href="https://anandvyas.in/categories">
+                <i class="fa fa-fw fa fa-dashboard"></i>
+                <span class="nav-link-text">Categories</span>
+                </a>
+            </li>
+            
+            <li class="nav-item sidebar-menu" data-toggle="tooltip" data-placement="right" title="Tags">
+                <a class="nav-link" href="https://anandvyas.in/tags">
+                <i class="fa fa-fw fa fa-tags"></i>
+                <span class="nav-link-text">Tags</span>
+                </a>
+            </li>
+            
+        </ul>
+        <ul class="navbar-nav sidenav-social">
+            
+            <li><a href="#" target="_blank"><i class="fa fa-mobile"></i></a></li>
+            
+            <li><a href="mailto:anandvyas@live.com" target="_blank"><i class="fa fa-envelope"></i></a></li>
+            
+            <li><a href="https://twitter.com/anandvyaas" target="_blank"><i class="fa fa-twitter"></i></a></li>
+            
+            <li><a href="https://www.linkedin.com/in/anandvyaas" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+            
+            <li><a href="https://www.instagram.com/anandvyaas" target="_blank"><i class="fa fa-instagram"></i></a></li>
+            
+            <li><a href="https://github.com/anandvyas" target="_blank"><i class="fa fa-github"></i></a></li>
+            
+            <li><a href="https://stackoverflow.com/users/8208060/anand-vyas" target="_blank"><i class="fa fa-stack-overflow"></i></a></li>
+            
+        </ul>
+        <ul class="navbar-nav sidenav-toggler">
+            <li class="nav-item">
+                <a class="nav-link text-center" id="sidenavToggler">
+            <i class="fa fa-fw fa-angle-left"></i>
+            </a>
+            </li>
+        </ul>
+        
+        
+    </div>
+</nav>
+  
+  <div class="content-wrapper">
+    <div class="container-fluid">
+    
+
+
+<ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="https://anandvyas.in/">Home</a></li>
+
+
+    
+    <li class="breadcrumb-item active"><a href='https://anandvyas.in/aws'>aws</a></li>
+    
+    
+
+
+    
+    <li class="breadcrumb-item active"><a href='https://anandvyas.in/aws/aws-vpc-nat'>aws-vpc-nat</a></li>
+    
+    
+
+
+    
+
+</ol>
+
+        <div class="post">
+            <h1>AWS VPC NAT</h1>
+            <span class="post-date">Tue, Jul 25, 2017</span>
+            
+
+<ul>
+<li>You can use a network address translation (NAT) devices to enable instances in a private subnet to connect to the Internet or other AWS services but prevent the Internet from initiating a connection with those instances.</li>
+<li>Instances in private subnets would need internet connection for performing software updates or trying to access external services</li>
+<li>NAT device routes the traffic, from the private subnet to the Internet, by replacing the source IP address with its address and for the response traffic it translates the address back to the instances’ private IP addresses.</li>
+<li>AWS allows NAT configuration in 2 ways
+
+<ul>
+<li>NAT Gateway (Managed service by AWS)</li>
+<li>NAT Instance</li>
+</ul></li>
+</ul>
+
+<h3 id="a-name-aws-vpc-nat-gateway-nat-gateway-a"><a name="#aws-vpc-nat-gateway">NAT Gateway</a></h3>
+
+<p>NAT gateway is a AWS managed NAT service that provides better availability, higher bandwidth, and requires less administrative effort.</p>
+
+<ul>
+<li>A NAT gateway supports bursts of up to 10 Gbps of bandwidth.</li>
+<li>For more than 10 Gbps bursts requirement, the workload can be distributed by splitting the resources into multiple subnets, and creating a NAT gateway in each subnet.</li>
+<li>NAT gateway is associated with One Elastic IP address which cannot be disassociated after it’s creation.</li>
+<li>Each NAT gateway is created in a specific Availability Zone and implemented with redundancy in that zone.</li>
+<li>A NAT gateway supports the following protocols: TCP, UDP, and ICMP.</li>
+<li>NAT gateway cannot be associated a security group. Security can be configured for the instances in the private subnets to control the traffic</li>
+<li>Network ACL can be used to control the traffic to and from the subnet. Network ACL applies to the NAT gateway’s traffic, which uses ports 1024 – 65535.</li>
+<li>NAT gateway when created receives an elastic network interface that’s automatically assigned a private IP address from the IP address range of your subnet. Attributes of this network interface cannot be modified</li>
+<li>NAT gateway cannot send traffic over VPC endpoints, VPN connections, AWS Direct Connect, or VPC peering connections. Private subnet’s route table should be modified to route the traffic directly to these devices.</li>
+</ul>
+
+<h3 id="a-name-aws-vpc-nat-instance-nat-instance-a"><a name="#aws-vpc-nat-instance">NAT Instance</a></h3>
+
+<ul>
+<li>NAT instance can be created by using Amazon Linux AMIs configured to route traffic to Internet.</li>
+<li>They do not provide the same availability and bandwidth and need to configured as per the application needs.</li>
+<li>NAT instances must have security groups associated with Inbound traffic enabled from private subnets and Outbound traffic enabled to the Internet</li>
+<li>NAT instances should have the Source Destination Check attribute disabled, as it is neither the source nor the destination for the traffic and merely acts as a gateway</li>
+<li>Create One NAT instance per Availability Zone</li>
+<li>Configure all Private subnet route tables to the same zone NAT instance</li>
+<li>User Auto Scaling for NAT availability</li>
+<li>User Auto Scaling group per NAT instance with min and max size set of 1. So if NAT instances fail, Auto Scaling will automatically launch an replacement instance</li>
+<li>NAT instance is highly available with limited downtime</li>
+<li>Let Auto Scaling monitor health and availability of the NAT instance</li>
+<li>Bootstrap scripts with the NAT instance to update the Route tables programmatically</li>
+<li>Keep a close watch on the Network Metrics and scale vertically the NAT instance type to the one with high network performance</li>
+</ul>
+
+<p>Note : Each EC2 instance performs source/destination checks by default. This means that the instance must be the source or destination of any traffic it sends or receives. However, a NAT instance must be able to send and receive traffic when the source or destination is not itself. Therefore, you must disable source/destination checks on the NAT instance.</p>
+
+<div class="text-center">
+    <img class="img-responsive" src="https://anandvyas.in/images/vpc-nat-instance.png" alt="AWS Databases" />
+</div>
+ 
+
+<h3 id="a-name-aws-vpc-nat-comparison-nat-gateway-instance-comparison-a"><a name="#aws-vpc-nat-comparison">NAT Gateway &amp; Instance Comparison</a></h3>
+
+<div class="text-center">
+    <img class="img-responsive" src="https://anandvyas.in/images/vpc-nat-gateway-and-instance-compare.png" alt="AWS Databases" />
+</div>
+ 
+
+        </div>
+        
+    </div>
+    
+    
+    <footer class="sticky-footer">
+    <div class="container">
+        <div class="text-center">
+            <small>Copyright © Anand Vyas 2019</small>
+        </div>
+    </div>
+</footer>
+
+<a class="scroll-to-top rounded" href="#page-top">
+    <i class="fa fa-angle-up"></i>
+</a>
+
+
+<script src="https://anandvyas.in/js/popper.min.js"></script>
+<script src="https://anandvyas.in/js/bootstrap.min.js"></script>
+<script src="https://anandvyas.in/js/highlight.min.js"></script>
+<script src="https://anandvyas.in/js/moment.min.js"></script>
+<script src="https://anandvyas.in/js/clipboard.min.js"></script>
+
+<script src="https://anandvyas.in/js/jquery.easing.min.js"></script>
+
+<script src="https://anandvyas.in/js/sb-admin.js"></script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-108803266-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'UA-108803266-1');
+</script>
+  </div>
+<script data-no-instant>document.write('<script src="/livereload.js?port=1313&mindelay=10"></' + 'script>')</script></body>
+</html>

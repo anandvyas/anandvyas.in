@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>AWS Virtual Private Cloud (VPC) - Anand vyas</title>
+    <meta content="AWS Virtual Private Cloud (VPC) - Anand vyas" property="og:title">
+    <meta content="" name="keywords">
+    <meta content="" property="og:description">
+    <meta name="author" content="Anand Vyas">
+
+    
+    <link href="https://anandvyas.in/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link href="https://anandvyas.in/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    
+    <link href="https://anandvyas.in/css/highlighter.css" rel="stylesheet">
+    
+    <link href="https://anandvyas.in/css/sb-admin.css" rel="stylesheet">
+    <link href="https://anandvyas.in/css/about.css" rel="stylesheet">
+
+    <script src="https://anandvyas.in/js/jquery.min.js"></script>
+</head>
+<body class="fixed-nav sticky-footer bg-dark sidenav-toggled" id="page-top">
+  
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+    <a class="navbar-brand" href="https://anandvyas.in/">
+        <img src="https://anandvyas.in/images/profile/logo.png" />
+        <span>Anand vyas</span>
+    </a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav navbar-sidenav">
+            <li class="nav-item sidebar-profile text-center">
+                <div class="profile-pic">
+                    <img src="https://anandvyas.in/images/profile/avatar.jpg" alt="avatar">
+                </div>
+                <div class="profile-detail">
+                    
+                    <span>Solution Architect</span> 
+                    <span>Cloud Architect</span> 
+                    <span>DevOps</span> 
+                    <span>Tech Lead</span> 
+                </div>
+            </li>
+            
+            <li class="nav-item sidebar-menu" data-toggle="tooltip" data-placement="right" title="Home">
+                <a class="nav-link" href="https://anandvyas.in/">
+                <i class="fa fa-fw fa fa-home"></i>
+                <span class="nav-link-text">Home</span>
+                </a>
+            </li>
+            
+            <li class="nav-item sidebar-menu" data-toggle="tooltip" data-placement="right" title="About">
+                <a class="nav-link" href="https://anandvyas.in/about">
+                <i class="fa fa-fw fa fa-user-circle"></i>
+                <span class="nav-link-text">About</span>
+                </a>
+            </li>
+            
+            <li class="nav-item sidebar-menu" data-toggle="tooltip" data-placement="right" title="Categories">
+                <a class="nav-link" href="https://anandvyas.in/categories">
+                <i class="fa fa-fw fa fa-dashboard"></i>
+                <span class="nav-link-text">Categories</span>
+                </a>
+            </li>
+            
+            <li class="nav-item sidebar-menu" data-toggle="tooltip" data-placement="right" title="Tags">
+                <a class="nav-link" href="https://anandvyas.in/tags">
+                <i class="fa fa-fw fa fa-tags"></i>
+                <span class="nav-link-text">Tags</span>
+                </a>
+            </li>
+            
+        </ul>
+        <ul class="navbar-nav sidenav-social">
+            
+            <li><a href="#" target="_blank"><i class="fa fa-mobile"></i></a></li>
+            
+            <li><a href="mailto:anandvyas@live.com" target="_blank"><i class="fa fa-envelope"></i></a></li>
+            
+            <li><a href="https://twitter.com/anandvyaas" target="_blank"><i class="fa fa-twitter"></i></a></li>
+            
+            <li><a href="https://www.linkedin.com/in/anandvyaas" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+            
+            <li><a href="https://www.instagram.com/anandvyaas" target="_blank"><i class="fa fa-instagram"></i></a></li>
+            
+            <li><a href="https://github.com/anandvyas" target="_blank"><i class="fa fa-github"></i></a></li>
+            
+            <li><a href="https://stackoverflow.com/users/8208060/anand-vyas" target="_blank"><i class="fa fa-stack-overflow"></i></a></li>
+            
+        </ul>
+        <ul class="navbar-nav sidenav-toggler">
+            <li class="nav-item">
+                <a class="nav-link text-center" id="sidenavToggler">
+            <i class="fa fa-fw fa-angle-left"></i>
+            </a>
+            </li>
+        </ul>
+        
+        
+    </div>
+</nav>
+  
+  <div class="content-wrapper">
+    <div class="container-fluid">
+    
+
+
+<ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="https://anandvyas.in/">Home</a></li>
+
+
+    
+    <li class="breadcrumb-item active"><a href='https://anandvyas.in/aws'>aws</a></li>
+    
+    
+
+
+    
+    <li class="breadcrumb-item active"><a href='https://anandvyas.in/aws/aws-vpc'>aws-vpc</a></li>
+    
+    
+
+
+    
+
+</ol>
+
+        <div class="post">
+            <h1>AWS Virtual Private Cloud (VPC)</h1>
+            <span class="post-date">Tue, Jul 25, 2017</span>
+            <p>Amazon Virtual Private Cloud (Amazon VPC) lets you provision a logically isolated section of the Amazon Web Services (AWS) cloud where you can launch AWS resources in a virtual network that you define.</p>
+
+<div class="text-center">
+    <img class="img-responsive" src="https://anandvyas.in/images/aws/vpc.png" alt="AWS Databases" />
+</div>
+ 
+
+<p>You have complete control over your virtual networking environment, including selection of your own IP address range, creation of subnets, and configuration of route tables and network gateways.</p>
+
+<ul>
+<li>A virtual network dedicated to your AWS enviroment</li>
+<li>Logically isolated from other virtual networks in the AWS cloud</li>
+<li>A location for launching AWS resource, such as <a href="https://anandvyas.in/aws/aws-ec2">Amazon EC2</a> instances</li>
+<li>Highly configurable virtual private server
+
+<ul>
+<li>Set up IP address range</li>
+<li>Create Subnets</li>
+<li>Configure route table</li>
+<li>Define network gateways</li>
+<li>Configure security settings</li>
+</ul></li>
+</ul>
+
+<h3 id="span-style-color-e47911-vpc-components-span"><span style="color:#e47911">VPC - Components </span></h3>
+
+<ul>
+<li>Subnets</li>
+<li>Route tables</li>
+<li>Dynamic Host Configuration Protocol (DHCP) option sets</li>
+<li>Security groups</li>
+<li>Network Access Control Lists (ACLs)</li>
+</ul>
+
+<h3 id="span-style-color-e47911-vpc-optional-components-span"><span style="color:#e47911">VPC - Optional Components </span></h3>
+
+<ul>
+<li>Internet Gateways (IGWs)</li>
+<li>Elastic IP (EIP) addresses</li>
+<li>Elastic Network Interfaces (ENIs)</li>
+<li>Endpoints</li>
+<li>Peering</li>
+<li>Network Address Translation (NATs) instances and NAT gateways</li>
+<li>Virtual Private Gateway (VPG), Customer Gateways (CGWs), and Virtual Private
+Networks (VPNs)</li>
+</ul>
+
+<h3 id="a-name-aws-vpc-subnet-subnet-a"><a name="#aws-vpc-subnet">Subnet</a></h3>
+
+<p>A subnet is a segment of an Amazon VPC’s IP address range where you can launch Amazon
+EC2 instances, Amazon Relational Database Service (Amazon RDS) databases, and other
+AWS resources. When you create a VPC, you must specify a range of IPv4 addresses for the VPC in the form of a Classless Inter-Domain Routing (CIDR) block.</p>
+
+<ul>
+<li><strong>one subnet equals one Availability Zone</strong></li>
+<li>you can add one or more subnets in each Availability Zone</li>
+<li>Subnets reside within one Availability Zone and cannot span zones.</li>
+<li>Subnets can be classified as public, private, or VPN-only.
+
+<ul>
+<li><strong>public</strong>: A public subnet is one in which the associated route table directs the subnet’s traffic to the Amazon VPC’s IGW</li>
+<li><strong>private</strong>: A private subnet is one in which the associated route table does not direct the subnet’s traffic to the Amazon VPC’s IGW.</li>
+<li><strong>VPN-only</strong>: A VPN-only subnet is one in which the associated route table directs the subnet’s traffic to the Amazon VPC’s VPG and does not have a route to the IGW.</li>
+</ul></li>
+<li>Default Amazon VPCs contain one public subnet in every Availability Zone within the region, with a netmask of /20</li>
+</ul>
+
+<h3 id="a-name-aws-vpc-subnet-sizing-subnet-sizing-a"><a name="#aws-vpc-subnet-sizing">Subnet Sizing</a></h3>
+
+<ul>
+<li>CIDR block assigned to the Subnet can be the same as the VPC CIDR, in this case you can launch only one subnet within your VPC</li>
+<li>CIDR block assigned to the Subnet can be a subset of the VPC CIDR, which allows you to launch multiple subnets within the VPC</li>
+<li>CIDR block assigned to the subnet should not be overlapping</li>
+<li>CIDR block size allowed is between
+
+<ul>
+<li>/28 netmask (minimum with 2^4 – 16 available IP address) and</li>
+<li>/16 netmask (maximum with 2^16 – 65536 IP address)</li>
+</ul></li>
+<li>AWS reserves 5 IPs address (first 4 and last 1 IP address) in each Subnet which are not available for use and cannot be assigned to an instance. for e.g. for a Subnet with a CIDR block 10.0.0.0/24 the following five IPs are reserved
+
+<ul>
+<li>10.0.0.0: Network address</li>
+<li>10.0.0.1: Reserved by AWS for the VPC router</li>
+<li>10.0.0.2: Reserved by AWS for mapping to Amazon-provided DNS</li>
+<li>10.0.0.3: Reserved by AWS for future use</li>
+<li>10.0.0.255: Network broadcast address.
+<br /></li>
+</ul></li>
+</ul>
+
+<p>AWS does not support broadcast in a VPC, therefore the address is reserved.</p>
+
+<h3 id="a-name-aws-vpc-route-tables-route-tables-a"><a name="#aws-vpc-route-tables">Route Tables</a></h3>
+
+<p>A route table contains a set of rules, called routes, that are used to determine where network traffic is directed. Each subnet in your VPC must be associated with a route table; the table controls the routing for the subnet. A subnet can only be associated with one route table at a time, but you can associate multiple subnets with the same route table.</p>
+
+<ul>
+<li>A route table’s routes are what permit Amazon EC2 instances within different subnets within an Amazon VPC to communicate with each other.</li>
+<li>You can also use route tables to specify which subnets are public (by directing Internet traffic to the IGW) and which subnets are private (by not having a route that directs traffic to the IGW).</li>
+<li>Each route table contains a default route called the local route, which enables communication within the Amazon VPC, and this route cannot be modified or removed.</li>
+<li>Your VPC has an implicit router.</li>
+<li>Your VPC automatically comes with a main route table that you can modify.</li>
+<li>You can create additional custom route tables for your VPC.</li>
+<li>Each subnet must be associated with a route table, which controls the routing for the subnet. If you don&rsquo;t explicitly associate a subnet with a particular route table, the subnet is implicitly associated with the main route table.</li>
+<li>You cannot delete the main route table, but you can replace the main route table with a custom table that you&rsquo;ve created</li>
+<li>Each route in a table specifies a destination CIDR and a target</li>
+<li>Every route table contains a local route for communication within the VPC over IPv4.</li>
+<li>When you add an Internet gateway, an egress-only Internet gateway, a virtual private gateway, a NAT device, a peering connection, or a VPC endpoint in your VPC, you must update the route table for any subnet that uses these gateways or connections.</li>
+</ul>
+
+<h3 id="a-name-aws-vpc-igw-internet-gateways-igw-a"><a name="#aws-vpc-igw">Internet Gateways – IGW</a></h3>
+
+<p>An Internet gateway is a horizontally scaled, redundant, and highly available VPC component that allows communication between instances in your VPC and the Internet. It therefore imposes no availability risks or bandwidth constraints on your network traffic</p>
+
+<ul>
+<li>An Internet gateway serves two purposes:
+
+<ul>
+<li>to provide a target in your VPC route tables for Internet-routable traffic</li>
+<li>to perform network address translation (NAT) for instances that have been assigned public IPv4 addresses.</li>
+</ul></li>
+<li>An Internet gateway supports IPv4 and IPv6 traffic.</li>
+<li>Enabling Internet access to an Instance requires
+
+<ul>
+<li>Attach an Internet gateway to your VPC.</li>
+<li>Ensure that your subnet&rsquo;s route table points to the Internet gateway.</li>
+<li>Ensure that instances in your subnet have a globally unique IP address (public IPv4 address, Elastic IP address, or IPv6 address).</li>
+<li>Ensure that your network access control and security group rules allow the relevant traffic to flow to and from your instance.</li>
+</ul></li>
+</ul>
+
+<h3 id="a-name-aws-vpc-dhcp-dynamic-host-configuration-protocol-dhcp-a"><a name="#aws-vpc-dhcp">Dynamic Host Configuration Protocol (DHCP)</a></h3>
+
+<p>DHCP (Dynamic Host Configuration Protocol) is a protocol used to provide quick, automatic, and central management for the distribution of IP addresses within a network.</p>
+
+<p>In most home and small businesses, the router acts as the DHCP server. In large networks, a single computer might act as the DHCP server.</p>
+
+<h3 id="a-name-aws-vpc-dhcp-option-sets-dhcp-option-sets-a"><a name="#aws-vpc-dhcp-option-sets">DHCP Option Sets</a></h3>
+
+<p>AWS automatically creates and associates a DHCP option set for your Amazon VPC upon
+creation and sets two options:</p>
+
+<ul>
+<li>domain-name-servers (defaulted to AmazonProvidedDNS)</li>
+<li>domain-name (defaulted to the domain name for your region)</li>
+</ul>
+
+<blockquote>
+<p>AmazonProvidedDNS is an Amazon Domain Name System (DNS) server, and this option enables DNS for instances that need to communicate over the Amazon VPC’s IGW.</p>
+</blockquote>
+
+<p>To assign your own domain name to your instances, create a custom DHCP option set and assign it to your Amazon VPC. You can configure the following values within a DHCP option set:</p>
+
+<ul>
+<li><strong>domain-name-servers</strong>: The IP addresses of up to four domain name servers, separated by commas. The default is AmazonProvidedDNS.</li>
+<li><strong>domain-name—Specify</strong>: The desired domain name here (for example, mycompany.com).</li>
+<li><strong>ntp-servers</strong>: The IP addresses of up to four Network Time Protocol (NTP) servers,
+separated by commas</li>
+<li><strong>netbios-name-servers</strong>: The IP addresses of up to four NetBIOS name servers,
+separated by commas</li>
+<li><strong>netbios-node-type</strong>: Set this value to 2.</li>
+</ul>
+
+<h3 id="a-name-aws-vpc-eip-elastic-ip-addresses-eips-a"><a name="#aws-vpc-eip">Elastic IP Addresses (EIPs)</a></h3>
+
+<ul>
+<li>EIPs allow you to maintain a set of IP addresses that remain fixed while the underlying infrastructure may change over time.</li>
+<li>You must first allocate an EIP for use within a VPC and then assign it to an instance.</li>
+<li>EIPs are specific to a region (that is, an EIP in one region cannot be assigned to an instance within an Amazon VPC in a different region).</li>
+<li>There is a one-to-one relationship between network interfaces and EIPs.</li>
+<li>You can move EIPs from one instance to another, either in the same Amazon VPC or a different Amazon VPC within the same region.</li>
+<li>EIPs remain associated with your AWS account until you explicitly release them.</li>
+<li>There are charges for EIPs allocated to your account, even when they are not associated with a resource.</li>
+</ul>
+
+<h3 id="a-name-aws-vpc-eni-elastic-network-interfaces-enis-a"><a name="#aws-vpc-eni">Elastic Network Interfaces (ENIs)</a></h3>
+
+<ul>
+<li>An Elastic Network Interface (ENI) is a virtual network interface that you can attach to an instance in an Amazon VPC.</li>
+<li>ENIs are only available within an Amazon VPC, and they are associated with a subnet upon creation.</li>
+<li>They can have one public IP address and multiple private IP addresses. If there are multiple private IP addresses, one of them is primary.</li>
+<li>A network interface can include the following attributes:
+
+<ul>
+<li>A primary private IPv4 address</li>
+<li>One or more secondary private IPv4 addresses</li>
+<li>One Elastic IP address (IPv4) per private IPv4 address</li>
+<li>One public IPv4 address</li>
+<li>One or more IPv6 addresses</li>
+<li>One or more security groups</li>
+<li>A MAC address</li>
+<li>A source/destination check flag</li>
+<li>A description</li>
+</ul></li>
+<li>You can create a network interface, attach it to an instance, detach it from an instance, and attach it to another instance.</li>
+</ul>
+
+<h3 id="a-name-aws-vpc-endpoints-vpc-end-points-a"><a name="#aws-vpc-endpoints">VPC End-points</a></h3>
+
+<ul>
+<li>VPC endpoint enables creation of a private connection between your VPC and another AWS service using its private IP address</li>
+<li>VPC Endpoint does not require a public IP address, access over the Internet, NAT device, a VPN connection or AWS Direct Connect</li>
+<li>Endpoints are virtual devices. They are horizontally scaled, redundant, and highly available VPC components that allow communication between instances in your VPC and AWS services without imposing availability risks or bandwidth constraints on your network traffic.</li>
+<li>Traffic between VPC and AWS service does not leave the Amazon network</li>
+<li>Endpoints currently do not support cross-region requests, ensure that the endpoint is created in the same region as your bucket</li>
+<li>AWS currently supports endpoints for S3 service only</li>
+</ul>
+
+<div class="text-center">
+    <img class="img-responsive" src="https://anandvyas.in/images/aws/vpc-endpoints.png" alt="vpc endpoint" />
+</div>
+ 
+
+<div class="embed video-player">
+    <iframe class="youtube-player anand" type="text/html" width="640" height="385" src="http://www.youtube.com/embed/m8OZRZGfrFg" allowfullscreen frameborder="0">
+    </iframe>
+</div>
+
+<p><strong>Configuration</strong></p>
+
+<ul>
+<li>Endpoint requires the VPC and the service to be accessed via the endpoint</li>
+<li>Endpoint needs to be associated with the Route table and the route table cannot be modified to remove the route entry. It can only be deleted by removing the Endpoint association with the Route table</li>
+<li>A route is automatically added to the Route table with a destination that specifies the prefix list of service and the target with the endpoint id. for e.g. A rule with destination pl-68a54001 (com.amazonaws.us-west-2.s3) and a target with this endpoints’ ID (e.g. vpce-12345678) will be added to the route tables</li>
+<li>Access to the resources in other services can be controlled by endpoint policies</li>
+<li>Security groups needs to be modified to allow Outbound traffic from the VPC to the service thats specified in the endpoint. Use the service prefix list ID for e.g. com.amazonaws.us-east-1.s3  as the destination in the outbound rule</li>
+<li>Multiple endpoint routes to different services can be specified in a route table, and multiple endpoint routes to the same service can be specified in different route tables, but you cannot have multiple endpoints to the same service in a single route table</li>
+</ul>
+
+<p><strong>Limitations</strong></p>
+
+<ul>
+<li>Endpoint cannot be created between a VPC and an AWS service in a different region.</li>
+<li>Endpoint cannot be tagged</li>
+<li>Endpoint cannot be transferred from one VPC to another, or from one service to another</li>
+<li>Endpoint connections cannot be extended out of a VPC i.e. resources across the VPN connection, VPC peering connection, AWS Direct Connect connection cannot use the endpoint</li>
+</ul>
+
+<h3 id="a-name-aws-vpc-security-groups-security-groups-a"><a name="#aws-vpc-security-groups">Security groups</a></h3>
+
+<ul>
+<li>A security group is a virtual stateful firewall that controls inbound and outbound network traffic to AWS resources and Amazon EC2 instances.</li>
+<li>All Amazon EC2 instances must be launched into a security group.</li>
+<li>If a security group is not specified at launch, then the instance will be launched into the default security group for the Amazon VPC.</li>
+<li>The default security group allows communication between all resources within the security group, allows all outbound traffic, and denies all other traffic.</li>
+<li>You may change the rules for the default security group, but you may not delete the default security group.</li>
+</ul>
+
+<p><strong>Security Group Rules for a Web Server</strong></p>
+
+<div class="text-center">
+    <img class="img-responsive" src="https://anandvyas.in/images/aws/aws-vpc-security-group-rules.png" alt="vpc endpoint" />
+</div>
+ 
+
+<ul>
+<li>You can create up to 500 security groups for each Amazon VPC.</li>
+<li>You can add up to 50 inbound and 50 outbound rules to each security group. If you need to apply more than 100 rules to an instance, you can associate up to five security groups with each network interface.</li>
+<li>You can specify allow rules, but not deny rules. This is an important difference between security groups and ACLs.</li>
+<li>You can specify separate rules for inbound and outbound traffic.</li>
+<li>By default, no inbound traffic is allowed until you add inbound rules to the security
+group.</li>
+<li>By default, new security groups have an outbound rule that allows all outbound traffic.You can remove the rule and add outbound rules that allow specific outbound traffic only.</li>
+<li>Security groups are stateful. This means that responses to allowed inbound traffic are allowed to flow outbound regardless of outbound rules and vice versa. This is an
+important difference between security groups and network ACLs.</li>
+<li>Instances associated with the same security group can’t talk to each other unless you add rules allowing it (with the exception being the default security group).</li>
+<li>You can change the security groups with which an instance is associated after launch,
+and the changes will take effect immediately.</li>
+</ul>
+
+<h3 id="a-name-aws-vpc-acl-network-access-control-lists-acls-a"><a name="#aws-vpc-acl">Network Access Control Lists (ACLs)</a></h3>
+
+<ul>
+<li>A network access control list (ACL) is another layer of security that acts as a stateless firewall on a subnet level.</li>
+<li>A network ACL is a numbered list of rules that AWS evaluates in order, starting with the lowest numbered rule, to determine whether traffic is allowed in or out of any subnet associated with the network ACL.</li>
+<li>Amazon VPCs are created with a modifiable default network ACL associated with every subnet that allows all inbound and outbound traffic.</li>
+<li>When you create a custom network ACL, its initial configuration will deny all inbound
+and outbound traffic until you create rules that allow otherwise.</li>
+<li>Every subnet must be associated with a network ACL.</li>
+</ul>
+
+<h3 id="a-name-aws-vpc-security-vpc-security-a"><a name="#aws-vpc-security">VPC Security</a></h3>
+
+<p>In a VPC, both Security Groups and Network ACLs (NACLS) together help to build a layered network defense.</p>
+
+<ul>
+<li><p><strong>Security groups</strong>: A security group acts as a virtual firewall for your instance to control inbound and outbound traffic. When you launch an instance in a VPC, you can assign up to <u>five security groups</u> to the instance. Security groups act at the instance level, not the subnet level. Therefore, each instance in a subnet in your VPC could be assigned to a different set of security groups.</p></li>
+
+<li><p><strong>Network access control lists (NACLs)</strong>: Act as a firewall for associated subnets, controlling both inbound and outbound traffic at the subnet level</p></li>
+
+<li><p><strong>Flow logs</strong>: Capture information about the IP traffic going to and from network interfaces in your VPC</p></li>
+</ul>
+
+<p><div class="text-center">
+    <img class="img-responsive" src="https://anandvyas.in/images/aws/vpc-security-group-vs-nacl.png" alt="AWS Databases" />
+</div>
+ 
+<div class="text-center">
+    <img class="img-responsive" src="https://anandvyas.in/images/aws/security-diagram.png" alt="AWS Databases" />
+</div>
+ </p>
+
+<h3 id="a-name-aws-vpc-nat-overview-nat-overview-a"><a name="#aws-vpc-nat-overview">NAT Overview</a></h3>
+
+<p>NAT device enables instances in a private subnet to connect to the Internet or other AWS services, but prevents the Internet from initiating connections with the instances.</p>
+
+<p>Refer to My Blog Post about <a href="https://anandvyas.in/aws/aws-vpc-nat">VPC NAT</a></p>
+
+<h3 id="a-name-aws-vpc-bastion-host-bastion-host-overview-a"><a name="#aws-vpc-bastion-host">Bastion Host Overview</a></h3>
+
+<ul>
+<li>In AWS, a Bastion host (also referred to as a Jump server) can be used to securely access instances in the private subnets.</li>
+<li>Bastion host launched in the Public subnets would act as a primary access point from the Internet and acts as a proxy to other instances.</li>
+</ul>
+
+<div class="text-center">
+    <img class="img-responsive" src="https://anandvyas.in/images/aws/vpc-bastion-host.png" alt="bastion host" />
+</div>
+ 
+
+<ul>
+<li>Bastion host is deployed in the Public subnet and acts as a proxy or a gateway between you and your instances</li>
+<li>Bastion host is a security measure that helps to reduce attack on your infrastructure and you have to concentrate to hardening a single layer</li>
+<li>Bastion host allows you to login to instances in the Private subnet securely without having to store the private keys on the Bastion host (using ssh-agent forwarding or RDP gateways)</li>
+<li>Bastion host security can be further tightened to allow SSH/RDP access from specific trusted IPs or corporate IP ranges</li>
+<li>Bastion host for your AWS infrastructure shouldn’t be used for any other purpose, as that could open unnecessary security holes</li>
+<li>Security for all the Instances in the private subnet should be hardened to accept SSH/RDP connections only from the Bastion host</li>
+<li>Deploy a Bastion host within each Availability Zone for HA, cause if the Bastion instance or the AZ hosting the Bastion server goes down the ability to connect to your private instances is lost completely</li>
+</ul>
+
+<div class="embed video-player">
+    <iframe class="youtube-player anand" type="text/html" width="640" height="385" src="http://www.youtube.com/embed/EpFAHis4O4g" allowfullscreen frameborder="0">
+    </iframe>
+</div>
+
+<h3 id="a-name-aws-vpc-peering-vpc-peering-a"><a name="#aws-vpc-peering">VPC Peering</a></h3>
+
+<ul>
+<li>A VPC peering connection is a networking connection between two VPCs that enables routing of traffic between them using private IP addresses.</li>
+<li>VPC peering connection can be established between your own VPCs, or with a VPC in another AWS account within a single region.</li>
+<li>Peering connections are created through a request/accept protocol. The owner of the
+requesting Amazon VPC sends a request to peer to the owner of the peer Amazon VPC. If the peer Amazon VPC is within the same account, it is identified by its VPC ID. If the peer VPC is within a different account, it is identified by Account ID and VPC ID. The owner of the peer Amazon VPC has one week to accept or reject the request to peer with the requesting Amazon VPC before the peering request expires.</li>
+</ul>
+
+<p><strong>VPC Peering Architecture</strong></p>
+
+<div class="text-center">
+    <img class="img-responsive" src="https://anandvyas.in/images/aws/vpc-peering-architecture.png" alt="vpc endpoint" />
+</div>
+ 
+
+<p><strong>VPC Peering Rules &amp; Limitations</strong></p>
+
+<ul>
+<li>VPC peering connection cannot be created between VPCs that have matching or overlapping CIDR blocks.</li>
+</ul>
+
+<div class="text-center">
+    <img class="img-responsive" src="https://anandvyas.in/images/aws/vpc-peering-cidr.png" alt="vpc endpoint" />
+</div>
+ 
+
+<ul>
+<li>VPC peering connection cannot be created between VPCs in different regions.</li>
+<li>VPC peering connection are limited on the number active and pending VPC peering connections that you can have per VPC.</li>
+</ul>
+
+<div class="text-center">
+    <img class="img-responsive" src="https://anandvyas.in/images/aws/vpc-peering-connections-limits.png" alt="vpc endpoint" />
+</div>
+ 
+
+<ul>
+<li>VPC peering does not support transitive peering relationships
+In a VPC peering connection, your VPC does not have access to any other VPCs that the peer VPC may be peered with even if established entirely within your own AWS account</li>
+</ul>
+
+<div class="text-center">
+    <img class="img-responsive" src="https://anandvyas.in/images/aws/vpc-peering-transitive-peering.png" alt="vpc endpoint" />
+</div>
+ 
+
+<ul>
+<li>Only one VPC peering connection can be established between the same two VPCs at the same time</li>
+<li>Maximum Transmission Unit (MTU) across a VPC peering connection is 1500 bytes.</li>
+<li>A placement group can span peered VPCs; however, you do not get full-bisection bandwidth between instances in peered VPCs.</li>
+<li>Unicast reverse path forwarding in VPC peering connections is not supported.</li>
+<li>Instance’s public DNS hostname does not resolve to its private IP address across peered VPCs.</li>
+</ul>
+
+<div class="embed video-player">
+    <iframe class="youtube-player anand" type="text/html" width="640" height="385" src="http://www.youtube.com/embed/_LR1RUKe91g" allowfullscreen frameborder="0">
+    </iframe>
+</div>
+
+<h3 id="a-name-aws-vpc-vpn-aws-vpc-vpn-a"><a name="aws-vpc-vpn">AWS VPC VPN</a></h3>
+
+<p>You can connect your VPC to remote networks by using a VPN connection. The following are some of the connectivity options available to you.</p>
+
+<ul>
+<li>AWS hardware VPN
+
+<ul>
+<li>Connectivity can be established by creating an IPSec, hardware VPN connection between the VPC and the remote network.</li>
+<li>On the AWS side of the VPN connection, a Virtual Private Gateway (VGW) provides two VPN endpoints for automatic failover.</li>
+<li>On customer side a customer gateway (CGW) needs to be configured, which is the physical device or software application on the remote side of the VPN connection</li>
+</ul></li>
+<li>AWS Direct Connect
+
+<ul>
+<li>AWS Direct Connect provides a dedicated private connection from a remote network to your VPC.</li>
+<li>Direct Connect can be combined with an AWS hardware VPN connection to create an IPsec-encrypted connection</li>
+</ul></li>
+<li>AWS VPN CloudHub
+
+<ul>
+<li>For more than one remote network for e.g. multiple branch offices, multiple AWS hardware VPN connections can be created via the VPC to enable communication between these networks</li>
+</ul></li>
+<li>Software VPN
+
+<ul>
+<li>VPN connection can be setup by running a software VPN like OpenVPN appliance on an EC2 instance in the VPC</li>
+<li>AWS does not provide or maintain software VPN appliances; however, there are range of products provided by partners and open source communities</li>
+</ul></li>
+</ul>
+
+<p><strong>VPC Components</strong></p>
+
+<ul>
+<li>Virtual Private Gateway – VGW
+
+<ul>
+<li>A virtual private gateway is the VPN concentrator on the AWS side of the VPN connection</li>
+</ul></li>
+<li>Customer Gateway – CGW
+
+<ul>
+<li>A customer gateway is a physical device or software application on customer side of the VPN connection.</li>
+<li>When a VPN connection is created, the VPN tunnel comes up when traffic is generated from the remote side of the VPN connection.</li>
+<li>VGW is not the initiator; CGW must initiate the tunnels</li>
+<li>If the VPN connection experiences a period of idle time, usually 10  seconds, depending on the configuration, the tunnel may go down. To prevent this, a network monitoring tool to generate keepalive pings; for e.g. by using IP SLA.</li>
+</ul></li>
+</ul>
+
+<p><strong>VPC Configuration</strong></p>
+
+<ul>
+<li>Each VPN has two tunnels associated with it that can be configured on the customer router, as is not single point of failure</li>
+<li>Multiple VPN connections to a single VPC can be created, and a second CGW can be configured to create a redundant connection to the same external location or to create VPN connections to multiple geographic locations.</li>
+</ul>
+
+<p><strong>VPN Routing Options</strong></p>
+
+<ul>
+<li>For a VPN connection, the route table for the subnets should be updated with the type of routing (static of dynamic) that you plan to use.</li>
+<li>Route tables determine where network traffic is directed. Traffic destined for the VPN connections must be routed to the virtual private gateway.</li>
+<li>Type of routing can depend on the make and model of your VPN devices.
+
+<ul>
+<li>Static Routing
+
+<ul>
+<li>If your device does not support BGP, specify static routing.</li>
+<li>Using static routing, the routes (IP prefixes) can be specified that should be communicated to the virtual private gateway.</li>
+<li>Devices that don’t support BGP may also perform health checks to assist failover to the second tunnel when needed.</li>
+</ul></li>
+<li>BGP dynamic routing
+
+<ul>
+<li>If the VPN device supports Border Gateway Protocol (BGP), specify dynamic routing with the VPN connection.</li>
+<li>When using a BGP device, static routes need not be specified to the VPN connection because the device uses BGP for auto discovery and to advertise its routes to the virtual private gateway.</li>
+<li>BGP-capable devices are recommended as the BGP protocol offers robust liveness detection checks that can assist failover to the second VPN tunnel if the first tunnel goes down.</li>
+</ul></li>
+</ul></li>
+<li>Only IP prefixes known to the virtual private gateway, either through BGP advertisement or static route entry, can receive traffic from your VPC.</li>
+<li>Virtual private gateway does not route any other traffic destined outside of the advertised BGP, static route entries, or its attached VPC CIDR.</li>
+</ul>
+
+<div class="embed video-player">
+    <iframe class="youtube-player anand" type="text/html" width="640" height="385" src="http://www.youtube.com/embed/3j1MLlgc5Eg" allowfullscreen frameborder="0">
+    </iframe>
+</div>
+
+<h3 id="a-name-aws-vpc-vpn-cloudhub-aws-vpc-vpn-cloudhub-a"><a name="aws-vpc-vpn-cloudhub">AWS VPC VPN CloudHub</a></h3>
+
+<ul>
+<li>VPN CloudHub can be used to provide secure communication between sites, if you have multiple VPN connections</li>
+<li>VPN CloudHub operates on a simple hub-and-spoke model that can be used with or without a VPC.</li>
+<li>Design is suitable for customers with multiple branch offices and existing
+Internet connections who’d like to implement a convenient, potentially low-cost hub-and-spoke model for primary or backup connectivity between these remote offices</li>
+</ul>
+
+<div class="text-center">
+    <img class="img-responsive" src="https://anandvyas.in/images/aws/VPN-CloudHub-Architecture.png" alt="vpc endpoint" />
+</div>
+ 
+
+<h3 id="a-name-aws-vpc-quiz-important-links-a"><a name="aws-vpc-quiz">Important Links</a></h3>
+
+<div class="embed video-player">
+    <iframe class="youtube-player anand" type="text/html" width="640" height="385" src="http://www.youtube.com/embed/OPy3V2ujIDs" allowfullscreen frameborder="0">
+    </iframe>
+</div>
+
+<h3 id="a-name-aws-vpc-quiz-quiz-aws-vpc-a"><a name="aws-vpc-quiz">Quiz: AWS VPC</a></h3>
+
+
+
+<script>
+    var quiz = [{"correct":[2],"explanation":"The minimum size subnet that you can have in an Amazon VPC is /28.","image":"","options":["/24","/26","/28","/30"],"question":"What is the minimum size subnet that you can have in an Amazon VPC?"},{"correct":[2],"explanation":"You need two public subnets (one for each Availability Zone) and two private subnets (one for each Availability Zone). Therefore, you need four subnets.","image":"","options":["2","3","4","1"],"question":"You are a solutions architect working for a large travel company that is migrating its existing server estate to AWS. You have recommended that they use a custom Amazon VPC, and they have agreed to proceed. They will need a public subnet for their web servers and a private subnet in which to place their databases. They also require that the web servers and database servers be highly available and that there be a minimum of two web servers and two database servers each. How many subnets should you have to maintain high availability?"},{"correct":[0],"explanation":"Network ACLs are associated to a VPC subnet to control traffic flow.","image":"","options":["Network ACL","Security Group","Firewall","Web application firewall"],"question":"Which of the following is an optional security control that can be applied at the subnet layer of a VPC?"},{"correct":[0],"explanation":"The maximum size subnet that you can have in a VPC is /16.","image":"","options":["/16","/24","/28","/30"],"question":"What is the maximum size IP address range that you can have in an Amazon VPC?"},{"correct":[3],"explanation":"By creating a route out to the Internet using an IGW, you have made this subnet public.","image":"","options":["An internal subnet","A private subnet","An external subnet","A public subnet"],"question":"You create a new subnet and then add a route to your route table that routes traffic out from that subnet to the Internet using an IGW. What type of subnet have you created?"},{"correct":[0],"explanation":"When you create an Amazon VPC, a route table is created by default. You must manually create subnets and an IGW.","image":"","options":["A main route table is created by default.","Three subnets are created by default—one for each Availability Zone.","Three subnets are created by default in one Availability Zone.","An IGW is created by default."],"question":"What happens when you create a new Amazon VPC?"},{"correct":[2],"explanation":"When you provision an Amazon VPC, all subnets can communicate with each other by default.","image":"","options":["By default, these subnets will not be able to communicate with each other; you will need to create routes.","All subnets are public by default.","All subnets will be able to communicate with each other by default.","Each subnet will have identical CIDR blocks."],"question":"You create a new VPC in US-East-1 and provision three subnets inside this Amazon VPC. Which of the following statements is true?"},{"correct":[0],"explanation":"You may only have one IGW for each Amazon VPC.","image":"","options":["1","2","3","4"],"question":"How many IGWs can you attach to an Amazon VPC at any one time?"},{"correct":[1],"explanation":"Security groups are stateful, whereas network ACLs are stateless","image":"","options":["Network ACLs","Security groups","Amazon DynamoDB","Amazon S3"],"question":"What aspect of an Amazon VPC is stateful?"},{"correct":[2],"explanation":"You should disable source/destination checks on the NAT.","image":"","options":["Your NAT is in a public subnet, but it needs to be in a private subnet.","Your NAT should be behind an Elastic Load Balancer.","You should disable source/destination checks on the NAT.","Your NAT has been deployed on a Windows instance, but your other instances are Linux. You should redeploy the NAT onto a Linux instance."],"question":"You have created a custom Amazon VPC with both private and public subnets. You have created a NAT instance and deployed this instance to a public subnet. You have attached an EIP address and added your NAT to the route table. Unfortunately, instances in your private subnet still cannot access the Internet. What may be the cause of this?"},{"correct":[1,4],"explanation":"In the EC2-Classic network, the EIP will be disassociated with the instance; in the EC2-VPC network, the EIP remains associated with the instance. Regardless of the underlying network, a stop/start of an Amazon EBS-backed Amazon EC2 instance always changes the host computer.","image":"","options":["The EIP will be dissociated from the instance.","All data on instance-store devices will be lost.","All data on Amazon EBS devices will be lost.","The ENI is detached.","The underlying host for the instance is changed."],"question":"Which of the following will occur when an Amazon Elastic Block Store (Amazon EBS)-backed Amazon EC2 instance in an Amazon VPC with an associated EIP is stopped and started? (Choose 2 answers)"},{"correct":[3],"explanation":"Six VPC Peering connections are needed for each of the four VPCs to send traffic to the other.","image":"","options":["3","4","5","6"],"question":"How many VPC Peering connections are required for four VPCs located within the same AWS region to be able to send traffic to each of the others?"},{"correct":[1],"explanation":"A DHCP option set allows customers to define DNS servers for DNS name resolution, establish domain names for instances within an Amazon VPC, define NTP servers, and define the NetBIOS name servers.","image":"","options":["A VPC peering connection","A DHCP option set","A routing rule","An IGW"],"question":"Which of the following AWS resources would you use in order for an EC2-VPC instance to resolve DNS names outside of AWS?"},{"correct":[3],"explanation":"A CGW is the customer side of a VPN connection, and an IGW connects a network to the Internet. A VPG is the Amazon side of a VPN connection.","image":"","options":["An EIP","A CGW","An IGW","A VPG"],"question":"Which of the following is the Amazon side of an Amazon VPN connection?"},{"correct":[0],"explanation":"The default limit for the number of Amazon VPCs that a customer may have in a region is 5.","image":"","options":["5","6","7","There is no default maximum number of VPCs within a region"],"question":"What is the default limit for the number of Amazon VPCs that a customer may have in a region?"},{"correct":[1],"explanation":"Network ACL rules can deny traffic.","image":"","options":["Security group","Network ACL","NAT instance","An Amazon VPC endpoint"],"question":"You are responsible for your company’s AWS resources, and you notice a significant amount of traffic from an IP address in a foreign country in which your company does not have customers. Further investigation of the traffic indicates the source of the traffic is scanning for open ports on your EC2-VPC instances. Which one of the following resources can deny the traffic from reaching the instances?"},{"correct":[3],"explanation":"IPsec is the security protocol supported by Amazon VPC.","image":"","options":["SSH","Advanced Encryption Standard (AES)","Point-to-Point Tunneling Protocol (PPTP)","IPsec"],"question":"Which of the following is the security protocol supported by Amazon VPC?"},{"correct":[3],"explanation":"An Amazon VPC endpoint enables you to create a private connection between your Amazon VPC and another AWS service without requiring access over the Internet or through a NAT device, VPN connection, or AWS Direct Connect.","image":"","options":["Amazon S3 gateway","IGW","CGW","VPC endpoint"],"question":"Which of the following Amazon VPC resources would you use in order for EC2-VPC instances to send traffic directly to Amazon S3?"},{"correct":[0,2],"explanation":"The CIDR block is specified upon creation and cannot be changed. An Amazon VPC is associated with exactly one region which must be specified upon creation. You can add a subnet to an Amazon VPC any time after it has been created, provided its address range falls within the Amazon VPC CIDR block and does not overlap with the address range of any existing CIDR block. You can set up peering relationships between Amazon VPCs after they have been created.","image":"","options":["The CIDR block representing the IP address range","One or more subnets for the Amazon VPC","The region for the Amazon VPC","Amazon VPC Peering relationships"],"question":"What properties of an Amazon VPC must be specified at the time of creation? (Choose 2 answers)"},{"correct":[1],"explanation":"Attaching an ENI associated with a different subnet to an instance can make the instance dual-homed.","image":"","options":["EIP address","ENI","Security groups","CGW"],"question":"Which Amazon VPC feature allows you to create a dual-homed instance?"}];
+    var currentquestion = 0, score = 0, submt=true, picked = [];
+
+    Array.prototype.diff = function(arr2) {
+        var ret = [];
+        for(var i in this) {   
+            if(arr2.indexOf( this[i] ) > -1){
+                ret.push( this[i] );
+            }
+        }
+        return ret;
+    };
+    
+    Array.prototype.equals = function (array) {
+        
+        if (!array)
+            return false;
+
+        
+        if (this.length != array.length)
+            return false;
+
+        for (var i = 0, l=this.length; i < l; i++) {
+            
+            if (this[i] instanceof Array && array[i] instanceof Array) {
+                
+                if (!this[i].equals(array[i]))
+                    return false;       
+            }           
+            else if (this[i] != array[i]) { 
+                
+                return false;   
+            }           
+        }       
+        return true;
+    }
+
+    
+    Object.defineProperty(Array.prototype, "equals", {enumerable: false});
+
+     
+    jQuery(document).ready(function($){
+        
+
+        function htmlEncode(value){
+          return $(document.createElement('div')).text(value).html();
+        }
+        
+
+        function addChoices(choices){
+            if(typeof choices !== "undefined" && $.type(choices) == "array"){
+                $('#choice-block').empty();
+                for(var i=0;i<choices.length; i++){
+                    $(document.createElement('li')).addClass('choice choice-box').attr('data-index', i).text(choices[i]).appendTo('#choice-block');                    
+                }
+            }
+        }
+        
+        
+
+        function nextQuestion(){
+            submt = true;
+            picked = [];
+            $('#explanation').empty();
+            $('#question').text(quiz[currentquestion]['question']);
+            $('#pager').text('Question ' + Number(currentquestion + 1) + ' of ' + quiz.length);
+            if(quiz[currentquestion].hasOwnProperty('image') && quiz[currentquestion]['image'] != ""){
+                if($('#question-image').length == 0){
+                    $(document.createElement('img')).addClass('question-image').attr('id', 'question-image').attr('src', quiz[currentquestion]['image']).attr('alt', htmlEncode(quiz[currentquestion]['question'])).insertAfter('#question');
+                } else {
+                    $('#question-image').attr('src', quiz[currentquestion]['image']).attr('alt', htmlEncode(quiz[currentquestion]['question']));
+                }
+            } else {
+                $('#question-image').remove();
+            }
+            addChoices(quiz[currentquestion]['options']);
+
+            var multichoice = quiz[currentquestion]['correct'].length > 1 ? true : false;
+            setupButtons(multichoice);
+        }
+        
+
+        function processQuestion(choice){
+            var flag = quiz[currentquestion]['correct'].equals(choice);
+            if(flag){
+                $('.choice').eq(choice).css({'background-color':'#50D943'});
+                $('#explanation').html('<strong>Correct!</strong> ' + htmlEncode(quiz[currentquestion]['explanation']));
+                score++;
+            } else {
+                $('.choice').eq(choice).css({'background-color':'#D92623'});
+                $('#explanation').html('<strong>Incorrect.</strong> ' + htmlEncode(quiz[currentquestion]['explanation']));
+            }
+            currentquestion++;
+            $('#submitbutton').html('NEXT QUESTION &raquo;').on('click', function(){
+                if(currentquestion == quiz.length){
+                    endQuiz();
+                } else {
+                    $(this).text('Check Answer').css({'color':'#222'}).off('click');
+                    nextQuestion();
+                }
+            })
+        }
+        
+
+        function setupButtons(multichoice){
+            console.log(multichoice);
+            $('.choice').on('click', function(){
+                var curElement = $(this);
+                var curElementIndex = curElement.attr('data-index');
+                var myClass = curElement.attr("class");
+                
+                if(multichoice){
+                    if(curElement.hasClass("selectedAns")){
+                        var index = picked.indexOf(curElementIndex);
+                        picked.splice(index, 1);
+                        curElement.removeClass("selectedAns");
+                    }else{
+                        picked.push(parseInt(curElementIndex));
+                        curElement.addClass("selectedAns");
+                    }
+                }else{
+                    picked = [];
+                    $('.choice').removeClass("selectedAns");
+                    curElement.addClass("selectedAns");
+                    picked.push(parseInt(curElementIndex));
+                }
+                
+                
+                if(submt){
+                    submt=false;
+                    $('#submitbutton').css({'color':'#000'}).on('click', function(){
+                        $('.choice').off('click');
+                        $(this).off('click');
+                        processQuestion(picked);
+                    });
+                }
+            })
+        }
+        
+        
+
+        function endQuiz(){
+            $('#explanation').empty();
+            $('#question').empty();
+            $('#choice-block').empty();
+            $('#submitbutton').remove();
+            $('#question').text("You got " + score + " out of " + quiz.length + " correct.");
+            $(document.createElement('h2')).css({'text-align':'center', 'font-size':'4em'}).text(Math.round(score/quiz.length * 100) + '%').insertAfter('#question');
+        }
+        
+
+        function init(){
+            
+
+            
+            if(typeof quiz !== "undefined" && $.type(quiz) === "array"){
+                var container = $('#frame');
+                quiz.forEach(function (row) {
+                   
+                });
+                
+                
+                $(document.createElement('p')).addClass('pager').attr('id','pager').text('Question 1 of ' + quiz.length).appendTo('#frame');
+                
+                $(document.createElement('h2')).addClass('question').attr('id', 'question').text(quiz[0]['question']).appendTo('#frame');
+                
+                if(quiz[0].hasOwnProperty('image') && quiz[0]['image'] != ""){
+                    $(document.createElement('img')).addClass('question-image').attr('id', 'question-image').attr('src', quiz[0]['image']).attr('alt', htmlEncode(quiz[0]['question'])).appendTo('#frame');
+                }
+                
+                $(document.createElement('ul')).attr('id', 'choice-block').appendTo('#frame');
+            
+                
+                addChoices(quiz[0]['options']);
+                
+                $(document.createElement('p')).addClass('explanation').attr('id','explanation').html('&nbsp;').appendTo('#frame');
+                
+                
+                $(document.createElement('div')).addClass('choice-box').attr('id', 'submitbutton').text('Check Answer').css({'font-weight':700,'color':'#222','padding':'30px 0'}).appendTo('#frame');
+                
+                var multichoice = quiz[0]['correct'].length > 1 ? true : false;
+                setupButtons(multichoice);
+            }
+        }
+        init();
+    });
+
+</script>
+<style>
+    #frame {
+        background-color: #fff;
+        padding: 12px 20px;
+        border-radius: 4px;
+        border: 1px solid #d3e0e9;
+    }
+
+    .selectedAns {
+        border-color: royalblue;
+        background-color: burlywood;
+    }
+</style>
+<div id="frame" role="content"></div>
+        </div>
+        
+    </div>
+    
+    
+    <footer class="sticky-footer">
+    <div class="container">
+        <div class="text-center">
+            <small>Copyright © Anand Vyas 2019</small>
+        </div>
+    </div>
+</footer>
+
+<a class="scroll-to-top rounded" href="#page-top">
+    <i class="fa fa-angle-up"></i>
+</a>
+
+
+<script src="https://anandvyas.in/js/popper.min.js"></script>
+<script src="https://anandvyas.in/js/bootstrap.min.js"></script>
+<script src="https://anandvyas.in/js/highlight.min.js"></script>
+<script src="https://anandvyas.in/js/moment.min.js"></script>
+<script src="https://anandvyas.in/js/clipboard.min.js"></script>
+
+<script src="https://anandvyas.in/js/jquery.easing.min.js"></script>
+
+<script src="https://anandvyas.in/js/sb-admin.js"></script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-108803266-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'UA-108803266-1');
+</script>
+  </div>
+<script data-no-instant>document.write('<script src="/livereload.js?port=1313&mindelay=10"></' + 'script>')</script></body>
+</html>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Kubernetes on Anand vyas</title>
+    <link>https://anandvyas.in/categories/kubernetes/</link>
+    <description>Recent content in Kubernetes on Anand vyas</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 10 Mar 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://anandvyas.in/categories/kubernetes/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Kubernetes - Builder</title>
+      <link>https://anandvyas.in/kubernetes/kubernetes-builder/</link>
+      <pubDate>Sun, 10 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://anandvyas.in/kubernetes/kubernetes-builder/</guid>
+      <description>   .nav-tabslia, .nav-pillslia { margin-left: 10px; } #app { margin: 10px 0 0 0; } pre#output { border: 1px solid; text-shadow: 0 0 0px black; padding: 5px; } fieldset { border: 1px solid rgba(0, 0, 0, .15); padding: 10px; } fieldsetlegend { font-size: 1rem; width: auto; } .fa-times { color: red; margin-top: 14px; } .nav-link { width: 100%; }  [[tab.name]]  Reset                </description>
+    </item>
+    
+    <item>
+      <title>Kubernetes - Cheatsheet</title>
+      <link>https://anandvyas.in/kubernetes/kubernetes-cheatsheet/</link>
+      <pubDate>Sun, 10 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://anandvyas.in/kubernetes/kubernetes-cheatsheet/</guid>
+      <description>Viewing, Finding Resources # Get commands with basic output kubectl get services # List all services in the namespace kubectl get pods --all-namespaces # List all pods in all namespaces kubectl get pods -o wide # List all pods in the namespace, with more details kubectl get deployment my-dep # List a particular deployment kubectl get pods --include-uninitialized # List all pods in the namespace, including uninitialized ones # Describe commands with verbose output kubectl describe nodes my-node kubectl describe pods my-pod kubectl get services --sort-by=.</description>
+    </item>
+    
+    <item>
+      <title>Kubernetes - Cheatsheet</title>
+      <link>https://anandvyas.in/kubernetes/kubernetes-commands/</link>
+      <pubDate>Sun, 10 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://anandvyas.in/kubernetes/kubernetes-commands/</guid>
+      <description>Commands kubectl version : Get the version of kubernetes client and server
+kubectl run hello-minikube &amp;ndash;image=k8s.gcr.io/echoserver:1.10 &amp;ndash;port=8080 kubectl expose deployment hello-minikube &amp;ndash;type=NodePort kubectl get pod curl $(minikube service hello-minikube &amp;ndash;url)
+kubectl cluster-info kubectl cluster-info dump
+minikube start minikube start &amp;ndash;disk-size 2g &amp;ndash;vm-driver=virtualbox &amp;ndash;iso-url=&amp;ldquo;https://storage.googleapis.com/minikube/iso/minikube-v0.33.0.iso&amp;quot;
+rm -rf ~/.minikube/machines
+kubectl run hello-minikube &amp;ndash;image=gcr.io/google_containers/echoserver:1.4 &amp;ndash;port=8080 kubectl expose deployment hello-minikube4 &amp;ndash;type=NodePort kubectl expose deployment hello-minikube4 &amp;ndash;type=LoadBalancer &amp;ndash;port=8080 &amp;ndash;target-port=8080 &amp;ndash;name=app-load-balancer
+kubectl describe pod hello-minikube4
+kubectl delete pods &amp;ndash;all kubectl delete service &amp;ndash;all</description>
+    </item>
+    
+    <item>
+      <title>Kubernetes - Basics</title>
+      <link>https://anandvyas.in/kubernetes/basic/</link>
+      <pubDate>Sat, 21 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://anandvyas.in/kubernetes/basic/</guid>
+      <description>Kubernetes is an open-source system for automating deployment, scaling and management of containerized applications that was originally designed by Google and now maintained by the Cloud Native Computing Foundation
+ Kubernetes Components Master Components Master components provide the cluster’s control plane. Master components make global decisions about the cluster (for example, scheduling), and detecting and responding to cluster events
+ kube-apiserver: Component on the master that exposes the Kubernetes API etcd: Consistent and highly-available key value store used as Kubernetes’ backing store for all cluster data.</description>
+    </item>
+    
+    <item>
+      <title>Kubernetes - Minikube</title>
+      <link>https://anandvyas.in/kubernetes/minikube/</link>
+      <pubDate>Sat, 21 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://anandvyas.in/kubernetes/minikube/</guid>
+      <description>Minikube Minikube is a tool that makes it easy to run Kubernetes locally. Minikube runs a single-node Kubernetes cluster.
+Installation of Minikube on Ubuntu curl -Lo minikube https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64 &amp;amp;&amp;amp; chmod +x minikube sudo cp minikube /usr/local/bin &amp;amp;&amp;amp; rm minikube  Minikube Commands minikube version #Get minikube version minikube start # Start Minikube Service minikube start --cpus 4 --memory 8192 # Start Minikube Service with 4 cpus and 8192 of memory minikube stop # Stop Mikikube Service minikube delete # Clean the configurations and start clean (maybe also you need rm -rf .</description>
+    </item>
+    
+  </channel>
+</rss>

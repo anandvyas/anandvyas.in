@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Dockerfile - Anand vyas</title>
+    <meta content="Dockerfile - Anand vyas" property="og:title">
+    <meta content="Docker, Dockerfile" name="keywords">
+    <meta content="Dockerfile" property="og:description">
+    <meta name="author" content="Anand Vyas">
+
+    
+    <link href="https://anandvyas.in/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link href="https://anandvyas.in/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    
+    <link href="https://anandvyas.in/css/highlighter.css" rel="stylesheet">
+    
+    <link href="https://anandvyas.in/css/sb-admin.css" rel="stylesheet">
+    <link href="https://anandvyas.in/css/about.css" rel="stylesheet">
+
+    <script src="https://anandvyas.in/js/jquery.min.js"></script>
+</head>
+<body class="fixed-nav sticky-footer bg-dark sidenav-toggled" id="page-top">
+  
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+    <a class="navbar-brand" href="https://anandvyas.in/">
+        <img src="https://anandvyas.in/images/profile/logo.png" />
+        <span>Anand vyas</span>
+    </a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav navbar-sidenav">
+            <li class="nav-item sidebar-profile text-center">
+                <div class="profile-pic">
+                    <img src="https://anandvyas.in/images/profile/avatar.jpg" alt="avatar">
+                </div>
+                <div class="profile-detail">
+                    
+                    <span>Solution Architect</span> 
+                    <span>Cloud Architect</span> 
+                    <span>DevOps</span> 
+                    <span>Tech Lead</span> 
+                </div>
+            </li>
+            
+            <li class="nav-item sidebar-menu" data-toggle="tooltip" data-placement="right" title="Home">
+                <a class="nav-link" href="https://anandvyas.in/">
+                <i class="fa fa-fw fa fa-home"></i>
+                <span class="nav-link-text">Home</span>
+                </a>
+            </li>
+            
+            <li class="nav-item sidebar-menu" data-toggle="tooltip" data-placement="right" title="About">
+                <a class="nav-link" href="https://anandvyas.in/about">
+                <i class="fa fa-fw fa fa-user-circle"></i>
+                <span class="nav-link-text">About</span>
+                </a>
+            </li>
+            
+            <li class="nav-item sidebar-menu" data-toggle="tooltip" data-placement="right" title="Categories">
+                <a class="nav-link" href="https://anandvyas.in/categories">
+                <i class="fa fa-fw fa fa-dashboard"></i>
+                <span class="nav-link-text">Categories</span>
+                </a>
+            </li>
+            
+            <li class="nav-item sidebar-menu" data-toggle="tooltip" data-placement="right" title="Tags">
+                <a class="nav-link" href="https://anandvyas.in/tags">
+                <i class="fa fa-fw fa fa-tags"></i>
+                <span class="nav-link-text">Tags</span>
+                </a>
+            </li>
+            
+        </ul>
+        <ul class="navbar-nav sidenav-social">
+            
+            <li><a href="#" target="_blank"><i class="fa fa-mobile"></i></a></li>
+            
+            <li><a href="mailto:anandvyas@live.com" target="_blank"><i class="fa fa-envelope"></i></a></li>
+            
+            <li><a href="https://twitter.com/anandvyaas" target="_blank"><i class="fa fa-twitter"></i></a></li>
+            
+            <li><a href="https://www.linkedin.com/in/anandvyaas" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+            
+            <li><a href="https://www.instagram.com/anandvyaas" target="_blank"><i class="fa fa-instagram"></i></a></li>
+            
+            <li><a href="https://github.com/anandvyas" target="_blank"><i class="fa fa-github"></i></a></li>
+            
+            <li><a href="https://stackoverflow.com/users/8208060/anand-vyas" target="_blank"><i class="fa fa-stack-overflow"></i></a></li>
+            
+        </ul>
+        <ul class="navbar-nav sidenav-toggler">
+            <li class="nav-item">
+                <a class="nav-link text-center" id="sidenavToggler">
+            <i class="fa fa-fw fa-angle-left"></i>
+            </a>
+            </li>
+        </ul>
+        
+        
+    </div>
+</nav>
+  
+  <div class="content-wrapper">
+    <div class="container-fluid">
+    
+
+
+<ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="https://anandvyas.in/">Home</a></li>
+
+
+    
+    <li class="breadcrumb-item active"><a href='https://anandvyas.in/docker'>docker</a></li>
+    
+    
+
+
+    
+    <li class="breadcrumb-item active"><a href='https://anandvyas.in/docker/dockerfile'>dockerfile</a></li>
+    
+    
+
+
+    
+
+</ol>
+
+        <div class="post">
+            <h1>Dockerfile</h1>
+            <span class="post-date">Thu, Apr 12, 2018</span>
+            
+
+<p>A Dockerfile is a text document used to create own docker container. A Dockerfile has some commands</p>
+
+<ul>
+<li><strong>FROM</strong>: Sets the Base Image for subsequent instructions.</li>
+<li><strong>MAINTAINER</strong>: (deprecated - use LABEL instead) Set the Author field of the generated images.</li>
+<li><strong>RUN</strong>: execute any commands in a new layer on top of the current image and commit the results.</li>
+<li><strong>CMD</strong>: provide defaults for an executing container.</li>
+<li><strong>EXPOSE</strong>: informs Docker that the container listens on the specified network ports at runtime. NOTE: does not actually make ports accessible.</li>
+<li><strong>ENV</strong>: sets environment variable.</li>
+<li><strong>ADD</strong>: copies new files, directories or remote file to container. Invalidates caches. Avoid ADD and use COPY instead.</li>
+<li><strong>COPY</strong>: copies new files or directories to container. <strong>Note</strong> that this only copies as root, so you have to chown manually regardless of your USER / WORKDIR setting, as same as ADD.</li>
+<li><strong>ENTRYPOINT</strong>: configures a container that will run as an executable.</li>
+<li><strong>VOLUME</strong>: creates a mount point for externally mounted volumes or other containers.</li>
+<li><strong>USER</strong>: sets the user name for following RUN / CMD / ENTRYPOINT commands.</li>
+<li><strong>WORKDIR</strong>: sets the working directory.</li>
+<li><strong>ARG</strong>: defines a build-time variable.</li>
+<li><strong>ONBUILD</strong>: adds a trigger instruction when the image is used as the base for another build.</li>
+<li><strong>STOPSIGNAL</strong>: sets the system call signal that will be sent to the container to exit.</li>
+<li><strong>LABEL</strong>: apply key/value metadata to your images, containers, or daemons.</li>
+<li><strong>HEALTHCHECK</strong>: a health check is a command used to determine the health of a running container.</li>
+</ul>
+
+<h4 id="onbuild-example">ONBUILD Example</h4>
+
+<pre><code class="language-sh">FROM maven:3-jdk-8
+
+RUN mkdir -p /usr/src/app
+WORKDIR /usr/src/app
+
+ONBUILD ADD . /usr/src/app
+
+ONBUILD RUN mvn install
+</code></pre>
+
+<h4 id="healthcheck-example">HEALTHCHECK Example</h4>
+
+<pre><code class="language-sh">FROM node:alpine
+RUN apk update
+RUN apk upgrade
+RUN apk add bash
+ADD package.json /app/
+
+WORKDIR /app
+RUN npm install
+ADD hello.js /app/
+VOLUME /toto
+CMD npm start
+
+EXPOSE 3000
+HEALTHCHECK CMD curl --fail http://localhost:3000/ || exit 1
+</code></pre>
+
+<h4 id="apache-server">Apache Server</h4>
+
+<pre><code class="language-sh">FROM ubuntu:12.04
+MAINTAINER Anand Vyas version: 0.1
+
+RUN apt-get update &amp;&amp; apt-get install -y apache2 &amp;&amp; apt-get clean &amp;&amp; rm -rf /var/lib/apt/lists/*
+
+ENV APACHE_RUN_USER www-data
+ENV APACHE_RUN_GROUP www-data
+ENV APACHE_LOG_DIR /var/log/apache2
+
+EXPOSE 80
+
+CMD [&quot;/usr/sbin/apache2&quot;, &quot;-D&quot;, &quot;FOREGROUND&quot;]
+</code></pre>
+
+<h4 id="mongodb">MongoDB</h4>
+
+<pre><code class="language-sh">FROM ubuntu
+MAINTAINER Anand Vyas
+
+RUN apt-key adv --keyserver keyserver.ubuntu.com --recv 7F0CEB10
+RUN echo &quot;deb http://downloads-distro.mongodb.org/repo/ubuntu-upstart dist 10gen&quot; | tee -a /etc/apt/sources.list.d/10gen.list
+RUN apt-get update
+RUN apt-get -y install apt-utils
+RUN apt-get -y install mongodb-10gen
+
+CMD [&quot;/usr/bin/mongod&quot;, &quot;--config&quot;, &quot;/etc/mongodb.conf&quot;] 
+</code></pre>
+
+        </div>
+        
+    </div>
+    
+    
+    <footer class="sticky-footer">
+    <div class="container">
+        <div class="text-center">
+            <small>Copyright © Anand Vyas 2019</small>
+        </div>
+    </div>
+</footer>
+
+<a class="scroll-to-top rounded" href="#page-top">
+    <i class="fa fa-angle-up"></i>
+</a>
+
+
+<script src="https://anandvyas.in/js/popper.min.js"></script>
+<script src="https://anandvyas.in/js/bootstrap.min.js"></script>
+<script src="https://anandvyas.in/js/highlight.min.js"></script>
+<script src="https://anandvyas.in/js/moment.min.js"></script>
+<script src="https://anandvyas.in/js/clipboard.min.js"></script>
+
+<script src="https://anandvyas.in/js/jquery.easing.min.js"></script>
+
+<script src="https://anandvyas.in/js/sb-admin.js"></script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-108803266-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'UA-108803266-1');
+</script>
+  </div>
+<script data-no-instant>document.write('<script src="/livereload.js?port=1313&mindelay=10"></' + 'script>')</script></body>
+</html>

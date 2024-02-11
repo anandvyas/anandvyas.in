@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Elk Filebeat on Anand vyas</title>
+    <link>https://anandvyas.in/tags/elk-filebeat/</link>
+    <description>Recent content in Elk Filebeat on Anand vyas</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 21 Apr 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://anandvyas.in/tags/elk-filebeat/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Filebeat</title>
+      <link>https://anandvyas.in/elk/filebeat/</link>
+      <pubDate>Sat, 21 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://anandvyas.in/elk/filebeat/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

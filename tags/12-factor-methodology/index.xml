@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>12 Factor Methodology on Anand vyas</title>
+    <link>https://anandvyas.in/tags/12-factor-methodology/</link>
+    <description>Recent content in 12 Factor Methodology on Anand vyas</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 12 Apr 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://anandvyas.in/tags/12-factor-methodology/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>The Twelve-Factor App</title>
+      <link>https://anandvyas.in/general/12-factor-methodology/</link>
+      <pubDate>Thu, 12 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://anandvyas.in/general/12-factor-methodology/</guid>
+      <description>The twelve-factor app is a methodology for building software-as-a-service apps, and its not depend on any languages, its works with every language.
+Why we use 12 Factor Methodology  Minimize time and cost of getting a new dev up to speed Minimize requirements on the underlying OS, maximize portability between different enviroments Ease deployment on modern cloud plateform.  The Twelve Factors  I. Codebase: One codebase tracked in revision control, many deploys II.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>AWS ElastiCache - Anand vyas</title>
+    <meta content="AWS ElastiCache - Anand vyas" property="og:title">
+    <meta content="" name="keywords">
+    <meta content="" property="og:description">
+    <meta name="author" content="Anand Vyas">
+
+    
+    <link href="https://anandvyas.in/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link href="https://anandvyas.in/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    
+    <link href="https://anandvyas.in/css/highlighter.css" rel="stylesheet">
+    
+    <link href="https://anandvyas.in/css/sb-admin.css" rel="stylesheet">
+    <link href="https://anandvyas.in/css/about.css" rel="stylesheet">
+
+    <script src="https://anandvyas.in/js/jquery.min.js"></script>
+</head>
+<body class="fixed-nav sticky-footer bg-dark sidenav-toggled" id="page-top">
+  
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+    <a class="navbar-brand" href="https://anandvyas.in/">
+        <img src="https://anandvyas.in/images/profile/logo.png" />
+        <span>Anand vyas</span>
+    </a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav navbar-sidenav">
+            <li class="nav-item sidebar-profile text-center">
+                <div class="profile-pic">
+                    <img src="https://anandvyas.in/images/profile/avatar.jpg" alt="avatar">
+                </div>
+                <div class="profile-detail">
+                    
+                    <span>Solution Architect</span> 
+                    <span>Cloud Architect</span> 
+                    <span>DevOps</span> 
+                    <span>Tech Lead</span> 
+                </div>
+            </li>
+            
+            <li class="nav-item sidebar-menu" data-toggle="tooltip" data-placement="right" title="Home">
+                <a class="nav-link" href="https://anandvyas.in/">
+                <i class="fa fa-fw fa fa-home"></i>
+                <span class="nav-link-text">Home</span>
+                </a>
+            </li>
+            
+            <li class="nav-item sidebar-menu" data-toggle="tooltip" data-placement="right" title="About">
+                <a class="nav-link" href="https://anandvyas.in/about">
+                <i class="fa fa-fw fa fa-user-circle"></i>
+                <span class="nav-link-text">About</span>
+                </a>
+            </li>
+            
+            <li class="nav-item sidebar-menu" data-toggle="tooltip" data-placement="right" title="Categories">
+                <a class="nav-link" href="https://anandvyas.in/categories">
+                <i class="fa fa-fw fa fa-dashboard"></i>
+                <span class="nav-link-text">Categories</span>
+                </a>
+            </li>
+            
+            <li class="nav-item sidebar-menu" data-toggle="tooltip" data-placement="right" title="Tags">
+                <a class="nav-link" href="https://anandvyas.in/tags">
+                <i class="fa fa-fw fa fa-tags"></i>
+                <span class="nav-link-text">Tags</span>
+                </a>
+            </li>
+            
+        </ul>
+        <ul class="navbar-nav sidenav-social">
+            
+            <li><a href="#" target="_blank"><i class="fa fa-mobile"></i></a></li>
+            
+            <li><a href="mailto:anandvyas@live.com" target="_blank"><i class="fa fa-envelope"></i></a></li>
+            
+            <li><a href="https://twitter.com/anandvyaas" target="_blank"><i class="fa fa-twitter"></i></a></li>
+            
+            <li><a href="https://www.linkedin.com/in/anandvyaas" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+            
+            <li><a href="https://www.instagram.com/anandvyaas" target="_blank"><i class="fa fa-instagram"></i></a></li>
+            
+            <li><a href="https://github.com/anandvyas" target="_blank"><i class="fa fa-github"></i></a></li>
+            
+            <li><a href="https://stackoverflow.com/users/8208060/anand-vyas" target="_blank"><i class="fa fa-stack-overflow"></i></a></li>
+            
+        </ul>
+        <ul class="navbar-nav sidenav-toggler">
+            <li class="nav-item">
+                <a class="nav-link text-center" id="sidenavToggler">
+            <i class="fa fa-fw fa-angle-left"></i>
+            </a>
+            </li>
+        </ul>
+        
+        
+    </div>
+</nav>
+  
+  <div class="content-wrapper">
+    <div class="container-fluid">
+    
+
+
+<ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="https://anandvyas.in/">Home</a></li>
+
+
+    
+    <li class="breadcrumb-item active"><a href='https://anandvyas.in/aws'>aws</a></li>
+    
+    
+
+
+    
+    <li class="breadcrumb-item active"><a href='https://anandvyas.in/aws/aws-elasticache'>aws-elasticache</a></li>
+    
+    
+
+
+    
+
+</ol>
+
+        <div class="post">
+            <h1>AWS ElastiCache</h1>
+            <span class="post-date">Sat, Jul 22, 2017</span>
+            <p>Amazon ElastiCache is a web service that simplifies the setup and management of distributed in-memory caching environments. This service makes it easy and cost effective to provide a high-performance and scalable caching solution for your cloud applications.</p>
+
+<div class="text-center">
+    <img class="img-responsive" src="https://anandvyas.in/images/aws-elasticache.png" alt="AWS Elastic Block Storage" />
+</div>
+ 
+
+<ul>
+<li>Amazon ElastiCache is a managed service, you can start using the service today with very few or no modifications to your existing applications that use <strong>Memcached</strong> or <strong>Redis</strong>. . Because Amazon ElastiCache is protocol-compliant with both of these engines, you only need to change the endpoint in your configuration files.</li>
+</ul>
+
+<h3 id="a-name-aws-elasticache-cache-engine-cache-engines-a"><a name="aws-elasticache-cache-engine">Cache Engines</a></h3>
+
+<p>Amazon ElastiCache allows you to quickly deploy clusters of two different types of popular cache engines: <strong>Memcached</strong> and <strong>Redis</strong>. At a high level, Memcached and Redis may seem similar, but they support a variety of different use cases and provide different functionality.</p>
+
+<ul>
+<li><p><strong>Memcached</strong></p>
+
+<ul>
+<li>Memcached provides a very simple interface that allows you to write and read objects into in-memory key/value data stores.</li>
+<li>With Amazon ElastiCache, you can elastically grow and shrink a cluster of Memcached nodes to meet your demands.</li>
+<li>Memcached deals with objects as blobs that can be retrieved using a unique key.</li>
+</ul></li>
+
+<li><p><strong>Redis</strong></p>
+
+<ul>
+<li>In late 2013, Amazon ElastiCache added support to deploy Redis clusters.<br /></li>
+<li>Redis supports a rich set of data types likes strings, lists, and sets.</li>
+<li>ElastiCache for Redis can be used as a primary in-memory key-value data store, providing fast, sub millisecond data performance, high availability and scalability up to 16 nodes plus up to 5 read replicas, each of up to 3.55 TiB of in-memory data</li>
+</ul></li>
+</ul>
+
+<div class="text-center">
+    <img class="img-responsive" src="https://anandvyas.in/images/aws-elasticache-redis-vs-memcached.png" alt="AWS Elastic Block Storage" />
+</div>
+ 
+
+<h3 id="a-name-aws-elasticache-nodes-and-clusters-nodes-and-clusters-a"><a name="aws-elasticache-nodes-and-clusters">Nodes and Clusters</a></h3>
+
+<ul>
+<li>Each deployment of Amazon ElastiCache consists of one or more nodes in a cluster.</li>
+<li>A single Memcached cluster can contain up to 20 nodes.</li>
+<li>Redis clusters are always made up of a single node; however, multiple clusters can be grouped into a Redis replication group.</li>
+<li>The individual node types are derived from a subset of the Amazon EC2 instance type
+families, like t2, m3, and r3.</li>
+<li>The specific node types may change over time, but today they range from a t2.micro node type with 555MB of memory up to an r3.8xlarge with 237GB of memory, with many choices in between.
+-The t2 cache node family is ideal for development and low-volume applications with occasional bursts, but certain features may not be available.</li>
+<li>The m3 family is a good blend of compute and memory</li>
+<li>The r3 family is optimized for memory-intensive workloads.</li>
+</ul>
+
+<h3 id="a-name-aws-elasticache-scaling-scaling-a"><a name="aws-elasticache-scaling">Scaling</a></h3>
+
+<p>Amazon ElastiCache allows you to adjust the size of your environment to meet the needs of workloads as they evolve over time. Adding additional cache nodes allows you to easily expand horizontally and meet higher levels of read or write performance.</p>
+
+<ul>
+<li><p><strong>Horizontal Scaling</strong></p>
+
+<ul>
+<li>With Memcached, you can partition your data and scale horizontally to 20 nodes or more.</li>
+<li>A Redis cluster consists of a single cache node that is handling read and write transactions. Additional clusters can be created and grouped into a Redis replication group. While you can only have one node handling write commands, you can have up to five read replicas handling read-only requests.</li>
+</ul></li>
+
+<li><p><strong>Vertical Scaling</strong></p>
+
+<ul>
+<li>Support for vertical scaling is more limited with Amazon ElastiCache.</li>
+<li>If you like to change the cache node type and scale the compute resources vertically, the service does not directly allow you to resize your cluster in this manner.</li>
+</ul></li>
+</ul>
+
+<blockquote>
+<p>It’s important to understand that a new Memcached cluster always starts empty, while a Redis cluster can be initialized from a backup</p>
+</blockquote>
+
+<h3 id="a-name-aws-elasticache-replication-replication-and-multi-az-a"><a name="aws-elasticache-replication">Replication and Multi-AZ</a></h3>
+
+<p>Replication is a useful technique to provide rapid recovery in the event of a node failure, and also to serve up very high volumes of read queries beyond the  capabilities of a single node.</p>
+
+<ul>
+<li>Amazon ElastiCache clusters running Redis support both of these design requirements.
+Unlike Redis, cache clusters running Memcached are standalone in-memory services without any redundant data protection services.</li>
+<li>Cache clusters running Redis support the concept of replication groups.</li>
+<li>A replication group consists of up to six clusters, with five of them designated as read replicas.</li>
+</ul>
+
+<div class="text-center">
+    <img class="img-responsive" src="https://anandvyas.in/images/aws-elasticache-replication.png" alt="AWS Elastic Block Storage" />
+</div>
+ 
+
+<blockquote>
+<p>It’s important to keep in mind that replication between the clusters is performed
+asynchronously and there will be a small delay before data is available on all cluster
+nodes.</p>
+</blockquote>
+
+<h3 id="a-name-aws-elasticache-backup-and-recovery-backup-and-recovery-a"><a name="aws-elasticache-backup-and-recovery">Backup and Recovery</a></h3>
+
+<ul>
+<li>Amazon ElastiCache clusters running Redis allow you to persist your data from in-memory to disk and create a snapshot.</li>
+<li>Each snapshot is a full clone of the data that can be used to recover to a specific point in time or to create a copy for other purposes.</li>
+<li>Snapshots cannot be created for clusters using the Memcached engine because it is a purely in-memory key/value store and always starts empty.</li>
+<li>Amazon ElastiCache uses the native backup capabilities of Redis and will generate a standard Redis database backup file that gets stored in Amazon Simple Storage Service (Amazon S3).</li>
+<li>You can create a snapshot to back up your Amazon ElastiCache clusters running the Redis engine. Snapshots can be created automatically on a daily basis or manually on demand. Amazon ElastiCache clusters running Memcached do not support backup and restore natively.</li>
+</ul>
+
+<h3 id="a-name-aws-elasticache-quiz-quiz-a"><a name="aws-elasticache-quiz">Quiz</a></h3>
+
+<ul>
+<li><p>What does Amazon ElastiCache provide?</p>
+
+<ul>
+<li>A service by this name doesn’t exist. Perhaps you mean Amazon CloudCache.</li>
+<li>A virtual server with a huge amount of memory.
+<strong>A managed In-memory cache service</strong></li>
+<li>An Amazon EC2 instance with the Memcached software already pre-installed.</li>
+</ul></li>
+
+<li><p>You are developing a highly available web application using stateless web servers. Which services are suitable for storing session state data? Choose 3 answers.</p>
+
+<ul>
+<li>Elastic Load Balancing</li>
+<li><strong>Amazon Relational Database Service (RDS)</strong></li>
+<li>Amazon CloudWatch</li>
+<li><strong>Amazon ElastiCache</strong></li>
+<li><strong>Amazon DynamoDB</strong></li>
+<li>AWS Storage Gateway</li>
+</ul></li>
+
+<li><p>Which statement best describes ElastiCache?</p>
+
+<ul>
+<li>Reduces the latency by splitting the workload across multiple AZs</li>
+<li>A simple web services interface to create and store multiple data sets, query your data easily, and return the results</li>
+<li><strong>Offload the read traffic from your database in order to reduce latency caused by read-heavy workload</strong></li>
+<li>Managed service that makes it easy to set up, operate and scale a relational database in the cloud</li>
+</ul></li>
+
+<li><p>Our company is getting ready to do a major public announcement of a social media site on AWS. The website is running on EC2 instances deployed across multiple Availability Zones with a Multi-AZ RDS MySQL Extra Large DB Instance. The site performs a high number of small reads and writes per second and relies on an eventual consistency model. After comprehensive tests you discover that there is read contention on RDS MySQL. Which are the best approaches to meet these requirements? (Choose 2 answers)</p>
+
+<ul>
+<li><strong>Deploy ElastiCache in-memory cache running in each availability zone</strong></li>
+<li>Implement sharding to distribute load to multiple RDS MySQL instances</li>
+<li>Increase the RDS MySQL Instance size and Implement provisioned IOPS</li>
+<li><strong>Add an RDS MySQL read replica in each availability zone</strong></li>
+</ul></li>
+
+<li><p>You are using ElastiCache Memcached to store session state and cache database queries in your infrastructure. You notice in CloudWatch that Evictions and Get Misses are both very high. What two actions could you take to rectify this? Choose 2 answers</p>
+
+<ul>
+<li><strong>Increase the number of nodes in your cluster</strong></li>
+<li>Tweak the max_item_size parameter</li>
+<li>Shrink the number of nodes in your cluster</li>
+<li><strong>Increase the size of the nodes in the cluster</strong></li>
+</ul></li>
+
+<li><p>You have been tasked with moving an ecommerce web application from a customer’s datacenter into a VPC. The application must be fault tolerant and well as highly scalable. Moreover, the customer is adamant that service interruptions not affect the user experience. As you near launch, you discover that the application currently uses multicast to share session state between web servers, In order to handle session state within the VPC, you choose to:</p>
+
+<ul>
+<li><strong>Store session state in Amazon ElastiCache for Redis</strong> (scalable and makes the web applications stateless)</li>
+<li>Create a mesh VPN between instances and allow multicast on it</li>
+<li>Store session state in Amazon Relational Database Service (RDS solution not highly scalable)</li>
+<li>Enable session stickiness via Elastic Load Balancing (affects user experience if the instance goes down)</li>
+</ul></li>
+
+<li><p>When you are designing to support a 24-hour flash sale, which one of the following methods best describes a strategy to lower the latency while keeping up with unusually heavy traffic?</p>
+
+<ul>
+<li>Launch enhanced networking instances in a placement group to support the heavy traffic (only improves internal communication)</li>
+<li>Apply Service Oriented Architecture (SOA) principles instead of a 3-tier architecture (just simplifies architecture)</li>
+<li>Use Elastic Beanstalk to enable blue-green deployment (only minimizes download for applications and ease of rollback)</li>
+<li><strong>Use ElastiCache as in-memory storage on top of DynamoDB to store user sessions</strong> (scalable, faster read/writes and in memory storage)</li>
+</ul></li>
+
+<li><p>You are configuring your company’s application to use Auto Scaling and need to move user state information. Which of the following AWS services provides a shared data store with durability and low latency?</p>
+
+<ul>
+<li>AWS ElastiCache Memcached (does not provide durability as if the node is gone the data is gone)</li>
+<li>Amazon Simple Storage Service</li>
+<li>Amazon EC2 instance storage</li>
+<li><strong>Amazon DynamoDB</strong></li>
+</ul></li>
+
+<li><p>Your application is using an ELB in front of an Auto Scaling group of web/application servers deployed across two AZs and a Multi-AZ RDS Instance for data persistence. The database CPU is often above 80% usage and 90% of I/O operations on the database are reads. To improve performance you recently added a single-node Memcached ElastiCache Cluster to cache frequent DB query results. In the next weeks the overall workload is expected to grow by 30%. Do you need to change anything in the architecture to maintain the high availability for the application with the anticipated additional load and Why?</p>
+
+<ul>
+<li><strong>You should deploy two Memcached ElastiCache Clusters in different AZs because the RDS Instance will not be able to handle the load if the cache node fails.</strong></li>
+<li>If the cache node fails the automated ElastiCache node recovery feature will prevent any availability impact. (does not provide high availability, as data is lost if the node is lost)</li>
+<li>Yes you should deploy the Memcached ElastiCache Cluster with two nodes in the same AZ as the RDS DB master instance to handle the load if one cache node fails. (Single AZ affects availability as DB is Multi AZ and would be overloaded is the AZ goes down)</li>
+<li>No if the cache node fails you can always get the same data from the DB without having any availability impact. (Will overload the database affecting availability)</li>
+</ul></li>
+
+<li><p>A read only news reporting site with a combined web and application tier and a database tier that receives large and unpredictable traffic demands must be able to respond to these traffic fluctuations automatically. What AWS services should be used meet these requirements?</p>
+
+<ul>
+<li><strong>Stateless instances for the web and application tier synchronized using ElastiCache Memcached in an autoscaling group monitored with CloudWatch and RDS with read replicas.</strong></li>
+<li>Stateful instances for the web and application tier in an autoscaling group monitored with CloudWatch and RDS with read replicas (Stateful instances will not allow for scaling)</li>
+<li>Stateful instances for the web and application tier in an autoscaling group monitored with CloudWatch and multi-AZ RDS (Stateful instances will allow not for scaling &amp; multi-AZ is for high availability and not scaling)</li>
+<li>Stateless instances for the web and application tier synchronized using ElastiCache Memcached in an autoscaling group monitored with CloudWatch and multi-AZ RDS (multi-AZ is for high availability and not scaling)</li>
+</ul></li>
+
+<li><p>You have written an application that uses the Elastic Load Balancing service to spread traffic to several web servers. Your users complain that they are sometimes forced to login again in the middle of using your application, after they have already logged in. This is not behavior you have designed. What is a possible solution to prevent this happening?</p>
+
+<ul>
+<li>Use instance memory to save session state.</li>
+<li>Use instance storage to save session state.</li>
+<li>Use EBS to save session state.</li>
+<li><strong>Use ElastiCache to save session state.</strong></li>
+<li>Use Glacier to save session slate.</li>
+</ul></li>
+</ul>
+
+<ol>
+<li><p>Which of the following objects are good candidates to store in a cache? (Choose 3 answers)</p>
+
+<ul>
+<li><strong>A. Session state</strong></li>
+<li><strong>B. Shopping cart</strong></li>
+<li><strong>C. Product catalog</strong></li>
+<li>D. Bank account balance</li>
+</ul></li>
+
+<li><p>Which of the following cache engines are supported by Amazon ElastiCache? (Choose 2 answers)</p>
+
+<ul>
+<li>A. MySQL</li>
+<li><strong>B. Memcached</strong></li>
+<li><strong>C. Redis</strong></li>
+<li>D. Couchbase</li>
+</ul></li>
+
+<li><p>How many nodes can you add to an Amazon ElastiCache cluster running Memcached?</p>
+
+<ul>
+<li>A. 1</li>
+<li>B. 5</li>
+<li><strong>C. 20</strong></li>
+<li>D. 100</li>
+</ul></li>
+
+<li><p>How many nodes can you add to an Amazon ElastiCache cluster running Redis?</p>
+
+<ul>
+<li><strong>A. 1</strong></li>
+<li>B. 5</li>
+<li>C. 20</li>
+<li>D. 100</li>
+</ul></li>
+
+<li><p>An application currently uses Memcached to cache frequently used database queries. Which steps are required to migrate the application to use Amazon ElastiCache with minimal changes? (Choose 2 answers)</p>
+
+<ul>
+<li>A. Recompile the application to use the Amazon ElastiCache libraries.</li>
+<li><strong>B. Update the configuration file with the endpoint for the Amazon ElastiCache cluster.</strong></li>
+<li><strong>C. Configure a security group to allow access from the application servers.</strong></li>
+<li>D. Connect to the Amazon ElastiCache nodes using Secure Shell (SSH) and install the latest version of Memcached.</li>
+</ul></li>
+
+<li><p>How can you back up data stored in Amazon ElastiCache running Redis? (Choose 2 answers)</p>
+
+<ul>
+<li>A. Create an image of the Amazon Elastic Compute Cloud (Amazon EC2) instance.</li>
+<li><strong>B. Configure automatic snapshots to back up the cache environment every night.</strong></li>
+<li><strong>C. Create a snapshot manually.</strong></li>
+<li>D. Redis clusters cannot be backed up.</li>
+</ul></li>
+
+<li><p>How can you secure an Amazon ElastiCache cluster? (Choose 3 answers)</p>
+
+<ul>
+<li>A. Change the Memcached root password.</li>
+<li><strong>B. Restrict Application Programming Interface (API) actions using AWS Identity and Access Management (IAM) policies.</strong></li>
+<li><strong>C. Restrict network access using security groups.</strong></li>
+<li><strong>D. Restrict network access using a network Access Control List (ACL).</strong></li>
+</ul></li>
+
+<li><p>You are working on a mobile gaming application and are building the leaderboard feature to track the top scores across millions of users. Which AWS services are best suited for this use case?</p>
+
+<ul>
+<li>A. Amazon Redshift</li>
+<li>B. Amazon ElastiCache using Memcached</li>
+<li><strong>C. Amazon ElastiCache using Redis</strong></li>
+<li>D. Amazon Simple Storage Service (S3)</li>
+</ul></li>
+
+<li><p>You have built a large web application that uses Amazon ElastiCache using Memcached to store frequent query results. You plan to expand both the web fleet and the cache fleet multiple times over the next year to accommodate increased user traffic. How do you minimize the amount of changes required when a scaling event occurs?</p>
+
+<ul>
+<li><strong>A. Configure AutoDiscovery on the client side</strong></li>
+<li>B. Configure AutoDiscovery on the server side</li>
+<li>C. Update the configuration file each time a new cluster</li>
+<li>D. Use an Elastic Load Balancer to proxy the requests</li>
+</ul></li>
+
+<li><p>Which cache engines does Amazon ElastiCache support? (Choose 2 answers)</p>
+
+<ul>
+<li><strong>Memcached</strong></li>
+<li><strong>Redis</strong></li>
+<li>Membase</li>
+<li>Couchbase</li>
+</ul></li>
+</ol>
+        </div>
+        
+    </div>
+    
+    
+    <footer class="sticky-footer">
+    <div class="container">
+        <div class="text-center">
+            <small>Copyright © Anand Vyas 2019</small>
+        </div>
+    </div>
+</footer>
+
+<a class="scroll-to-top rounded" href="#page-top">
+    <i class="fa fa-angle-up"></i>
+</a>
+
+
+<script src="https://anandvyas.in/js/popper.min.js"></script>
+<script src="https://anandvyas.in/js/bootstrap.min.js"></script>
+<script src="https://anandvyas.in/js/highlight.min.js"></script>
+<script src="https://anandvyas.in/js/moment.min.js"></script>
+<script src="https://anandvyas.in/js/clipboard.min.js"></script>
+
+<script src="https://anandvyas.in/js/jquery.easing.min.js"></script>
+
+<script src="https://anandvyas.in/js/sb-admin.js"></script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-108803266-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'UA-108803266-1');
+</script>
+  </div>
+<script data-no-instant>document.write('<script src="/livereload.js?port=1313&mindelay=10"></' + 'script>')</script></body>
+</html>

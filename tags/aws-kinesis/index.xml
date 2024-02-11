@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Aws Kinesis on Anand vyas</title>
+    <link>https://anandvyas.in/tags/aws-kinesis/</link>
+    <description>Recent content in Aws Kinesis on Anand vyas</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 13 Jul 2017 00:15:00 +0200</lastBuildDate>
+    
+	<atom:link href="https://anandvyas.in/tags/aws-kinesis/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>AWS Kinesis</title>
+      <link>https://anandvyas.in/aws/aws-kinesis/</link>
+      <pubDate>Thu, 13 Jul 2017 00:15:00 +0200</pubDate>
+      
+      <guid>https://anandvyas.in/aws/aws-kinesis/</guid>
+      <description>&lt;p&gt;Amazon Kinesis is a platform for handling massive streaming data on AWS, offering powerful services to make it easy to load and analyze streaming data and also providing the ability for you to build custom streaming data applications for specialized needs.&lt;/p&gt;
+
+&lt;div class=&#34;text-center&#34;&gt;
+    &lt;img class=&#34;img-responsive&#34; src=&#34;https://anandvyas.in/images/aws-kinesis.png&#34; alt=&#34;AWS Snowball&#34; /&gt;
+&lt;/div&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

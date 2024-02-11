@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Aws Cloudwatch on Anand vyas</title>
+    <link>https://anandvyas.in/tags/aws-cloudwatch/</link>
+    <description>Recent content in Aws Cloudwatch on Anand vyas</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 25 Jul 2017 00:15:00 +0200</lastBuildDate>
+    
+	<atom:link href="https://anandvyas.in/tags/aws-cloudwatch/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>AWS CloudWatch</title>
+      <link>https://anandvyas.in/aws/aws-cloudwatch/</link>
+      <pubDate>Tue, 25 Jul 2017 00:15:00 +0200</pubDate>
+      
+      <guid>https://anandvyas.in/aws/aws-cloudwatch/</guid>
+      <description>&lt;p&gt;Amazon CloudWatch is a service that monitors AWS Cloud resources and applications running on AWS. It collects and tracks metrics, collects and monitors log files, and sets alarms. Amazon CloudWatch has a basic level of monitoring for no cost and a more detailed level of monitoring for an additional cost.&lt;/p&gt;
+
+&lt;div class=&#34;text-center&#34;&gt;
+    &lt;img class=&#34;img-responsive&#34; src=&#34;https://anandvyas.in/images/aws-cloudwatch.png&#34; alt=&#34;AWS Identity and Access Management&#34; /&gt;
+&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>AWS Elastic Load Balancing</title>
+      <link>https://anandvyas.in/aws/aws-elastic-load-balancing/</link>
+      <pubDate>Tue, 25 Jul 2017 00:15:00 +0200</pubDate>
+      
+      <guid>https://anandvyas.in/aws/aws-elastic-load-balancing/</guid>
+      <description>&lt;p&gt;Elastic Load Balancing automatically distributes your incoming application traffic across multiple targets, such as EC2 instances. It monitors the health of registered targets and routes traffic only to the healthy targets.&lt;/p&gt;
+
+&lt;div class=&#34;text-center&#34;&gt;
+    &lt;img class=&#34;img-responsive&#34; src=&#34;https://anandvyas.in/images/aws/aws-elb.png&#34; alt=&#34;AWS Elastic Load Balancing&#34; /&gt;
+&lt;/div&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

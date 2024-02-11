@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Docker on Anand vyas</title>
+    <link>https://anandvyas.in/categories/docker/</link>
+    <description>Recent content in Docker on Anand vyas</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 12 Apr 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://anandvyas.in/categories/docker/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Docker Commands</title>
+      <link>https://anandvyas.in/docker/commands/</link>
+      <pubDate>Thu, 12 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://anandvyas.in/docker/commands/</guid>
+      <description>Docker Global  docker version: see the version of docker client and server. docker info: Display system-wide information.  Docker Containers Lifecycle  docker create: creates a container but does not start it. docker rename: allows the container to be renamed. docker run: creates and starts a container in one operation. docker rm: deletes a container. docker update: updates a container&amp;rsquo;s resource limits.  Starting and Stopping  docker start: starts a container so it is running.</description>
+    </item>
+    
+    <item>
+      <title>Docker Compose</title>
+      <link>https://anandvyas.in/docker/docker-compose/</link>
+      <pubDate>Thu, 12 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://anandvyas.in/docker/docker-compose/</guid>
+      <description>The Compose file is a YAML file which defines services, networks, and volumes. Compose file is located at the following path ./docker-compose.yml.
+Docker-compose Terminal Commands docker-compose logs Displays log output from services.
+# Display the log of service containers docker-compose logs web  docker-compose ps Lists containers.
+# Display the list of total containers which are defined in docker-compose.yaml file docker-compose ps  docker-compose scale Deprecated You will scale from the docker-compose up scale web=3</description>
+    </item>
+    
+    <item>
+      <title>Docker Intro</title>
+      <link>https://anandvyas.in/docker/intro/</link>
+      <pubDate>Thu, 12 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://anandvyas.in/docker/intro/</guid>
+      <description>Docker is a container management service. Which basic means upload/install required things in one container and ship to any where. Docker announced in March 2013 and since then it has become a major tool in development world.
+Docker Release  Docker EE (Enterprise Edition) [Paid] Docker CE (Community Edition) [Free] Docker for Cloud  Docker Stable and Edge version  Edge (Beta) released monthly, Stable quarterly Stable version rolls in three months of Edge features   Docker Architecture Docker uses a client-server architecture.</description>
+    </item>
+    
+    <item>
+      <title>Docker Machine</title>
+      <link>https://anandvyas.in/docker/docker-machine/</link>
+      <pubDate>Thu, 12 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://anandvyas.in/docker/docker-machine/</guid>
+      <description>Docker Machine is a tool that lets you install Docker Engine on virtual hosts, and manage the hosts with docker-machine commands.
+Docker-machine Installation Docker-machine Commands  docker-machine active: See which machine is “active” docker-machine config: Print the connection config for machine docker-machine create: Create a machine. docker-machine env: Set environment variables docker-machine inspect: Inspect information about a machine docker-machine ip: Get the IP address of one or more machines. docker-machine kill: Kill (abruptly force stop) a machine docker-machine ls: List machines docker-machine mount: Mount directories from a machine to your local host, using sshfs.</description>
+    </item>
+    
+    <item>
+      <title>Docker Swarm</title>
+      <link>https://anandvyas.in/docker/docker-swarm/</link>
+      <pubDate>Thu, 12 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://anandvyas.in/docker/docker-swarm/</guid>
+      <description>Docker-swarm  docker swarm init: Initiate swam cluster docker swarm join-token: Lists join security token to join another node in swarm as worker or manager docker swarm join: Join already running swarm as a worker or manager docker swarm leave: Leave swarm. To be run from node itself docker swarm unlock: Unlocks swarm by providing key after manager restarts docker swarm unlock-key: Display swarm unlock key docker swarm update: Updates swarm configurations  Docker-swarm Node A Node is an instance of the Docker Engine connected to the Swarm.</description>
+    </item>
+    
+    <item>
+      <title>Dockerfile</title>
+      <link>https://anandvyas.in/docker/dockerfile/</link>
+      <pubDate>Thu, 12 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://anandvyas.in/docker/dockerfile/</guid>
+      <description>A Dockerfile is a text document used to create own docker container. A Dockerfile has some commands
+ FROM: Sets the Base Image for subsequent instructions. MAINTAINER: (deprecated - use LABEL instead) Set the Author field of the generated images. RUN: execute any commands in a new layer on top of the current image and commit the results. CMD: provide defaults for an executing container. EXPOSE: informs Docker that the container listens on the specified network ports at runtime.</description>
+    </item>
+    
+  </channel>
+</rss>

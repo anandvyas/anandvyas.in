@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Docker Compose - Anand vyas</title>
+    <meta content="Docker Compose - Anand vyas" property="og:title">
+    <meta content="Docker, Dockerfile" name="keywords">
+    <meta content="Dockerfile" property="og:description">
+    <meta name="author" content="Anand Vyas">
+
+    
+    <link href="https://anandvyas.in/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link href="https://anandvyas.in/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    
+    <link href="https://anandvyas.in/css/highlighter.css" rel="stylesheet">
+    
+    <link href="https://anandvyas.in/css/sb-admin.css" rel="stylesheet">
+    <link href="https://anandvyas.in/css/about.css" rel="stylesheet">
+
+    <script src="https://anandvyas.in/js/jquery.min.js"></script>
+</head>
+<body class="fixed-nav sticky-footer bg-dark sidenav-toggled" id="page-top">
+  
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+    <a class="navbar-brand" href="https://anandvyas.in/">
+        <img src="https://anandvyas.in/images/profile/logo.png" />
+        <span>Anand vyas</span>
+    </a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav navbar-sidenav">
+            <li class="nav-item sidebar-profile text-center">
+                <div class="profile-pic">
+                    <img src="https://anandvyas.in/images/profile/avatar.jpg" alt="avatar">
+                </div>
+                <div class="profile-detail">
+                    
+                    <span>Solution Architect</span> 
+                    <span>Cloud Architect</span> 
+                    <span>DevOps</span> 
+                    <span>Tech Lead</span> 
+                </div>
+            </li>
+            
+            <li class="nav-item sidebar-menu" data-toggle="tooltip" data-placement="right" title="Home">
+                <a class="nav-link" href="https://anandvyas.in/">
+                <i class="fa fa-fw fa fa-home"></i>
+                <span class="nav-link-text">Home</span>
+                </a>
+            </li>
+            
+            <li class="nav-item sidebar-menu" data-toggle="tooltip" data-placement="right" title="About">
+                <a class="nav-link" href="https://anandvyas.in/about">
+                <i class="fa fa-fw fa fa-user-circle"></i>
+                <span class="nav-link-text">About</span>
+                </a>
+            </li>
+            
+            <li class="nav-item sidebar-menu" data-toggle="tooltip" data-placement="right" title="Categories">
+                <a class="nav-link" href="https://anandvyas.in/categories">
+                <i class="fa fa-fw fa fa-dashboard"></i>
+                <span class="nav-link-text">Categories</span>
+                </a>
+            </li>
+            
+            <li class="nav-item sidebar-menu" data-toggle="tooltip" data-placement="right" title="Tags">
+                <a class="nav-link" href="https://anandvyas.in/tags">
+                <i class="fa fa-fw fa fa-tags"></i>
+                <span class="nav-link-text">Tags</span>
+                </a>
+            </li>
+            
+        </ul>
+        <ul class="navbar-nav sidenav-social">
+            
+            <li><a href="#" target="_blank"><i class="fa fa-mobile"></i></a></li>
+            
+            <li><a href="mailto:anandvyas@live.com" target="_blank"><i class="fa fa-envelope"></i></a></li>
+            
+            <li><a href="https://twitter.com/anandvyaas" target="_blank"><i class="fa fa-twitter"></i></a></li>
+            
+            <li><a href="https://www.linkedin.com/in/anandvyaas" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+            
+            <li><a href="https://www.instagram.com/anandvyaas" target="_blank"><i class="fa fa-instagram"></i></a></li>
+            
+            <li><a href="https://github.com/anandvyas" target="_blank"><i class="fa fa-github"></i></a></li>
+            
+            <li><a href="https://stackoverflow.com/users/8208060/anand-vyas" target="_blank"><i class="fa fa-stack-overflow"></i></a></li>
+            
+        </ul>
+        <ul class="navbar-nav sidenav-toggler">
+            <li class="nav-item">
+                <a class="nav-link text-center" id="sidenavToggler">
+            <i class="fa fa-fw fa-angle-left"></i>
+            </a>
+            </li>
+        </ul>
+        
+        
+    </div>
+</nav>
+  
+  <div class="content-wrapper">
+    <div class="container-fluid">
+    
+
+
+<ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="https://anandvyas.in/">Home</a></li>
+
+
+    
+    <li class="breadcrumb-item active"><a href='https://anandvyas.in/docker'>docker</a></li>
+    
+    
+
+
+    
+    <li class="breadcrumb-item active"><a href='https://anandvyas.in/docker/docker-compose'>docker-compose</a></li>
+    
+    
+
+
+    
+
+</ol>
+
+        <div class="post">
+            <h1>Docker Compose</h1>
+            <span class="post-date">Thu, Apr 12, 2018</span>
+            
+
+<p>The Compose file is a YAML file which defines services, networks, and volumes.
+Compose file is located at the following path ./docker-compose.yml.</p>
+
+<h3 id="a-name-docker-compose-commands-docker-compose-terminal-commands-a"><a name="docker-compose-commands">Docker-compose Terminal Commands</a></h3>
+
+<h4 id="docker-compose-logs-docker-compose-logs"><a href="#docker-compose-logs">docker-compose logs</a></h4>
+
+<p>Displays log output from services.</p>
+
+<pre><code class="language-sh"># Display the log of service containers
+docker-compose logs web
+</code></pre>
+
+<h4 id="docker-compose-ps-docker-compose-ps"><a href="#docker-compose-ps">docker-compose ps</a></h4>
+
+<p>Lists containers.</p>
+
+<pre><code class="language-sh"># Display the list of total containers which are defined in docker-compose.yaml file
+docker-compose ps
+</code></pre>
+
+<h4 id="docker-compose-scale-docker-compose-scale"><a href="#docker-compose-scale">docker-compose scale</a></h4>
+
+<p><strong>Deprecated</strong> You will scale from the <strong>docker-compose up scale web=3</strong></p>
+
+<h4 id="docker-compose-start-docker-compose-start"><a href="#docker-compose-start">docker-compose start</a></h4>
+
+<p>Starts existing containers for a service.</p>
+
+<h4 id="docker-compose-stop-docker-compose-stop"><a href="#docker-compose-stop">docker-compose stop</a></h4>
+
+<p>Stops running containers without removing them.</p>
+
+<h4 id="docker-compose-restart-docker-compose-restart"><a href="#docker-compose-restart">docker-compose restart</a></h4>
+
+<p>Restarts all stopped and running services.</p>
+
+<h4 id="docker-compose-kill-docker-compose-kill"><a href="#docker-compose-kill">docker-compose kill</a></h4>
+
+<p>Forces running containers to stop by sending a SIGKILL signal. Optionally the signal can be passed</p>
+
+<pre><code class="language-sh">docker-compose kill -s SIGINT
+</code></pre>
+
+<h4 id="docker-compose-rm-docker-compose-rm"><a href="#docker-compose-rm">docker-compose rm</a></h4>
+
+<p>Removes stopped service containers.</p>
+
+<h4 id="docker-compose-top-docker-compose-top"><a href="#docker-compose-top">docker-compose top</a></h4>
+
+<p>Show the top process of the container</p>
+
+<pre><code class="language-sh">docker-compose top
+</code></pre>
+
+<h4 id="docker-compose-pause-docker-compose-pause"><a href="#docker-compose-pause">docker-compose pause</a></h4>
+
+<p>pause running containers on same stage.</p>
+
+<h4 id="docker-compose-unpause-docker-compose-unpause"><a href="#docker-compose-unpause">docker-compose unpause</a></h4>
+
+<p>Unpauses paused containers of a service.</p>
+
+<h4 id="docker-compose-up-docker-compose-up"><a href="#docker-compose-up">docker-compose up</a></h4>
+
+<p>Builds, (re)creates, starts, and attaches to containers for a service.</p>
+
+<pre><code class="language-sh">docker-compose up
+# docker-compose in detachable mode
+docker-compose up -d
+# Docker-compose scale web service 
+docker-compose up scale web=3
+</code></pre>
+
+<h4 id="docker-compose-down-docker-compose-down"><a href="#docker-compose-down">docker-compose down</a></h4>
+
+<p>Stops containers and removes containers, networks, volumes, and images created by up.</p>
+
+<h4 id="docker-compose-run-docker-compose-run"><a href="#docker-compose-run">docker-compose run</a></h4>
+
+<p>Runs a one-time command against a service.</p>
+
+<pre><code class="language-sh"># Docker-compose run: command
+# db: service in docker-compose.yaml file
+# pssql -h db -U docker: command which pass to the container
+docker-compose run db psql -h db -U docker
+</code></pre>
+
+<h3 id="a-name-docker-compose-file-options-docker-compose-yaml-options-a"><a name="docker-compose-file-options">Docker-compose.yaml Options</a></h3>
+
+<h3 id="example">Example</h3>
+
+<pre><code class="language-sh">version: &quot;3&quot;
+services:
+  app:
+    image: laravel-www
+    container_name: laravel-www
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    depends_on:
+      - redis
+      - mysql
+    ports:
+      - 8080:80
+    volumes:
+      - .:/var/www/html
+    environment:
+      APP_ENV: local
+      CONTAINER_ROLE: app
+      CACHE_DRIVER: redis
+      SESSION_DRIVER: redis
+      QUEUE_DRIVER: redis
+      REDIS_HOST: redis
+
+  redis:
+    container_name: laravel-redis
+    image: redis:4-alpine
+    ports:
+      - 16379:6379
+    volumes:
+      - redis:/data
+
+  mysql:
+    container_name: laravel-mysql
+    image: mysql:5.7
+    ports:
+      - 13306:3306
+    volumes:
+      - mysql:/var/lib/mysql
+    environment:
+      MYSQL_DATABASE: homestead
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_USER: homestead
+      MYSQL_PASSWORD: secret
+
+volumes:
+  redis:
+    driver: &quot;local&quot;
+  mysql:
+    driver: &quot;local&quot;
+</code></pre>
+
+        </div>
+        
+    </div>
+    
+    
+    <footer class="sticky-footer">
+    <div class="container">
+        <div class="text-center">
+            <small>Copyright © Anand Vyas 2019</small>
+        </div>
+    </div>
+</footer>
+
+<a class="scroll-to-top rounded" href="#page-top">
+    <i class="fa fa-angle-up"></i>
+</a>
+
+
+<script src="https://anandvyas.in/js/popper.min.js"></script>
+<script src="https://anandvyas.in/js/bootstrap.min.js"></script>
+<script src="https://anandvyas.in/js/highlight.min.js"></script>
+<script src="https://anandvyas.in/js/moment.min.js"></script>
+<script src="https://anandvyas.in/js/clipboard.min.js"></script>
+
+<script src="https://anandvyas.in/js/jquery.easing.min.js"></script>
+
+<script src="https://anandvyas.in/js/sb-admin.js"></script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-108803266-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'UA-108803266-1');
+</script>
+  </div>
+<script data-no-instant>document.write('<script src="/livereload.js?port=1313&mindelay=10"></' + 'script>')</script></body>
+</html>

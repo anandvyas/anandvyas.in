@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Aws Auto Scaling on Anand vyas</title>
+    <link>https://anandvyas.in/tags/aws-auto-scaling/</link>
+    <description>Recent content in Aws Auto Scaling on Anand vyas</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 25 Jul 2017 00:15:00 +0200</lastBuildDate>
+    
+	<atom:link href="https://anandvyas.in/tags/aws-auto-scaling/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>AWS Auto Scaling</title>
+      <link>https://anandvyas.in/aws/aws-auto-scaling/</link>
+      <pubDate>Tue, 25 Jul 2017 00:15:00 +0200</pubDate>
+      
+      <guid>https://anandvyas.in/aws/aws-auto-scaling/</guid>
+      <description>&lt;p&gt;Auto Scaling is a service that allows you to scale your Amazon EC2 capacity automatically by scaling out and scaling in according to criteria that you define. With Auto Scaling, you can ensure that the number of running Amazon EC2 instances increases during demand spikes or peak demand periods to maintain application performance and decreases automatically during demand lulls or troughs to minimize costs.&lt;/p&gt;
+
+&lt;div class=&#34;text-center&#34;&gt;
+    &lt;img class=&#34;img-responsive&#34; src=&#34;https://anandvyas.in/images/aws-auto-scaling.jpg&#34; alt=&#34;AWS Auto Scaling&#34; /&gt;
+&lt;/div&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

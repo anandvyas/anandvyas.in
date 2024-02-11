@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Aws Elastic Beanstalk on Anand vyas</title>
+    <link>https://anandvyas.in/tags/aws-elastic-beanstalk/</link>
+    <description>Recent content in Aws Elastic Beanstalk on Anand vyas</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 22 Aug 2017 00:15:00 +0200</lastBuildDate>
+    
+	<atom:link href="https://anandvyas.in/tags/aws-elastic-beanstalk/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>AWS Elastic Beanstalk***</title>
+      <link>https://anandvyas.in/aws/aws-elastic-beanstalk/</link>
+      <pubDate>Tue, 22 Aug 2017 00:15:00 +0200</pubDate>
+      
+      <guid>https://anandvyas.in/aws/aws-elastic-beanstalk/</guid>
+      <description>&lt;p&gt;AWS Elastic Beanstalk is an easy-to-use service for deploying and scaling web applications and services developed with Java, .NET, PHP, Node.js, Python, Ruby, Go, and Docker on familiar servers such as Apache, Nginx, Passenger, and IIS.&lt;/p&gt;
+
+&lt;div class=&#34;text-center&#34;&gt;
+    &lt;img class=&#34;img-responsive&#34; src=&#34;https://anandvyas.in/images/aws-elasticbeanstalk.png&#34; alt=&#34;Elastic Beanstalk&#34; /&gt;
+&lt;/div&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

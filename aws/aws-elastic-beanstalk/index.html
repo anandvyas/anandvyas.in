@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>AWS Elastic Beanstalk*** - Anand vyas</title>
+    <meta content="AWS Elastic Beanstalk*** - Anand vyas" property="og:title">
+    <meta content="" name="keywords">
+    <meta content="" property="og:description">
+    <meta name="author" content="Anand Vyas">
+
+    
+    <link href="https://anandvyas.in/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link href="https://anandvyas.in/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    
+    <link href="https://anandvyas.in/css/highlighter.css" rel="stylesheet">
+    
+    <link href="https://anandvyas.in/css/sb-admin.css" rel="stylesheet">
+    <link href="https://anandvyas.in/css/about.css" rel="stylesheet">
+
+    <script src="https://anandvyas.in/js/jquery.min.js"></script>
+</head>
+<body class="fixed-nav sticky-footer bg-dark sidenav-toggled" id="page-top">
+  
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+    <a class="navbar-brand" href="https://anandvyas.in/">
+        <img src="https://anandvyas.in/images/profile/logo.png" />
+        <span>Anand vyas</span>
+    </a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav navbar-sidenav">
+            <li class="nav-item sidebar-profile text-center">
+                <div class="profile-pic">
+                    <img src="https://anandvyas.in/images/profile/avatar.jpg" alt="avatar">
+                </div>
+                <div class="profile-detail">
+                    
+                    <span>Solution Architect</span> 
+                    <span>Cloud Architect</span> 
+                    <span>DevOps</span> 
+                    <span>Tech Lead</span> 
+                </div>
+            </li>
+            
+            <li class="nav-item sidebar-menu" data-toggle="tooltip" data-placement="right" title="Home">
+                <a class="nav-link" href="https://anandvyas.in/">
+                <i class="fa fa-fw fa fa-home"></i>
+                <span class="nav-link-text">Home</span>
+                </a>
+            </li>
+            
+            <li class="nav-item sidebar-menu" data-toggle="tooltip" data-placement="right" title="About">
+                <a class="nav-link" href="https://anandvyas.in/about">
+                <i class="fa fa-fw fa fa-user-circle"></i>
+                <span class="nav-link-text">About</span>
+                </a>
+            </li>
+            
+            <li class="nav-item sidebar-menu" data-toggle="tooltip" data-placement="right" title="Categories">
+                <a class="nav-link" href="https://anandvyas.in/categories">
+                <i class="fa fa-fw fa fa-dashboard"></i>
+                <span class="nav-link-text">Categories</span>
+                </a>
+            </li>
+            
+            <li class="nav-item sidebar-menu" data-toggle="tooltip" data-placement="right" title="Tags">
+                <a class="nav-link" href="https://anandvyas.in/tags">
+                <i class="fa fa-fw fa fa-tags"></i>
+                <span class="nav-link-text">Tags</span>
+                </a>
+            </li>
+            
+        </ul>
+        <ul class="navbar-nav sidenav-social">
+            
+            <li><a href="#" target="_blank"><i class="fa fa-mobile"></i></a></li>
+            
+            <li><a href="mailto:anandvyas@live.com" target="_blank"><i class="fa fa-envelope"></i></a></li>
+            
+            <li><a href="https://twitter.com/anandvyaas" target="_blank"><i class="fa fa-twitter"></i></a></li>
+            
+            <li><a href="https://www.linkedin.com/in/anandvyaas" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+            
+            <li><a href="https://www.instagram.com/anandvyaas" target="_blank"><i class="fa fa-instagram"></i></a></li>
+            
+            <li><a href="https://github.com/anandvyas" target="_blank"><i class="fa fa-github"></i></a></li>
+            
+            <li><a href="https://stackoverflow.com/users/8208060/anand-vyas" target="_blank"><i class="fa fa-stack-overflow"></i></a></li>
+            
+        </ul>
+        <ul class="navbar-nav sidenav-toggler">
+            <li class="nav-item">
+                <a class="nav-link text-center" id="sidenavToggler">
+            <i class="fa fa-fw fa-angle-left"></i>
+            </a>
+            </li>
+        </ul>
+        
+        
+    </div>
+</nav>
+  
+  <div class="content-wrapper">
+    <div class="container-fluid">
+    
+
+
+<ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="https://anandvyas.in/">Home</a></li>
+
+
+    
+    <li class="breadcrumb-item active"><a href='https://anandvyas.in/aws'>aws</a></li>
+    
+    
+
+
+    
+    <li class="breadcrumb-item active"><a href='https://anandvyas.in/aws/aws-elastic-beanstalk'>aws-elastic-beanstalk</a></li>
+    
+    
+
+
+    
+
+</ol>
+
+        <div class="post">
+            <h1>AWS Elastic Beanstalk***</h1>
+            <span class="post-date">Tue, Aug 22, 2017</span>
+            <p>AWS Elastic Beanstalk is an easy-to-use service for deploying and scaling web applications and services developed with Java, .NET, PHP, Node.js, Python, Ruby, Go, and Docker on familiar servers such as Apache, Nginx, Passenger, and IIS.</p>
+
+<div class="text-center">
+    <img class="img-responsive" src="https://anandvyas.in/images/aws-elasticbeanstalk.png" alt="Elastic Beanstalk" />
+</div>
+ 
+
+<p>With Elastic Beanstalk, you can quickly deploy and manage applications in the AWS Cloud without worrying about the infrastructure that runs those applications. AWS Elastic Beanstalk reduces management complexity without restricting choice or control. You simply upload your application, and Elastic Beanstalk automatically handles the details of capacity provisioning, load balancing, scaling, and application health monitoring.</p>
+
+<ul>
+<li>AWS Elastic Beanstalk enables automated infrastructure management and code deployment, by simply uploading, for applications and includes
+
+<ul>
+<li>Application platform management</li>
+<li>Capacity provisioning</li>
+<li>Load Balancing</li>
+<li>Auto scaling</li>
+<li>Code deployment</li>
+<li>Health Monitoring</li>
+</ul></li>
+<li>Once an application is uploaded, Elastic Beanstalk automatically launches an environment and creates and configures the AWS resources needed to run the code. After your environment is launched, it can be managed and used to deploy new application versions</li>
+<li>AWS resources launched by Elastic Beanstalk are fully accessible i.e. you can ssh into the EC2 instances</li>
+</ul>
+
+<h3 id="a-name-aws-elastic-beanstalk-components-elastic-beanstalk-components-a"><a name="aws-elastic-beanstalk-components">Elastic Beanstalk Components</a></h3>
+
+<ul>
+<li>Application
+
+<ul>
+<li>An Elastic Beanstalk application is a logical collection of Elastic Beanstalk components, including environments, versions, and environment configurations.</li>
+</ul></li>
+<li>Application Version
+
+<ul>
+<li>An application version refers to a specific, labeled iteration of deployable code for a web application</li>
+<li>Applications can have many versions and each application version is unique and points to an S3 object</li>
+<li>Multiple versions can be deployed for an Application for testing differences and helps rollback to any version if case of issues</li>
+</ul></li>
+<li>Environment
+
+<ul>
+<li>An environment is a version that is deployed onto AWS resources</li>
+<li>An environment runs a single application version at a time, but same application version can be deployed across multiple environments</li>
+<li>When an environment is created, Elastic Beanstalk provisions the resources needed to run the application version you specified.</li>
+</ul></li>
+<li>Environment Configuration
+
+<ul>
+<li>An environment configuration identifies a collection of parameters and settings that define how an environment and its associated resources behave</li>
+<li>When an environment’s configuration settings is updated, Elastic Beanstalk automatically applies the changes to existing resources or deletes and deploys new resources, depending upon the change</li>
+</ul></li>
+<li>Configuration Template
+
+<ul>
+<li>A configuration template is a starting point for creating unique environment configurations</li>
+</ul></li>
+</ul>
+
+<h3 id="a-name-aws-cloudformation-vs-elastic-beanstalk-elastic-beanstalk-v-s-cloud-formation-a"><a name="aws-cloudformation-vs-elastic-beanstalk">Elastic Beanstalk V/S Cloud Formation</a></h3>
+
+<table>
+<thead>
+<tr>
+<th>Elastic Beanstalk</th>
+<th>Cloud Formation</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Elastic Beanstalk is intended to make developers&rsquo; lives easier.</td>
+<td>CloudFormation is intended to make systems engineers&rsquo; lives easier.</td>
+</tr>
+
+<tr>
+<td>Elastic Beanstalk is a PaaS-like layer ontop of AWS&rsquo;s IaaS services which abstracts away the underlying EC2 instances, Elastic Load Balancers, auto scaling groups, etc. This makes it a lot easier for developers, who don&rsquo;t want to be dealing with all the systems stuff, to get their application quickly deployed on AWS. It&rsquo;s very similar to other PaaS products such as Heroku, EngineYard, Google App Engine, etc. With Elastic Beanstalk, you don&rsquo;t need to understand how any of the underlying magic works.</td>
+<td>CloudFormation, on the other hand, doesn&rsquo;t automatically do anything. It&rsquo;s simply a way to define all the resources needed for deployment in a huge JSON file. So a CloudFormation template might actually create two ElasticBeanstalk environments (production and staging), a couple of ElasticCache clusters, a DyanmoDB table, and then the proper DNS in Route53. I then upload this template to AWS, walk away, and 45 minutes later everything is ready and waiting. Since it&rsquo;s just a plain-text JSON file, I can stick it in my source control which provides a great way to version my application deployments. It also ensures that I have a repeatable, &ldquo;known good&rdquo; configuration that I can quickly deploy in a different region.</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="a-name-aws-elastic-beanstalk-with-other-services-elastic-beanstalk-with-other-aws-services-a"><a name="aws-elastic-beanstalk-with-other-services">Elastic Beanstalk with other AWS Services</a></h3>
+
+<ul>
+<li>Elastic Beanstalk supports VPC and launches AWS resources, such as instances, into the VPC</li>
+<li>Elastic Beanstalk supports IAM and helps you securely control access to your AWS resources.</li>
+<li>CloudFront can be used to distribute the content in S3, after an Elastic Beanstalk is created and deployed</li>
+<li>CloudTrail
+
+<ul>
+<li>Elastic Beanstalk is integrated with CloudTrail, a service that captures all of the Elastic BeanstalkAPI calls and delivers the log files to an S3 bucket that you specify.</li>
+<li>CloudTrail captures API calls from the Elastic Beanstalk console or from your code to the Elastic Beanstalk APIs and help to determine the request made to Elastic Beanstalk, the source IP address from which the request was made, who made the request, when it was made etc.</li>
+</ul></li>
+<li>RDS
+
+<ul>
+<li>Elastic Beanstalk provides support for running RDS instances in the Elastic Beanstalk environment which is ideal for development and testing but not for production.</li>
+<li>For a production environment, it is not recommended because it ties the lifecycle of the database instance to the lifecycle of application’s environment. So it the Elastic beanstalk environment is deleted, the RDS instance is deleted as well</li>
+<li>It is recommended to launch a database instance outside of the environment and configure the application to connect to it outside of the functionality provided by Elastic Beanstalk.</li>
+<li>Using a database instance external to your environment requires additional security group and connection string configuration, but it also lets the application connect to the database from multiple environments, use database types not supported with integrated databases, perform blue/green deployments, and tear down your environment without affecting the database instance.</li>
+</ul></li>
+<li>S3
+
+<ul>
+<li>Elastic Beanstalk creates an S3 bucket named elasticbeanstalk-region-account-id for each region in which environments is created.</li>
+<li>Elastic Beanstalk uses the bucket to store application versions, logs, and other supporting files.</li>
+<li>It applies a bucket policy to buckets it creates to allow environments to write to the bucket and prevent accidental deletion</li>
+</ul></li>
+</ul>
+
+<h3 id="a-name-aws-elastic-beanstalk-lab-elastic-beanstalk-lab-a"><a name="aws-elastic-beanstalk-lab">Elastic Beanstalk Lab</a></h3>
+
+<div align="center">
+    <video width="620" height="440" controls>
+    <source src="https://anandvyas.in/videos/elastic-beanstalk/elastic-beanstalk.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+    </video>
+</div>
+
+<h3 id="a-name-aws-cloudformation-exam-tips-exam-tips-a"><a name="aws-cloudformation-exam-tips">Exam Tips</a></h3>
+
+<ul>
+<li>You don’t pay for Beanstalk, it’s free - you pay for the resources it creates</li>
+<li>You can create an RDC DB Instance</li>
+<li>You can create this environment inside a VPC</li>
+<li>This can access S3 buckets via setting the Environment Properties</li>
+<li>Can have load balancing</li>
+<li>Can get notifications sent to email really easily (probably also text notifications?)</li>
+<li>Can set alarms, having monitoring, events, tags</li>
+<li>Elastic Beanstalk is not object based storage (that is S3)</li>
+<li>You need to attach an EBS volume to an EC2 instance - call the AttachVolume API</li>
+<li>Used to deploy applications on AWS without worrying about infrastructure</li>
+<li>Languages supported
+
+<ul>
+<li>Java, .NET, PHP, Node.js, Python, Ruby, Go</li>
+</ul></li>
+<li>Webservers &amp; Containers:
+
+<ul>
+<li>Apache, IIS, Java SE, Nginx, Passenger, Puma, Tomcat, Docket</li>
+</ul></li>
+<li>Deployment platforms
+
+<ul>
+<li>Git, IDEs, Manual upload</li>
+</ul></li>
+<li>When to use
+
+<ul>
+<li>Spend minimal time learning to setup infrastructure</li>
+<li>Quick prototyping/testing</li>
+<li>Increase developer productivity</li>
+<li>Maintain flexibility and control over the resources used to power your application</li>
+</ul></li>
+<li>When not to use
+
+<ul>
+<li>If you need complete control of resource configurations</li>
+<li>Existing applications can be difficult to fit in the Elastic Beanstalk &ldquo;model&rdquo;</li>
+<li>Installing dependencies is different than simply using &ldquo;apt-get&rdquo; and can complicate things if you have a lot of dependencies</li>
+</ul></li>
+<li>Core components
+
+<ul>
+<li>Application
+
+<ul>
+<li>Collection of components like environment, version and configuration (think folder with files)</li>
+</ul></li>
+<li>Application Version
+
+<ul>
+<li>Part of an application</li>
+<li>Each version unique.</li>
+<li>Multiple versions can be deployed</li>
+</ul></li>
+<li>Environment
+
+<ul>
+<li>An application version that is deployed onto AWS resources</li>
+</ul></li>
+<li>Environment Configuration
+
+<ul>
+<li>Settings and parameters that define the environment and resources</li>
+</ul></li>
+<li>Configuration templates
+
+<ul>
+<li>Used to create repeatable environment configurations</li>
+</ul></li>
+</ul></li>
+</ul>
+
+<h3 id="a-name-aws-cloudformation-quiz-cloudformation-quiz-a"><a name="aws-cloudformation-quiz">CloudFormation: Quiz</a></h3>
+
+
+
+<script>
+    var quiz = [{"correct":[0],"explanation":"","image":"","options":["AWS Elastic Beanstalk","AWS CloudFront","AWS CloudFormation","AWS DevOps"],"question":"An organization is planning to use AWS for their production roll out. The organization wants to implement automation for deployment such that it will automatically create a LAMP stack, download the latest PHP installable from S3 and setup the ELB. Which of the below mentioned AWS services meets the requirement for making an orderly deployment of the software?"},{"correct":[1],"explanation":"","image":"","options":["A scalable storage appliance on top of Amazon Web Services.","An application container on top of Amazon Web Services","A service by this name doesn’t exist.","A scalable cluster of EC2 instances"],"question":"What does Amazon Elastic Beanstalk provide?"},{"correct":[2],"explanation":"","image":"","options":["However if you have 2 AWS accounts this can be done","AWS Elastic Beanstalk is not designed to support multiple running environments","AWS Elastic Beanstalk is designed to support a number of multiple running environments","However AWS Elastic Beanstalk is designed to support only 2 multiple running environments"],"question":"You want to have multiple versions of your application running at the same time, with all versions launched via AWS Elastic Beanstalk. Is this possible?"},{"correct":[1],"explanation":"","image":"","options":["Access the log files directly from Elastic Beanstalk","Enable log file rotation to S3 within the Elastic Beanstalk configuration","Ask your developers to enable log file rotation in the applications web.config file","Connect to each Instance launched by Elastic Beanstalk and create a Windows Scheduled task to rotate the log files to S3"],"question":"A .NET application that you manage is running in Elastic Beanstalk. Your developers tell you they will need access to application log files to debug issues that arise. The infrastructure will scale up and down. How can you ensure the developers will be able to access only the log files?"},{"correct":[0],"explanation":"","image":"","options":["Those who want to deploy and manage their applications within minutes in the AWS cloud.","Those who want to privately store and manage Git repositories in the AWS cloud.","Those who want to automate the deployment of applications to instances and to update the applications as required.","Those who want to model, visualize, and automate the steps required to release software."],"question":"Which of the following groups is AWS Elastic Beanstalk best suited for?"},{"correct":[2],"explanation":"Applications group logical services. Environments belong to Applications, and typically represent different deployment levels (dev, stage, prod, forth). Deployments belong to environments, and are pushes of bundles of code for the environments to run.","image":"","options":["Applications have many deployments, deployments have many environments.","Environments have many applications, applications have many deployments.","Applications have many environments, environments have many deployments.","Deployments have many environments, environments have many applications."],"question":"When thinking of AWS Elastic Beanstalk’s model, which is true?"},{"correct":[3],"explanation":"Elastic Beanstalk worker environments support SQS dead letter queues, where worker can send messages that for some reason could not be successfully processed. Dead letter queue provides the ability to sideline, isolate and analyze the unsuccessfully processed messages","image":"","options":["Configure Rolling Deployments.","Configure Enhanced Health Reporting","Configure Blue-Green Deployments.","Configure a Dead Letter Queue"],"question":"If you’re trying to configure an AWS Elastic Beanstalk worker tier for easy debugging if there are problems finishing queue jobs, what should you configure?"},{"correct":[3],"explanation":"Elastic Beanstalk installs a daemon on each EC2 instance in the Auto Scaling group to process SQS messages in the worker environment.","image":"","options":["Worker tiers pull jobs from SNS.","Worker tiers pull jobs from HTTP.","Worker tiers pull jobs from JSON.","Worker tiers pull jobs from SQS."],"question":"When thinking of AWS Elastic Beanstalk, which statement is true?"},{"correct":[3],"explanation":"","image":"","options":["AWS CloudFormation","AWS OpsWorks","AWS ELB + EC2 with CLI Push","AWS Elastic Beanstalk"],"question":"You are building a Ruby on Rails application for internal, non-production use, which uses MySQL as a database. You want developers without very much AWS experience to be able to deploy new code with a single command line push. You also want to set this up as simply as possible. Which tool is ideal for this setup?"},{"correct":[0,2,3],"explanation":"","image":"","options":["Auto scaling groups","Route 53 hosted zones","Elastic Load Balancers","RDS Instances","Elastic IP addresses","SQS Queues"],"question":"What AWS products and features can be deployed by Elastic Beanstalk? "},{"correct":[3],"explanation":"","image":"","options":["Amazon Storage Gateway","Amazon Glacier","Amazon EC2","Amazon S3"],"question":"AWS Elastic Beanstalk stores your application files and optionally server log files in ____."},{"correct":[2],"explanation":"","image":"","options":["Need to upload each file separately","Need to create each file and path","Need to upload a source bundle","Need to create each file"],"question":"When you use the AWS Elastic Beanstalk console to deploy a new application ____."}];
+    var currentquestion = 0, score = 0, submt=true, picked = [];
+
+    Array.prototype.diff = function(arr2) {
+        var ret = [];
+        for(var i in this) {   
+            if(arr2.indexOf( this[i] ) > -1){
+                ret.push( this[i] );
+            }
+        }
+        return ret;
+    };
+    
+    Array.prototype.equals = function (array) {
+        
+        if (!array)
+            return false;
+
+        
+        if (this.length != array.length)
+            return false;
+
+        for (var i = 0, l=this.length; i < l; i++) {
+            
+            if (this[i] instanceof Array && array[i] instanceof Array) {
+                
+                if (!this[i].equals(array[i]))
+                    return false;       
+            }           
+            else if (this[i] != array[i]) { 
+                
+                return false;   
+            }           
+        }       
+        return true;
+    }
+
+    
+    Object.defineProperty(Array.prototype, "equals", {enumerable: false});
+
+     
+    jQuery(document).ready(function($){
+        
+
+        function htmlEncode(value){
+          return $(document.createElement('div')).text(value).html();
+        }
+        
+
+        function addChoices(choices){
+            if(typeof choices !== "undefined" && $.type(choices) == "array"){
+                $('#choice-block').empty();
+                for(var i=0;i<choices.length; i++){
+                    $(document.createElement('li')).addClass('choice choice-box').attr('data-index', i).text(choices[i]).appendTo('#choice-block');                    
+                }
+            }
+        }
+        
+        
+
+        function nextQuestion(){
+            submt = true;
+            picked = [];
+            $('#explanation').empty();
+            $('#question').text(quiz[currentquestion]['question']);
+            $('#pager').text('Question ' + Number(currentquestion + 1) + ' of ' + quiz.length);
+            if(quiz[currentquestion].hasOwnProperty('image') && quiz[currentquestion]['image'] != ""){
+                if($('#question-image').length == 0){
+                    $(document.createElement('img')).addClass('question-image').attr('id', 'question-image').attr('src', quiz[currentquestion]['image']).attr('alt', htmlEncode(quiz[currentquestion]['question'])).insertAfter('#question');
+                } else {
+                    $('#question-image').attr('src', quiz[currentquestion]['image']).attr('alt', htmlEncode(quiz[currentquestion]['question']));
+                }
+            } else {
+                $('#question-image').remove();
+            }
+            addChoices(quiz[currentquestion]['options']);
+
+            var multichoice = quiz[currentquestion]['correct'].length > 1 ? true : false;
+            setupButtons(multichoice);
+        }
+        
+
+        function processQuestion(choice){
+            var flag = quiz[currentquestion]['correct'].equals(choice);
+            if(flag){
+                $('.choice').eq(choice).css({'background-color':'#50D943'});
+                $('#explanation').html('<strong>Correct!</strong> ' + htmlEncode(quiz[currentquestion]['explanation']));
+                score++;
+            } else {
+                $('.choice').eq(choice).css({'background-color':'#D92623'});
+                $('#explanation').html('<strong>Incorrect.</strong> ' + htmlEncode(quiz[currentquestion]['explanation']));
+            }
+            currentquestion++;
+            $('#submitbutton').html('NEXT QUESTION &raquo;').on('click', function(){
+                if(currentquestion == quiz.length){
+                    endQuiz();
+                } else {
+                    $(this).text('Check Answer').css({'color':'#222'}).off('click');
+                    nextQuestion();
+                }
+            })
+        }
+        
+
+        function setupButtons(multichoice){
+            console.log(multichoice);
+            $('.choice').on('click', function(){
+                var curElement = $(this);
+                var curElementIndex = curElement.attr('data-index');
+                var myClass = curElement.attr("class");
+                
+                if(multichoice){
+                    if(curElement.hasClass("selectedAns")){
+                        var index = picked.indexOf(curElementIndex);
+                        picked.splice(index, 1);
+                        curElement.removeClass("selectedAns");
+                    }else{
+                        picked.push(parseInt(curElementIndex));
+                        curElement.addClass("selectedAns");
+                    }
+                }else{
+                    picked = [];
+                    $('.choice').removeClass("selectedAns");
+                    curElement.addClass("selectedAns");
+                    picked.push(parseInt(curElementIndex));
+                }
+                
+                
+                if(submt){
+                    submt=false;
+                    $('#submitbutton').css({'color':'#000'}).on('click', function(){
+                        $('.choice').off('click');
+                        $(this).off('click');
+                        processQuestion(picked);
+                    });
+                }
+            })
+        }
+        
+        
+
+        function endQuiz(){
+            $('#explanation').empty();
+            $('#question').empty();
+            $('#choice-block').empty();
+            $('#submitbutton').remove();
+            $('#question').text("You got " + score + " out of " + quiz.length + " correct.");
+            $(document.createElement('h2')).css({'text-align':'center', 'font-size':'4em'}).text(Math.round(score/quiz.length * 100) + '%').insertAfter('#question');
+        }
+        
+
+        function init(){
+            
+
+            
+            if(typeof quiz !== "undefined" && $.type(quiz) === "array"){
+                var container = $('#frame');
+                quiz.forEach(function (row) {
+                   
+                });
+                
+                
+                $(document.createElement('p')).addClass('pager').attr('id','pager').text('Question 1 of ' + quiz.length).appendTo('#frame');
+                
+                $(document.createElement('h2')).addClass('question').attr('id', 'question').text(quiz[0]['question']).appendTo('#frame');
+                
+                if(quiz[0].hasOwnProperty('image') && quiz[0]['image'] != ""){
+                    $(document.createElement('img')).addClass('question-image').attr('id', 'question-image').attr('src', quiz[0]['image']).attr('alt', htmlEncode(quiz[0]['question'])).appendTo('#frame');
+                }
+                
+                $(document.createElement('ul')).attr('id', 'choice-block').appendTo('#frame');
+            
+                
+                addChoices(quiz[0]['options']);
+                
+                $(document.createElement('p')).addClass('explanation').attr('id','explanation').html('&nbsp;').appendTo('#frame');
+                
+                
+                $(document.createElement('div')).addClass('choice-box').attr('id', 'submitbutton').text('Check Answer').css({'font-weight':700,'color':'#222','padding':'30px 0'}).appendTo('#frame');
+                
+                var multichoice = quiz[0]['correct'].length > 1 ? true : false;
+                setupButtons(multichoice);
+            }
+        }
+        init();
+    });
+
+</script>
+<style>
+    #frame {
+        background-color: #fff;
+        padding: 12px 20px;
+        border-radius: 4px;
+        border: 1px solid #d3e0e9;
+    }
+
+    .selectedAns {
+        border-color: royalblue;
+        background-color: burlywood;
+    }
+</style>
+<div id="frame" role="content"></div>
+        </div>
+        
+    </div>
+    
+    
+    <footer class="sticky-footer">
+    <div class="container">
+        <div class="text-center">
+            <small>Copyright © Anand Vyas 2019</small>
+        </div>
+    </div>
+</footer>
+
+<a class="scroll-to-top rounded" href="#page-top">
+    <i class="fa fa-angle-up"></i>
+</a>
+
+
+<script src="https://anandvyas.in/js/popper.min.js"></script>
+<script src="https://anandvyas.in/js/bootstrap.min.js"></script>
+<script src="https://anandvyas.in/js/highlight.min.js"></script>
+<script src="https://anandvyas.in/js/moment.min.js"></script>
+<script src="https://anandvyas.in/js/clipboard.min.js"></script>
+
+<script src="https://anandvyas.in/js/jquery.easing.min.js"></script>
+
+<script src="https://anandvyas.in/js/sb-admin.js"></script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-108803266-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'UA-108803266-1');
+</script>
+  </div>
+<script data-no-instant>document.write('<script src="/livereload.js?port=1313&mindelay=10"></' + 'script>')</script></body>
+</html>

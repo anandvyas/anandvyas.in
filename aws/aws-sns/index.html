@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>AWS Simple Notification Service (SNS)*** - Anand vyas</title>
+    <meta content="AWS Simple Notification Service (SNS)*** - Anand vyas" property="og:title">
+    <meta content="" name="keywords">
+    <meta content="" property="og:description">
+    <meta name="author" content="Anand Vyas">
+
+    
+    <link href="https://anandvyas.in/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link href="https://anandvyas.in/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    
+    <link href="https://anandvyas.in/css/highlighter.css" rel="stylesheet">
+    
+    <link href="https://anandvyas.in/css/sb-admin.css" rel="stylesheet">
+    <link href="https://anandvyas.in/css/about.css" rel="stylesheet">
+
+    <script src="https://anandvyas.in/js/jquery.min.js"></script>
+</head>
+<body class="fixed-nav sticky-footer bg-dark sidenav-toggled" id="page-top">
+  
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+    <a class="navbar-brand" href="https://anandvyas.in/">
+        <img src="https://anandvyas.in/images/profile/logo.png" />
+        <span>Anand vyas</span>
+    </a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav navbar-sidenav">
+            <li class="nav-item sidebar-profile text-center">
+                <div class="profile-pic">
+                    <img src="https://anandvyas.in/images/profile/avatar.jpg" alt="avatar">
+                </div>
+                <div class="profile-detail">
+                    
+                    <span>Solution Architect</span> 
+                    <span>Cloud Architect</span> 
+                    <span>DevOps</span> 
+                    <span>Tech Lead</span> 
+                </div>
+            </li>
+            
+            <li class="nav-item sidebar-menu" data-toggle="tooltip" data-placement="right" title="Home">
+                <a class="nav-link" href="https://anandvyas.in/">
+                <i class="fa fa-fw fa fa-home"></i>
+                <span class="nav-link-text">Home</span>
+                </a>
+            </li>
+            
+            <li class="nav-item sidebar-menu" data-toggle="tooltip" data-placement="right" title="About">
+                <a class="nav-link" href="https://anandvyas.in/about">
+                <i class="fa fa-fw fa fa-user-circle"></i>
+                <span class="nav-link-text">About</span>
+                </a>
+            </li>
+            
+            <li class="nav-item sidebar-menu" data-toggle="tooltip" data-placement="right" title="Categories">
+                <a class="nav-link" href="https://anandvyas.in/categories">
+                <i class="fa fa-fw fa fa-dashboard"></i>
+                <span class="nav-link-text">Categories</span>
+                </a>
+            </li>
+            
+            <li class="nav-item sidebar-menu" data-toggle="tooltip" data-placement="right" title="Tags">
+                <a class="nav-link" href="https://anandvyas.in/tags">
+                <i class="fa fa-fw fa fa-tags"></i>
+                <span class="nav-link-text">Tags</span>
+                </a>
+            </li>
+            
+        </ul>
+        <ul class="navbar-nav sidenav-social">
+            
+            <li><a href="#" target="_blank"><i class="fa fa-mobile"></i></a></li>
+            
+            <li><a href="mailto:anandvyas@live.com" target="_blank"><i class="fa fa-envelope"></i></a></li>
+            
+            <li><a href="https://twitter.com/anandvyaas" target="_blank"><i class="fa fa-twitter"></i></a></li>
+            
+            <li><a href="https://www.linkedin.com/in/anandvyaas" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+            
+            <li><a href="https://www.instagram.com/anandvyaas" target="_blank"><i class="fa fa-instagram"></i></a></li>
+            
+            <li><a href="https://github.com/anandvyas" target="_blank"><i class="fa fa-github"></i></a></li>
+            
+            <li><a href="https://stackoverflow.com/users/8208060/anand-vyas" target="_blank"><i class="fa fa-stack-overflow"></i></a></li>
+            
+        </ul>
+        <ul class="navbar-nav sidenav-toggler">
+            <li class="nav-item">
+                <a class="nav-link text-center" id="sidenavToggler">
+            <i class="fa fa-fw fa-angle-left"></i>
+            </a>
+            </li>
+        </ul>
+        
+        
+    </div>
+</nav>
+  
+  <div class="content-wrapper">
+    <div class="container-fluid">
+    
+
+
+<ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="https://anandvyas.in/">Home</a></li>
+
+
+    
+    <li class="breadcrumb-item active"><a href='https://anandvyas.in/aws'>aws</a></li>
+    
+    
+
+
+    
+    <li class="breadcrumb-item active"><a href='https://anandvyas.in/aws/aws-sns'>aws-sns</a></li>
+    
+    
+
+
+    
+
+</ol>
+
+        <div class="post">
+            <h1>AWS Simple Notification Service (SNS)***</h1>
+            <span class="post-date">Fri, Aug 4, 2017</span>
+            <p>Amazon Simple Notification Service (Amazon SNS) is a fast, flexible, fully managed push notification service that lets you send individual messages or to fan-out messages to large numbers of recipients. Amazon SNS makes it simple and cost effective to send push notifications to mobile device users, email recipients or even send messages to other distributed services.</p>
+
+<div class="text-center">
+    <img class="img-responsive" src="https://anandvyas.in/images/aws-sns.png" alt="AWS Databases" />
+</div>
+ 
+
+<p>In Amazon SNS, there are two types of clients</p>
+
+<ul>
+<li><p><strong>Publishers (producers)</strong>: Publishers communicate asynchronously with subscribers by producing and sending a message to a topic, which is a logical access point and communication channel.</p></li>
+
+<li><p><strong>Subscribers (consumers)</strong>: Subscribers (i.e., web servers, email addresses, Amazon SQS queues, AWS Lambda functions) consume or receive the message or notification over one of the supported protocols (i.e., Amazon SQS, HTTP/S, email, SMS, Lambda) when they are subscribed to the topic.</p></li>
+</ul>
+
+<h3 id="a-name-aws-sns-accessing-accessing-amazon-sns-a"><a name="aws-sns-accessing">Accessing Amazon SNS</a></h3>
+
+<ul>
+<li><strong>Amazon Management console</strong>: Amazon Management console is the web-based user interface which can be used to manage SNS</li>
+<li><strong>AWS Command line Interface (CLI)</strong>: Provides commands for a broad set of AWS products, and is supported on Windows, Mac, and Linux.</li>
+<li><strong>AWS Tools for Windows Powershell</strong>: Provides commands for a broad set of AWS products for those who script in the PowerShell environment</li>
+<li><strong>AWS SNS Query API</strong>: Query API allows for requests are HTTP or HTTPS requests that use the HTTP verbs GET or POST and a Query parameter named Action</li>
+<li><strong>AWS SDK libraries</strong>: AWS provide libraries in various languages which provide basic functions that automate tasks such as cryptographically signing your requests, retrying requests, and handling error responses</li>
+</ul>
+
+<h3 id="a-name-aws-sns-support-transport-protocols-sns-supported-transport-protocols-a"><a name="aws-sns-support-transport-protocols">SNS Supported Transport Protocols</a></h3>
+
+<ul>
+<li><strong>HTTP, HTTPS</strong> – Subscribers specify a URL as part of the subscription registration; notifications will be delivered through an HTTP POST to the specified URL.</li>
+<li><strong>Email, Email-JSON</strong> – Messages are sent to registered addresses as email. Email-JSON sends notifications as a JSON object, while Email sends text-based email.</li>
+<li><strong>SQS</strong> – Users can specify an SQS queue as the endpoint; SNS will enqueue a notification message to the specified queue (which subscribers can then process using SQS APIs such as ReceiveMessage, DeleteMessage, etc.)</li>
+<li><strong>SMS</strong> – Messages are sent to registered phone numbers as SMS text messages</li>
+<li><strong>Lambda</strong> -</li>
+</ul>
+
+<div align="center">
+    <video width="620" height="440" controls>
+    <source src="https://anandvyas.in/videos/services/S903-SNS.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+    </video>
+</div>
+
+<h3 id="a-name-aws-sns-vs-sqs-sns-v-s-sqs-a"><a name="aws-sns-vs-sqs">SNS V/S SQS</a></h3>
+
+<table>
+<thead>
+<tr>
+<th>SNS</th>
+<th>SQS</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>SNS is push based</td>
+<td>SQS is pull based</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="a-name-aws-sns-pricing-sns-pricing-a"><a name="aws-sns-pricing">SNS Pricing</a></h3>
+
+<div class="text-center">
+    <img class="img-responsive" src="https://anandvyas.in/images/aws-sns-pricing.png" alt="AWS Databases" />
+</div>
+ 
+
+<h3 id="a-name-aws-sns-exam-tips-exam-tips-a"><a name="aws-sns-exam-tips">Exam Tips</a></h3>
+
+<ul>
+<li>Sends notifications from the cloud</li>
+<li>Fast and fully managed push messaging system.</li>
+<li>Sends out time critical notifications</li>
+<li>SNS sends push messages, whereas SQS pulls messages</li>
+<li>Topic can be created for notifications to be sent out</li>
+<li>You can create multiple subscriptions for a single topic. Subscription is an endpoint.</li>
+<li>Topic: Communication channels where we publish and subscribe
+
+<ul>
+<li>Topic name
+
+<ul>
+<li>Must be unique</li>
+<li>Limit of 256 characters. Alphanumeric, hyphens and underscores allowed</li>
+<li>Stored redundantly on multiple servers and data centers</li>
+</ul></li>
+<li>Display name (used for SMS messages)</li>
+<li>Has an identifier ARN</li>
+</ul></li>
+<li>Messages: Messages published to specific topic ARN</li>
+<li>Subscriptions: Subscriptions on specific topic ARN
+
+<ul>
+<li>Topic ARN</li>
+<li>Protocol: The protocol to be used for communication with our endpoint</li>
+<li>Endpoint: Endpoint to contact using the defined protocol when a message appears on the subscribed topic</li>
+<li>Has a subscription ID<br /></li>
+</ul></li>
+<li>Topic owners can change permissions to allow more than 1 user to publish a topic</li>
+<li>Endpoints can be
+
+<ul>
+<li>HTTP/HTTPS: Website to receive information upon message in topic</li>
+<li>Email / Email-JSON
+
+<ul>
+<li>Email-JSON sends as JSON object. Email sends text-based email.</li>
+<li>Requires confirmation of email address to avoid spam.</li>
+</ul></li>
+<li>Amazon SQS
+
+<ul>
+<li>SNS uses push, SQS uses pull. I.e. we can push to SQS and pull when possible rather than be ready to accept all the time.</li>
+</ul></li>
+<li>Application: e.g. mobile application</li>
+<li>AWS Lambda
+
+<ul>
+<li>Supports versioning / aliases</li>
+</ul></li>
+<li>SMS</li>
+</ul></li>
+<li>Fanout scenario: Message sent to single topic, pushed to multiple endpoints
+
+<ul>
+<li>Allows for parallel asynchronous processing</li>
+</ul></li>
+<li>Managing access
+
+<ul>
+<li>Integrates with IAM for control over our own user&rsquo;s permission
+
+<ul>
+<li>Control access for our own users</li>
+<li>Can&rsquo;t grant access to other AWS accounts</li>
+<li>Can include conditions</li>
+<li>Can use both IAM policies adn Access Control policies simultaneously</li>
+<li>IAM policies can grant temporary security credentials</li>
+</ul></li>
+<li>Access control policies
+
+<ul>
+<li>AWS account has only permissions by default</li>
+<li>Can grant access to other AWS accounts</li>
+<li>Allows override of default deny (default deny = soft deny, any other policy will override)</li>
+<li>Explicit denies override allows</li>
+<li>Order of policies does NOT matter</li>
+<li>based off of IAM</li>
+</ul></li>
+<li>Can control:
+
+<ul>
+<li>Who is allowed to publish</li>
+<li>Who is allowed to subscribe</li>
+<li>Under what conditions</li>
+</ul></li>
+</ul></li>
+<li>Examples of services using SNS
+
+<ul>
+<li>Cloudwatch alarm</li>
+<li>S3 RRS</li>
+<li>RDS notification of change</li>
+</ul></li>
+<li>Can send different messages based on endpoint</li>
+<li>Message data has the following
+
+<ul>
+<li>Message: Message value specified when the notification was published to the topic</li>
+<li>MessageID: UUID; Same ID must be used for retries.</li>
+<li>Subject: Optional parameter</li>
+<li>Timestamp: Time (GMT) when notification was published</li>
+<li>TopicArn: ARN for the topic</li>
+<li>Type: Type of message (i.e. Notifications are type Notification)</li>
+<li>Signature: Base64 encoded SHA1withRSA signature of message, messageid, subject, type, timestamp and topicARN</li>
+<li>SignatureVersion: Version of the Amazon SNS signature used</li>
+<li>SigningCertURL: The URL to the certificate used to sign the message</li>
+<li>UnsubscribeURL: URL to unsubscribe</li>
+</ul></li>
+<li>Confirmation of subscription message stays valid for 3 days</li>
+<li>A notification will not have more than one message</li>
+<li>SNS messages are not guaranteed to be delivered in order</li>
+<li>Message once sent cannot be recalled</li>
+<li>Direct addressing is possible, allows delivery to a single endpoint. direct addressing only supported for mobile push, not for sms or email</li>
+<li>SMS notifications
+
+<ul>
+<li>Topics with SMS subscription need to have DisplayName; for others it is optional</li>
+<li>Only first 10 characters of display name will be included in SMS</li>
+<li>SMS subscriber can stop messages by sending STOP to 30304</li>
+<li>SMS publications are right now available only in the US east region</li>
+<li>MMS is not supported</li>
+<li>SMS restricted to 140 characters including display name</li>
+<li>Currently only available to US phone numbers</li>
+</ul></li>
+<li>SNS limits
+
+<ul>
+<li>10 million subscriptions per topic</li>
+<li>3000 topics per account</li>
+<li>SNS message can have upto 256kb of data</li>
+<li>Billing unit is 64kb</li>
+</ul></li>
+<li>Mobile push notifications
+
+<ul>
+<li>Apple, google, amazon, windows, microsoft and baidu</li>
+<li>You can specify TTL Time to live for each message, message is deleted after ttl expires. Default TTL is 4 weeks for all mobile platforms</li>
+<li>TTL = 0 is special case for message to deliver immediately or expire</li>
+<li>Delivery status feature is available only for mobile push</li>
+</ul></li>
+<li>Common API
+
+<ul>
+<li>AddPermission, RemovePermission</li>
+</ul></li>
+<li>SNS serive acceepoint URL <a href="http://sns.amazonaws.com">http://sns.amazonaws.com</a></li>
+</ul>
+
+<h3 id="a-name-aws-sns-quiz-quiz-aws-sns-a"><a name="aws-sns-quiz">Quiz: AWS SNS</a></h3>
+
+
+
+<script>
+    var quiz = [{"correct":[0,3],"explanation":"","image":"","options":["Email","CloudFront distribution","File Transfer Protocol","Short Message Service","Simple Network Management Protocol"],"question":"Which of the following notification endpoints or clients does Amazon Simple Notification Service support?"},{"correct":[1],"explanation":"","image":"","options":["The topic is created, and it has the name you specified for it","An ARN (Amazon Resource Name) is created","You can create a topic on Amazon SQS, not on Amazon SNS.","This question doesn’t make sense."],"question":"What happens when you create a topic on Amazon SNS?"},{"correct":[1],"explanation":"","image":"","options":["None because the user infrastructure is in the private cloud","AWS SNS","AWS SES","AWS SMS"],"question":"A user has deployed an application on his private cloud. The user is using his own monitoring tool. He wants to configure that whenever there is an error, the monitoring tool should notify him via SMS. Which of the below mentioned AWS services will help in this scenario?"},{"correct":[1],"explanation":"","image":"","options":["AWS CloudWatch + AWS SES","AWS CloudWatch + AWS SNS","AWS CloudWatch + AWS SQS","AWS EC2 + AWS CloudWatch"],"question":"A user wants to make so that whenever the CPU utilization of the AWS EC2 instance is above 90%, the redlight of his bedroom turns on. Which of the below mentioned AWS services is helpful for this purpose?"},{"correct":[3],"explanation":"","image":"","options":["Email JSON","HTTP","AWS SQS","AWS SES"],"question":"A user is trying to understand AWS SNS. To which of the below mentioned end points is SNS unable to send a notification?"},{"correct":[1],"explanation":"","image":"","options":["AWS CloudWatch + AWS SES","AWS CloudWatch + AWS SNS","AWS CloudWatch + AWS SQS","AWS EC2 + AWS CloudWatch"],"question":"A user is running a webserver on EC2. The user wants to receive the SMS when the EC2 instance utilization is above the threshold limit. Which AWS services should the user configure in this case?"},{"correct":[0],"explanation":"","image":"","options":["AWS Simple Notification Service","AWS Simple Queue Service","AWS Mobile Communication Service","AWS Simple Email Service"],"question":"A user is planning to host a mobile game on EC2 which sends notifications to active users on either high score or the addition of new features. The user should get this notification when he is online on his mobile device. Which of the below mentioned AWS services can help achieve this functionality?"},{"correct":[3],"explanation":"Refer \u003ca href='http://docs.aws.amazon.com/sns/latest/dg/mobile-push-send-devicetoken.html'\u003edocumentation\u003c/a\u003e","image":"","options":["Bulk upload the device tokens contained in a CSV file via the AWS Management Console","Let the push notification service (e.g. Amazon Device messaging) handle the registration","Implement a token vending service to handle the registration","Call the CreatePlatformEndpoint API function to register multiple device tokens."],"question":"You are providing AWS consulting service for a company developing a new mobile application that will be leveraging amazon SNS push for push notifications. In order to send direct notification messages to individual devices each device registration identifier or token needs to be registered with SNS, however the developers are not sure of the best way to do this. You advise them to: –"},{"correct":[2],"explanation":"","image":"","options":["Replace RDS with Redshift for the batch analysis and SNS to notify the on-premises system to update the dashboard","Replace RDS with Redshift for the batch analysis and SQS to send a message to the on-premises system to update the dashboard","Create an RDS Read Replica for the batch analysis and SNS to notify me on-premises system to update the dashboard","Create an RDS Read Replica for the batch analysis and SQS to send a message to the on-premises system to update the dashboard."],"question":"A company is running a batch analysis every hour on their main transactional DB running on an RDS MySQL instance to populate their central Data Warehouse running on Redshift. During the execution of the batch their transactional applications are very slow. When the batch completes they need to update the top management dashboard with the new data. The dashboard is produced by another system running on-premises that is currently started when a manually-sent email notifies that an update is required The on-premises system cannot be modified because is managed by another team. How would you optimize this scenario to solve performance issues and automate the process as much as possible?"},{"correct":[0,2],"explanation":"","image":"","options":["HTTP","UDP","SMS","DynamoDB","Named Pipes"],"question":"Which of the following are valid SNS delivery transports?"},{"correct":[3],"explanation":"","image":"","options":["An XML object containing MessageId, UnsubscribeURL, Subject, Message and other values","An JSON object containing MessageId, DuplicateFlag, Message and other values","An XML object containing MessageId, DuplicateFlag, Message and other values","An JSON object containing MessageId, unsubscribeURL, Subject, Message and other values"],"question":"What is the format of structured notification messages sent by Amazon SNS?"},{"correct":[0,1,4],"explanation":"","image":"","options":["TopicAm","Subject","Destination","Format","Message","Language"],"question":"Which of the following are valid arguments for an SNS Publish request?"}];
+    var currentquestion = 0, score = 0, submt=true, picked = [];
+
+    Array.prototype.diff = function(arr2) {
+        var ret = [];
+        for(var i in this) {   
+            if(arr2.indexOf( this[i] ) > -1){
+                ret.push( this[i] );
+            }
+        }
+        return ret;
+    };
+    
+    Array.prototype.equals = function (array) {
+        
+        if (!array)
+            return false;
+
+        
+        if (this.length != array.length)
+            return false;
+
+        for (var i = 0, l=this.length; i < l; i++) {
+            
+            if (this[i] instanceof Array && array[i] instanceof Array) {
+                
+                if (!this[i].equals(array[i]))
+                    return false;       
+            }           
+            else if (this[i] != array[i]) { 
+                
+                return false;   
+            }           
+        }       
+        return true;
+    }
+
+    
+    Object.defineProperty(Array.prototype, "equals", {enumerable: false});
+
+     
+    jQuery(document).ready(function($){
+        
+
+        function htmlEncode(value){
+          return $(document.createElement('div')).text(value).html();
+        }
+        
+
+        function addChoices(choices){
+            if(typeof choices !== "undefined" && $.type(choices) == "array"){
+                $('#choice-block').empty();
+                for(var i=0;i<choices.length; i++){
+                    $(document.createElement('li')).addClass('choice choice-box').attr('data-index', i).text(choices[i]).appendTo('#choice-block');                    
+                }
+            }
+        }
+        
+        
+
+        function nextQuestion(){
+            submt = true;
+            picked = [];
+            $('#explanation').empty();
+            $('#question').text(quiz[currentquestion]['question']);
+            $('#pager').text('Question ' + Number(currentquestion + 1) + ' of ' + quiz.length);
+            if(quiz[currentquestion].hasOwnProperty('image') && quiz[currentquestion]['image'] != ""){
+                if($('#question-image').length == 0){
+                    $(document.createElement('img')).addClass('question-image').attr('id', 'question-image').attr('src', quiz[currentquestion]['image']).attr('alt', htmlEncode(quiz[currentquestion]['question'])).insertAfter('#question');
+                } else {
+                    $('#question-image').attr('src', quiz[currentquestion]['image']).attr('alt', htmlEncode(quiz[currentquestion]['question']));
+                }
+            } else {
+                $('#question-image').remove();
+            }
+            addChoices(quiz[currentquestion]['options']);
+
+            var multichoice = quiz[currentquestion]['correct'].length > 1 ? true : false;
+            setupButtons(multichoice);
+        }
+        
+
+        function processQuestion(choice){
+            var flag = quiz[currentquestion]['correct'].equals(choice);
+            if(flag){
+                $('.choice').eq(choice).css({'background-color':'#50D943'});
+                $('#explanation').html('<strong>Correct!</strong> ' + htmlEncode(quiz[currentquestion]['explanation']));
+                score++;
+            } else {
+                $('.choice').eq(choice).css({'background-color':'#D92623'});
+                $('#explanation').html('<strong>Incorrect.</strong> ' + htmlEncode(quiz[currentquestion]['explanation']));
+            }
+            currentquestion++;
+            $('#submitbutton').html('NEXT QUESTION &raquo;').on('click', function(){
+                if(currentquestion == quiz.length){
+                    endQuiz();
+                } else {
+                    $(this).text('Check Answer').css({'color':'#222'}).off('click');
+                    nextQuestion();
+                }
+            })
+        }
+        
+
+        function setupButtons(multichoice){
+            console.log(multichoice);
+            $('.choice').on('click', function(){
+                var curElement = $(this);
+                var curElementIndex = curElement.attr('data-index');
+                var myClass = curElement.attr("class");
+                
+                if(multichoice){
+                    if(curElement.hasClass("selectedAns")){
+                        var index = picked.indexOf(curElementIndex);
+                        picked.splice(index, 1);
+                        curElement.removeClass("selectedAns");
+                    }else{
+                        picked.push(parseInt(curElementIndex));
+                        curElement.addClass("selectedAns");
+                    }
+                }else{
+                    picked = [];
+                    $('.choice').removeClass("selectedAns");
+                    curElement.addClass("selectedAns");
+                    picked.push(parseInt(curElementIndex));
+                }
+                
+                
+                if(submt){
+                    submt=false;
+                    $('#submitbutton').css({'color':'#000'}).on('click', function(){
+                        $('.choice').off('click');
+                        $(this).off('click');
+                        processQuestion(picked);
+                    });
+                }
+            })
+        }
+        
+        
+
+        function endQuiz(){
+            $('#explanation').empty();
+            $('#question').empty();
+            $('#choice-block').empty();
+            $('#submitbutton').remove();
+            $('#question').text("You got " + score + " out of " + quiz.length + " correct.");
+            $(document.createElement('h2')).css({'text-align':'center', 'font-size':'4em'}).text(Math.round(score/quiz.length * 100) + '%').insertAfter('#question');
+        }
+        
+
+        function init(){
+            
+
+            
+            if(typeof quiz !== "undefined" && $.type(quiz) === "array"){
+                var container = $('#frame');
+                quiz.forEach(function (row) {
+                   
+                });
+                
+                
+                $(document.createElement('p')).addClass('pager').attr('id','pager').text('Question 1 of ' + quiz.length).appendTo('#frame');
+                
+                $(document.createElement('h2')).addClass('question').attr('id', 'question').text(quiz[0]['question']).appendTo('#frame');
+                
+                if(quiz[0].hasOwnProperty('image') && quiz[0]['image'] != ""){
+                    $(document.createElement('img')).addClass('question-image').attr('id', 'question-image').attr('src', quiz[0]['image']).attr('alt', htmlEncode(quiz[0]['question'])).appendTo('#frame');
+                }
+                
+                $(document.createElement('ul')).attr('id', 'choice-block').appendTo('#frame');
+            
+                
+                addChoices(quiz[0]['options']);
+                
+                $(document.createElement('p')).addClass('explanation').attr('id','explanation').html('&nbsp;').appendTo('#frame');
+                
+                
+                $(document.createElement('div')).addClass('choice-box').attr('id', 'submitbutton').text('Check Answer').css({'font-weight':700,'color':'#222','padding':'30px 0'}).appendTo('#frame');
+                
+                var multichoice = quiz[0]['correct'].length > 1 ? true : false;
+                setupButtons(multichoice);
+            }
+        }
+        init();
+    });
+
+</script>
+<style>
+    #frame {
+        background-color: #fff;
+        padding: 12px 20px;
+        border-radius: 4px;
+        border: 1px solid #d3e0e9;
+    }
+
+    .selectedAns {
+        border-color: royalblue;
+        background-color: burlywood;
+    }
+</style>
+<div id="frame" role="content"></div>
+        </div>
+        
+    </div>
+    
+    
+    <footer class="sticky-footer">
+    <div class="container">
+        <div class="text-center">
+            <small>Copyright © Anand Vyas 2019</small>
+        </div>
+    </div>
+</footer>
+
+<a class="scroll-to-top rounded" href="#page-top">
+    <i class="fa fa-angle-up"></i>
+</a>
+
+
+<script src="https://anandvyas.in/js/popper.min.js"></script>
+<script src="https://anandvyas.in/js/bootstrap.min.js"></script>
+<script src="https://anandvyas.in/js/highlight.min.js"></script>
+<script src="https://anandvyas.in/js/moment.min.js"></script>
+<script src="https://anandvyas.in/js/clipboard.min.js"></script>
+
+<script src="https://anandvyas.in/js/jquery.easing.min.js"></script>
+
+<script src="https://anandvyas.in/js/sb-admin.js"></script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-108803266-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'UA-108803266-1');
+</script>
+  </div>
+<script data-no-instant>document.write('<script src="/livereload.js?port=1313&mindelay=10"></' + 'script>')</script></body>
+</html>

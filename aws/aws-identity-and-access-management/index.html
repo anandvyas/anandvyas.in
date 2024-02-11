@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>AWS Identity and Access Management (IAM) - Anand vyas</title>
+    <meta content="AWS Identity and Access Management (IAM) - Anand vyas" property="og:title">
+    <meta content="" name="keywords">
+    <meta content="" property="og:description">
+    <meta name="author" content="Anand Vyas">
+
+    
+    <link href="https://anandvyas.in/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link href="https://anandvyas.in/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    
+    <link href="https://anandvyas.in/css/highlighter.css" rel="stylesheet">
+    
+    <link href="https://anandvyas.in/css/sb-admin.css" rel="stylesheet">
+    <link href="https://anandvyas.in/css/about.css" rel="stylesheet">
+
+    <script src="https://anandvyas.in/js/jquery.min.js"></script>
+</head>
+<body class="fixed-nav sticky-footer bg-dark sidenav-toggled" id="page-top">
+  
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+    <a class="navbar-brand" href="https://anandvyas.in/">
+        <img src="https://anandvyas.in/images/profile/logo.png" />
+        <span>Anand vyas</span>
+    </a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav navbar-sidenav">
+            <li class="nav-item sidebar-profile text-center">
+                <div class="profile-pic">
+                    <img src="https://anandvyas.in/images/profile/avatar.jpg" alt="avatar">
+                </div>
+                <div class="profile-detail">
+                    
+                    <span>Solution Architect</span> 
+                    <span>Cloud Architect</span> 
+                    <span>DevOps</span> 
+                    <span>Tech Lead</span> 
+                </div>
+            </li>
+            
+            <li class="nav-item sidebar-menu" data-toggle="tooltip" data-placement="right" title="Home">
+                <a class="nav-link" href="https://anandvyas.in/">
+                <i class="fa fa-fw fa fa-home"></i>
+                <span class="nav-link-text">Home</span>
+                </a>
+            </li>
+            
+            <li class="nav-item sidebar-menu" data-toggle="tooltip" data-placement="right" title="About">
+                <a class="nav-link" href="https://anandvyas.in/about">
+                <i class="fa fa-fw fa fa-user-circle"></i>
+                <span class="nav-link-text">About</span>
+                </a>
+            </li>
+            
+            <li class="nav-item sidebar-menu" data-toggle="tooltip" data-placement="right" title="Categories">
+                <a class="nav-link" href="https://anandvyas.in/categories">
+                <i class="fa fa-fw fa fa-dashboard"></i>
+                <span class="nav-link-text">Categories</span>
+                </a>
+            </li>
+            
+            <li class="nav-item sidebar-menu" data-toggle="tooltip" data-placement="right" title="Tags">
+                <a class="nav-link" href="https://anandvyas.in/tags">
+                <i class="fa fa-fw fa fa-tags"></i>
+                <span class="nav-link-text">Tags</span>
+                </a>
+            </li>
+            
+        </ul>
+        <ul class="navbar-nav sidenav-social">
+            
+            <li><a href="#" target="_blank"><i class="fa fa-mobile"></i></a></li>
+            
+            <li><a href="mailto:anandvyas@live.com" target="_blank"><i class="fa fa-envelope"></i></a></li>
+            
+            <li><a href="https://twitter.com/anandvyaas" target="_blank"><i class="fa fa-twitter"></i></a></li>
+            
+            <li><a href="https://www.linkedin.com/in/anandvyaas" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+            
+            <li><a href="https://www.instagram.com/anandvyaas" target="_blank"><i class="fa fa-instagram"></i></a></li>
+            
+            <li><a href="https://github.com/anandvyas" target="_blank"><i class="fa fa-github"></i></a></li>
+            
+            <li><a href="https://stackoverflow.com/users/8208060/anand-vyas" target="_blank"><i class="fa fa-stack-overflow"></i></a></li>
+            
+        </ul>
+        <ul class="navbar-nav sidenav-toggler">
+            <li class="nav-item">
+                <a class="nav-link text-center" id="sidenavToggler">
+            <i class="fa fa-fw fa-angle-left"></i>
+            </a>
+            </li>
+        </ul>
+        
+        
+    </div>
+</nav>
+  
+  <div class="content-wrapper">
+    <div class="container-fluid">
+    
+
+
+<ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="https://anandvyas.in/">Home</a></li>
+
+
+    
+    <li class="breadcrumb-item active"><a href='https://anandvyas.in/aws'>aws</a></li>
+    
+    
+
+
+    
+    <li class="breadcrumb-item active"><a href='https://anandvyas.in/aws/aws-identity-and-access-management'>aws-identity-and-access-management</a></li>
+    
+    
+
+
+    
+
+</ol>
+
+        <div class="post">
+            <h1>AWS Identity and Access Management (IAM)</h1>
+            <span class="post-date">Wed, Jul 5, 2017</span>
+            <p>AWS Identity and Access Management (IAM) gives you the facilities to manage users and their access level through AWS console. AWS IAM spacially targeted on an organization who have multiple users and need to assign different access to different users.</p>
+
+<div class="text-center">
+    <img class="img-responsive" src="https://anandvyas.in/images/aws_iam.png" alt="AWS Identity and Access Management" />
+</div>
+ 
+
+<ul>
+<li>IAM is a powerful service that allows you to control how people and programs are allowed to manipulate your AWS infrastructure.</li>
+<li>IAM is used to control
+
+<ul>
+<li>Identity – who can use your AWS resources (authentication)</li>
+<li>Access – what resources they can use and in what ways (authorization)</li>
+</ul></li>
+<li>IAM can also keep your account credentials private.</li>
+<li>IAM is controlled like most other AWS Cloud services:
+
+<ul>
+<li>Through the AWS Management Console</li>
+<li>With the CLI</li>
+<li>Via the AWS SDKs</li>
+</ul></li>
+</ul>
+
+<h3 id="a-name-aws-iam-principle-iam-principle-a"><a name="aws-iam-principle">IAM Principle</a></h3>
+
+<ul>
+<li>A principal is an IAM entity that is allowed to interact with AWS resources. A principal can be permanent or temporary, and it can represent a human or an application.</li>
+<li>There are three types of principals:
+
+<ul>
+<li>root users,</li>
+<li>IAM users,</li>
+<li>and roles/temporary security tokens.</li>
+</ul></li>
+</ul>
+
+<h3 id="a-name-aws-iam-root-user-iam-root-account-user-a"><a name="aws-iam-root-user">IAM Root Account/User</a></h3>
+
+<p>Root Account is the email address and password with which you are sign-in into the AWS account. Root account have full unrestricted access to AWS account including the account security credentials which include sensitive information.</p>
+
+<ul>
+<li>The root user is similar in concept to the UNIX root or Windows Administrator account
+<strong>Note</strong>: Do not use or share the Root account once the AWS account is created, instead create a separate user with admin privilege.</li>
+</ul>
+
+<h3 id="a-name-aws-iam-user-iam-user-group-a"><a name="aws-iam-user">IAM User/Group</a></h3>
+
+<ul>
+<li>Users are persistent(no expiration period) identities set up through the IAM service to represent individual people or applications.</li>
+<li>You may create separate IAM users for each member or create dev, test, and production users for applications that need to access</li>
+<li>IAM users can be created by principals with IAM administrative privileges at any time
+through the AWS Management Console, CLI, or SDKs.</li>
+</ul>
+
+<h3 id="a-name-aws-iam-roles-roles-temporary-security-tokens-a"><a name="aws-iam-roles">Roles/Temporary Security Tokens</a></h3>
+
+<ul>
+<li>Roles and temporary security tokens are very important for advanced IAM usage, but many AWS users find them confusing. Roles are used to grant specific privileges to specific actors for a set duration of time. These actors can be authenticated by AWS or some trusted external system.</li>
+<li>When one of these actors assumes a role, AWS provides the actor with a temporary security token from the AWS Security Token Service (STS) that the actor can use to access AWS Cloud services.</li>
+<li>Requesting a temporary security token requires specifying how long the token will exist before it expires. The range of a temporary security token lifetime is 15 minutes to 36 hours.</li>
+<li>Roles and temporary security tokens enable a number of use cases:
+
+<ul>
+<li><strong>Amazon EC2 Roles</strong>: Granting permissions to applications running on an Amazon EC2 instance.</li>
+<li><strong>Cross-Account Access</strong>: Granting permissions to users from other AWS accounts,  whether you control those accounts or not.</li>
+<li><strong>Federation</strong>: Granting permissions to users authenticated by a trusted external
+system.</li>
+</ul></li>
+</ul>
+
+<h3 id="a-name-aws-iam-authentication-authentication-a"><a name="aws-iam-authentication">Authentication</a></h3>
+
+<ul>
+<li>There are three ways that IAM authenticates a principal:
+
+<ul>
+<li><strong>User Name/Password</strong>: When a principal represents a human interacting with the console, the human will provide a user name/password pair to verify their identity. IAM allows you to create a password policy enforcing password complexity and expiration.</li>
+<li><strong>Access Key</strong>: An access key is a combination of an access key ID (20 characters) and an access secret key (40 characters). When a program is manipulating the AWS infrastructure via the API, it will use these values to sign the underlying REST calls to the services. The AWS SDKs and tools handle all the intricacies of signing the REST calls, so using an access key will almost always be a matter of providing the values to the SDK or tool.</li>
+<li><strong>Access Key/Session Token</strong>: When a process operates under an assumed role, the temporary security token provides an access key for authentication. In addition to the access key (remember that it consists of two parts), the token also includes a session token. Calls to AWS must include both the two-part access key and the session token to authenticate.</li>
+</ul></li>
+</ul>
+
+<blockquote>
+<p>It is important to note that when an IAM user is created, it has neither an access key nor a password, and the IAM administrator can set up either or both. This adds an extra layer of security in that console users cannot use their credentials to run a program that accesses your AWS infrastructure.</p>
+</blockquote>
+
+<h3 id="a-iam-features-a"><a>IAM Features</a></h3>
+
+<ul>
+<li>Centralized control of your AWS account</li>
+<li>Shared access to your AWS account</li>
+<li>Integrated with existing active directory account and allows single sign on</li>
+<li>Has fine grained access to the AWS resource</li>
+<li>Access available on user/group/roles</li>
+<li><strong>MFA</strong>: Allows Multi-Factor authentication (MFA)</li>
+<li><strong>Temporary Access</strong>: Provides temporary access for users,and devices and services where necessary</li>
+<li><strong>Password</strong>: Allows us to set up password rotation policy</li>
+<li><strong>Eventually Consistent</strong>: IAM is a global service. It is not region specific</li>
+<li><strong>Granular permissions/Identity federation</strong>: IAM allows users to access AWS resources, without requiring the user to have accounts with AWS. You can grant different permissions to different people for different resources.</li>
+<li><strong>Free to use</strong>: AWS Identity and Access Management is a feature of your AWS account offered at no additional charge. You will be charged only for use of other AWS products by your IAM users.</li>
+</ul>
+
+<h3 id="span-style-color-e47911-critical-terms-span"><span style="color:#e47911">Critical Terms</span></h3>
+
+<ul>
+<li><strong>Users</strong>: End users / people.</li>
+<li><strong>Groups</strong>: A collection of users under one set of permissions.</li>
+<li><strong>Roles</strong>: Similar to a group, but you can assign both users and AWS resources(EC2). EC2 instances have credentials stored on them,however it is a security risk and difficult to manage. Roles solve this issue.</li>
+<li><strong>Policies</strong>: Document (JSON format) that defines one or more permissions – assign to user or groups</li>
+</ul>
+
+<div class="text-center">
+    <img class="img-responsive" src="https://anandvyas.in/images/IAM-Identities.png" alt="AWS Identity and Access Management" />
+</div>
+ 
+
+<h3 id="span-style-color-e47911-policies-document-span"><span style="color:#e47911">Policies Document</span></h3>
+
+<p>A policy is a (JSON) document that defines one or more permissions to a user, group, role, or resource. A policy consists of one or more statements, each of which describes one set of permissions. Here&rsquo;s an example of a simple policy.</p>
+
+<p>Policy documents contain one or more permissions, with each permission defining:</p>
+
+<ul>
+<li><strong>Effect</strong>: A single word: Allow or Deny.</li>
+<li><strong>Service</strong>: For what service does this permission apply? Most AWS Cloud services support granting access through IAM, including IAM itself.</li>
+<li><strong>Resource</strong>: The resource value specifies the specific AWS infrastructure for which this permission applies. This is specified as an Amazon Resource Name (ARN). The format
+for an ARN varies slightly between services, but the basic format is:
+
+<ul>
+<li><code>&quot;arn:aws:service:region:account-id:[resourcetype:]resource&quot;</code></li>
+</ul></li>
+<li><strong>Action</strong>: The action value specifies the subset of actions within a service that the permission allows or denies. For instance, a permission may grant access to any readbased action for Amazon S3. A set of actions can be specified with an enumerated list or by using wildcards (Read*).<br /></li>
+<li><strong>Condition</strong>: The condition value optionally defines one or more additional restrictions that limit the actions allowed by the permission.</li>
+</ul>
+
+<pre><code class="language-json">{
+  &quot;Version&quot;: &quot;2012-10-17&quot;,
+  &quot;Statement&quot;: {
+      &quot;Sid&quot;: &quot;FirstStatement&quot;,
+      &quot;Effect&quot;: &quot;Allow&quot;,
+      &quot;Action&quot;: [
+        &quot;s3:List*&quot;,
+        &quot;s3:Get*&quot;
+      ],
+      &quot;Resource&quot;: [
+        &quot;arn:aws:s3:::confidential-data&quot;,
+        &quot;arn:aws:s3:::confidential-data/*&quot;
+      ],
+      &quot;Principal&quot;: {&quot;AWS&quot;: [&quot;arn:aws:iam::ACCOUNT-ID-WITHOUT-HYPHENS:root&quot;]},
+      &quot;Condition&quot;: {&quot;Bool&quot;: {&quot;aws:MultiFactorAuthPresent&quot;: &quot;true&quot;}}
+    }
+}
+</code></pre>
+
+<ul>
+<li><strong>Sid</strong>: Statement ID.</li>
+<li><strong>Effect</strong>: what the effect will be when the user requests access—either allow or deny.</li>
+<li><strong>Principal</strong>: Policy has to include information about who is allowed to access the resource.</li>
+<li><strong>Actions</strong>: what actions you will allow.</li>
+<li><strong>Resources</strong>: which resources you allow the action on.</li>
+<li><strong>Condition</strong>: When a policy statement contains a Condition element, the statement is only in effect when the Condition element evaluates to true.</li>
+</ul>
+
+<h3 id="span-style-color-e47911-types-of-policies-span"><span style="color:#e47911">Types of Policies</span></h3>
+
+<p>In IAM we have create three types of policy</p>
+
+<ul>
+<li><strong>Managed Policies</strong>: Standalone policies that you can attach to multiple users, groups, and roles in your AWS account. We don&rsquo;t have a permission to make changes in managed policies.</li>
+<li><strong>Customer Managed Policies</strong>: You can create standalone policies that you administer in your own AWS account, which we refer to as a customer managed policies. You can then attach the policies to multiple principal entities in your AWS account. A great way to create a customer managed policy is to start by copying an existing AWS managed policy and after that do needfull changes.</li>
+<li><strong>Inline policies</strong>: Policies that you create and manage, and that are embedded directly into a single user, group, or role. Resource-based policies are another form of inline policy.</li>
+</ul>
+
+<h3 id="span-style-color-e47911-password-policy-for-iam-users-span"><span style="color:#e47911">Password Policy for IAM Users</span></h3>
+
+<p>You can set a password policy on your AWS account to specify complexity requirements and mandatory rotation periods for your IAM users&rsquo; passwords.</p>
+
+<ul>
+<li><strong>Minimum password length</strong>: You can specify the minimum number of characters allowed in an IAM user password. You can enter any number from 6 to 128.</li>
+<li><strong>Require at least one uppercase letter</strong>: You can require that IAM user passwords contain at least one uppercase character from the ISO basic Latin alphabet (A to Z).</li>
+<li><strong>Require at least one lowercase letter</strong>: You can require that IAM user passwords contain at least one lowercase character from the ISO basic Latin alphabet (a to z).</li>
+<li><strong>Require at least one number</strong>: You can require that IAM user passwords contain at least one numeric character (0 to 9).</li>
+<li><strong>Require at least one nonalphanumeric character</strong>: You can require that IAM user passwords contain at least one of the following nonalphanumeric characters: ! @ # $ % ^ &amp; * ( ) _ + - = [ ] { } | &lsquo;</li>
+<li><strong>Allow users to change their own password</strong>: You can permit all IAM users in your account to use the IAM console to change their own passwords.</li>
+<li><strong>Enable password expiration</strong>: You can set IAM user passwords to be valid for only the specified number of days.</li>
+<li><strong>Prevent password reuse</strong>: You can prevent IAM users from reusing a specified number of previous passwords. You can set the number of previous passwords from 1 to 24, inclusive.</li>
+</ul>
+
+<div class="text-center">
+    <img class="img-responsive" src="https://anandvyas.in/images/iam_password_policy.png" alt="AWS Identity and Access Management" />
+</div>
+ 
+
+<h3 id="span-style-color-e47911-iam-faq-span"><span style="color:#e47911">IAM FAQ</span></h3>
+
+<p>Latest FAQ&rsquo;s find on this <a href="https://aws.amazon.com/iam/faqs/">link</a>.</p>
+
+<h3 id="span-style-color-e47911-iam-summary-span"><span style="color:#e47911">IAM Summary</span></h3>
+
+<ul>
+<li>IAM is universal. It does not apply to regions at this time.</li>
+<li>The &ldquo;root account&rdquo; is simply the account created when first setup your AWS account. It has complete Admin access.</li>
+<li>New users have NO permissions when first created.</li>
+<li>New users are assigned <strong>Access Key ID &amp; Secret Access Keys</strong> when frist created.</li>
+<li>You cannot user Access key ID &amp; Secret Access Key to login into the console. You can use this to access AWS via APIs and command line however.</li>
+<li>You only get to view these (Access Key ID &amp; Secret Access Keys) once. If you lose them, you have to regenerate them. So save them in a secure location.</li>
+<li>Always setup MFA (Multi-factor Authentication) on your root account.</li>
+<li>You can create and customise your own password rotation polices.</li>
+</ul>
+
+<h3 id="a-name-aws-iam-mfa-manage-multi-factor-authentication-mfa-a"><a name="aws-iam-mfa">Manage Multi-Factor Authentication (MFA)</a></h3>
+
+<p>AWS Multi-Factor Authentication (MFA) is a simple best practice that adds an extra layer of protection on top of your user name and password.
+With MFA enabled:</p>
+
+<ul>
+<li>First factor: Need username and password</li>
+<li>Second factor: Authentication code from their AWS MFA device</li>
+</ul>
+
+<p><strong>MFA Form Factors</strong>
+<div class="text-center">
+    <img class="img-responsive" src="https://anandvyas.in/images/iam-mfa-factor.png" alt="AWS Identity and Access Management" />
+</div>
+ </p>
+
+<h3 id="a-name-aws-iam-rotating-keys-rotating-keys-a"><a name="aws-iam-rotating-keys">Rotating Keys</a></h3>
+
+<p>The security risk of any credential increases with the age of the credential. To this end, it is a security best practice to rotate access keys associated with your IAM users. IAM facilitates this process by allowing two active access keys at a time. The process to rotate keys can be conducted via the console, CLI, or SDKs:</p>
+
+<ol>
+<li>Create a new access key for the user.</li>
+<li>Reconfigure all applications to use the new access key.</li>
+<li>Disable the original access key (disabling instead of deleting at this stage is critical, as it
+allows rollback to the original key if there are issues with the rotation).</li>
+<li>Verify the operation of all applications.</li>
+<li>Delete the original access key.</li>
+</ol>
+
+<h3 id="a-name-aws-iam-federation-identity-federation-a"><a name="aws-iam-federation">Identity Federation</a></h3>
+
+<p>AWS Identity and Access Management (IAM) supports identity federation for delegated access to the AWS Management Console or AWS APIs. With identity federation, external identities (federated users) are granted secure access to resources in your AWS account without having to create IAM users. Identity federation allows to sign in using a well-known two types identity provider (IdP)</p>
+
+<ul>
+<li><strong>Corporate identity provider</strong>: such as Microsoft Active Directory or from the AWS Directory Service</li>
+<li><strong>Web identity provider</strong>: such as Amazon Cognito, Login with Amazon, Facebook, Google or any OpenID Connect (OIDC) compatible provider</li>
+</ul>
+
+<div class="embed video-player">
+    <iframe class="youtube-player anand" type="text/html" width="640" height="385" src="http://www.youtube.com/embed/JLsF0auZlZY" allowfullscreen frameborder="0">
+    </iframe>
+</div>
+
+<p><strong>Key Terms</strong>
+- Federation
+- Identity Provider(IDP)
+- Identity Broker
+- Identity Store
+- Identities</p>
+
+<h3 id="a-name-aws-iam-federation-type-federation-type-a"><a name="aws-iam-federation-type">Federation Type</a></h3>
+
+<ul>
+<li><a href="#aws-iam-federation-web">Web Identity Federation</a></li>
+<li><a href="#aws-iam-federation-cognito">Mobile or Web Identity Federation with Cognito</a></li>
+<li><a href="#aws-iam-federation-saml">SAML 2.0-based Federation</a></li>
+<li><a href="#aws-iam-federation-custom">Custom Identity broker Federation</a></li>
+</ul>
+
+<h3 id="a-name-aws-iam-federation-web-web-identity-federation-a"><a name="aws-iam-federation-web">Web Identity Federation</a></h3>
+
+<div class="text-center">
+    <img class="img-responsive" src="https://anandvyas.in/images/iam_web_identity_federation.png" alt="AWS Web Identity Federation" />
+</div>
+ 
+
+<h3 id="a-name-aws-iam-federation-cognito-mobile-or-web-identity-federation-with-cognito-a"><a name="aws-iam-federation-cognito">Mobile or Web Identity Federation with Cognito</a></h3>
+
+<h3 id="a-name-aws-iam-federation-saml-saml-2-0-based-federation-a"><a name="aws-iam-federation-saml">SAML 2.0-based Federation</a></h3>
+
+<h3 id="a-name-aws-iam-federation-custom-custom-identity-broker-federation-a"><a name="aws-iam-federation-custom">Custom Identity broker Federation</a></h3>
+
+<h3 id="span-style-color-e47911-pending-topics-span"><span style="color:#e47911">Pending Topics</span></h3>
+
+<ul>
+<li>Microsoft Active Directory intregation with AWS</li>
+<li>Identity federation</li>
+<li>Directory management</li>
+<li>SMAL intregation</li>
+<li>Single sign off (SSO)</li>
+<li>Microsoft ADFS</li>
+</ul>
+
+<p>These all topics are not cleared yet, I have to explain all of them.</p>
+
+<h3 id="a-name-aws-iam-quiz-quiz-aws-iam-a"><a name="aws-iam-quiz">Quiz: AWS IAM</a></h3>
+
+
+
+<script>
+    var quiz = [{"choice":"single","correct":["AWS Identity and Access Management (IAM)"],"explanation":"","image":"","options":["AWS Access Control Service (ACS)","AWS Identity and Access Management (IAM)","AWS Identity Manager (AIM)"],"question":"Which service enables AWS customers to manage users and permissions in AWS?"},{"choice":"single","correct":["Administrator Access"],"explanation":"","image":"","options":["Read Only Access","Power User Access","AWS Cloud Formation Read Only Access","Administrator Access"],"question":"IAM provides several policy templates you can use to automatically assign permissions to the groups you create. The _____ policy template gives the Admins group permission to access all account resources, except your AWS account information"},{"choice":"single","correct":["No permissions"],"explanation":"","image":"","options":["Partial permissions","Full permissions","No permissions"],"question":"Every user you create in the IAM system starts with _________."},{"choice":"single","correct":["be nested at all"],"explanation":"","image":"","options":["be nested more than 3 levels","be nested at all","be nested more than 4 levels"],"question":"Groups can’t _____."},{"choice":"single","correct":["AWS Identity and Access Management"],"explanation":"","image":"","options":["Amazon RDS","AWS Integrity Management","AWS Identity and Access Management","Amazon EMR"],"question":"The _____ service is targeted at organizations with multiple users or systems that use AWS products such as Amazon EC2, Amazon SimpleDB, and the AWS Management Console."}];
+    var currentquestion = 0, score = 0, submt=true, picked = [];
+
+    Array.prototype.diff = function(arr2) {
+        var ret = [];
+        for(var i in this) {   
+            if(arr2.indexOf( this[i] ) > -1){
+                ret.push( this[i] );
+            }
+        }
+        return ret;
+    };
+    
+    Array.prototype.equals = function (array) {
+        
+        if (!array)
+            return false;
+
+        
+        if (this.length != array.length)
+            return false;
+
+        for (var i = 0, l=this.length; i < l; i++) {
+            
+            if (this[i] instanceof Array && array[i] instanceof Array) {
+                
+                if (!this[i].equals(array[i]))
+                    return false;       
+            }           
+            else if (this[i] != array[i]) { 
+                
+                return false;   
+            }           
+        }       
+        return true;
+    }
+
+    
+    Object.defineProperty(Array.prototype, "equals", {enumerable: false});
+
+     
+    jQuery(document).ready(function($){
+        
+
+        function htmlEncode(value){
+          return $(document.createElement('div')).text(value).html();
+        }
+        
+
+        function addChoices(choices){
+            if(typeof choices !== "undefined" && $.type(choices) == "array"){
+                $('#choice-block').empty();
+                for(var i=0;i<choices.length; i++){
+                    $(document.createElement('li')).addClass('choice choice-box').attr('data-index', i).text(choices[i]).appendTo('#choice-block');                    
+                }
+            }
+        }
+        
+        
+
+        function nextQuestion(){
+            submt = true;
+            picked = [];
+            $('#explanation').empty();
+            $('#question').text(quiz[currentquestion]['question']);
+            $('#pager').text('Question ' + Number(currentquestion + 1) + ' of ' + quiz.length);
+            if(quiz[currentquestion].hasOwnProperty('image') && quiz[currentquestion]['image'] != ""){
+                if($('#question-image').length == 0){
+                    $(document.createElement('img')).addClass('question-image').attr('id', 'question-image').attr('src', quiz[currentquestion]['image']).attr('alt', htmlEncode(quiz[currentquestion]['question'])).insertAfter('#question');
+                } else {
+                    $('#question-image').attr('src', quiz[currentquestion]['image']).attr('alt', htmlEncode(quiz[currentquestion]['question']));
+                }
+            } else {
+                $('#question-image').remove();
+            }
+            addChoices(quiz[currentquestion]['options']);
+
+            var multichoice = quiz[currentquestion]['correct'].length > 1 ? true : false;
+            setupButtons(multichoice);
+        }
+        
+
+        function processQuestion(choice){
+            var flag = quiz[currentquestion]['correct'].equals(choice);
+            if(flag){
+                $('.choice').eq(choice).css({'background-color':'#50D943'});
+                $('#explanation').html('<strong>Correct!</strong> ' + htmlEncode(quiz[currentquestion]['explanation']));
+                score++;
+            } else {
+                $('.choice').eq(choice).css({'background-color':'#D92623'});
+                $('#explanation').html('<strong>Incorrect.</strong> ' + htmlEncode(quiz[currentquestion]['explanation']));
+            }
+            currentquestion++;
+            $('#submitbutton').html('NEXT QUESTION &raquo;').on('click', function(){
+                if(currentquestion == quiz.length){
+                    endQuiz();
+                } else {
+                    $(this).text('Check Answer').css({'color':'#222'}).off('click');
+                    nextQuestion();
+                }
+            })
+        }
+        
+
+        function setupButtons(multichoice){
+            console.log(multichoice);
+            $('.choice').on('click', function(){
+                var curElement = $(this);
+                var curElementIndex = curElement.attr('data-index');
+                var myClass = curElement.attr("class");
+                
+                if(multichoice){
+                    if(curElement.hasClass("selectedAns")){
+                        var index = picked.indexOf(curElementIndex);
+                        picked.splice(index, 1);
+                        curElement.removeClass("selectedAns");
+                    }else{
+                        picked.push(parseInt(curElementIndex));
+                        curElement.addClass("selectedAns");
+                    }
+                }else{
+                    picked = [];
+                    $('.choice').removeClass("selectedAns");
+                    curElement.addClass("selectedAns");
+                    picked.push(parseInt(curElementIndex));
+                }
+                
+                
+                if(submt){
+                    submt=false;
+                    $('#submitbutton').css({'color':'#000'}).on('click', function(){
+                        $('.choice').off('click');
+                        $(this).off('click');
+                        processQuestion(picked);
+                    });
+                }
+            })
+        }
+        
+        
+
+        function endQuiz(){
+            $('#explanation').empty();
+            $('#question').empty();
+            $('#choice-block').empty();
+            $('#submitbutton').remove();
+            $('#question').text("You got " + score + " out of " + quiz.length + " correct.");
+            $(document.createElement('h2')).css({'text-align':'center', 'font-size':'4em'}).text(Math.round(score/quiz.length * 100) + '%').insertAfter('#question');
+        }
+        
+
+        function init(){
+            
+
+            
+            if(typeof quiz !== "undefined" && $.type(quiz) === "array"){
+                var container = $('#frame');
+                quiz.forEach(function (row) {
+                   
+                });
+                
+                
+                $(document.createElement('p')).addClass('pager').attr('id','pager').text('Question 1 of ' + quiz.length).appendTo('#frame');
+                
+                $(document.createElement('h2')).addClass('question').attr('id', 'question').text(quiz[0]['question']).appendTo('#frame');
+                
+                if(quiz[0].hasOwnProperty('image') && quiz[0]['image'] != ""){
+                    $(document.createElement('img')).addClass('question-image').attr('id', 'question-image').attr('src', quiz[0]['image']).attr('alt', htmlEncode(quiz[0]['question'])).appendTo('#frame');
+                }
+                
+                $(document.createElement('ul')).attr('id', 'choice-block').appendTo('#frame');
+            
+                
+                addChoices(quiz[0]['options']);
+                
+                $(document.createElement('p')).addClass('explanation').attr('id','explanation').html('&nbsp;').appendTo('#frame');
+                
+                
+                $(document.createElement('div')).addClass('choice-box').attr('id', 'submitbutton').text('Check Answer').css({'font-weight':700,'color':'#222','padding':'30px 0'}).appendTo('#frame');
+                
+                var multichoice = quiz[0]['correct'].length > 1 ? true : false;
+                setupButtons(multichoice);
+            }
+        }
+        init();
+    });
+
+</script>
+<style>
+    #frame {
+        background-color: #fff;
+        padding: 12px 20px;
+        border-radius: 4px;
+        border: 1px solid #d3e0e9;
+    }
+
+    .selectedAns {
+        border-color: royalblue;
+        background-color: burlywood;
+    }
+</style>
+<div id="frame" role="content"></div>
+        </div>
+        
+    </div>
+    
+    
+    <footer class="sticky-footer">
+    <div class="container">
+        <div class="text-center">
+            <small>Copyright © Anand Vyas 2019</small>
+        </div>
+    </div>
+</footer>
+
+<a class="scroll-to-top rounded" href="#page-top">
+    <i class="fa fa-angle-up"></i>
+</a>
+
+
+<script src="https://anandvyas.in/js/popper.min.js"></script>
+<script src="https://anandvyas.in/js/bootstrap.min.js"></script>
+<script src="https://anandvyas.in/js/highlight.min.js"></script>
+<script src="https://anandvyas.in/js/moment.min.js"></script>
+<script src="https://anandvyas.in/js/clipboard.min.js"></script>
+
+<script src="https://anandvyas.in/js/jquery.easing.min.js"></script>
+
+<script src="https://anandvyas.in/js/sb-admin.js"></script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-108803266-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'UA-108803266-1');
+</script>
+  </div>
+<script data-no-instant>document.write('<script src="/livereload.js?port=1313&mindelay=10"></' + 'script>')</script></body>
+</html>

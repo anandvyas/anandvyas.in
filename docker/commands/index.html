@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Docker Commands - Anand vyas</title>
+    <meta content="Docker Commands - Anand vyas" property="og:title">
+    <meta content="Docker" name="keywords">
+    <meta content="Docker Commands" property="og:description">
+    <meta name="author" content="Anand Vyas">
+
+    
+    <link href="https://anandvyas.in/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link href="https://anandvyas.in/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    
+    <link href="https://anandvyas.in/css/highlighter.css" rel="stylesheet">
+    
+    <link href="https://anandvyas.in/css/sb-admin.css" rel="stylesheet">
+    <link href="https://anandvyas.in/css/about.css" rel="stylesheet">
+
+    <script src="https://anandvyas.in/js/jquery.min.js"></script>
+</head>
+<body class="fixed-nav sticky-footer bg-dark sidenav-toggled" id="page-top">
+  
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+    <a class="navbar-brand" href="https://anandvyas.in/">
+        <img src="https://anandvyas.in/images/profile/logo.png" />
+        <span>Anand vyas</span>
+    </a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav navbar-sidenav">
+            <li class="nav-item sidebar-profile text-center">
+                <div class="profile-pic">
+                    <img src="https://anandvyas.in/images/profile/avatar.jpg" alt="avatar">
+                </div>
+                <div class="profile-detail">
+                    
+                    <span>Solution Architect</span> 
+                    <span>Cloud Architect</span> 
+                    <span>DevOps</span> 
+                    <span>Tech Lead</span> 
+                </div>
+            </li>
+            
+            <li class="nav-item sidebar-menu" data-toggle="tooltip" data-placement="right" title="Home">
+                <a class="nav-link" href="https://anandvyas.in/">
+                <i class="fa fa-fw fa fa-home"></i>
+                <span class="nav-link-text">Home</span>
+                </a>
+            </li>
+            
+            <li class="nav-item sidebar-menu" data-toggle="tooltip" data-placement="right" title="About">
+                <a class="nav-link" href="https://anandvyas.in/about">
+                <i class="fa fa-fw fa fa-user-circle"></i>
+                <span class="nav-link-text">About</span>
+                </a>
+            </li>
+            
+            <li class="nav-item sidebar-menu" data-toggle="tooltip" data-placement="right" title="Categories">
+                <a class="nav-link" href="https://anandvyas.in/categories">
+                <i class="fa fa-fw fa fa-dashboard"></i>
+                <span class="nav-link-text">Categories</span>
+                </a>
+            </li>
+            
+            <li class="nav-item sidebar-menu" data-toggle="tooltip" data-placement="right" title="Tags">
+                <a class="nav-link" href="https://anandvyas.in/tags">
+                <i class="fa fa-fw fa fa-tags"></i>
+                <span class="nav-link-text">Tags</span>
+                </a>
+            </li>
+            
+        </ul>
+        <ul class="navbar-nav sidenav-social">
+            
+            <li><a href="#" target="_blank"><i class="fa fa-mobile"></i></a></li>
+            
+            <li><a href="mailto:anandvyas@live.com" target="_blank"><i class="fa fa-envelope"></i></a></li>
+            
+            <li><a href="https://twitter.com/anandvyaas" target="_blank"><i class="fa fa-twitter"></i></a></li>
+            
+            <li><a href="https://www.linkedin.com/in/anandvyaas" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+            
+            <li><a href="https://www.instagram.com/anandvyaas" target="_blank"><i class="fa fa-instagram"></i></a></li>
+            
+            <li><a href="https://github.com/anandvyas" target="_blank"><i class="fa fa-github"></i></a></li>
+            
+            <li><a href="https://stackoverflow.com/users/8208060/anand-vyas" target="_blank"><i class="fa fa-stack-overflow"></i></a></li>
+            
+        </ul>
+        <ul class="navbar-nav sidenav-toggler">
+            <li class="nav-item">
+                <a class="nav-link text-center" id="sidenavToggler">
+            <i class="fa fa-fw fa-angle-left"></i>
+            </a>
+            </li>
+        </ul>
+        
+        
+    </div>
+</nav>
+  
+  <div class="content-wrapper">
+    <div class="container-fluid">
+    
+
+
+<ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="https://anandvyas.in/">Home</a></li>
+
+
+    
+    <li class="breadcrumb-item active"><a href='https://anandvyas.in/docker'>docker</a></li>
+    
+    
+
+
+    
+    <li class="breadcrumb-item active"><a href='https://anandvyas.in/docker/commands'>commands</a></li>
+    
+    
+
+
+    
+
+</ol>
+
+        <div class="post">
+            <h1>Docker Commands</h1>
+            <span class="post-date">Thu, Apr 12, 2018</span>
+            
+
+<h4 id="docker-global">Docker Global</h4>
+
+<ul>
+<li><a href="#docker_version">docker version</a>: see the version of docker client and server.</li>
+<li><a href="#docker_info">docker info</a>: Display system-wide information.</li>
+</ul>
+
+<h3 id="a-name-docker-containers-docker-containers-a"><a name="docker-containers">Docker Containers</a></h3>
+
+<h4 id="lifecycle">Lifecycle</h4>
+
+<ul>
+<li><a href="#docker_create">docker create</a>: creates a container but does not start it.</li>
+<li><a href="#docker_rename">docker rename</a>: allows the container to be renamed.</li>
+<li><a href="#docker_run">docker run</a>: creates and starts a container in one operation.</li>
+<li><a href="#docker_rm">docker rm</a>: deletes a container.</li>
+<li><a href="#docker_update">docker update</a>: updates a container&rsquo;s resource limits.</li>
+</ul>
+
+<h4 id="starting-and-stopping">Starting and Stopping</h4>
+
+<ul>
+<li><a href="#docker_start">docker start</a>: starts a container so it is running.</li>
+<li><a href="#docker_stop">docker stop</a>: stops a running container.</li>
+<li><a href="#docker_restart">docker restart</a>: stops and starts a container.</li>
+<li><a href="#docker_pause">docker pause</a>: pauses a running container, &ldquo;freezing&rdquo; it in place.</li>
+<li><a href="#docker_unpause">docker unpause</a>: will unpause a running container.</li>
+<li><a href="#docker_wait">docker wait</a>: blocks until running container stops.</li>
+<li><a href="#docker_kill">docker kill</a>: sends a SIGKILL to a running container.</li>
+<li><a href="#docker_attach">docker attach</a>: will connect to a running container.</li>
+</ul>
+
+<h4 id="info">Info</h4>
+
+<ul>
+<li><a href="#docker_ps">docker ps</a>: shows running containers.</li>
+<li><a href="#docker_logs">docker logs</a>: gets logs from container. (You can use a custom log driver, but logs is only available for json-file and journald in 1.10).</li>
+<li><a href="#docker_inspect">docker inspect</a>: looks at all the info on a container (including IP address).</li>
+<li><a href="#docker_events">docker events</a>: gets events from container.</li>
+<li><a href="#docker_port">docker port</a>: shows public facing port of container.</li>
+<li><a href="#docker_top">docker top</a>: shows running processes in container.</li>
+<li><a href="#docker_stats">docker stats</a>: shows containers&rsquo; resource usage statistics.</li>
+<li><a href="#docker_diff">docker diff</a>: shows changed files in the container&rsquo;s FS.</li>
+</ul>
+
+<h4 id="import-export">Import / Export</h4>
+
+<ul>
+<li><a href="#docker_cp">docker cp</a>: copies files or folders between a container and the local filesystem.</li>
+<li><a href="#docker_export">docker export</a>: turns container filesystem into tarball archive stream to STDOUT.</li>
+</ul>
+
+<h4 id="executing-commands">Executing Commands</h4>
+
+<ul>
+<li><a href="#docker_exec">docker exec</a>: to execute a command in container.</li>
+</ul>
+
+<h3 id="a-name-docker-images-docker-images-a"><a name="docker-images">Docker Images</a></h3>
+
+<h4 id="lifecycle-1">Lifecycle</h4>
+
+<ul>
+<li><a href="#docker_images">docker images</a>: shows all images.</li>
+<li><a href="#docker_import">docker import</a>: creates an image from a tarball.</li>
+<li><a href="#docker_build">docker build</a>: creates image from Dockerfile.</li>
+<li><a href="#docker_commit">docker commit</a>: creates image from a container, pausing it temporarily if it is running.</li>
+<li><a href="#docker_rmi">docker rmi</a>: removes an image.</li>
+<li><a href="#docker_load">docker load</a>: loads an image from a tar archive as STDIN, including images and tags (as of 0.7).</li>
+<li><a href="#docker_save">docker save</a>: saves an image to a tar archive stream to STDOUT with all parent layers, tags &amp; versions (as of 0.7).</li>
+</ul>
+
+<h4 id="info-1">Info</h4>
+
+<ul>
+<li><a href="#docker_history">docker history</a>: shows history of image.</li>
+<li><a href="#docker_tag">docker tag</a>: tags an image to a name (local or registry).</li>
+</ul>
+
+<h3 id="a-name-docker-networks-docker-networks-a"><a name="docker-networks">Docker Networks</a></h3>
+
+<ul>
+<li><a href="#">docker network create</a>:</li>
+<li><a href="#">docker network rm</a>:</li>
+<li><a href="#">docker network ls</a>:</li>
+<li><a href="#">docker network inspect</a>:</li>
+<li><a href="#">docker network connect</a>:</li>
+<li><a href="#">docker network disconnect</a>:</li>
+</ul>
+
+<h3 id="a-name-docker-networks-docker-registry-repository-a"><a name="docker-networks">Docker Registry &amp; Repository</a></h3>
+
+<ul>
+<li><a href="#docker_login">docker login</a>: to login to a registry.</li>
+<li><a href="#docker_logout">docker logout</a>: to logout from a registry.</li>
+<li><a href="#docker_search">docker search</a>: searches registry for image.</li>
+<li><a href="#docker_pull">docker pull</a>: pulls an image from registry to local machine.</li>
+<li><a href="#docker_push">docker push</a>: pushes an image to the registry from local machine.</li>
+</ul>
+
+<h3 id="a-name-docker-version-docker-version-a"><a name="docker_version">docker version</a></h3>
+
+<pre><code class="language-sh"># Docker client and server version
+docker version
+# Docker version in json format
+docker version --format &quot;{{json .}}&quot;
+# Docker get the server version
+docker version --format '{{.Server.Version}}'
+</code></pre>
+
+<h3 id="a-name-docker-info-docker-info-a"><a name="docker_info">docker Info</a></h3>
+
+<pre><code class="language-sh"># Docker information
+docker info
+# Docker information in json format
+docker info --format &quot;{{json .}}&quot;
+</code></pre>
+
+<h3 id="a-name-docker-create-docker-create-a"><a name="docker_create">docker create</a></h3>
+
+<h3 id="a-name-docker-rename-docker-rename-a"><a name="docker_rename">docker rename</a></h3>
+
+<pre><code class="language-sh">docker rename my_container my_new_container
+</code></pre>
+
+<h3 id="a-name-docker-run-docker-run-a"><a name="docker_run">docker run</a></h3>
+
+<h3 id="a-name-docker-rm-docker-rm-a"><a name="docker_rm">docker rm</a></h3>
+
+<pre><code class="language-sh">
+# Delete all containers (force!! running or stopped containers)
+docker rm -f $(docker ps -qa)
+</code></pre>
+
+<h3 id="a-name-docker-update-docker-update-a"><a name="docker_update">docker update</a></h3>
+
+<h3 id="a-name-docker-start-docker-start-a"><a name="docker_start">docker start</a></h3>
+
+<h3 id="a-name-docker-stop-docker-stop-a"><a name="docker_stop">docker stop</a></h3>
+
+<h3 id="a-name-docker-restart-docker-restart-a"><a name="docker_restart">docker restart</a></h3>
+
+<h3 id="a-name-docker-pause-docker-pause-a"><a name="docker_pause">docker pause</a></h3>
+
+<h3 id="a-name-docker-unpause-docker-unpause-a"><a name="docker_unpause">docker unpause</a></h3>
+
+<h3 id="a-name-docker-wait-docker-wait-a"><a name="docker_wait">docker wait</a></h3>
+
+<h3 id="a-name-docker-kill-docker-kill-a"><a name="docker_kill">docker kill</a></h3>
+
+<pre><code class="language-sh"># Kill running containers
+docker kill $(docker ps -q)
+# Kill docker container with SIGNUSR1 signal
+docker kill --signal=&quot;SIGUSR1&quot; &lt;container name&gt;
+</code></pre>
+
+<h3 id="a-name-docker-attach-docker-attach-a"><a name="docker_attach">docker attach</a></h3>
+
+<h3 id="a-name-docker-ps-docker-ps-a"><a name="docker_ps">docker ps</a></h3>
+
+<h3 id="a-name-docker-logs-docker-logs-a"><a name="docker_logs">docker logs</a></h3>
+
+<h3 id="a-name-docker-inspect-docker-inspect-a"><a name="docker_inspect">docker inspect</a></h3>
+
+<pre><code class="language-sh">
+</code></pre>
+
+<h3 id="a-name-docker-events-docker-events-a"><a name="docker_events">docker events</a></h3>
+
+<h3 id="a-name-docker-port-docker-port-a"><a name="docker_port">docker port</a></h3>
+
+<h3 id="a-name-docker-top-docker-top-a"><a name="docker_top">docker top</a></h3>
+
+<h3 id="a-name-docker-stats-docker-stats-a"><a name="docker_stats">docker stats</a></h3>
+
+<h3 id="a-name-docker-diff-docker-diff-a"><a name="docker_diff">docker diff</a></h3>
+
+<h3 id="a-name-docker-cp-docker-cp-a"><a name="docker_cp">docker cp</a></h3>
+
+<h3 id="a-name-docker-export-docker-export-a"><a name="docker_export">docker export</a></h3>
+
+<h3 id="a-name-docker-exec-docker-exec-a"><a name="docker_exec">docker exec</a></h3>
+
+<h3 id="a-name-docker-images-docker-images-a-1"><a name="docker_images">docker images</a></h3>
+
+<h3 id="a-name-docker-import-docker-import-a"><a name="docker_import">docker import</a></h3>
+
+<h3 id="a-name-docker-build-docker-build-a"><a name="docker_build">docker build</a></h3>
+
+<h3 id="a-name-docker-commit-docker-commit-a"><a name="docker_commit">docker commit</a></h3>
+
+<h3 id="a-name-docker-rmi-docker-rmi-a"><a name="docker_rmi">docker rmi</a></h3>
+
+<h3 id="a-name-docker-load-docker-load-a"><a name="docker_load">docker load</a></h3>
+
+<h3 id="a-name-docker-save-docker-save-a"><a name="docker_save">docker save</a></h3>
+
+<h3 id="a-name-docker-history-docker-history-a"><a name="docker_history">docker history</a></h3>
+
+<h3 id="a-name-docker-tag-docker-tag-a"><a name="docker_tag">docker tag</a></h3>
+
+<h3 id="a-name-docker-login-docker-login-a"><a name="docker_login">docker login</a></h3>
+
+<h3 id="a-name-docker-logout-docker-logout-a"><a name="docker_logout">docker logout</a></h3>
+
+<h3 id="a-name-docker-search-docker-search-a"><a name="docker_search">docker search</a></h3>
+
+<h3 id="a-name-docker-pull-docker-pull-a"><a name="docker_pull">docker pull</a></h3>
+
+<h3 id="a-name-docker-push-docker-push-a"><a name="docker_push">docker push</a></h3>
+
+<h3 id="a-name-docker-tricks-tricks-a"><a name="docker_tricks">Tricks</a></h3>
+
+<pre><code class="language-sh"># Give the count of all container 
+docker ps -a -q | wc -l 
+</code></pre>
+
+        </div>
+        
+    </div>
+    
+    
+    <footer class="sticky-footer">
+    <div class="container">
+        <div class="text-center">
+            <small>Copyright © Anand Vyas 2019</small>
+        </div>
+    </div>
+</footer>
+
+<a class="scroll-to-top rounded" href="#page-top">
+    <i class="fa fa-angle-up"></i>
+</a>
+
+
+<script src="https://anandvyas.in/js/popper.min.js"></script>
+<script src="https://anandvyas.in/js/bootstrap.min.js"></script>
+<script src="https://anandvyas.in/js/highlight.min.js"></script>
+<script src="https://anandvyas.in/js/moment.min.js"></script>
+<script src="https://anandvyas.in/js/clipboard.min.js"></script>
+
+<script src="https://anandvyas.in/js/jquery.easing.min.js"></script>
+
+<script src="https://anandvyas.in/js/sb-admin.js"></script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-108803266-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'UA-108803266-1');
+</script>
+  </div>
+<script data-no-instant>document.write('<script src="/livereload.js?port=1313&mindelay=10"></' + 'script>')</script></body>
+</html>

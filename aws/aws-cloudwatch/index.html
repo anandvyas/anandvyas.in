@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>AWS CloudWatch - Anand vyas</title>
+    <meta content="AWS CloudWatch - Anand vyas" property="og:title">
+    <meta content="" name="keywords">
+    <meta content="" property="og:description">
+    <meta name="author" content="Anand Vyas">
+
+    
+    <link href="https://anandvyas.in/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link href="https://anandvyas.in/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    
+    <link href="https://anandvyas.in/css/highlighter.css" rel="stylesheet">
+    
+    <link href="https://anandvyas.in/css/sb-admin.css" rel="stylesheet">
+    <link href="https://anandvyas.in/css/about.css" rel="stylesheet">
+
+    <script src="https://anandvyas.in/js/jquery.min.js"></script>
+</head>
+<body class="fixed-nav sticky-footer bg-dark sidenav-toggled" id="page-top">
+  
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+    <a class="navbar-brand" href="https://anandvyas.in/">
+        <img src="https://anandvyas.in/images/profile/logo.png" />
+        <span>Anand vyas</span>
+    </a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav navbar-sidenav">
+            <li class="nav-item sidebar-profile text-center">
+                <div class="profile-pic">
+                    <img src="https://anandvyas.in/images/profile/avatar.jpg" alt="avatar">
+                </div>
+                <div class="profile-detail">
+                    
+                    <span>Solution Architect</span> 
+                    <span>Cloud Architect</span> 
+                    <span>DevOps</span> 
+                    <span>Tech Lead</span> 
+                </div>
+            </li>
+            
+            <li class="nav-item sidebar-menu" data-toggle="tooltip" data-placement="right" title="Home">
+                <a class="nav-link" href="https://anandvyas.in/">
+                <i class="fa fa-fw fa fa-home"></i>
+                <span class="nav-link-text">Home</span>
+                </a>
+            </li>
+            
+            <li class="nav-item sidebar-menu" data-toggle="tooltip" data-placement="right" title="About">
+                <a class="nav-link" href="https://anandvyas.in/about">
+                <i class="fa fa-fw fa fa-user-circle"></i>
+                <span class="nav-link-text">About</span>
+                </a>
+            </li>
+            
+            <li class="nav-item sidebar-menu" data-toggle="tooltip" data-placement="right" title="Categories">
+                <a class="nav-link" href="https://anandvyas.in/categories">
+                <i class="fa fa-fw fa fa-dashboard"></i>
+                <span class="nav-link-text">Categories</span>
+                </a>
+            </li>
+            
+            <li class="nav-item sidebar-menu" data-toggle="tooltip" data-placement="right" title="Tags">
+                <a class="nav-link" href="https://anandvyas.in/tags">
+                <i class="fa fa-fw fa fa-tags"></i>
+                <span class="nav-link-text">Tags</span>
+                </a>
+            </li>
+            
+        </ul>
+        <ul class="navbar-nav sidenav-social">
+            
+            <li><a href="#" target="_blank"><i class="fa fa-mobile"></i></a></li>
+            
+            <li><a href="mailto:anandvyas@live.com" target="_blank"><i class="fa fa-envelope"></i></a></li>
+            
+            <li><a href="https://twitter.com/anandvyaas" target="_blank"><i class="fa fa-twitter"></i></a></li>
+            
+            <li><a href="https://www.linkedin.com/in/anandvyaas" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+            
+            <li><a href="https://www.instagram.com/anandvyaas" target="_blank"><i class="fa fa-instagram"></i></a></li>
+            
+            <li><a href="https://github.com/anandvyas" target="_blank"><i class="fa fa-github"></i></a></li>
+            
+            <li><a href="https://stackoverflow.com/users/8208060/anand-vyas" target="_blank"><i class="fa fa-stack-overflow"></i></a></li>
+            
+        </ul>
+        <ul class="navbar-nav sidenav-toggler">
+            <li class="nav-item">
+                <a class="nav-link text-center" id="sidenavToggler">
+            <i class="fa fa-fw fa-angle-left"></i>
+            </a>
+            </li>
+        </ul>
+        
+        
+    </div>
+</nav>
+  
+  <div class="content-wrapper">
+    <div class="container-fluid">
+    
+
+
+<ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="https://anandvyas.in/">Home</a></li>
+
+
+    
+    <li class="breadcrumb-item active"><a href='https://anandvyas.in/aws'>aws</a></li>
+    
+    
+
+
+    
+    <li class="breadcrumb-item active"><a href='https://anandvyas.in/aws/aws-cloudwatch'>aws-cloudwatch</a></li>
+    
+    
+
+
+    
+
+</ol>
+
+        <div class="post">
+            <h1>AWS CloudWatch</h1>
+            <span class="post-date">Tue, Jul 25, 2017</span>
+            <p>Amazon CloudWatch is a service that monitors AWS Cloud resources and applications running on AWS. It collects and tracks metrics, collects and monitors log files, and sets alarms. Amazon CloudWatch has a basic level of monitoring for no cost and a more detailed level of monitoring for an additional cost.</p>
+
+<div class="text-center">
+    <img class="img-responsive" src="https://anandvyas.in/images/aws-cloudwatch.png" alt="AWS Identity and Access Management" />
+</div>
+ 
+
+<ul>
+<li>Amazon CloudWatch offers either basic or detailed monitoring for supported AWS products.
+
+<ul>
+<li>Basic monitoring sends data points to Amazon CloudWatch every <strong>five minutes</strong> for a limited number of preselected metrics at no charge.</li>
+<li>Detailed monitoring sends data points to Amazon CloudWatch <strong>every minute</strong> and allows data aggregation for an additional charge.</li>
+</ul></li>
+<li>If you want to use detailed monitoring, you must enable it—basic is the default.</li>
+<li>Amazon CloudWatch supports monitoring and specific metrics for most AWS Cloud services including:
+
+<ul>
+<li>Auto Scaling</li>
+<li>Amazon CloudFront</li>
+<li>Amazon CloudSearch</li>
+<li>Amazon DynamoDB</li>
+<li>Amazon EC2</li>
+<li>Amazon EC2 Container Service (Amazon ECS)</li>
+<li>Amazon ElastiCache</li>
+<li>Amazon Elastic Block Store (Amazon EBS)</li>
+<li>Elastic Load Balancing</li>
+<li>Amazon Elastic MapReduce (Amazon EMR)</li>
+<li>Amazon Elasticsearch Service</li>
+<li>Amazon Kinesis Streams</li>
+<li>Amazon Kinesis Firehose</li>
+<li>AWS Lambda</li>
+<li>Amazon Machine Learning</li>
+<li>AWS OpsWorks</li>
+<li>Amazon Redshift</li>
+<li>Amazon Relational Database Service (Amazon RDS)</li>
+<li>Amazon Route 53</li>
+<li>Amazon SNS</li>
+<li>Amazon Simple Queue Service (Amazon SQS)</li>
+<li>Amazon S3</li>
+<li>AWS Simple Workflow Service (Amazon SWF)</li>
+<li>AWS Storage Gateway</li>
+<li>AWS WAF</li>
+<li>Amazon WorkSpaces.</li>
+</ul></li>
+</ul>
+
+<blockquote>
+<p>You may have an application that leverages Amazon DynamoDB, and you want to know when read requests reach a certain threshold and alert yourself with an email. You can do this by using <strong>ProvisionedReadCapacityUnits</strong> for the Amazon DynamoDB table for which you want to set an alarm.</p>
+</blockquote>
+
+<ul>
+<li>Amazon CloudWatch metrics can be retrieved by performing a GET request. When you use
+detailed monitoring, you can also aggregate metrics across a length of time you specify.</li>
+<li>Amazon CloudWatch does not <u>aggregate data across regions</u> but can aggregate across Availability Zones within a region.</li>
+<li>AWS provides a rich set of metrics included with each service, but you can also define custom metrics to monitor resources and events AWS does not have visibility into. —for example, Amazon EC2 instance memory consumption and disk metrics that are visible to the operating system of the Amazon EC2 instance but not visible to AWS or application-specific thresholds running on instances that are not known to AWS.</li>
+<li>Amazon CloudWatch supports an Application Programming Interface (API) that allows programs and scripts to PUT metrics into Amazon CloudWatch as name-value pairs that can then be used to create events and trigger alarms in the same manner as the default Amazon CloudWatch metrics.</li>
+<li>Amazon CloudWatch Logs can be used to monitor, store, and access log files from Amazon EC2 instances, AWS CloudTrail, and other sources.</li>
+<li>Amazon CloudWatch Logs can also be used to store your logs in Amazon S3 or Amazon Glacier.</li>
+<li>Logs can be retained indefinitely or according to an aging policy that will delete older logs as no longer needed.</li>
+<li>A CloudWatch Logs agent is available that provides an automated way to send log data to CloudWatch Logs for Amazon EC2 instances running Amazon Linux or Ubuntu. You can use
+the Amazon CloudWatch Logs agent installer on an existing Amazon EC2 instance to install and configure the CloudWatch Logs agent. After installation is complete, the agent confirms that it has started and it stays running until you disable it.</li>
+<li>Each <u>AWS account is limited to 5,000 alarms per AWS account</u>, and metrics data is retained for <u>two weeks (14 days) by default</u> (at the time of this writing). If you want to keep the data longer, you will need to move the logs to a persistent store like Amazon S3 or Amazon Glacier.</li>
+</ul>
+
+<div align="center">
+    <video width="620" height="440" controls>
+    <source src="https://anandvyas.in/videos/cloudwatch/Cloud-Watch-Lab.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+    </video>
+</div>
+
+<h3 id="a-name-aws-vpc-quiz-quiz-aws-cloudwatch-a"><a name="aws-vpc-quiz">Quiz: AWS CloudWatch</a></h3>
+
+
+
+<script>
+    var quiz = [{"correct":[1,4],"explanation":"","image":"","options":["Amazon Simple Email Service (Cannot be integrated with CloudWatch directly)","Amazon CloudWatch","Amazon Simple Queue Service","Amazon Route 53","Amazon Simple Notification Service"],"question":"A company needs to monitor the read and write IOPs metrics for their AWS MySQL RDS instance and send real-time alerts to their operations team. Which AWS services can accomplish this? Choose 2 answers"},{"correct":[1],"explanation":"","image":"","options":["Enable AWS CloudTrail for the load balancer.","Enable access logs on the load balancer.","Install the Amazon CloudWatch Logs agent on the load balancer.","Enable Amazon CloudWatch metrics on the load balancer"],"question":"A customer needs to capture all client connection information from their load balancer every five minutes. The company wants to use this data for analyzing traffic patterns and troubleshooting their applications. Which of the following options meets the customer requirements?"},{"correct":[0],"explanation":"","image":"","options":["Setup the CloudWatch action to terminate the instance when the CPU utilization is less than 5%","Setup the CloudWatch with Auto Scaling to terminate all the instances","Setup a job which terminates all instances after 600 minutes","It is not possible to terminate instances automatically"],"question":"A user is running a batch process on EBS backed EC2 instances. The batch process starts a few instances to process Hadoop Map reduce jobs, which can run between 50 – 600 minutes or sometimes for more time. The user wants to configure that the instance gets terminated only when the process is completed. How can the user configure this with CloudWatch?"},{"correct":[1],"explanation":"","image":"","options":["The setup will not work as CloudWatch cannot receive data across regions","CloudWatch will receive and aggregate the data based on the namespace and metric","CloudWatch will give an error since the data will conflict due to two sources","CloudWatch will take the data of the server, which sends the data first"],"question":"A user has two EC2 instances running in two separate regions. The user is running an internal memory management tool, which captures the data and sends it to CloudWatch in US East, using a CLI with the same namespace and metric. Which of the below mentioned options is true with respect to the above statement?"},{"correct":[0],"explanation":"","image":"","options":["CloudWatch will accept the data","It is not possible to send data of the future","It is not possible to send the data manually to CloudWatch","The user cannot send data for more than 60 minutes in the future"],"question":"A user is sending the data to CloudWatch using the CloudWatch API. The user is sending data 90 minutes in the future. What will CloudWatch do in this case?"},{"correct":[2],"explanation":"","image":"","options":["For the period when there is no data, the user should not send the data at all","For the period when there is no data the user should send a blank value","For the period when there is no data the user should send the value as 0","The user must upload the data to CloudWatch as having no data for some period will cause an error at CloudWatch monitoring"],"question":"A user is having data generated randomly based on a certain event. The user wants to upload that data to CloudWatch. It may happen that event may not have data generated for some period due to randomness. Which of the below mentioned options is a recommended option for this case?"},{"correct":[1],"explanation":"","image":"","options":["Value","Namespace","Metric Name","Timezone"],"question":"A user has a weighing plant. The user measures the weight of some goods every 5 minutes and sends data to AWS CloudWatch for monitoring and tracking. Which of the below mentioned parameters is mandatory for the user to include in the request list?"},{"correct":[0],"explanation":"","image":"","options":["The user needs to use AWS CLI or API to upload the data","The user can use the AWS Import Export facility to import data to CloudWatch","The user will upload data from the AWS console","The user cannot upload data to CloudWatch since it is not an AWS service metric"],"question":"A user has a refrigerator plant. The user is measuring the temperature of the plant every 15 minutes. If the user wants to send the data to CloudWatch to view the data visually, which of the below mentioned statements is true with respect to the information given above?"},{"correct":[0],"explanation":"","image":"","options":["Notify the Auto Scaling launch config to scale up","Send an SMS using SNS","Notify the Auto Scaling group to scale down","Stop the EC2 instance"],"question":"A user has launched an EC2 instance. The user is planning to setup the CloudWatch alarm. Which of the below mentioned actions is not supported by the CloudWatch alarm?"},{"correct":[0],"explanation":"","image":"","options":["Aggregate","Sum","Sample data","Average"],"question":"A user is trying to aggregate all the CloudWatch metric data of the last 1 week. Which of the below mentioned statistics is not available for the user as a part of data aggregation?"},{"correct":[2],"explanation":"","image":"","options":["Run activities on the CPU such that its utilization reaches above 75%","From the AWS console change the state to ‘Alarm’","The user can set the alarm state to ‘Alarm’ using CLI","Run the SNS action manually"],"question":"A user has setup a CloudWatch alarm on an EC2 action when the CPU utilization is above 75%. The alarm sends a notification to SNS on the alarm state. If the user wants to simulate the alarm action how can he achieve this?"},{"correct":[1],"explanation":"","image":"","options":["The user can use the CloudWatch Import tool","The user should be able to see the data in the console after around 15 minutes","If the user is uploading the custom data, the user must supply the namespace, timezone, and metric name as part of the command","The user can view as well as upload data using the console, CLI and APIs"],"question":"A user is publishing custom metrics to CloudWatch. Which of the below mentioned statements will help the user understand the functionality better?"},{"correct":[1],"explanation":"A:CloudWatch metrics are regional, C:Can’t add SNMP traps to DynamoDB as it is a managed service, D: Can’t add agents to DynamoDB as it is a managed service","image":"","options":["Tag your resources with the application name, and select the tag name as the dimension in the CloudWatch Management console to view the respective graphs","Use the CloudWatch CLI tools to pull the respective metrics from each regional endpoint. Aggregate the data offline \u0026 store it for graphing in CloudWatch.","Add SNMP traps to each instance and DynamoDB table. Leverage a central monitoring server to capture data from each instance and table. Put the aggregate data into CloudWatch for graphing","Add a CloudWatch agent to each instance and attach one to each DynamoDB table. When configuring the agent set the appropriate application name \u0026 view the graphs in CloudWatch."],"question":"An application that you are managing has EC2 instances and DynamoDB tables deployed to several AWS Regions. In order to monitor the performance of the application globally, you would like to see two graphs 1) Avg CPU Utilization across all EC2 instances and 2) Number of Throttled Requests for all DynamoDB tables. How can you accomplish this?"},{"correct":[3],"explanation":"A:Consolidation will not help limit per account, B:many instances do not directly map to cost and would not give exact cost, C:as each project already has a account, no need for resource tagging","image":"","options":["Consolidate your accounts so you have a single bill for all accounts and projects","Set up auto scaling with CloudWatch alarms using SNS to notify you when you are running too many Instances in a given account","Set up CloudWatch billing alerts for all AWS resources used by each project, with a notification occurring when the amount for each resource tagged to a particular project matches the budget allocated to the project.","Set up CloudWatch billing alerts for all AWS resources used by each account, with email notifications when it hits 50%. 80% and 90% of its budgeted monthly spend"],"question":"You have set up Individual AWS accounts for each project. You have been asked to make sure your AWS Infrastructure costs do not exceed the budget set per project for each month. Which of the following approaches can help ensure that you do not exceed the budget each month?"},{"correct":[1],"explanation":"Metrics data was available for 2 weeks before, however it has been extended now","image":"","options":["Check your CloudTrail log history around the spike’s time for any API calls that caused slowness.","Review CloudWatch Metrics graphs to determine which component(s) slowed the system down.","Review your ELB access logs in S3 to see if any ELBs in your system saw the latency.","Analyze your logs to detect bursts in traffic at that time."],"question":"You meet once per month with your operations team to review the past month’s data. During the meeting, you realize that 3 weeks ago, your monitoring system which pings over HTTP from outside AWS recorded a large spike in latency on your 3-tier web service API. You use DynamoDB for the database layer, ELB, EBS, and EC2 for the business logic tier, and SQS, ELB, and EC2 for the presentation layer. Which of the following techniques will NOT help you figure out what happened?"},{"correct":[3],"explanation":"CloudWatch Events allow subscription to AWS API calls, and direction of these events into Kinesis Streams. This allows a unified, near real-time stream for all API calls, which can be analyzed with any tool(s).","image":"","options":["Subscription to AWS Config via an SNS Topic. Use a Lambda Function to perform in-flight analysis and reactivity to changes as they occur.","Global AWS CloudTrail setup delivering to S3 with an SNS subscription to the deliver notifications, pushing into a Lambda, which inserts records into an ELK stack for analysis.","Use a CloudWatch Rule ScheduleExpression to periodically analyze IAM credential logs. Push the deltas for events into an ELK stack and perform ad-hoc analysis there.","CloudWatch Events Rules, which trigger based on all AWS API calls, submitting all events to an AWS Kinesis Stream for arbitrary downstream analysis."],"question":"You have a high security requirement for your AWS accounts. What is the most rapid and sophisticated setup you can use to react to AWS API calls to your account?"},{"correct":[2],"explanation":"CloudTrail is a batch API call collection service, CloudWatch Events enables real-time monitoring of calls through the Rules object interface","image":"","options":["AWS Config; AWS Inspector","AWS CloudTrail; AWS Config","AWS CloudTrail; CloudWatch Events","AWS Config; AWS Lambda"],"question":"To monitor API calls against our AWS account by different users and entities, we can use ____ to create a history of calls in bulk for later review, and use ____ for reacting to AWS API calls in real-time."}];
+    var currentquestion = 0, score = 0, submt=true, picked = [];
+
+    Array.prototype.diff = function(arr2) {
+        var ret = [];
+        for(var i in this) {   
+            if(arr2.indexOf( this[i] ) > -1){
+                ret.push( this[i] );
+            }
+        }
+        return ret;
+    };
+    
+    Array.prototype.equals = function (array) {
+        
+        if (!array)
+            return false;
+
+        
+        if (this.length != array.length)
+            return false;
+
+        for (var i = 0, l=this.length; i < l; i++) {
+            
+            if (this[i] instanceof Array && array[i] instanceof Array) {
+                
+                if (!this[i].equals(array[i]))
+                    return false;       
+            }           
+            else if (this[i] != array[i]) { 
+                
+                return false;   
+            }           
+        }       
+        return true;
+    }
+
+    
+    Object.defineProperty(Array.prototype, "equals", {enumerable: false});
+
+     
+    jQuery(document).ready(function($){
+        
+
+        function htmlEncode(value){
+          return $(document.createElement('div')).text(value).html();
+        }
+        
+
+        function addChoices(choices){
+            if(typeof choices !== "undefined" && $.type(choices) == "array"){
+                $('#choice-block').empty();
+                for(var i=0;i<choices.length; i++){
+                    $(document.createElement('li')).addClass('choice choice-box').attr('data-index', i).text(choices[i]).appendTo('#choice-block');                    
+                }
+            }
+        }
+        
+        
+
+        function nextQuestion(){
+            submt = true;
+            picked = [];
+            $('#explanation').empty();
+            $('#question').text(quiz[currentquestion]['question']);
+            $('#pager').text('Question ' + Number(currentquestion + 1) + ' of ' + quiz.length);
+            if(quiz[currentquestion].hasOwnProperty('image') && quiz[currentquestion]['image'] != ""){
+                if($('#question-image').length == 0){
+                    $(document.createElement('img')).addClass('question-image').attr('id', 'question-image').attr('src', quiz[currentquestion]['image']).attr('alt', htmlEncode(quiz[currentquestion]['question'])).insertAfter('#question');
+                } else {
+                    $('#question-image').attr('src', quiz[currentquestion]['image']).attr('alt', htmlEncode(quiz[currentquestion]['question']));
+                }
+            } else {
+                $('#question-image').remove();
+            }
+            addChoices(quiz[currentquestion]['options']);
+
+            var multichoice = quiz[currentquestion]['correct'].length > 1 ? true : false;
+            setupButtons(multichoice);
+        }
+        
+
+        function processQuestion(choice){
+            var flag = quiz[currentquestion]['correct'].equals(choice);
+            if(flag){
+                $('.choice').eq(choice).css({'background-color':'#50D943'});
+                $('#explanation').html('<strong>Correct!</strong> ' + htmlEncode(quiz[currentquestion]['explanation']));
+                score++;
+            } else {
+                $('.choice').eq(choice).css({'background-color':'#D92623'});
+                $('#explanation').html('<strong>Incorrect.</strong> ' + htmlEncode(quiz[currentquestion]['explanation']));
+            }
+            currentquestion++;
+            $('#submitbutton').html('NEXT QUESTION &raquo;').on('click', function(){
+                if(currentquestion == quiz.length){
+                    endQuiz();
+                } else {
+                    $(this).text('Check Answer').css({'color':'#222'}).off('click');
+                    nextQuestion();
+                }
+            })
+        }
+        
+
+        function setupButtons(multichoice){
+            console.log(multichoice);
+            $('.choice').on('click', function(){
+                var curElement = $(this);
+                var curElementIndex = curElement.attr('data-index');
+                var myClass = curElement.attr("class");
+                
+                if(multichoice){
+                    if(curElement.hasClass("selectedAns")){
+                        var index = picked.indexOf(curElementIndex);
+                        picked.splice(index, 1);
+                        curElement.removeClass("selectedAns");
+                    }else{
+                        picked.push(parseInt(curElementIndex));
+                        curElement.addClass("selectedAns");
+                    }
+                }else{
+                    picked = [];
+                    $('.choice').removeClass("selectedAns");
+                    curElement.addClass("selectedAns");
+                    picked.push(parseInt(curElementIndex));
+                }
+                
+                
+                if(submt){
+                    submt=false;
+                    $('#submitbutton').css({'color':'#000'}).on('click', function(){
+                        $('.choice').off('click');
+                        $(this).off('click');
+                        processQuestion(picked);
+                    });
+                }
+            })
+        }
+        
+        
+
+        function endQuiz(){
+            $('#explanation').empty();
+            $('#question').empty();
+            $('#choice-block').empty();
+            $('#submitbutton').remove();
+            $('#question').text("You got " + score + " out of " + quiz.length + " correct.");
+            $(document.createElement('h2')).css({'text-align':'center', 'font-size':'4em'}).text(Math.round(score/quiz.length * 100) + '%').insertAfter('#question');
+        }
+        
+
+        function init(){
+            
+
+            
+            if(typeof quiz !== "undefined" && $.type(quiz) === "array"){
+                var container = $('#frame');
+                quiz.forEach(function (row) {
+                   
+                });
+                
+                
+                $(document.createElement('p')).addClass('pager').attr('id','pager').text('Question 1 of ' + quiz.length).appendTo('#frame');
+                
+                $(document.createElement('h2')).addClass('question').attr('id', 'question').text(quiz[0]['question']).appendTo('#frame');
+                
+                if(quiz[0].hasOwnProperty('image') && quiz[0]['image'] != ""){
+                    $(document.createElement('img')).addClass('question-image').attr('id', 'question-image').attr('src', quiz[0]['image']).attr('alt', htmlEncode(quiz[0]['question'])).appendTo('#frame');
+                }
+                
+                $(document.createElement('ul')).attr('id', 'choice-block').appendTo('#frame');
+            
+                
+                addChoices(quiz[0]['options']);
+                
+                $(document.createElement('p')).addClass('explanation').attr('id','explanation').html('&nbsp;').appendTo('#frame');
+                
+                
+                $(document.createElement('div')).addClass('choice-box').attr('id', 'submitbutton').text('Check Answer').css({'font-weight':700,'color':'#222','padding':'30px 0'}).appendTo('#frame');
+                
+                var multichoice = quiz[0]['correct'].length > 1 ? true : false;
+                setupButtons(multichoice);
+            }
+        }
+        init();
+    });
+
+</script>
+<style>
+    #frame {
+        background-color: #fff;
+        padding: 12px 20px;
+        border-radius: 4px;
+        border: 1px solid #d3e0e9;
+    }
+
+    .selectedAns {
+        border-color: royalblue;
+        background-color: burlywood;
+    }
+</style>
+<div id="frame" role="content"></div>
+        </div>
+        
+    </div>
+    
+    
+    <footer class="sticky-footer">
+    <div class="container">
+        <div class="text-center">
+            <small>Copyright © Anand Vyas 2019</small>
+        </div>
+    </div>
+</footer>
+
+<a class="scroll-to-top rounded" href="#page-top">
+    <i class="fa fa-angle-up"></i>
+</a>
+
+
+<script src="https://anandvyas.in/js/popper.min.js"></script>
+<script src="https://anandvyas.in/js/bootstrap.min.js"></script>
+<script src="https://anandvyas.in/js/highlight.min.js"></script>
+<script src="https://anandvyas.in/js/moment.min.js"></script>
+<script src="https://anandvyas.in/js/clipboard.min.js"></script>
+
+<script src="https://anandvyas.in/js/jquery.easing.min.js"></script>
+
+<script src="https://anandvyas.in/js/sb-admin.js"></script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-108803266-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'UA-108803266-1');
+</script>
+  </div>
+<script data-no-instant>document.write('<script src="/livereload.js?port=1313&mindelay=10"></' + 'script>')</script></body>
+</html>

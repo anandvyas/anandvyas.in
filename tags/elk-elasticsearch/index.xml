@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Elk Elasticsearch on Anand vyas</title>
+    <link>https://anandvyas.in/tags/elk-elasticsearch/</link>
+    <description>Recent content in Elk Elasticsearch on Anand vyas</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 21 Apr 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://anandvyas.in/tags/elk-elasticsearch/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Elasticsearch</title>
+      <link>https://anandvyas.in/elk/elasticsearch/</link>
+      <pubDate>Sat, 21 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://anandvyas.in/elk/elasticsearch/</guid>
+      <description>Elasticsearch is an open-source, RESTful, distributed search and analytics engine built on Apache Lucene.
+Installation Elasticsearch # update your package index sudo apt-get update # Download latest version # Check version information: https://www.elastic.co/downloads/past-releases wget https://download.elastic.co/elasticsearch/release/org/elasticsearch/distribution/deb/elasticsearch/2.3.1/elasticsearch-2.3.1.deb # Install through dpkg command sudo dpkg -i elasticsearch-2.3.1.deb  Installation Elasticsearch from Repository # update your system sudo apt-get update # install Java sudo apt-get install default-jre # add Elastic’s signing key wget -qO - https://artifacts.</description>
+    </item>
+    
+  </channel>
+</rss>

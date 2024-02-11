@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Internet Protocol on Anand vyas</title>
+    <link>https://anandvyas.in/tags/internet-protocol/</link>
+    <description>Recent content in Internet Protocol on Anand vyas</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 27 Jul 2017 00:15:00 +0200</lastBuildDate>
+    
+	<atom:link href="https://anandvyas.in/tags/internet-protocol/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>IP - Internet Protocol</title>
+      <link>https://anandvyas.in/aws/ip-address/</link>
+      <pubDate>Thu, 27 Jul 2017 00:15:00 +0200</pubDate>
+      
+      <guid>https://anandvyas.in/aws/ip-address/</guid>
+      <description>&lt;p&gt;The Internet Protocol (IP) is the method or protocol by which data is sent from one computer to another on the Internet. Each computer (known as a host) on the Internet has at least one IP address that uniquely identifies it from all other computers on the Internet.&lt;/p&gt;
+
+&lt;div class=&#34;text-center&#34;&gt;
+    &lt;img class=&#34;img-responsive&#34; src=&#34;https://anandvyas.in/images/aws/ip-address.jpg&#34; alt=&#34;IP - Internet Protocol&#34; /&gt;
+&lt;/div&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

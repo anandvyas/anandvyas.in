@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>AWS Auto Scaling - Anand vyas</title>
+    <meta content="AWS Auto Scaling - Anand vyas" property="og:title">
+    <meta content="" name="keywords">
+    <meta content="" property="og:description">
+    <meta name="author" content="Anand Vyas">
+
+    
+    <link href="https://anandvyas.in/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link href="https://anandvyas.in/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    
+    <link href="https://anandvyas.in/css/highlighter.css" rel="stylesheet">
+    
+    <link href="https://anandvyas.in/css/sb-admin.css" rel="stylesheet">
+    <link href="https://anandvyas.in/css/about.css" rel="stylesheet">
+
+    <script src="https://anandvyas.in/js/jquery.min.js"></script>
+</head>
+<body class="fixed-nav sticky-footer bg-dark sidenav-toggled" id="page-top">
+  
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+    <a class="navbar-brand" href="https://anandvyas.in/">
+        <img src="https://anandvyas.in/images/profile/logo.png" />
+        <span>Anand vyas</span>
+    </a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav navbar-sidenav">
+            <li class="nav-item sidebar-profile text-center">
+                <div class="profile-pic">
+                    <img src="https://anandvyas.in/images/profile/avatar.jpg" alt="avatar">
+                </div>
+                <div class="profile-detail">
+                    
+                    <span>Solution Architect</span> 
+                    <span>Cloud Architect</span> 
+                    <span>DevOps</span> 
+                    <span>Tech Lead</span> 
+                </div>
+            </li>
+            
+            <li class="nav-item sidebar-menu" data-toggle="tooltip" data-placement="right" title="Home">
+                <a class="nav-link" href="https://anandvyas.in/">
+                <i class="fa fa-fw fa fa-home"></i>
+                <span class="nav-link-text">Home</span>
+                </a>
+            </li>
+            
+            <li class="nav-item sidebar-menu" data-toggle="tooltip" data-placement="right" title="About">
+                <a class="nav-link" href="https://anandvyas.in/about">
+                <i class="fa fa-fw fa fa-user-circle"></i>
+                <span class="nav-link-text">About</span>
+                </a>
+            </li>
+            
+            <li class="nav-item sidebar-menu" data-toggle="tooltip" data-placement="right" title="Categories">
+                <a class="nav-link" href="https://anandvyas.in/categories">
+                <i class="fa fa-fw fa fa-dashboard"></i>
+                <span class="nav-link-text">Categories</span>
+                </a>
+            </li>
+            
+            <li class="nav-item sidebar-menu" data-toggle="tooltip" data-placement="right" title="Tags">
+                <a class="nav-link" href="https://anandvyas.in/tags">
+                <i class="fa fa-fw fa fa-tags"></i>
+                <span class="nav-link-text">Tags</span>
+                </a>
+            </li>
+            
+        </ul>
+        <ul class="navbar-nav sidenav-social">
+            
+            <li><a href="#" target="_blank"><i class="fa fa-mobile"></i></a></li>
+            
+            <li><a href="mailto:anandvyas@live.com" target="_blank"><i class="fa fa-envelope"></i></a></li>
+            
+            <li><a href="https://twitter.com/anandvyaas" target="_blank"><i class="fa fa-twitter"></i></a></li>
+            
+            <li><a href="https://www.linkedin.com/in/anandvyaas" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+            
+            <li><a href="https://www.instagram.com/anandvyaas" target="_blank"><i class="fa fa-instagram"></i></a></li>
+            
+            <li><a href="https://github.com/anandvyas" target="_blank"><i class="fa fa-github"></i></a></li>
+            
+            <li><a href="https://stackoverflow.com/users/8208060/anand-vyas" target="_blank"><i class="fa fa-stack-overflow"></i></a></li>
+            
+        </ul>
+        <ul class="navbar-nav sidenav-toggler">
+            <li class="nav-item">
+                <a class="nav-link text-center" id="sidenavToggler">
+            <i class="fa fa-fw fa-angle-left"></i>
+            </a>
+            </li>
+        </ul>
+        
+        
+    </div>
+</nav>
+  
+  <div class="content-wrapper">
+    <div class="container-fluid">
+    
+
+
+<ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="https://anandvyas.in/">Home</a></li>
+
+
+    
+    <li class="breadcrumb-item active"><a href='https://anandvyas.in/aws'>aws</a></li>
+    
+    
+
+
+    
+    <li class="breadcrumb-item active"><a href='https://anandvyas.in/aws/aws-auto-scaling'>aws-auto-scaling</a></li>
+    
+    
+
+
+    
+
+</ol>
+
+        <div class="post">
+            <h1>AWS Auto Scaling</h1>
+            <span class="post-date">Tue, Jul 25, 2017</span>
+            <p>Auto Scaling is a service that allows you to scale your Amazon EC2 capacity automatically by scaling out and scaling in according to criteria that you define. With Auto Scaling, you can ensure that the number of running Amazon EC2 instances increases during demand spikes or peak demand periods to maintain application performance and decreases automatically during demand lulls or troughs to minimize costs.</p>
+
+<div class="text-center">
+    <img class="img-responsive" src="https://anandvyas.in/images/aws-auto-scaling.jpg" alt="AWS Auto Scaling" />
+</div>
+ 
+
+<h3 id="a-name-aws-auto-scaling-types-auto-scaling-types-a"><a name="#aws-auto-scaling-types">Auto Scaling Types</a></h3>
+
+<p>Auto Scaling performs a periodic health check on running instances within an Auto Scaling group. When Auto Scaling finds an unhealthy instance, it terminates that instance and launches a new one.</p>
+
+<ul>
+<li><strong>Manual Scaling</strong>: Manual scaling is the most basic way to scale your resources. You only need to specify the change in the maximum, minimum, or desired capacity of your Auto Scaling group. Auto Scaling manages the process of creating or terminating instances to maintain the updated capacity.</li>
+<li><strong>Scheduled Scaling</strong>: Sometimes you know exactly when you will need to increase or decrease the number of instances in your group, simply because that need arises on a predictable schedule. Scheduled scaling means that scaling actions are performed automatically as a function of time and date.</li>
+<li><strong>Dynamic Scaling</strong>: Dynamic scaling lets you define parameters that control the Auto Scaling process in a scaling policy. For example, you might create a policy that adds more Amazon EC2 instances to the web tier when the network bandwidth, measured by Amazon CloudWatch, reaches a certain threshold.</li>
+</ul>
+
+<h3 id="a-name-aws-auto-scaling-components-auto-scaling-components-a"><a name="#aws-auto-scaling-components">Auto Scaling Components</a></h3>
+
+<p>Auto Scaling has several components that need to be configured to work properly:</p>
+
+<ul>
+<li>a launch configuration,</li>
+<li>an Auto Scaling group,</li>
+
+<li><p>and an optional scaling policy.</p></li>
+
+<li><p><strong>Launch configuration</strong>:</p>
+
+<ul>
+<li>A launch configuration is the template that Auto Scaling uses to create new instances, and it is composed of
+
+<ul>
+<li>the configuration name,</li>
+<li>Amazon Machine Image (AMI),</li>
+<li>Amazon EC2 instance type,</li>
+<li>security group,</li>
+<li>and instance key pair.</li>
+</ul></li>
+<li>Each Auto Scaling group can have only one launch configuration at a time.</li>
+<li>The CLI command that follows will create a launch configuration with the following attributes:
+
+<ul>
+<li>Name: myLC</li>
+<li>AMI: ami-0535d66c</li>
+<li>Instance type: m3.medium</li>
+<li>Security groups: sg-f57cde9d</li>
+<li>Instance key pair: myKeyPair</li>
+</ul></li>
+<li>ssh command
+
+<ul>
+<li><code>aws autoscaling create-launch-configuration -–launch-configuration-name myLC --image-id ami-0535d66c --instance-type m3.medium --security-groups sg-f57cde9d --key-name myKeyPair</code></li>
+</ul></li>
+<li>The default limit for launch configurations is 100 per region. If you exceed this limit, the call to create-launch-configuration will fail.</li>
+<li>You may view and update this limit by running describe-account-limits at the command line
+
+<ul>
+<li><code>aws autoscaling describe-account-limits</code></li>
+</ul></li>
+<li>the default number of Amazon EC2 instances you can currently launch within a region, which is 20</li>
+</ul></li>
+
+<li><p><strong>Auto Scaling Group</strong></p>
+
+<ul>
+<li>An Auto Scaling group is a collection of Amazon EC2 instances managed by the Auto Scaling service.</li>
+<li>Each Auto Scaling group contains configuration options that control when Auto Scaling should launch new instances and terminate existing instances.</li>
+<li>An Auto Scaling group must contain a name and a minimum and maximum number of instances that can be in the group. You can optionally specify desired capacity, which is the number of instances that the group must have at all times. If you don’t specify a desired capacity, the default desired capacity is the minimum number of instances that you specify.</li>
+<li>The CLI command that follows will create an Auto Scaling group that references the previous launch configuration and includes the following specifications:
+
+<ul>
+<li>Name: myASG</li>
+<li>Launch configuration: myLC</li>
+<li>Availability Zones: us-east-1a and us-east-1c</li>
+<li>Minimum size: 1</li>
+<li>Desired capacity: 3</li>
+<li>Maximum capacity: 10</li>
+<li>Load balancers: myELB</li>
+</ul></li>
+<li>ssh Command
+
+<ul>
+<li><code>aws autoscaling create-auto-scaling-group --auto–scaling-group-name myASG --launch-configuration-name myLC --availability-zones us-east-1a,us-east-1c --minsize 1 --max-size 10 --desired-capacity 3 -load-balancer-names myELB</code></li>
+</ul></li>
+<li>An Auto Scaling group can use either On-Demand or Spot Instances as the Amazon EC2 instances it manages.</li>
+<li>On-Demand is the default, but Spot Instances can be used by referencing a maximum bid price in the launch configuration (—spot-price &ldquo;0.15&rdquo;) associated with the Auto Scaling group.</li>
+<li>Auto Scaling supports using cost-effective Spot Instances. This can be very useful when you are hosting sites where you want to provide additional compute capacity but are price constrained.</li>
+</ul></li>
+
+<li><p><strong>Scaling Policy</strong></p>
+
+<ul>
+<li>You can associate Amazon CloudWatch alarms and scaling policies with an Auto Scaling group to adjust Auto Scaling dynamically.</li>
+<li>There are several ways to configure a scaling policy:
+
+<ul>
+<li>You can increase or decrease by a specific number of instances</li>
+<li>such as adding two instances</li>
+<li>you can target a specific number of instances</li>
+<li>such as a maximum of five total Amazon EC2 instances</li>
+<li>or you can adjust based on a percentage</li>
+<li>cloudwatch alarm threshold trigger</li>
+</ul></li>
+<li><strong>You can associate more than one scaling policy with an Auto Scaling group.</strong></li>
+<li>For Example
+
+<ul>
+<li>CPU utilization is greater than 75 percent for two minutes.</li>
+<li>CPU utilization is less than 40 percent for 20 minutes.</li>
+</ul></li>
+<li>SSH Command
+
+<ul>
+<li><code>aws autoscaling put-scaling-policy --auto-scaling-group-name myASG --policy-name CPULoadScaleOut --scaling-adjustment 1 --adjustment-type ChangeInCapacity --cooldown 30</code></li>
+<li><code>aws autoscaling put-scaling-policy --auto-scaling-group-name myASG --policy-name CPULoadScaleIn --scaling-adjustment -1 --adjustment-type ChangeInCapacity --cooldown 600</code></li>
+</ul></li>
+</ul></li>
+</ul>
+
+<div class="embed video-player">
+    <iframe class="youtube-player anand" type="text/html" width="640" height="385" src="http://www.youtube.com/embed/7SfVZqOVcCI" allowfullscreen frameborder="0">
+    </iframe>
+</div>
+
+<h3 id="a-name-aws-vpc-quiz-quiz-aws-autoscaling-a"><a name="aws-vpc-quiz">Quiz: AWS AutoScaling</a></h3>
+
+<ul>
+<li><p>A company is building a two-tier web application to serve dynamic transaction-based content. The data tier is leveraging an Online Transactional Processing (OLTP) database. What services should you leverage to enable an elastic and scalable web tier?</p>
+
+<ul>
+<li><strong>Elastic Load Balancing, Amazon EC2, and Auto Scaling</strong></li>
+<li>Elastic Load Balancing, Amazon RDS with Multi-AZ, and Amazon S3</li>
+<li>Amazon RDS with Multi-AZ and Auto Scaling</li>
+<li>Amazon EC2, Amazon DynamoDB, and Amazon S3</li>
+</ul></li>
+
+<li><p>You have been given a scope to deploy some AWS infrastructure for a large organization. The requirements are that you will have a lot of EC2 instances but may need to add more when the average utilization of your Amazon EC2 fleet is high and conversely remove them when CPU utilization is low. Which AWS services would be best to use to accomplish this?</p>
+
+<ul>
+<li>Amazon CloudFront, Amazon CloudWatch and Elastic Load Balancing</li>
+<li>Auto Scaling, Amazon CloudWatch and AWS CloudTrail</li>
+<li><strong>Auto Scaling, Amazon CloudWatch and Elastic Load Balancing</strong></li>
+<li>Auto Scaling, Amazon CloudWatch and AWS Elastic Beanstalk</li>
+</ul></li>
+
+<li><p>A user has configured ELB with Auto Scaling. The user suspended the Auto Scaling AddToLoadBalancer, which adds instances to the load balancer. process for a while. What will happen to the instances launched during the suspension period?</p>
+
+<ul>
+<li><strong>The instances will not be registered with ELB and the user has to manually register when the process is resumed</strong></li>
+<li>The instances will be registered with ELB only once the process has resumed</li>
+<li>Auto Scaling will not launch the instance during this period due to process suspension</li>
+<li>It is not possible to suspend only the AddToLoadBalancer process</li>
+</ul></li>
+
+<li><p>You have an Auto Scaling group associated with an Elastic Load Balancer (ELB). You have noticed that instances launched via the Auto Scaling group are being marked unhealthy due to an ELB health check, but these unhealthy instances are not being terminated. What do you need to do to ensure trial instances marked unhealthy by the ELB will be terminated and replaced?</p>
+
+<ul>
+<li>Change the thresholds set on the Auto Scaling group health check</li>
+<li><strong>Add an Elastic Load Balancing health check to your Auto Scaling group</strong></li>
+<li>Increase the value for the Health check interval set on the Elastic Load Balancer</li>
+<li>Change the health check set on the Elastic Load Balancer to use TCP rather than HTTP checks</li>
+</ul></li>
+
+<li><p>You are responsible for a web application that consists of an Elastic Load Balancing (ELB) load balancer in front of an Auto Scaling group of Amazon Elastic Compute Cloud (EC2) instances. For a recent deployment of a new version of the application, a new Amazon Machine Image (AMI) was created, and the Auto Scaling group was updated with a new launch configuration that refers to this new AMI. During the deployment, you received complaints from users that the website was responding with errors. All instances passed the ELB health checks. What should you do in order to avoid errors for future deployments? (Choose 2 answer) [PROFESSIONAL]</p>
+
+<ul>
+<li>Add an Elastic Load Balancing health check to the Auto Scaling group. Set a short period for the health checks to operate as soon as possible in order to prevent premature registration of the instance to the load balancer.</li>
+<li>Enable EC2 instance CloudWatch alerts to change the launch configuration’s AMI to the previous one. Gradually terminate instances that are using the new AMI.</li>
+<li><strong>Set the Elastic Load Balancing health check configuration to target a part of the application that fully tests application health and returns an error if the tests fail.</strong></li>
+<li><strong>Create a new launch configuration that refers to the new AMI, and associate it with the group. Double the size of the group, wait for the new instances to become healthy, and reduce back to the original size. If new instances do not become healthy, associate the previous launch configuration.</strong></li>
+<li>Increase the Elastic Load Balancing Unhealthy Threshold to a higher value to prevent an unhealthy instance from going into service behind the load balancer.</li>
+</ul></li>
+
+<li><p>What is the order of most-to-least rapidly-scaling (fastest to scale first)? A) EC2 + ELB + Auto Scaling B) Lambda C) RDS</p>
+
+<ul>
+<li><strong>B, A, C</strong> (Lambda is designed to scale instantly. EC2 + ELB + Auto Scaling require single-digit minutes to scale out. RDS will take at least 15 minutes, and will apply OS patches or any other updates when applied.)
+C, B, A
+C, A, B
+A, C, B</li>
+</ul></li>
+
+<li><p>A user has hosted an application on EC2 instances. The EC2 instances are configured with ELB and Auto Scaling. The application server session time out is 2 hours. The user wants to configure connection draining to ensure that all in-flight requests are supported by ELB even though the instance is being deregistered. What time out period should the user specify for connection draining?</p>
+
+<ul>
+<li>5 minutes</li>
+<li><strong>1 hour</strong> (max allowed is 3600 secs that is close to 2 hours to keep the in flight requests alive)</li>
+<li>30 minutes</li>
+<li>2 hours</li>
+</ul></li>
+</ul>
+
+<ol>
+<li><p>Which of the following are required elements of an Auto Scaling group? (Choose 2 answers)</p>
+
+<ul>
+<li><strong>A. Minimum size</strong></li>
+<li>B. Health checks</li>
+<li>C. Desired capacity</li>
+<li><strong>D. Launch configuration</strong>
+Exp: An Auto Scaling group must have a minimum size and a launch configuration defined in order to be created. Health checks and a desired capacity are optional.<br /></li>
+</ul></li>
+
+<li><p>You have created an Elastic Load Balancing load balancer listening on port 80, and you registered it with a single Amazon Elastic Compute Cloud (Amazon EC2) instance also listening on port 80. A client makes a request to the load balancer with the correct protocol and port for the load balancer. In this scenario, how many connections does the balancer maintain?</p>
+
+<ul>
+<li>A. 1</li>
+<li><strong>B. 2</strong></li>
+<li>C. 3</li>
+<li>D. 4
+Exp: The load balancer maintains two separate connections: one connection with the client and one connection with the Amazon EC2 instance.</li>
+</ul></li>
+
+<li><p>How long does Amazon CloudWatch keep metric data?</p>
+
+<ul>
+<li>A. 1 day</li>
+<li>B. 2 days</li>
+<li>C. 1 week</li>
+<li><strong>D. 2 weeks</strong></li>
+</ul></li>
+</ol>
+
+<p>exp: Amazon CloudWatch metric data is kept for 2 weeks.</p>
+
+<ol>
+<li>Which of the following are the minimum required elements to create an Auto Scaling launch configuration?
+
+<ul>
+<li><strong>A. Launch configuration name, Amazon Machine Image (AMI), and instance type</strong></li>
+<li>B. Launch configuration name, AMI, instance type, and key pair</li>
+<li>C. Launch configuration name, AMI, instance type, key pair, and security group</li>
+<li>D. Launch configuration name, AMI, instance type, key pair, security group, and block device mapping</li>
+</ul></li>
+</ol>
+
+<p>Exp: Only the launch configuration name, AMI, and instance type are needed to create an Auto Scaling launch configuration. Identifying a key pair, security group, and a block device mapping are optional elements for an Auto Scaling launch configuration.</p>
+
+<ol>
+<li>You are responsible for the application logging solution for your company’s existing applications running on multiple Amazon EC2 instances. Which of the following is the best approach for aggregating the application logs within AWS?
+
+<ul>
+<li>A. Amazon CloudWatch custom metrics</li>
+<li><strong>B. Amazon CloudWatch Logs Agent</strong></li>
+<li>C. An Elastic Load Balancing listener</li>
+<li>D. An internal Elastic Load Balancing load balancer</li>
+</ul></li>
+</ol>
+
+<p>Exp: You can use the Amazon CloudWatch Logs Agent installer on existing Amazon EC2
+instances to install and configure the CloudWatch Logs Agent.</p>
+
+<ol>
+<li>Which of the following must be configured on an Elastic Load Balancing load balancer to accept incoming traffic?
+
+<ul>
+<li>A. A port</li>
+<li>B. A network interface</li>
+<li><strong>C. A listener</strong></li>
+<li>D. An instance</li>
+</ul></li>
+</ol>
+
+<p>Exp: You configure your load balancer to accept incoming traffic by specifying one or more listeners.</p>
+
+<ol>
+<li>You create an Auto Scaling group in a new region that is configured with a minimum size value of 10, a maximum size value of 100, and a desired capacity value of 50. However, you notice that 30 of the Amazon Elastic Compute Cloud (Amazon EC2) instances within the Auto Scaling group fail to launch. Which of the following is the cause of this behavior?
+
+<ul>
+<li>A. You cannot define an Auto Scaling group larger than 20.</li>
+<li>B. The Auto Scaling group maximum value cannot be more than 20.</li>
+<li>C. You did not attach an Elastic Load Balancing load balancer to the Auto Scaling group.</li>
+<li><strong>D. You have not raised your default Amazon EC2 capacity (20) for the new region.</strong></li>
+</ul></li>
+</ol>
+
+<p>Exp: The default Amazon EC2 instance limit for all regions is 20.</p>
+
+<ol>
+<li>You want to host multiple Hypertext Transfer Protocol Secure (HTTPS) websites on a fleet of Amazon EC2 instances behind an Elastic Load Balancing load balancer with a single X.509 certificate. How must you configure the Secure Sockets Layer (SSL) certificate so that clients connecting to the load balancer are not presented with a warning when they connect?
+
+<ul>
+<li><strong>A. Create one SSL certificate with a Subject Alternative Name (SAN) value for each website name.</strong></li>
+<li>B. Create one SSL certificate with the Server Name Indication (SNI) value checked.</li>
+<li>C. Create multiple SSL certificates with a SAN value for each website name.</li>
+<li>D. Create SSL certificates for each Availability Zone with a SAN value for each website name.</li>
+</ul></li>
+</ol>
+
+<p>Exp: An SSL certificate must specify the name of the website in either the subject name or listed as a value in the SAN extension of the certificate in order for connecting clients to not receive a warning.</p>
+
+<ol>
+<li>Your web application front end consists of multiple Amazon Compute Cloud (Amazon EC2) instances behind an Elastic Load Balancing load balancer. You have configured the load balancer to perform health checks on these Amazon EC2 instances. If an instance fails to pass health checks, which statement will be true?
+
+<ul>
+<li>A. The instance is replaced automatically by the load balancer.</li>
+<li>B. The instance is terminated automatically by the load balancer.</li>
+<li><strong>C. The load balancer stops sending traffic to the instance that failed its health check.</strong></li>
+<li>D. The instance is quarantined by the load balancer for root cause analysis.</li>
+</ul></li>
+</ol>
+
+<p>exp: When Amazon EC2 instances fail the requisite number of consecutive health checks,
+the load balancer stops sending traffic to the Amazon EC2 instance.</p>
+
+<ol>
+<li>In the basic monitoring package for Amazon Elastic Compute Cloud (Amazon EC2), what Amazon CloudWatch metrics are available?
+
+<ul>
+<li>A. Web server visible metrics such as number of failed transaction requests</li>
+<li>B. Operating system visible metrics such as memory utilization</li>
+<li>C. Database visible metrics such as number of connections</li>
+<li><strong>D. Hypervisor visible metrics such as CPU utilization</strong></li>
+</ul></li>
+</ol>
+
+<p>Exp: Amazon CloudWatch metrics provide hypervisor visible metrics.</p>
+
+<ol>
+<li>A cell phone company is running dynamic-content television commercials for a contest. They want their website to handle traffic spikes that come after a commercial airs. The website is interactive, offering personalized content to each visitor based on location, purchase history, and the current commercial airing. Which architecture will configure Auto Scaling to scale out to respond to spikes of demand, while minimizing costs during quiet periods?
+
+<ul>
+<li>A. Set the minimum size of the Auto Scaling group so that it can handle high traffic volumes without needing to scale out.</li>
+<li>B. Create an Auto Scaling group large enough to handle peak traffic loads, and then stop some instances. Configure Auto Scaling to scale out when traffic increases using the stopped instances, so new capacity will come online quickly.</li>
+<li><strong>C. Configure Auto Scaling to scale out as traffic increases. Configure the launch configuration to start new instances from a preconfigured Amazon Machine Image(AMI).</strong></li>
+<li>D. Use Amazon CloudFront and Amazon Simple Storage Service (Amazon S3) to cache changing content, with the Auto Scaling group set as the origin. Configure Auto Scaling to have sufficient instances necessary to initially populate CloudFront and Amazon ElastiCache, and then scale in after the cache is fully populated.</li>
+</ul></li>
+</ol>
+
+<p>Exp: Auto Scaling is designed to scale out based on an event like increased traffic while being cost effective when not needed.</p>
+
+<ol>
+<li>For an application running in the ap-northeast-1 region with three Availability Zones (apnortheast-1a, ap-northeast-1b, and ap-northeast-1c), which instance deployment provides high availability for the application that normally requires nine running Amazon Elastic Compute Cloud (Amazon EC2) instances but can run on a minimum of 65 percent capacity while Auto Scaling launches replacement instances in the remaining Availability Zones?
+
+<ul>
+<li>A. Deploy the application on four servers in ap-northeast-1a and five servers in apnortheast-1b, and keep five stopped instances in ap-northeast-1a as reserve.</li>
+<li><strong>B. Deploy the application on three servers in ap-northeast-1a, three servers in apnortheast-1b, and three servers in ap-northeast-1c.</strong></li>
+<li>C. Deploy the application on six servers in ap-northeast-1b and three servers in apnortheast-1c.</li>
+<li>D. Deploy the application on nine servers in ap-northeast-1b, and keep nine stopped instances in ap-northeast-1a as reserve.</li>
+</ul></li>
+</ol>
+
+<p>Exp: Auto Scaling will provide high availability across three Availability Zones with three Amazon EC2 instances in each and keep capacity above the required minimum capacity, even in the event of an entire Availability Zone becoming unavailable.</p>
+
+<ol>
+<li>Which of the following are characteristics of the Auto Scaling service on AWS? (Choose 3 answers)
+
+<ul>
+<li>A. Sends traffic to healthy instances</li>
+<li><strong>B. Responds to changing conditions by adding or terminating Amazon Elastic Compute Cloud (Amazon EC2) instances</strong></li>
+<li>C. Collects and tracks metrics and sets alarms</li>
+<li>D. Delivers push notifications</li>
+<li><strong>E. Launches instances from a specified Amazon Machine Image (AMI)</strong></li>
+<li><strong>F. Enforces a minimum number of running Amazon EC2 instances</strong></li>
+</ul></li>
+</ol>
+
+<p>Exp: Auto Scaling responds to changing conditions by adding or terminating instances,
+launches instances from an AMI specified in the launch configuration associated with
+the Auto Scaling group, and enforces a minimum number of instances in the min-size
+parameter of the Auto Scaling group.</p>
+
+<ol>
+<li>Why is the launch configuration referenced by the Auto Scaling group instead of being part of the Auto Scaling group?
+
+<ul>
+<li>A. It allows you to change the Amazon Elastic Compute Cloud (Amazon EC2) instance
+type and Amazon Machine Image (AMI) without disrupting the Auto Scaling group.</li>
+<li>B. It facilitates rolling out a patch to an existing set of instances managed by an Auto Scaling group.</li>
+<li>C. It allows you to change security groups associated with the instances launched
+without having to make changes to the Auto Scaling group.</li>
+<li><strong>D. All of the above</strong></li>
+<li>E. None of the above</li>
+</ul></li>
+</ol>
+
+<p>Exp: A, B, and C are all true statements about launch configurations being loosely coupled and referenced by the Auto Scaling group instead of being part of the Auto Scaling group.</p>
+
+<ol>
+<li>An Auto Scaling group may use: (Choose 2 answers)
+
+<ul>
+<li><strong>A. On-Demand Instances</strong></li>
+<li>B. Stopped instances</li>
+<li><strong>C. Spot Instances</strong></li>
+<li>D. On-premises instances</li>
+<li>E. Already running instances if they use the same Amazon Machine Image (AMI) as the Auto Scaling group’s launch configuration and are not already part of another Auto Scaling group</li>
+</ul></li>
+</ol>
+
+<p>Exp: An Auto Scaling group may use On-Demand and Spot Instances. An Auto Scaling group may not use already stopped instances, instances running someplace other than AWS, and already running instances not started by the Auto Scaling group itself.</p>
+
+<ol>
+<li>Amazon CloudWatch supports which types of monitoring plans? (Choose 2 answers)
+
+<ul>
+<li><strong>A. Basic monitoring, which is free</strong></li>
+<li>B. Basic monitoring, which has an additional cost</li>
+<li>C. Ad hoc monitoring, which is free</li>
+<li>D. Ad hoc monitoring, which has an additional cost</li>
+<li>E. Detailed monitoring, which is free</li>
+<li>F. <strong>Detailed monitoring, which has an additional cost</strong></li>
+</ul></li>
+</ol>
+
+<p>Exp: Amazon CloudWatch has two plans: basic, which is free, and detailed, which has an
+additional cost. There is no ad hoc plan for Amazon CloudWatch.</p>
+
+<ol>
+<li>Elastic Load Balancing health checks may be: (Choose 3 answers)
+
+<ul>
+<li><strong>A. A ping</strong></li>
+<li>B. A key pair verification</li>
+<li><strong>C. A connection attempt</strong></li>
+<li><strong>D. A page request</strong></li>
+<li>E. An Amazon Elastic Compute Cloud (Amazon EC2) instance status check</li>
+</ul></li>
+</ol>
+
+<p>Exp: An Elastic Load Balancing health check may be a ping, a connection attempt, or a
+page that is checked.</p>
+
+<ol>
+<li>When an Amazon Elastic Compute Cloud (Amazon EC2) instance registered with an Elastic Load Balancing load balancer using connection draining is deregistered or unhealthy, which of the following will happen? (Choose 2 answers)
+
+<ul>
+<li>A. Immediately close all existing connections to that instance.</li>
+<li><strong>B. Keep the connections open to that instance, and attempt to complete in-flight requests.</strong></li>
+<li><strong>C. Redirect the requests to a user-defined error page like “Oops this is embarrassing” or “Under Construction.”</strong></li>
+<li>D. Forcibly close all connections to that instance after a timeout period.</li>
+<li>E. Leave the connections open as long as the load balancer is running.</li>
+</ul></li>
+</ol>
+
+<p>Exp: When connection draining is enabled, the load balancer will stop sending requests
+to a deregistered or unhealthy instance and attempt to complete in-flight requests  until a connection draining timeout period is reached, which is 300 seconds by default.</p>
+
+<ol>
+<li>Elastic Load Balancing supports which of the following types of load balancers?(Choose 3 answers)
+
+<ul>
+<li>A. Cross-region</li>
+<li><strong>B. Internet-facing</strong></li>
+<li>C. Interim</li>
+<li>D. Itinerant</li>
+<li><strong>E. Internal</strong></li>
+<li><strong>F. Hypertext Transfer Protocol Secure (HTTPS) using Secure Sockets Layer (SSL)</strong></li>
+</ul></li>
+</ol>
+
+<p>Exp: Elastic Load Balancing supports Internet-facing, internal, and HTTPS load
+balancers.</p>
+
+<ol>
+<li>Auto Scaling supports which of the following plans for Auto Scaling groups? (Choose 3 answers)
+
+<ul>
+<li>A. Predictive</li>
+<li><strong>B. Manual</strong></li>
+<li>C. Preemptive</li>
+<li><strong>D. Scheduled</strong></li>
+<li><strong>E. Dynamic</strong></li>
+<li>F. End-user request driven</li>
+<li>G. Optimistic</li>
+</ul></li>
+</ol>
+
+<p>Exp: Auto Scaling supports maintaining the current size of an Auto Scaling group
+using four plans: maintain current levels, manual scaling, scheduled scaling, and
+dynamic scaling</p>
+        </div>
+        
+    </div>
+    
+    
+    <footer class="sticky-footer">
+    <div class="container">
+        <div class="text-center">
+            <small>Copyright © Anand Vyas 2019</small>
+        </div>
+    </div>
+</footer>
+
+<a class="scroll-to-top rounded" href="#page-top">
+    <i class="fa fa-angle-up"></i>
+</a>
+
+
+<script src="https://anandvyas.in/js/popper.min.js"></script>
+<script src="https://anandvyas.in/js/bootstrap.min.js"></script>
+<script src="https://anandvyas.in/js/highlight.min.js"></script>
+<script src="https://anandvyas.in/js/moment.min.js"></script>
+<script src="https://anandvyas.in/js/clipboard.min.js"></script>
+
+<script src="https://anandvyas.in/js/jquery.easing.min.js"></script>
+
+<script src="https://anandvyas.in/js/sb-admin.js"></script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-108803266-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'UA-108803266-1');
+</script>
+  </div>
+<script data-no-instant>document.write('<script src="/livereload.js?port=1313&mindelay=10"></' + 'script>')</script></body>
+</html>

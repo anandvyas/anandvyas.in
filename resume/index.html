@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Anand vyas - Resume 2017</title>
+    
+    <link href="https://anandvyas.in/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link href="https://anandvyas.in/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,400" rel="stylesheet">
+    
+    <link href="https://anandvyas.in/css/resume.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', serif;
+            font-size: 14px;
+            border: 1px solid black;
+        }
+        #resume{
+            max-width: 740px;
+        }
+        .header .fname {
+            font-weight: 100;
+            font-style: normal;
+            color: gray;
+            font-size: 28pt;
+            margin-right: 8px;
+        }
+
+        .header .lname {
+            font-size: 28pt;
+            font-weight: 600;
+            font-style: normal;
+        }
+
+        .header .designation {
+            margin-top: -10px;
+        }
+
+        .header .designation span {
+            color: red;
+            font-size: 8pt;
+            margin-right: 10px;
+            font-weight: 400;
+        }
+
+        .header .address {
+            color: gray;
+            font-size: 8pt;
+        }
+
+        .header .social span {
+            font-size: 12px;
+            border-right: 1px solid #000000;
+            padding: 0 10px;
+        }
+
+        .header .social span a {
+            color: black
+        }
+
+        .header .social span a:hover {
+            text-decoration: none;
+        }
+
+        .header .social span:last-child {
+            border-right: none
+        }
+
+        .header .quotes {
+            font-size: 12px;
+            font-style: italic;
+            font-weight: 400;
+            margin: 20px 0;
+        }
+
+        .block {
+            border-top: 1px solid black;
+            margin-top: 40px;
+            page-break-after: always;
+        }
+
+        .block-heading {
+            padding-right: 5px;
+            font-size: 20px;
+            font-weight: 600;
+            margin-top: -22px;
+            background-color: white;
+            width: -webkit-fit-content;
+            width: -moz-fit-content;
+            width: fit-content;
+        }
+
+        .block-heading span {
+            font-weight: 400;
+            color: red;
+        }
+
+        .block-body {
+            padding: 5px;
+        }
+
+        .summary {
+            text-align: justify;
+        }
+
+        .company {
+            font-weight: 600;
+        }
+
+        .company-address {
+            font-weight: 100;
+            color: red;
+            font-style: italic;
+            text-align: right;
+            text-transform: uppercase;
+        }
+
+        .company-designation {
+            color: gray;
+            font-style: italic;
+            text-transform: uppercase;
+        }
+
+        .company-duration {
+            color: gray;
+            font-style: italic;
+            text-align: right;
+        }
+        .work-expression, .project{
+            border: 1px solid #E8E3E3;
+            margin-top: 5px;
+            padding: 10px;
+        }
+    </style>
+    <script src="https://anandvyas.in/js/jquery.min.js"></script>
+    <script src="https://anandvyas.in/js/jspdf.min.js"></script>
+    <script src="https://anandvyas.in/js/html2canvas.js"></script>
+</head>
+
+<body>
+    <div id="resume" class="container">
+        <div id="resume" class="header">
+            <div class="row text-center">
+                <div class="col-lg-12 ">
+                    <span class="fname">Anand</span>
+                    <span class="lname">Vyas</span>
+                </div>
+            </div>
+            <div class="row text-center designation">
+                <div class="col-lg-12">
+                    
+                    <span>Solution Architect</span> 
+                    <span>Cloud Architect</span> 
+                    <span>DevOps</span> 
+                    <span>Tech Lead</span> 
+                </div>
+            </div>
+            <div class="row text-center address">
+                <div class="col-lg-12">725, Sector 14, Gurugram, Haryana - 122001</div>
+            </div>
+            <div class="row text-center social">
+                <div class="col-lg-12">
+                    
+                    
+                    <span>
+                        <i class="fa fa-mobile"></i>
+                        <a href="#" target="blank">&#43;91 9660100100</a>
+                    </span> 
+                    
+                    
+                    
+                    <span>
+                        <i class="fa fa-envelope"></i>
+                        <a href="mailto:anandvyas@live.com" target="blank">anandvyas@live.com</a>
+                    </span> 
+                    
+                    
+                    
+                    
+                    
+                    <span>
+                        <i class="fa fa-linkedin"></i>
+                        <a href="https://www.linkedin.com/in/anandvyaas" target="blank">anandvyaas</a>
+                    </span> 
+                    
+                    
+                    
+                    
+                    
+                    <span>
+                        <i class="fa fa-github"></i>
+                        <a href="https://github.com/anandvyas" target="blank">anandvyas</a>
+                    </span> 
+                    
+                    
+                    
+                    
+                </div>
+            </div>
+            <div class="row text-center quotes">
+                <div class="col-lg-12">I believe there is no such thing as failure, it's a result we get by our belief and actions. Let's continuously steer our path until we get a result we want, called as "Success".</div>
+            </div>
+        </div>
+        <div class="block">
+            <div class="block-heading"><span>Sum</span>mary</div>
+            <div class="row block-body summary">
+                <div class="col-lg-12">
+                    Having more than 11+ years of vast professional experience in IT and 2 years AWS experience as an <b>AWS Solution Architect</b>. Working with various technologies like AWS Web Services, Nodejs, Angularjs, PHP, Drupal, Codeigniter, CakePHP, MongoDB, DynamoDB, Redis, Memcache, JSON, API.  As a Solution Architect/ Technical Architect/ Team Lead in various phase of career gained excellent client and team handling ability. Using this skill to communicate directly with the client and perform the best as a team. Also, have involved and contributed a lot in converting the requirements into effective business design. Always been a part of Release Process and Stage Maintenance.
+                </div>
+            </div>
+        </div>
+        <div class="block">
+            <div class="block-heading"><span>Wor</span>k Expression</div>
+            
+            <div class="block-body work-expression">
+                <div class="row">
+                    <div class="col-lg-6 company">Technodrive Software Solutions</div>
+                    <div class="col-lg-6 company-address">Hyderabad, IN</div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6 company-designation">Solutions Architect / Technical Architect</div>
+                    <div class="col-lg-6 company-duration">map[start:Jan 2018 end:Present]</div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12 company-role">
+                        <ul>
+                            
+                            <li>Architect, design and implement solutions with AWS Virtual Private Cloud (VPC), Elastic Compute Cloud (EC2), Elastic Load Balancer (ELB), AutoScalling, RDS, S3, CloudWatch and other AWS products.</li>
+                            
+                            <li>Ensure success in building and migrating applications, software and services on the AWS platform.</li>
+                            
+                            <li>Participate in deep architectural discussions to ensure solutions are designed for successful deployment in the cloud.</li>
+                            
+                            <li>Communicate with the stack holders internally and externally at various level to identify existing IT infra and future need.</li>
+                            
+                            <li>Involved in knowledge sharing and technical guidance to the team members.</li>
+                            
+                            <li>Deployment of code and database on staging and production servers.</li>
+                            
+                            <li>Implementing GIT, CI based workflows in our projects.</li>
+                            
+                            <li>Participate in the Sprint planning process.</li>
+                            
+                            <li>Performing hands on development when needed.</li>
+                            
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="block-body work-expression">
+                <div class="row">
+                    <div class="col-lg-6 company">Srijan Technologies</div>
+                    <div class="col-lg-6 company-address">Delhi, IN</div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6 company-designation">Solutions Architect / Technical Architect</div>
+                    <div class="col-lg-6 company-duration">map[start:June 2015 end:Dec 2017]</div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12 company-role">
+                        <ul>
+                            
+                            <li>Architect, design and implement solutions with AWS Virtual Private Cloud (VPC), Elastic Compute Cloud (EC2), Elastic Load Balancer (ELB), AutoScalling, RDS, S3, CloudWatch and other AWS products.</li>
+                            
+                            <li>Ensure success in building and migrating applications, software and services on the AWS platform.</li>
+                            
+                            <li>Participate in deep architectural discussions to ensure solutions are designed for successful deployment in the cloud.</li>
+                            
+                            <li>Communicate with the stack holders internally and externally at various level to identify existing IT infra and future need.</li>
+                            
+                            <li>Involved in knowledge sharing and technical guidance to the team members.</li>
+                            
+                            <li>Deployment of code and database on staging and production servers.</li>
+                            
+                            <li>Implementing GIT, CI based workflows in our projects.</li>
+                            
+                            <li>Participate in the Sprint planning process.</li>
+                            
+                            <li>Performing hands on development when needed.</li>
+                            
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="block-body work-expression">
+                <div class="row">
+                    <div class="col-lg-6 company">Cyberlinks Technologies</div>
+                    <div class="col-lg-6 company-address">Gurugram, IN</div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6 company-designation">Technical Architect / Team Lead</div>
+                    <div class="col-lg-6 company-duration">map[start:June 2014 end:June 2015]</div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12 company-role">
+                        <ul>
+                            
+                            <li>Leading Teams of 2 - 8 people in successfully delivering projects</li>
+                            
+                            <li>Mentoring the team members</li>
+                            
+                            <li>Ensuring the timely and Quality delivery of projects.</li>
+                            
+                            <li>Working closely with the Project Manager / Business Analyst in understanding requirement and breaking them down.</li>
+                            
+                            <li>Participate in the Sprint planning process and provide breakdown and effort of tasks.</li>
+                            
+                            <li>Working closely with a Mobile Team to develop Web Services and APIs</li>
+                            
+                            <li>Hands on development with the team to deliver web projects</li>
+                            
+                            <li>Deployment and maintenance of developed Web applications</li>
+                            
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="block-body work-expression">
+                <div class="row">
+                    <div class="col-lg-6 company">Arcgate Technologies</div>
+                    <div class="col-lg-6 company-address">Udaipur, IN</div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6 company-designation">Associate Technical Architect / Team Lead</div>
+                    <div class="col-lg-6 company-duration">map[start:May 2012 end:May 2014]</div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12 company-role">
+                        <ul>
+                            
+                            <li>Leading Teams of 2 - 6 people in successfully delivering projects</li>
+                            
+                            <li>Mentoring the team members</li>
+                            
+                            <li>Ensuring the timely and Quality delivery of projects.</li>
+                            
+                            <li>Working closely with the Project Manager / Business Analyst in understanding requirement and breaking them down.</li>
+                            
+                            <li>Participate in the Sprint planning process and provide breakdown and effort of tasks.</li>
+                            
+                            <li>Working closely with a Mobile Team to develop Web Services and APIs</li>
+                            
+                            <li>Hands on development with the team to deliver web projects</li>
+                            
+                            <li>Deployment and maintenance of developed Web applications</li>
+                            
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="block-body work-expression">
+                <div class="row">
+                    <div class="col-lg-6 company">Arcgate Technologies</div>
+                    <div class="col-lg-6 company-address">Udaipur, IN</div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6 company-designation">Sr. Developer</div>
+                    <div class="col-lg-6 company-duration">map[start:May 2008 end:May 2012]</div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12 company-role">
+                        <ul>
+                            
+                            <li>Developed and maintain PHP/MySQL, Cakephp, Drupal, Wordpress, Nodejs and Javascript based applications.</li>
+                            
+                            <li>Defining best practices for project support and documentation.</li>
+                            
+                            <li>Handling application development as well as unit, integration and system testing.</li>
+                            
+                            <li>Identifying technical &amp; functional requirements / pain areas &amp; mapping the same in line with organizational needs.</li>
+                            
+                            <li>Designing &amp; developing database objects like tables, views, and procedures.</li>
+                            
+                            <li>Coding &amp; Review as per Coding guidelines issued by the client.</li>
+                            
+                            <li>Writing APIs which are used by Mobile Apps or any other platform.</li>
+                            
+                            <li>Consuming APIs of various third party services.</li>
+                            
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="block-body work-expression">
+                <div class="row">
+                    <div class="col-lg-6 company">Rajasthan Patrika</div>
+                    <div class="col-lg-6 company-address">Jaipur, IN</div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6 company-designation">Developer</div>
+                    <div class="col-lg-6 company-duration">map[start:Feb 2007 end:May 2008]</div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12 company-role">
+                        <ul>
+                            
+                            <li>Deployment and maintenance of Rajasthan Patrika website</li>
+                            
+                            <li>Deployment and maintenance of news integration support backend tools</li>
+                            
+                            <li>Compare with other news sites and new features</li>
+                            
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="block-body work-expression">
+                <div class="row">
+                    <div class="col-lg-6 company">Acro Computing India</div>
+                    <div class="col-lg-6 company-address">Hydrabad, IN</div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6 company-designation">Trainee / Developer</div>
+                    <div class="col-lg-6 company-duration">map[end:Feb 2007 start:Jun 2006]</div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12 company-role">
+                        <ul>
+                            
+                            <li>Trained in PHP, MySQL concepts and its working. Also, got training as a System engineer.</li>
+                            
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <div class="block">
+            <div class="block-heading"><span>Cer</span>tification</div>
+            <div class="row text-center">
+                <ul class="certification">
+                    
+                    <li>
+                        <i class=""></i>
+                        <a href="#" target="blank"></a>
+                    </li>
+                    
+                    <li>
+                        <i class=""></i>
+                        <a href="#" target="blank"></a>
+                    </li>
+                    
+                    <li>
+                        <i class=""></i>
+                        <a href="#" target="blank"></a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+        <div class="block">
+            <div class="block-heading">Language</div>
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="summary-data">Anand vyas</div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="summary-data">Anand vyas</div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="summary-data">Anand vyas</div>
+                </div>
+            </div>
+        </div>
+        <div class="block">
+            <div class="block-heading">Projects</div>
+            
+            <div class="project">
+                <div class="row">
+                    <div class="col-lg-6">Sealed Air </div>
+                    <div class="col-lg-6">Jan 2017 - Present</div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12"> Sealed Air is completely based on IOT devices,  Sealed Air IOT devices send all information to API Gateway and lambda function store all data in dynamoDB in unstructured format. After that some other function filter data and store in cassandra. We get these data from cassandra and display real data on browser with help of angularjs. </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6">SealedAir </div>
+                    <div class="col-lg-6">Solution Architect/Technical Architect</div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">AWS API Gateway, Lambda, DynamoDB, Cassandra, IOT, Drupal, Nodejs, Angularjs </div>
+                </div>
+            </div>
+            
+            <div class="project">
+                <div class="row">
+                    <div class="col-lg-6">Live Hindusthan </div>
+                    <div class="col-lg-6">Feb 2016 - Jan 2017</div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">Live Hindusthan is the Hindi language news website with million of traffic. Our responsibility is to manage backend and frontend. Backend built on Drupal with dynamic template management. We also implement Elastic search to better performance. The frontend was built in Nodejs with React. </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6">Hindusthan Times </div>
+                    <div class="col-lg-6">Solution Architect/Technical Architect</div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">EC2, S3, Drupal 7, Nodejs, Redis, React, Elasticsearch, Kibana </div>
+                </div>
+            </div>
+            
+            <div class="project">
+                <div class="row">
+                    <div class="col-lg-6">Find It </div>
+                    <div class="col-lg-6">June 2015 - Feb 2016</div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">FindIt is an e-commerce based application, Our responsibility is to manage PIM (Product management tool), backend in Drupal, front-end in Drupal, Elastic search and Redis server. </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6">GetIT </div>
+                    <div class="col-lg-6">Technical Architect</div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">Drupal, Mysql, PIM (Product Management System), Redis, Elastic search </div>
+                </div>
+            </div>
+            
+            <div class="project">
+                <div class="row">
+                    <div class="col-lg-6">News Nation </div>
+                    <div class="col-lg-6">Feb 2015 - June 2015</div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">News Nation is a free to air 24-hour national Hindi news television channel owned by News Nation Network Pvt Ltd. And our responsibilities to manage online streaming for all devices (Android,Windows,iOS,Web) through wowza streaming server and also create website and Video CMS. </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6">Newsnation </div>
+                    <div class="col-lg-6">Technical Architect</div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">Php, MySQL, Slim framework, Redis, Wowza server, shell script </div>
+                </div>
+            </div>
+            
+            <div class="project">
+                <div class="row">
+                    <div class="col-lg-6">Multi TV </div>
+                    <div class="col-lg-6">June 2014 - Feb 2015</div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">MultiTV is an online solution for video streaming. The user can create a collection of its video and stream through MultiTV platform. We used FFMPEG to convert video in different format depends on the user device and user data plan. And also we use WOWZA server to stream video. </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6">Cyberlinks </div>
+                    <div class="col-lg-6">Technical Architect</div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">Php, MySQL, Slim framework, Redis, Wowza server, shell script </div>
+                </div>
+            </div>
+            
+            <div class="project">
+                <div class="row">
+                    <div class="col-lg-6">Money Control Terminal </div>
+                    <div class="col-lg-6">Sept 2013 - June 2014</div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">Money Control Terminal is a Network 18 project, basically, it provides live information about BSE 30 Live Prices/Quotes, Live BSE Stock/Share Price and Real-Time BSE Stocks. Our responsibility is to authenticate the user and show all data in real time. We use socket programming with Nodejs. </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6">Network 18 </div>
+                    <div class="col-lg-6">Technical Architect/Sr. Developer</div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">Php, Javascript, jQuery </div>
+                </div>
+            </div>
+            
+            <div class="project">
+                <div class="row">
+                    <div class="col-lg-6">i&gt;clicker </div>
+                    <div class="col-lg-6">June 2013 - Sept 2013</div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">i>clicker’s provides an intuitive student response system that focused on formative assessment and pedagogy. All i>clicker response devices are compatible with any brand of interactive whiteboard and any software application, making it a perfect audience response system for the growing number of K-12 customers to corporate training environments and tradeshows. Developed informative website of it. </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6">Macmillan Publishers, UK  </div>
+                    <div class="col-lg-6">Technical Architect/Sr. Developer</div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">Wordpress, MySQL, jQuery, JavaScript, XML, LAMP </div>
+                </div>
+            </div>
+            
+            <div class="project">
+                <div class="row">
+                    <div class="col-lg-6">Youngbuzz </div>
+                    <div class="col-lg-6">Aug 2011 - June 2013</div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12"><b>YoungBuzz​</b>, India’s premier career counseling company, can help you in all the above to choose that perfect career and chart a successful career path for you. Take the On-line Career Counseling Test to know your aptitude, interest and personality and make an informed career choice. </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6">YoungBuzz India Ltd, IN </div>
+                    <div class="col-lg-6">Sr. Developer</div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">Drupal 6, MySQL, AJAX, JavaScript, LAMP </div>
+                </div>
+            </div>
+            
+            <div class="project">
+                <div class="row">
+                    <div class="col-lg-6">CriticalPast </div>
+                    <div class="col-lg-6">Feb 2010 - Aug 2011</div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12"><b>‘CriticalPast.com’</b> is a place where professionals and non-professionals can easily search vast collection of footage or photos and can place an order. Customers can order the full-resolution moving images into their desired format on demand. The still photos are also available for download as JPEG files, or customers may take advantage of the company’s professional photo printing services and have prints delivered right to their door. Among stock footage providers, CriticalPast.com is unique in offering immediate download of any footage or photo image in the collection, for most image formats. If customer prefer, then order can be ship to anywhere in the world. </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6">Critical Past LLC, NY </div>
+                    <div class="col-lg-6">Sr. Developer</div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">OOPS PHP5 using Cake framework, MySQL, AJAX, JavaScript, XML, LAMP </div>
+                </div>
+            </div>
+            
+            <div class="project">
+                <div class="row">
+                    <div class="col-lg-6">GigaCRM </div>
+                    <div class="col-lg-6">May 2008 - Feb 2010</div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">‘GigaOM’ company is successfully running various blogging sites like GigaOM, WebWorkerDaily, NewTeeVee, Earth2Tech, TheAppleBlog etc. GigaCRM provides a CRM solution to Gigaomni Media people where they can see the various analytics about the blogs written on these sites like top posts, pageviews, comments, revenue, top posts, top authors etc. They can also analyze the performance of the sales people who sells the advertisements for the sites. The data is gathered through APIs of various sites like Google Analytics, Wordpress, Eventbrite, Zuora etc. </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6">GigaOM,CA </div>
+                    <div class="col-lg-6">Developer</div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">CakePHP 1.1 framework, MySQL 5.0, AJAX, JavaScript, XML, LAMP </div>
+                </div>
+            </div>
+            
+            <div class="project">
+                <div class="row">
+                    <div class="col-lg-6">Rajasthan Patrika </div>
+                    <div class="col-lg-6">Feb 2007 - May 2008</div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">Rajasthan Patrika is an Indian Hindi-language news website with millions of traffic per day. We build our custom backend system to manage news and ticker. We also build whole website in PHP with MySQL and Memcache for caching </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6">Rajasthan Patrika </div>
+                    <div class="col-lg-6">Developer</div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">Php, MySQL, Memcache </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <script>
+        var pdf = new jsPDF('p', 'pt', 'letter');
+        pdf.addFont('FontAwesome', 'FontAwesome', 'normal');
+        pdf.setFont('FontAwesome');
+        pdf.setProperties({
+            title: 'Anand vyas - Resume (2017)',
+            subject: 'Resume',
+            author: 'Anand vyas',
+            keywords: 'AWS Solution Architect, Cloud Architect, Application Architect,',
+            creator: 'Anand vyas'
+        });
+
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+
+        
+        
+
+
+        
+    </script>
+<script data-no-instant>document.write('<script src="/livereload.js?port=1313&mindelay=10"></' + 'script>')</script></body>
+</html>

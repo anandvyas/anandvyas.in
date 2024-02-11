@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>AWS EC2 - Elastic Compute Cloud  - Anand vyas</title>
+    <meta content="AWS EC2 - Elastic Compute Cloud  - Anand vyas" property="og:title">
+    <meta content="" name="keywords">
+    <meta content="" property="og:description">
+    <meta name="author" content="Anand Vyas">
+
+    
+    <link href="https://anandvyas.in/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link href="https://anandvyas.in/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    
+    <link href="https://anandvyas.in/css/highlighter.css" rel="stylesheet">
+    
+    <link href="https://anandvyas.in/css/sb-admin.css" rel="stylesheet">
+    <link href="https://anandvyas.in/css/about.css" rel="stylesheet">
+
+    <script src="https://anandvyas.in/js/jquery.min.js"></script>
+</head>
+<body class="fixed-nav sticky-footer bg-dark sidenav-toggled" id="page-top">
+  
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+    <a class="navbar-brand" href="https://anandvyas.in/">
+        <img src="https://anandvyas.in/images/profile/logo.png" />
+        <span>Anand vyas</span>
+    </a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav navbar-sidenav">
+            <li class="nav-item sidebar-profile text-center">
+                <div class="profile-pic">
+                    <img src="https://anandvyas.in/images/profile/avatar.jpg" alt="avatar">
+                </div>
+                <div class="profile-detail">
+                    
+                    <span>Solution Architect</span> 
+                    <span>Cloud Architect</span> 
+                    <span>DevOps</span> 
+                    <span>Tech Lead</span> 
+                </div>
+            </li>
+            
+            <li class="nav-item sidebar-menu" data-toggle="tooltip" data-placement="right" title="Home">
+                <a class="nav-link" href="https://anandvyas.in/">
+                <i class="fa fa-fw fa fa-home"></i>
+                <span class="nav-link-text">Home</span>
+                </a>
+            </li>
+            
+            <li class="nav-item sidebar-menu" data-toggle="tooltip" data-placement="right" title="About">
+                <a class="nav-link" href="https://anandvyas.in/about">
+                <i class="fa fa-fw fa fa-user-circle"></i>
+                <span class="nav-link-text">About</span>
+                </a>
+            </li>
+            
+            <li class="nav-item sidebar-menu" data-toggle="tooltip" data-placement="right" title="Categories">
+                <a class="nav-link" href="https://anandvyas.in/categories">
+                <i class="fa fa-fw fa fa-dashboard"></i>
+                <span class="nav-link-text">Categories</span>
+                </a>
+            </li>
+            
+            <li class="nav-item sidebar-menu" data-toggle="tooltip" data-placement="right" title="Tags">
+                <a class="nav-link" href="https://anandvyas.in/tags">
+                <i class="fa fa-fw fa fa-tags"></i>
+                <span class="nav-link-text">Tags</span>
+                </a>
+            </li>
+            
+        </ul>
+        <ul class="navbar-nav sidenav-social">
+            
+            <li><a href="#" target="_blank"><i class="fa fa-mobile"></i></a></li>
+            
+            <li><a href="mailto:anandvyas@live.com" target="_blank"><i class="fa fa-envelope"></i></a></li>
+            
+            <li><a href="https://twitter.com/anandvyaas" target="_blank"><i class="fa fa-twitter"></i></a></li>
+            
+            <li><a href="https://www.linkedin.com/in/anandvyaas" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+            
+            <li><a href="https://www.instagram.com/anandvyaas" target="_blank"><i class="fa fa-instagram"></i></a></li>
+            
+            <li><a href="https://github.com/anandvyas" target="_blank"><i class="fa fa-github"></i></a></li>
+            
+            <li><a href="https://stackoverflow.com/users/8208060/anand-vyas" target="_blank"><i class="fa fa-stack-overflow"></i></a></li>
+            
+        </ul>
+        <ul class="navbar-nav sidenav-toggler">
+            <li class="nav-item">
+                <a class="nav-link text-center" id="sidenavToggler">
+            <i class="fa fa-fw fa-angle-left"></i>
+            </a>
+            </li>
+        </ul>
+        
+        
+    </div>
+</nav>
+  
+  <div class="content-wrapper">
+    <div class="container-fluid">
+    
+
+
+<ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="https://anandvyas.in/">Home</a></li>
+
+
+    
+    <li class="breadcrumb-item active"><a href='https://anandvyas.in/aws'>aws</a></li>
+    
+    
+
+
+    
+    <li class="breadcrumb-item active"><a href='https://anandvyas.in/aws/aws-ec2'>aws-ec2</a></li>
+    
+    
+
+
+    
+
+</ol>
+
+        <div class="post">
+            <h1>AWS EC2 - Elastic Compute Cloud </h1>
+            <span class="post-date">Fri, Jul 14, 2017</span>
+            <p>Provides resizable compute capacity in the cloud. Reduces the time required to obtain and boot new server instances to minutes, allowing you to quickly scale capacity, both up and down, as computing requirements change.</p>
+
+<div class="text-center">
+    <img class="img-responsive" src="https://anandvyas.in/images/aws/amazon-ec2.png" alt="AWS EC2 - Elastic Compute Cloud" />
+</div>
+ 
+
+<h3 id="span-style-color-e47911-features-of-amazon-ec2-span"><span style="color:#e47911">Features of Amazon EC2</span></h3>
+
+<ul>
+<li>Virtual computing environments, known as <strong>EC2 Instances</strong></li>
+<li>Preconfigured templates for your instances, known as Amazon Machine Images (AMIs), that package the bits you need for your server (including the operating system and additional software)</li>
+<li>Various configurations of CPU, memory, storage, and networking capacity for your instances, known as <strong>Instance Types</strong></li>
+<li>Secure login information for your instances using key pairs (AWS stores the public key, and you store the private key in a secure place)</li>
+<li>Storage volumes for temporary data that&rsquo;s deleted when you stop or terminate your instance, known as <strong>Instance Store Volumes</strong></li>
+<li>Persistent storage volumes for your data using Amazon Elastic Block Store (Amazon EBS), known as <strong>Amazon EBS volumes</strong></li>
+<li>Multiple physical locations for your resources, such as instances and Amazon EBS volumes, known as regions and Availability Zones</li>
+<li>A firewall that enables you to specify the protocols, ports, and source IP ranges that can reach your instances using security groups</li>
+<li>Static IPv4 addresses for dynamic cloud computing, known as Elastic IP addresses</li>
+<li>Metadata, known as tags, that you can create and assign to your Amazon EC2 resources</li>
+<li>Virtual networks you can create that are logically isolated from the rest of the AWS cloud, and that you can optionally connect to your own network, known as virtual private clouds (VPCs)</li>
+</ul>
+
+<h3 id="span-style-color-e47911-ec2-options-span"><span style="color:#e47911">EC2 - Options</span></h3>
+
+<ul>
+<li><strong>On-Demand Instances</strong>: Allow you to pay a fixed rate by the hour with no commitment.
+
+<ul>
+<li>User that want low cost and flexibility without any upfront payment or long-term commitment.</li>
+<li>Applications with spiky, short term, or unpredictable workloads that cannot be interrupted.</li>
+<li>Applications being developed or tested on Amazon EC2 for the first time.</li>
+</ul></li>
+<li><strong>Reserved Instances</strong>: 1 or 3 year terms, provide discounts on the hourly charge by providing a capacity reservation.
+
+<ul>
+<li>Apps with steady state or predictable usage.</li>
+<li>Apps that require reserved capacity.</li>
+<li>Users able to make upfront payments to reduce their total computing costs even further.</li>
+</ul></li>
+<li><strong>Scheduled Instances</strong>:</li>
+<li><strong>Spot Instances</strong>: Enable you to bid whatever price you want for instance capacity, providing for even greater savings if your app has flexible start and end times Apps that are feasible to very low compute prices. Users with urgent computing needs for large amounts of additional capacity If the spot instance is terminated by Amazon EC2, you will not be charged for the partial hour of usage, but if you terminate the instance yourself, you will be charged for any hour in which the instance ran.</li>
+<li><strong>Dedicated Instances</strong>:</li>
+<li><strong>Dedicated Hosts</strong>: Physical EC2 server dedicated for your use. Dedicated Hosts can help you reduse costs by allowing you to use your existing server-bound software licenses.</li>
+</ul>
+
+<div class="text-center">
+    <img class="img-responsive" src="https://anandvyas.in/images/aws/aws-ec2-options.jpg" alt="AWS EC2 - Elastic Compute Cloud" />
+</div>
+ 
+
+<h3 id="span-style-color-e47911-ec2-instance-types-span"><span style="color:#e47911">EC2 Instance Types</span></h3>
+
+<table>
+<thead>
+<tr>
+<th>Family</th>
+<th>Speciality</th>
+<th>Use Cases</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>D2</td>
+<td>Dense storage</td>
+<td>File Servers/Data Warehousing/Hadoop</td>
+</tr>
+
+<tr>
+<td>R4</td>
+<td>Memory Optimized</td>
+<td>Memory Intensive Apps/ DBs</td>
+</tr>
+
+<tr>
+<td>M4</td>
+<td>General Purpose</td>
+<td>Application Servers</td>
+</tr>
+
+<tr>
+<td>C4</td>
+<td>Compute Optimized</td>
+<td>CPU Intensive Apps/DBs</td>
+</tr>
+
+<tr>
+<td>G2</td>
+<td>Graphics/General Purpose GPU</td>
+<td>Video Encoding, Machine Learning, 3D Application Streaming</td>
+</tr>
+
+<tr>
+<td>I2</td>
+<td>High Speed Storage</td>
+<td>NoSQL DBs, Data Warehousing etc.</td>
+</tr>
+
+<tr>
+<td>F1</td>
+<td>Field Programmable Gate Array</td>
+<td>Hardware acceleration for your code</td>
+</tr>
+
+<tr>
+<td>T2</td>
+<td>Lowest Cost, General Purpose</td>
+<td>Web Servers/Small DBs</td>
+</tr>
+
+<tr>
+<td>P2</td>
+<td>Graphics/General Purpose GPU</td>
+<td>Machine learing, Bit Coin mining etc.</td>
+</tr>
+
+<tr>
+<td>X1</td>
+<td>Memory Optimized</td>
+<td>SAP HANA/Apache Spark etc.</td>
+</tr>
+</tbody>
+</table>
+
+<p><strong>How to learn above instance types</strong></p>
+
+<p>DR MC GIFT PX : Doctor mac gift pix</p>
+
+<ul>
+<li><strong>D</strong> for density</li>
+<li><strong>R</strong> for RAM</li>
+<li><strong>M</strong> main choice for general purpose application</li>
+<li><strong>C</strong> for Compute</li>
+<li><strong>G</strong> for Graphics</li>
+<li><strong>I</strong> for IOPS</li>
+<li><strong>F</strong> for FPGA</li>
+<li><strong>T</strong> Cheap general purpose (Think T2 Micro)</li>
+<li><strong>P</strong> for Graphics (Think Pics)</li>
+<li><strong>X</strong> for Extreme Memory</li>
+</ul>
+
+<h3 id="span-style-color-e47911-tenancy-options-span"><span style="color:#e47911">Tenancy Options</span></h3>
+
+<p>There are several tenancy options for Amazon EC2 instances that can help customers achieve security and compliance goals.</p>
+
+<ul>
+<li><strong>Shared Tenancy</strong>: Shared tenancy means that a single host machine may house instances from different customers. <strong>Shared tenancy is the default tenancy model for all Amazon EC2 instances</strong>, regardless of instance type, pricing model, and so forth.</li>
+<li><strong>Dedicated Instances</strong>: Dedicated Instances run on hardware that’s dedicated to a single customer.</li>
+</ul>
+
+<h3 id="span-style-color-e47911-placement-groups-span"><span style="color:#e47911">Placement Groups</span></h3>
+
+<ul>
+<li>A placement group is a logical grouping of instances within a single Availability Zone.</li>
+<li>Placement groups enable applications to participate in a low-latency, 10 Gbps network.</li>
+<li>Placement groups are recommended for applications that benefit from low network latency, high network throughput, or both. Remember that this represents network connectivity between instances.</li>
+<li>To fully use this network performance for your placement group, choose an instance type that supports enhanced networking and 10 Gbps network performance.</li>
+</ul>
+
+<h3 id="span-style-color-e47911-placement-groups-limitation-span"><span style="color:#e47911">Placement Groups: Limitation</span></h3>
+
+<ul>
+<li>A placement group can&rsquo;t span multiple Availability Zones.</li>
+<li>The name you specify for a placement group must be unique within your AWS account.</li>
+<li>Only certain types of instances can be launched in a placement group.</li>
+<li>Amazon recommend using the same instance type for all the instance in the placement group.</li>
+<li>You can&rsquo;t merge placement group.</li>
+<li>You can&rsquo;t move existing instance into the placement group.</li>
+</ul>
+
+<div align="center">
+<div class="embed video-player">
+    <iframe class="youtube-player anand" type="text/html" width="640" height="385" src="http://www.youtube.com/embed/Wb45EGQweao" allowfullscreen frameborder="0">
+    </iframe>
+</div>
+</div>
+
+<h3 id="span-style-color-e47911-amazon-machine-images-amis-span"><span style="color:#e47911">Amazon Machine Images (AMIs)</span></h3>
+
+<ul>
+<li>An Amazon Machine Image (AMI) provides the information required to launch an instance, which is a virtual server in the cloud.</li>
+<li>An AMI is basically an template and can be used to launch as many instances as needed</li>
+<li>Within an VPC, instances can be launched from as many different AMIs</li>
+
+<li><p>An AMI includes the following:</p>
+
+<ul>
+<li>A template for the root volume for the instance for e.g. an operating system, an application server, and applications</li>
+<li>Launch permissions that control which AWS accounts can use the AMI to launch instances for e.g. AWS account ids with whom the AMI is shared</li>
+<li>A block device mapping that specifies the volumes to attach to the instance when it’s launched</li>
+</ul></li>
+
+<li><p>There are four sources of AMIs:</p>
+
+<ul>
+<li><strong>Published by AWS</strong>: AWS publishes AMIs with versions of many different OSs, both Linux and Windows.</li>
+<li><strong>The AWS Marketplace</strong>: AWS Marketplace is an online store that helps customers find, buy, and immediately start using the software and services that run on Amazon EC2. Many AWS partners have made their software available in the AWS Marketplace.</li>
+<li><strong>Generated from Existing Instances</strong>: An AMI can be created from an existing Amazon EC2 instance. This is a very common source of AMIs.</li>
+<li><strong>Uploaded Virtual Servers</strong>: Using AWS VM Import/Export service, customers can create images from various virtualization formats, including raw, VHD, VMDK, and OVA.</li>
+</ul></li>
+</ul>
+
+<h3 id="span-style-color-e47911-addressing-an-instance-span"><span style="color:#e47911">Addressing an Instance</span></h3>
+
+<p>There are several ways that an instance may be addressed over the web upon creation:</p>
+
+<ul>
+<li><strong>Public Domain Name System (DNS) Name</strong>: When you launch an instance, AWS creates a DNS name that can be used to access the instance. <strong>This DNS name is generated automatically and cannot be specified by the customer</strong>.</li>
+<li><strong>Public IP</strong>: A launched instance may also have a public IP address assigned. This IP address is assigned from the addresses reserved by AWS and cannot be specified. This IP address is unique on the Internet, persists only while the instance is running, and cannot be transferred to another instance.</li>
+<li><strong>Elastic IP</strong>: An elastic IP address is an address unique on the Internet that you  reserve independently and associate with an Amazon EC2 instance.</li>
+</ul>
+
+<blockquote>
+<p>Private IP addresses and Elastic Network Interfaces (ENIs) are additional methods
+of addressing instances</p>
+</blockquote>
+
+<p><strong>Difference between Public IP and Elastic IP</strong>
+This IP address persists until the customer releases it and is not tied to the lifetime or state of an individual instance. Because it can be transferred to a replacement instance in the event of an instance failure, it is a public address that can be shared externally without coupling clients to a particular instance</p>
+
+<h3 id="span-style-color-e47911-initial-access-span"><span style="color:#e47911">Initial Access</span></h3>
+
+<p>Amazon EC2 uses public-key cryptography to encrypt and decrypt login information. Publickey cryptography uses a public key to encrypt a piece of data and an associated private key to decrypt the data. These two keys together are called a key pair. Key pairs can be created through the AWS Management Console, CLI, or API, or customers can upload their own key pairs. AWS stores the public key, and the private key is kept by the customer. The private key is essential to acquiring secure access to an instance for the first time.</p>
+
+<h3 id="span-style-color-e47911-virtual-firewall-protection-span"><span style="color:#e47911">Virtual Firewall Protection</span></h3>
+
+<ul>
+<li>AWS allows you to control traffic in and out of your instances through virtual firewalls called <strong>security groups</strong></li>
+<li>A security group is default deny; that is, it does not allow any traffic that is not explicitly allowed by a security group rule.</li>
+<li>an instance is associated with multiple security groups. the rules are aggregated and all traffic allowed by each of the individual groups is allowed</li>
+
+<li><p>Security Group Rule Attributes</p>
+
+<ul>
+<li><strong>Port</strong>: The port number affected by this rule. For instance, port 80 for HTTP traffic.</li>
+<li><strong>Protocol</strong>: The communications standard for the traffic affected by this rule.</li>
+<li><strong>Source/Destination</strong>: Identifies the other end of the communication, the source for incoming traffic rules, or the destination for outgoing traffic rules. The source/destination can be defined in two ways:
+
+<ul>
+<li><strong>CIDR block</strong>: An x.x.x.x/x style definition that defines a specific range of IP addresses.</li>
+<li><strong>Security group</strong>: Includes any instance that is associated with the given security group.</li>
+</ul></li>
+</ul></li>
+
+<li><p>A security group is a stateful firewall; that is, an outgoing message is remembered so that the response is allowed through the security group without an explicit inbound rule being required.</p></li>
+</ul>
+
+<h3 id="span-style-color-e47911-the-lifecycle-of-instances-span"><span style="color:#e47911">The Lifecycle of Instances</span></h3>
+
+<ul>
+<li><strong>Bootstrapping</strong>: The process of providing code to be run on an instance at launch is called bootstrapping. One of the parameters when an instance is launched is a string value called UserData.</li>
+</ul>
+
+<blockquote>
+<p>UserData is stored with the instance and is not encrypted, so it is important to not
+include any secrets such as passwords or keys in the UserData.</p>
+</blockquote>
+
+<ul>
+<li><strong>VM Import/Export</strong>: VM Import/Export enables you to easily import Virtual Machines (VMs) from your existing environment as an Amazon EC2 instance and export them back to your on-premises environment.</li>
+</ul>
+
+<blockquote>
+<p>You can only export previously imported Amazon EC2 instances.</p>
+</blockquote>
+
+<div class="embed video-player">
+    <iframe class="youtube-player anand" type="text/html" width="640" height="385" src="http://www.youtube.com/embed/xeQ6tzwoXn4" allowfullscreen frameborder="0">
+    </iframe>
+</div>
+
+<ul>
+<li><p><strong>Instance Metadata</strong>: Instance metadata is data about your instance that you can use to configure or manage the running instance. An HTTP call to <strong><a href="http://169.254.169.254/latest/meta-data/">http://169.254.169.254/latest/meta-data/</a></strong> will return the top node of the instance metadata tree. Instance metadata includes a wide variety of attributes, including:</p>
+
+<ul>
+<li>The associated security groups</li>
+<li>The instance ID</li>
+<li>The instance type</li>
+<li>The AMI used to launch the instance</li>
+</ul></li>
+
+<li><p><strong>Managing Instances</strong>:</p>
+
+<ul>
+<li>Tags can help you manage not just your Amazon EC2 instances, but also many of your AWS Cloud services.</li>
+<li>Tags are key/value pairs you can associate with your instance or other service.</li>
+<li>Tags can be used to identify attributes of an instance like project, environment (dev, test, and so on), billable department, and so forth.<br /></li>
+<li>You can apply up to 10 tags per instance.</li>
+</ul></li>
+
+<li><p><strong>Monitoring Instances</strong>: AWS offers a service called <a href="https://anandvyas.in/aws/aws-cloudwatch/">Amazon CloudWatch</a> that provides monitoring and alerting for Amazon EC2 instances, and also other AWS infrastructure.</p></li>
+</ul>
+
+<h3 id="a-name-aws-web-services-quiz-quiz-ec2-a"><a name="aws-web-services-quiz">Quiz: EC2</a></h3>
+
+
+
+<script>
+    var quiz = [{"correct":[2],"explanation":"Reserved Instances provide cost savings when you can commit to running instances full time, such as to handle the base traffic. On-Demand Instances provide the flexibility to handle traffic spikes, such as on the last day of the month.","image":"","options":["Run 12 Reserved Instances all of the time.","Run four On-Demand Instances constantly, then add eight more On-Demand Instances on the last day of each month.","Run four Reserved Instances constantly, then add eight On-Demand Instances on the last day of each month.","Run four On-Demand Instances constantly, then add eight Reserved Instances on the last day of each month."],"question":"Your web application needs four instances to support steady traffic nearly all of the time. On the last day of each month, the traffic triples. What is a cost-effective way to handle this traffic pattern?"},{"correct":[1],"explanation":"Spot Instances are a very cost-effective way to address temporary compute needs that are not urgent and are tolerant of interruption. That’s exactly the workload described here. Reserved Instances are inappropriate for temporary workloads. On-Demand Instances are good for temporary workloads, but don’t offer the cost savings of Spot Instances. Adding more queues is a non-responsive answer as it would not address the problem.","image":"","options":["Create more queues.","Deploy additional Spot Instances to assist in processing the orders.","Deploy additional Reserved Instances to assist in processing the orders.","Deploy additional On-Demand Instances to assist in processing the orders."],"question":"Your order-processing application processes orders extracted from a queue with two then it is returned to the queue without penalty. Due to a weekend sale, the queues have several hundred orders backed up. While the backup is not catastrophic, you would like to drain it so that customers get their confirmation emails faster. What is a cost-effective way to drain the queue for orders?"},{"correct":[2,3],"explanation":"The Amazon EC2 instance ID will be assigned by AWS as part of the launch process. The administrator password is assigned by AWS and encrypted via the public key. The instance type defines the virtual hardware and the AMI defines the initial software state. You must specify both upon launch.","image":"","options":["The Amazon EC2 instance ID","Password for the administrator account","Amazon EC2 instance type","Amazon Machine Image (AMI)"],"question":"Which of the following must be specified when launching a new Amazon Elastic Compute Cloud (Amazon EC2) Windows instance? (Choose 2 answers)"},{"correct":[0,2],"explanation":"You can change the instance type only within the same instance type family, or you can change the Availability Zone. You cannot change the operating system nor the instance type family.","image":"","options":["Change it into two m3.large instances.","Change it to a Windows instance.","Move it to us-east-1b.","Change it to an m4.xlarge."],"question":"You have purchased an m3.xlarge Linux Reserved instance in us-east-1a. In which ways can you modify this reservation? (Choose 2 answers)"},{"correct":[3],"explanation":"When there are multiple security groups associated with an instance, all the rules are aggregated.","image":"","options":["RDP and HTTP access from CIDR block 0.0.0.0/0","No traffic is allowed.","RDP and HTTP traffic from 72.14.0.0/16","RDP traffic over port 3389 from 72.14.0.0/16 and HTTP traffic over port 80 from 0.0.00/0"],"question":"Your instance is associated with two security groups. The first allows Remote Desktop Protocol (RDP) access over port 3389 from Classless Inter-Domain Routing (CIDR) block 72.14.0.0/16. The second allows HTTP access over port 80 from CIDR block 0.0.0.0/0. What traffic can reach your instance?"},{"correct":[0,1,4],"explanation":"These are the benefits of enhanced networking.","image":"","options":["More Packets Per Second (PPS)","Lower latency","Multiple network interfaces","Border Gateway Protocol (BGP) routing","Less jitter"],"question":"Which of the following are features of enhanced networking? (Choose 3 answers)"},{"correct":[0,1,3],"explanation":"The other answers have nothing to do with networking.","image":"","options":["Use an instance type with 10 Gbps network performance.","Put the instances in a placement group.","Use Dedicated Instances.","Enable enhanced networking on the instances.","Use Reserved Instances."],"question":"You are creating a High-Performance Computing (HPC) cluster and need very low latency and high bandwidth between instances. What combination of the following will allow this? (Choose 3 answers)"},{"correct":[2],"explanation":"Dedicated Instances will not share hosts with other accounts.","image":"","options":["Amazon Virtual Private Cloud (VPC)","Placement groups","Dedicated Instances","Reserved Instances"],"question":"Which Amazon Elastic Compute Cloud (Amazon EC2) feature ensures that your instances will not share a physical host with instances from any other AWS customer?"},{"correct":[1,2],"explanation":"Instance stores are low-durability, high-IOPS storage that is included for free with the hourly cost of an instance.","image":"","options":["Automatic backups","Data is lost when the instance stops.","Very high IOPS","Charge is based on the total amount of storage provisioned"],"question":"Which of the following are true of instance stores? (Choose 2 answers)"},{"correct":[0,2],"explanation":"There are no tapes in the AWS infrastructure. Amazon EBS volumes persist when the instance is stopped. The data is automatically replicated within an Availability Zone. Amazon EBS volumes can be encrypted upon creation and used by an instance in the same manner as if they were not encrypted.","image":"","options":["Data stored on Amazon EBS is automatically replicated within an Availability Zone.","Amazon EBS data is automatically backed up to tape.","Amazon EBS volumes can be encrypted transparently to workloads on the attached instance.","Data on an Amazon EBS volume is lost when the attached instance is stopped."],"question":"Which of the following are features of Amazon Elastic Block Store (Amazon EBS)? (Choose 2 answers)"},{"correct":[1],"explanation":"There is no delay in processing when commencing a snapshot.","image":"","options":["It depends on the provisioned size of the volume.","The volume will be available immediately.","It depends on the amount of data stored on the volume.","It depends on whether the attached instance is an Amazon EBS-optimized instance."],"question":"You need to take a snapshot of an Amazon Elastic Block Store (Amazon EBS) volume. How long will the volume be unavailable?"},{"correct":[1],"explanation":"The volume is created immediately but the data is loaded lazily. This means that the volume can be accessed upon creation, and if the data being requested has not yet been restored, it will be restored upon first request.","image":"","options":["It depends on the provisioned size of the volume.","The data will be available immediately.","It depends on the amount of data stored on the volume.","It depends on whether the attached instance is an Amazon EBS-optimized instance."],"question":"You are restoring an Amazon Elastic Block Store (Amazon EBS) volume from a snapshot. How long will it be before the data is available?"},{"correct":[1,2],"explanation":"B and D are incorrect because an instance store will not be durable and a magnetic volume offers an average of 100 IOPS. Amazon EBS-optimized instances reserve network bandwidth on the instance for IO, and Provisioned IOPS SSD volumes provide the highest consistent IOPS.","image":"","options":["Use an Amazon Elastic Block Store (Amazon EBS)-optimized instance.","Use an instance store.","Use a Provisioned IOPS SSD volume.","Use a magnetic volume."],"question":"You have a workload that requires 15,000 consistent IOPS for data that must be durable. What combination of the following steps do you need? (Choose 2 answers)"},{"correct":[3],"explanation":"Bootstrapping runs the provided script, so anything you can accomplish in a script you can accomplish during bootstrapping.","image":"","options":["Install the most current security updates.","Install the current version of the application.","Configure Operating System (OS) services.","All of the above."],"question":"Which of the following can be accomplished through bootstrapping?"},{"correct":[2],"explanation":"The public half of the key pair is stored on the instance, and the private half can then be used to connect via SSH.","image":"","options":["Decrypt the root password.","Using a certificate","Using the private half of the instance’s key pair","Using Multi-Factor Authentication (MFA)"],"question":"How can you connect to a new Linux instance using SSH?"},{"correct":[1,2],"explanation":"These are the possible outputs of VM Import/Export.","image":"","options":["Amazon Elastic Block Store (Amazon EBS) volumes","Amazon Elastic Compute Cloud (Amazon EC2) instances","Amazon Machine Images (AMIs)","Security groups"],"question":"VM Import/Export can import existing virtual machines as: (Choose 2 answers)"},{"correct":[1,3],"explanation":"Neither the Windows machine name nor the Amazon EC2 instance ID can be resolved into an IP address to access the instance.","image":"","options":["Windows machine name","Public DNS name","Amazon EC2 instance ID","Elastic IP address"],"question":"Which of the following can be used to address an Amazon Elastic Compute Cloud (Amazon EC2) instance over the web? (Choose 2 answers)"},{"correct":[0],"explanation":"None of the other options will have any effect on the ability to connect.","image":"","options":["There is no security group rule that allows RDP access over port 3389 from your IP address.","The instance is a Reserved Instance.","The instance is not using enhanced networking.","The instance is not an Amazon EBS-optimized instance."],"question":"Using the correctly decrypted Administrator password and RDP, you cannot log in to a Windows instance you just launched. Which of the following is a possible reason?"},{"correct":[2],"explanation":"A short period of heavy traffic is exactly the use case for the bursting nature of general-purpose SSD volumes—the rest of the day is more than enough time to build up enough IOPS credits to handle the nightly task. Instance stores are not durable, magnetic volumes cannot provide enough IOPS, and to set up a Provisioned IOPS SSD volume to handle the peak would mean spending money for more IOPS than you need.","image":"","options":["Use a Provisioned IOPS SSD volume at 3,000 IOPS.","Use an instance store.","Use a general-purpose SSD volume.","Use a magnetic volume."],"question":"You have a workload that requires 1 TB of durable block storage at 1,500 IOPS during normal use. Every night there is an Extract, Transform, Load (ETL) task that requires 3,000 IOPS for 15 minutes. What is the most appropriate volume type for this workload?"},{"correct":[1],"explanation":"There is a very small hourly charge for allocated elastic IP addresses that are not associated with an instance.","image":"","options":["Hourly when they are associated with an instance","Hourly when they are not associated with an instance","Based on the data that flows through them","Based on the instance type to which they are attached"],"question":"How are you billed for elastic IP addresses?"}];
+    var currentquestion = 0, score = 0, submt=true, picked = [];
+
+    Array.prototype.diff = function(arr2) {
+        var ret = [];
+        for(var i in this) {   
+            if(arr2.indexOf( this[i] ) > -1){
+                ret.push( this[i] );
+            }
+        }
+        return ret;
+    };
+    
+    Array.prototype.equals = function (array) {
+        
+        if (!array)
+            return false;
+
+        
+        if (this.length != array.length)
+            return false;
+
+        for (var i = 0, l=this.length; i < l; i++) {
+            
+            if (this[i] instanceof Array && array[i] instanceof Array) {
+                
+                if (!this[i].equals(array[i]))
+                    return false;       
+            }           
+            else if (this[i] != array[i]) { 
+                
+                return false;   
+            }           
+        }       
+        return true;
+    }
+
+    
+    Object.defineProperty(Array.prototype, "equals", {enumerable: false});
+
+     
+    jQuery(document).ready(function($){
+        
+
+        function htmlEncode(value){
+          return $(document.createElement('div')).text(value).html();
+        }
+        
+
+        function addChoices(choices){
+            if(typeof choices !== "undefined" && $.type(choices) == "array"){
+                $('#choice-block').empty();
+                for(var i=0;i<choices.length; i++){
+                    $(document.createElement('li')).addClass('choice choice-box').attr('data-index', i).text(choices[i]).appendTo('#choice-block');                    
+                }
+            }
+        }
+        
+        
+
+        function nextQuestion(){
+            submt = true;
+            picked = [];
+            $('#explanation').empty();
+            $('#question').text(quiz[currentquestion]['question']);
+            $('#pager').text('Question ' + Number(currentquestion + 1) + ' of ' + quiz.length);
+            if(quiz[currentquestion].hasOwnProperty('image') && quiz[currentquestion]['image'] != ""){
+                if($('#question-image').length == 0){
+                    $(document.createElement('img')).addClass('question-image').attr('id', 'question-image').attr('src', quiz[currentquestion]['image']).attr('alt', htmlEncode(quiz[currentquestion]['question'])).insertAfter('#question');
+                } else {
+                    $('#question-image').attr('src', quiz[currentquestion]['image']).attr('alt', htmlEncode(quiz[currentquestion]['question']));
+                }
+            } else {
+                $('#question-image').remove();
+            }
+            addChoices(quiz[currentquestion]['options']);
+
+            var multichoice = quiz[currentquestion]['correct'].length > 1 ? true : false;
+            setupButtons(multichoice);
+        }
+        
+
+        function processQuestion(choice){
+            var flag = quiz[currentquestion]['correct'].equals(choice);
+            if(flag){
+                $('.choice').eq(choice).css({'background-color':'#50D943'});
+                $('#explanation').html('<strong>Correct!</strong> ' + htmlEncode(quiz[currentquestion]['explanation']));
+                score++;
+            } else {
+                $('.choice').eq(choice).css({'background-color':'#D92623'});
+                $('#explanation').html('<strong>Incorrect.</strong> ' + htmlEncode(quiz[currentquestion]['explanation']));
+            }
+            currentquestion++;
+            $('#submitbutton').html('NEXT QUESTION &raquo;').on('click', function(){
+                if(currentquestion == quiz.length){
+                    endQuiz();
+                } else {
+                    $(this).text('Check Answer').css({'color':'#222'}).off('click');
+                    nextQuestion();
+                }
+            })
+        }
+        
+
+        function setupButtons(multichoice){
+            console.log(multichoice);
+            $('.choice').on('click', function(){
+                var curElement = $(this);
+                var curElementIndex = curElement.attr('data-index');
+                var myClass = curElement.attr("class");
+                
+                if(multichoice){
+                    if(curElement.hasClass("selectedAns")){
+                        var index = picked.indexOf(curElementIndex);
+                        picked.splice(index, 1);
+                        curElement.removeClass("selectedAns");
+                    }else{
+                        picked.push(parseInt(curElementIndex));
+                        curElement.addClass("selectedAns");
+                    }
+                }else{
+                    picked = [];
+                    $('.choice').removeClass("selectedAns");
+                    curElement.addClass("selectedAns");
+                    picked.push(parseInt(curElementIndex));
+                }
+                
+                
+                if(submt){
+                    submt=false;
+                    $('#submitbutton').css({'color':'#000'}).on('click', function(){
+                        $('.choice').off('click');
+                        $(this).off('click');
+                        processQuestion(picked);
+                    });
+                }
+            })
+        }
+        
+        
+
+        function endQuiz(){
+            $('#explanation').empty();
+            $('#question').empty();
+            $('#choice-block').empty();
+            $('#submitbutton').remove();
+            $('#question').text("You got " + score + " out of " + quiz.length + " correct.");
+            $(document.createElement('h2')).css({'text-align':'center', 'font-size':'4em'}).text(Math.round(score/quiz.length * 100) + '%').insertAfter('#question');
+        }
+        
+
+        function init(){
+            
+
+            
+            if(typeof quiz !== "undefined" && $.type(quiz) === "array"){
+                var container = $('#frame');
+                quiz.forEach(function (row) {
+                   
+                });
+                
+                
+                $(document.createElement('p')).addClass('pager').attr('id','pager').text('Question 1 of ' + quiz.length).appendTo('#frame');
+                
+                $(document.createElement('h2')).addClass('question').attr('id', 'question').text(quiz[0]['question']).appendTo('#frame');
+                
+                if(quiz[0].hasOwnProperty('image') && quiz[0]['image'] != ""){
+                    $(document.createElement('img')).addClass('question-image').attr('id', 'question-image').attr('src', quiz[0]['image']).attr('alt', htmlEncode(quiz[0]['question'])).appendTo('#frame');
+                }
+                
+                $(document.createElement('ul')).attr('id', 'choice-block').appendTo('#frame');
+            
+                
+                addChoices(quiz[0]['options']);
+                
+                $(document.createElement('p')).addClass('explanation').attr('id','explanation').html('&nbsp;').appendTo('#frame');
+                
+                
+                $(document.createElement('div')).addClass('choice-box').attr('id', 'submitbutton').text('Check Answer').css({'font-weight':700,'color':'#222','padding':'30px 0'}).appendTo('#frame');
+                
+                var multichoice = quiz[0]['correct'].length > 1 ? true : false;
+                setupButtons(multichoice);
+            }
+        }
+        init();
+    });
+
+</script>
+<style>
+    #frame {
+        background-color: #fff;
+        padding: 12px 20px;
+        border-radius: 4px;
+        border: 1px solid #d3e0e9;
+    }
+
+    .selectedAns {
+        border-color: royalblue;
+        background-color: burlywood;
+    }
+</style>
+<div id="frame" role="content"></div>
+        </div>
+        
+    </div>
+    
+    
+    <footer class="sticky-footer">
+    <div class="container">
+        <div class="text-center">
+            <small>Copyright © Anand Vyas 2019</small>
+        </div>
+    </div>
+</footer>
+
+<a class="scroll-to-top rounded" href="#page-top">
+    <i class="fa fa-angle-up"></i>
+</a>
+
+
+<script src="https://anandvyas.in/js/popper.min.js"></script>
+<script src="https://anandvyas.in/js/bootstrap.min.js"></script>
+<script src="https://anandvyas.in/js/highlight.min.js"></script>
+<script src="https://anandvyas.in/js/moment.min.js"></script>
+<script src="https://anandvyas.in/js/clipboard.min.js"></script>
+
+<script src="https://anandvyas.in/js/jquery.easing.min.js"></script>
+
+<script src="https://anandvyas.in/js/sb-admin.js"></script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-108803266-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'UA-108803266-1');
+</script>
+  </div>
+<script data-no-instant>document.write('<script src="/livereload.js?port=1313&mindelay=10"></' + 'script>')</script></body>
+</html>

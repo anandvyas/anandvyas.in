@@ -1,0 +1,1013 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>AWS Simple Storage Service (S3), RRS, Glacier - Anand vyas</title>
+    <meta content="AWS Simple Storage Service (S3), RRS, Glacier - Anand vyas" property="og:title">
+    <meta content="" name="keywords">
+    <meta content="" property="og:description">
+    <meta name="author" content="Anand Vyas">
+
+    
+    <link href="https://anandvyas.in/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link href="https://anandvyas.in/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    
+    <link href="https://anandvyas.in/css/highlighter.css" rel="stylesheet">
+    
+    <link href="https://anandvyas.in/css/sb-admin.css" rel="stylesheet">
+    <link href="https://anandvyas.in/css/about.css" rel="stylesheet">
+
+    <script src="https://anandvyas.in/js/jquery.min.js"></script>
+</head>
+<body class="fixed-nav sticky-footer bg-dark sidenav-toggled" id="page-top">
+  
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+    <a class="navbar-brand" href="https://anandvyas.in/">
+        <img src="https://anandvyas.in/images/profile/logo.png" />
+        <span>Anand vyas</span>
+    </a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav navbar-sidenav">
+            <li class="nav-item sidebar-profile text-center">
+                <div class="profile-pic">
+                    <img src="https://anandvyas.in/images/profile/avatar.jpg" alt="avatar">
+                </div>
+                <div class="profile-detail">
+                    
+                    <span>Solution Architect</span> 
+                    <span>Cloud Architect</span> 
+                    <span>DevOps</span> 
+                    <span>Tech Lead</span> 
+                </div>
+            </li>
+            
+            <li class="nav-item sidebar-menu" data-toggle="tooltip" data-placement="right" title="Home">
+                <a class="nav-link" href="https://anandvyas.in/">
+                <i class="fa fa-fw fa fa-home"></i>
+                <span class="nav-link-text">Home</span>
+                </a>
+            </li>
+            
+            <li class="nav-item sidebar-menu" data-toggle="tooltip" data-placement="right" title="About">
+                <a class="nav-link" href="https://anandvyas.in/about">
+                <i class="fa fa-fw fa fa-user-circle"></i>
+                <span class="nav-link-text">About</span>
+                </a>
+            </li>
+            
+            <li class="nav-item sidebar-menu" data-toggle="tooltip" data-placement="right" title="Categories">
+                <a class="nav-link" href="https://anandvyas.in/categories">
+                <i class="fa fa-fw fa fa-dashboard"></i>
+                <span class="nav-link-text">Categories</span>
+                </a>
+            </li>
+            
+            <li class="nav-item sidebar-menu" data-toggle="tooltip" data-placement="right" title="Tags">
+                <a class="nav-link" href="https://anandvyas.in/tags">
+                <i class="fa fa-fw fa fa-tags"></i>
+                <span class="nav-link-text">Tags</span>
+                </a>
+            </li>
+            
+        </ul>
+        <ul class="navbar-nav sidenav-social">
+            
+            <li><a href="#" target="_blank"><i class="fa fa-mobile"></i></a></li>
+            
+            <li><a href="mailto:anandvyas@live.com" target="_blank"><i class="fa fa-envelope"></i></a></li>
+            
+            <li><a href="https://twitter.com/anandvyaas" target="_blank"><i class="fa fa-twitter"></i></a></li>
+            
+            <li><a href="https://www.linkedin.com/in/anandvyaas" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+            
+            <li><a href="https://www.instagram.com/anandvyaas" target="_blank"><i class="fa fa-instagram"></i></a></li>
+            
+            <li><a href="https://github.com/anandvyas" target="_blank"><i class="fa fa-github"></i></a></li>
+            
+            <li><a href="https://stackoverflow.com/users/8208060/anand-vyas" target="_blank"><i class="fa fa-stack-overflow"></i></a></li>
+            
+        </ul>
+        <ul class="navbar-nav sidenav-toggler">
+            <li class="nav-item">
+                <a class="nav-link text-center" id="sidenavToggler">
+            <i class="fa fa-fw fa-angle-left"></i>
+            </a>
+            </li>
+        </ul>
+        
+        
+    </div>
+</nav>
+  
+  <div class="content-wrapper">
+    <div class="container-fluid">
+    
+
+
+<ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="https://anandvyas.in/">Home</a></li>
+
+
+    
+    <li class="breadcrumb-item active"><a href='https://anandvyas.in/aws'>aws</a></li>
+    
+    
+
+
+    
+    <li class="breadcrumb-item active"><a href='https://anandvyas.in/aws/aws-object-storage-and-cdn'>aws-object-storage-and-cdn</a></li>
+    
+    
+
+
+    
+
+</ol>
+
+        <div class="post">
+            <h1>AWS Simple Storage Service (S3), RRS, Glacier</h1>
+            <span class="post-date">Mon, Jul 10, 2017</span>
+            <p>Amazon Web Services (AWS) provides low-cost data storage with high durability
+and availability. AWS offers storage choices for backup, archiving, and disaster
+recovery use cases and provides block, file, and object storage.</p>
+
+<div class="text-center">
+    <img class="img-responsive" src="https://anandvyas.in/images/aws/aws-s3-storage.png" alt="AWS Identity and Access Management" />
+</div>
+ 
+
+<h3 id="span-style-color-e47911-block-file-and-object-storage-span"><span style="color:#e47911">Block, File and object storage</span></h3>
+
+<div class="text-center">
+    <img class="img-responsive" src="https://anandvyas.in/images/aws/aws-storage.png" alt="AWS Identity and Access Management" />
+</div>
+ 
+
+<ul>
+<li><strong>Block Storage (SAN)</strong>: We use block storage systems to host our databases, support random read/write operations, and keep system files of the running virtual machines.</li>
+<li><strong>File Storage (NAS)</strong>: File level storage is seen and deployed in Network Attached Storage (NAS) systems.</li>
+<li><strong>Object Storage</strong>: Object storage works very well for unstructured data sets where data is mostly read (rather than written to).</li>
+</ul>
+
+<p><div class="text-center">
+    <img class="img-responsive" src="https://anandvyas.in/images/aws/type_of_storage.png" alt="AWS Identity and Access Management" />
+</div>
+ 
+<div class="text-center">
+    <img class="img-responsive" src="https://anandvyas.in/images/aws/storage_options.png" alt="AWS Identity and Access Management" />
+</div>
+ </p>
+
+<h3 id="span-style-color-e47911-s3-span"><span style="color:#e47911">S3</span></h3>
+
+<p>S3 (Simple storage service) provides developers and IT teams with highly scalable, durable, secure object storage. Amazon S3 is easy to use, with a simple web service interface to store and retrieve any amount of data from anywhere on the web.</p>
+
+<ul>
+<li>Amazon S3 also allows you to pay only for the storage you actually use</li>
+<li>Amazon S3 is one of first services introduced by AWS</li>
+<li>Amazon S3 offers configurable lifecycle policies</li>
+<li>Amazon S3 provides a rich set of permissions, access controls, and encryption
+options.</li>
+<li>Amazon S3 object contains both data and metadata.</li>
+<li>Objects reside in containers called buckets, and each object is identified by a unique user-specified key (filename). Buckets are a simple flat folder with no file system hierarchy.</li>
+<li>You can’t “mount” a bucket, “open” an object, install an operating system
+on Amazon S3, or run a database on it.</li>
+</ul>
+
+<h3 id="span-style-color-e47911-s3-bucket-span"><span style="color:#e47911">S3 Bucket</span></h3>
+
+<ul>
+<li>A bucket is a container (web folder) for objects (files) stored in Amazon S3.</li>
+<li>Every Amazon S3 object is contained in a bucket.</li>
+<li>Buckets form the top-level namespace for Amazon S3</li>
+<li><strong>Bucket names are global</strong>. This means that your bucket names must be unique across all AWS accounts, much like Domain Name System (DNS) domain names, not just within your own
+account.</li>
+<li>Bucket names can contain up to 63 lowercase letters, numbers, hyphens, and
+periods.</li>
+<li>You can create and use multiple buckets</li>
+<li>you can have up to <strong>100 bucket</strong> per account by default.</li>
+</ul>
+
+<h3 id="span-style-color-e47911-aws-regions-span"><span style="color:#e47911">AWS Regions</span></h3>
+
+<ul>
+<li>Amazon S3 bucket is created in a <strong>specific region</strong> that you choose.</li>
+<li>You can create and use buckets that are located close to a particular set of end users or customers in order to minimize latency, or located in a particular region to satisfy data locality and sovereignty concerns, or located far away from your primary facilities in order to satisfy disaster recovery and compliance needs.</li>
+</ul>
+
+<h3 id="span-style-color-e47911-objects-span"><span style="color:#e47911">Objects</span></h3>
+
+<ul>
+<li>Objects are the entities or files stored in Amazon S3 buckets.</li>
+<li>An object can store virtually any kind of data in any format.</li>
+<li>Objects can range in size from <strong>0 bytes up to 5TB</strong>.</li>
+<li>a single bucket can store an <strong>unlimited number</strong> of objects.</li>
+<li>Each object consists of data (the file itself) and metadata (data about the file).</li>
+<li>There are two types of metadata
+
+<ul>
+<li>system metadata: System metadata is created and used by Amazon S3 itself, and it includes things like the
+
+<ul>
+<li>date last modified,</li>
+<li>object size,</li>
+<li>MD5 digest,</li>
+<li>and HTTP Content-Type.</li>
+</ul></li>
+<li>user metadata: . User metadata is optional, and it can only be specified at the time an object is created. You can use custom metadata to tag your data with attributes that are meaningful to you.</li>
+</ul></li>
+</ul>
+
+<h3 id="span-style-color-e47911-keys-span"><span style="color:#e47911">Keys</span></h3>
+
+<ul>
+<li>Every object stored in an S3 bucket is identified by a unique identifier called a <strong>key</strong></li>
+<li>A key can be up to 1024 bytes of Unicode UTF-8 characters, <strong>including embedded slashes, backslashes, dots, and dashes</strong>. <code>important</code></li>
+<li>Keys must be unique within a single bucket, but different buckets can contain objects with the same key.</li>
+</ul>
+
+<h3 id="span-style-color-e47911-object-url-span"><span style="color:#e47911">Object URL</span></h3>
+
+<ul>
+<li>every Amazon S3 object can be addressed by a unique URL</li>
+<li>Example: <a href="http://mybucket.s3.amazonaws.com/jack.doc">http://mybucket.s3.amazonaws.com/jack.doc</a>
+
+<ul>
+<li>mybucket is the S3 bucket name, and jack.doc is the key or filename.</li>
+</ul></li>
+<li>Example: <a href="http://mybucket.s3.amazonaws.com/fee/fi/fo/fum/jack.doc">http://mybucket.s3.amazonaws.com/fee/fi/fo/fum/jack.doc</a><br />
+
+<ul>
+<li>The bucket name is still mybucket, but now the key or filename is the string <strong>fee/fi/fo/fum/jack.doc</strong>. A key may contain delimiter characters like slashes or backslashes to help you name and logically organize your Amazon S3 objects, but to Amazon S3 it is simply a long key name in a flat namespace. There is no actual file and folder hierarchy.</li>
+</ul></li>
+</ul>
+
+<h3 id="span-style-color-e47911-s3-operations-span"><span style="color:#e47911">S3 Operations</span></h3>
+
+<ul>
+<li>Create/delete a bucket</li>
+<li>Write an object</li>
+<li>Read an object</li>
+<li>Delete an object</li>
+<li>List keys in a bucket</li>
+</ul>
+
+<h3 id="span-style-color-e47911-rest-interface-span"><span style="color:#e47911">REST Interface</span></h3>
+
+<ul>
+<li>The native interface for Amazon S3 is a REST (Representational State Transfer) API.</li>
+<li>you use standard HTTP or HTTPS requests to create and delete buckets, list keys, and read and write objects.</li>
+<li><strong>Always use HTTPS for Amazon S3 API requests to ensure that your requests and data are secure</strong>.</li>
+</ul>
+
+<h3 id="span-style-color-e47911-durability-and-availability-span"><span style="color:#e47911">Durability and Availability</span></h3>
+
+<ul>
+<li><strong>Durability</strong>: Durability addresses the question, <strong>“Will my data still be there in the future?”</strong></li>
+<li><strong>Availability</strong>: Availability addresses the question, <strong>“Can I access my data right now?”</strong></li>
+<li>Amazon S3 standard storage is designed for 99.999999999% durability and 99.99%
+availability of objects over a given year.</li>
+</ul>
+
+<blockquote>
+<p>Even though Amazon S3 storage offers very high durability at the infrastructure level, it is still a best practice to protect against user-level accidental deletion or overwriting of data by using additional features such as <strong>versioning</strong>, <strong>cross-region replication</strong>, and <strong>MFA Delete</strong>.</p>
+</blockquote>
+
+<h3 id="span-style-color-e47911-data-consistency-span"><span style="color:#e47911">Data Consistency</span></h3>
+
+<ul>
+<li><strong>Consistency</strong> means that if you PUT new data to an existing key, a subsequent GET
+might return the old data.
+
+<ul>
+<li><strong>Update file Condition</strong>: your data is automatically replicated across multiple servers and locations within a region, changes in your data may take some time to propagate to all locations. As a result, there are some situations where information that you read immediately after an update may return stale data.</li>
+<li><strong>Insert file condition</strong>: Amazon S3 provides <strong>read-after-write consistency</strong>. means no problem.</li>
+<li><strong>Delete file condition</strong>: if you DELETE an object, a subsequent GET for that object might still read the deleted object.(<strong>Eventually consistency</strong>)</li>
+</ul></li>
+</ul>
+
+<h3 id="span-style-color-e47911-access-control-span"><span style="color:#e47911">Access Control</span></h3>
+
+<ul>
+<li>Using an Amazon S3 bucket policy,
+
+<ul>
+<li>you can specify who can access the bucket,</li>
+<li>from where (by Classless Inter-Domain Routing [CIDR] block or IP address),</li>
+<li>and during what time of day.</li>
+</ul></li>
+<li>IAM policies may be associated directly with IAM principals that grant access to an
+Amazon S3 bucket, just as it can grant access to any AWS service and resource.</li>
+</ul>
+
+<h3 id="span-style-color-e47911-prefixes-and-delimiters-in-key-name-span"><span style="color:#e47911">Prefixes and Delimiters in Key name</span></h3>
+
+<ul>
+<li>you would use a slash (/) or backslash (\) as a delimiter and then use key names with embedded delimiters to emulate a file and folder hierarchy within the flat object key namespace of a bucket.</li>
+</ul>
+
+<p>For example, you might want to store a series of server logs by server name (such as
+server42), but organized by year and month, like so:</p>
+
+<ul>
+<li>logs/2016/January/server42.log</li>
+<li>logs/2016/February/server42.log</li>
+<li>logs/2016/March/server42.log</li>
+</ul>
+
+<blockquote>
+<p>Use delimiters and object prefixes to hierarchically organize the objects in your
+Amazon S3 buckets, but always remember that Amazon S3 is not really a file system.</p>
+</blockquote>
+
+<h3 id="span-style-color-e47911-encryption-span"><span style="color:#e47911">Encryption</span></h3>
+
+<ul>
+<li>Two type of encryption
+
+<ul>
+<li><strong>In-flight</strong>: you can use the Amazon S3 Secure Sockets Layer (SSL) API endpoints. This ensures that all data sent to and from Amazon S3 is encrypted while in transit using the HTTPS protocol.</li>
+<li><strong>Rest</strong>:
+
+<ul>
+<li>you can use several variations of Server-Side Encryption (SSE).</li>
+<li>Amazon S3 encrypts your data at the object level as it writes it to disks in its data centers and decrypts it for you when you access it.</li>
+<li>All Server-Side Encryption (SSE) performed by Amazon S3 and AWS Key Management Service (Amazon KMS) uses the <strong>256-bit Advanced Encryption Standard (AES)</strong>.</li>
+<li>Types of Encryption
+
+<ul>
+<li>SSE-S3 (AWS-Managed Keys)</li>
+<li>SSE-KMS (AWS KMS Keys)</li>
+<li>SSE-C (Customer-Provided Keys)</li>
+<li>Client-Side Encryption</li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+
+<blockquote>
+<p>For maximum simplicity and ease of use, use server-side encryption with AWSmanaged
+keys (SSE-S3 or SSE-KMS).</p>
+</blockquote>
+
+<h3 id="span-style-color-e47911-s3-versioning-span"><span style="color:#e47911">S3 Versioning</span></h3>
+
+<ul>
+<li>Amazon S3 versioning helps protects your data against accidental or malicious deletion by keeping multiple versions of each object in the bucket, identified by a unique version ID.</li>
+<li>If a user makes an accidental change or even maliciously deletes an object in your S3 bucket, you can restore the object to its original state simply by referencing the version ID</li>
+<li>Once enabled, versioning cannot be removed from a bucket; it can only be suspended</li>
+</ul>
+
+<h3 id="span-style-color-e47911-s3-mfa-delete-span"><span style="color:#e47911">S3 MFA Delete</span></h3>
+
+<ul>
+<li>MFA Delete adds another layer of data protection on top of bucket versioning.</li>
+<li>MFA Delete requires an authentication code (a temporary, one-time password) generated by a hardware or virtual Multi-Factor Authentication (MFA) device.</li>
+</ul>
+
+<h3 id="span-style-color-e47911-pre-signed-urls-span"><span style="color:#e47911">Pre-Signed URLs</span></h3>
+
+<p>All Amazon S3 objects by default are private, meaning that only the owner has access. However, the object owner can optionally share objects with others by creating a pre-signed URL, using their own security credentials to grant time-limited permission to download the objects.</p>
+
+<h3 id="span-style-color-e47911-multipart-upload-span"><span style="color:#e47911">Multipart Upload</span></h3>
+
+<ul>
+<li>Multipart upload is a three-step process: initiation, uploading the parts, and completion (or abort).</li>
+<li>Parts can be uploaded independently in arbitrary order, with retransmission if needed. After all of the parts are uploaded, Amazon S3 assembles the parts in order to create an object.</li>
+<li>you <strong>should use multipart upload for objects larger than 100 Mb</strong>, and you <strong>must use multipart upload for objects larger than 5GB</strong>.</li>
+<li>When using the low-level APIs, you must break the file to be uploaded into parts and keep track of the parts.</li>
+<li>When using the high-level APIs and the high-level Amazon S3 commands in the AWS CLI (aws s3 cp, aws s3 mv, and aws s3 sync), multipart upload is automatically performed for large objects.</li>
+</ul>
+
+<div class="text-center">
+    <img class="img-responsive" src="https://anandvyas.in/images/aws/aws-s3-multipart.png" alt="AWS Identity and Access Management" />
+</div>
+ 
+
+<h3 id="span-style-color-e47911-range-gets-span"><span style="color:#e47911">Range GETs</span></h3>
+
+<ul>
+<li>It is possible to download (GET) only a portion of an object in both Amazon S3 and Amazon Glacier by using something called a Range GET.</li>
+<li>Using the Range HTTP header in the GET request or equivalent parameters in one of the SDK wrapper libraries, you specify a range of bytes of the object.</li>
+<li>This can be useful in dealing with large objects when you have poor connectivity or to download only a known portion of a large Amazon Glacier backup.</li>
+</ul>
+
+<h3 id="span-style-color-e47911-logging-span"><span style="color:#e47911">Logging</span></h3>
+
+<ul>
+<li><strong>Logging is off by default</strong>, but it can easily be enabled</li>
+<li>When you enable logging for a bucket (the source bucket), you must choose where the logs will be stored (the target bucket). You can store access logs in the same bucket or in a different bucket.</li>
+<li>best practice to specify a prefix, <strong>such as logs/ or yourbucketname/logs/</strong></li>
+<li>Logs include information such as:
+
+<ul>
+<li>Requestor account and IP address</li>
+<li>Bucket name</li>
+<li>Request time</li>
+<li>Action (GET, PUT, LIST, and so forth)</li>
+<li>Response status or error code</li>
+</ul></li>
+</ul>
+
+<h3 id="span-style-color-e47911-s3-essentials-span"><span style="color:#e47911">S3 Essentials</span></h3>
+
+<ol>
+<li>S3 is object based i.e. it allows you to store, and upload files on the platform. Cannot install OS or databases on S3</li>
+<li>Files can be from <strong>1 byte to 5tb</strong> in size</li>
+<li>There is <strong>unlimited storage</strong></li>
+<li>Files are stored in buckets(any directory like we have on Windows or Linux files system)</li>
+<li>Buckets have a unique namespace for each given region. For example, if we wanted to create a bucket called acloudguru the EU west region then that namespace name would be reserved so someone else using another Amazon account could not create a acloudguru bucket eg: <a href="https://s3-us-west2.amazonaws.com/acloudguru">https://s3-us-west2.amazonaws.com/acloudguru</a></li>
+<li>When you upload a file to S3 you will receive a <strong>HTTP 200 code</strong> if the file uploaded successfully.</li>
+<li>Amazon guarantees 99.99% availability or the S3 platform.S3 buckets are essentially spread across availability zones, so if the availability zone goes down the S3 bucket is stored in the other availability zones, and Amazon does this automatically we do not need to configure this</li>
+<li>Amazon also guarantees 99.999999999% durability for S3 information.Durability is simply, if you think of storing a file on a disc set that’s a RAID 1 and you lose one of the discs, since we are in the RAID 1 configuration which is a mirror, all your information is stored across 2 disks, so you can afford the loss of 1 disc. The way Amazon structures S3 is that if we store 10,000 files that will guarantee that those 10,000 files will stay there with above guarantee %age of durability</li>
+<li>S3 can have metadata(key value pairs) on each file</li>
+<li>S3 allows you to do lifecycle management as well as versioning</li>
+<li>S3 also allows you to encrypt your buckets, so you can store your files and encrypted at rest</li>
+</ol>
+
+<h3 id="span-style-color-e47911-s3-bucket-url-structure-span"><span style="color:#e47911">S3 Bucket URL Structure</span></h3>
+
+<p>Amazon S3 supports both <strong>virtual-hosted–style</strong> and <strong>path-style</strong> URLs to access a bucket.</p>
+
+<ul>
+<li>In a virtual-hosted–style URL, the bucket name is part of the domain name in the URL.
+
+<ul>
+<li>http://<font color="red">bucket</font>.s3.amazonaws.com</li>
+<li>http://<font color="red">bucket</font>.s3-<font color="red">aws-region</font>.amazonaws.com.</li>
+</ul></li>
+<li>In a path-style URL, the bucket name is not part of the domain (unless you use a region-specific endpoint).
+
+<ul>
+<li>US East (N. Virginia) region endpoint, <a href="http://s3.amazonaws.com/">http://s3.amazonaws.com/</a><font color="red">bucket</font></li>
+<li>Region-specific endpoint, <a href="http://s3-">http://s3-</a><font color="red">aws-region</font>.amazonaws.com/<font color="red">bucket</font></li>
+</ul></li>
+</ul>
+
+<h3 id="span-style-color-e47911-s3-object-structure-span"><span style="color:#e47911">S3 Object Structure</span></h3>
+
+<p>S3 is object based. Object consist of the following</p>
+
+<ol>
+<li><strong>Key</strong>: This is simply the name of the object.</li>
+<li><strong>Value</strong>: This is simply the data and is made up of a sequence of bytes.</li>
+<li><strong>Version ID</strong>: Important for versioning.</li>
+<li><strong>MetaData</strong>: Data about the data you are storing.</li>
+<li><strong>Subresources</strong>
+
+<ul>
+<li>Access control lists (ACL): Bucket level access control</li>
+<li>Torrent: Amazon does support torrent</li>
+</ul></li>
+</ol>
+
+<h3 id="span-style-color-e47911-storage-types-span"><span style="color:#e47911">Storage Types</span></h3>
+
+<ol>
+<li><strong>S3</strong>: 99.99% avialibility, 99.99999999999% durability, stored redundantly across multiple devices in multiple facilities and is designed to sustain the lose of 2 facilities concurrently.</li>
+<li><strong>S3 - IA (Infrequently Accessed)</strong>: For data that is accessed less frequently, but requires rapid access when needed. Lower fee than S3, but you are charged a retrieval fee.</li>
+<li><strong>Reduced Redundancy Storage (RRS)</strong>: Reduced Redundancy Storage (RRS) is an Amazon S3 storage option that enables customers to store noncritical, reproducible data at lower levels of redundancy than Amazon S3’s standard storage. It provides a highly available solution for distributing or sharing content that is durably stored elsewhere, or for storing thumbnails, transcoded media, or other processed data that can be easily reproduced.Designed to provide 99.99% durability and 99.99% availability of object over a given year.</li>
+<li><strong>Glacier</strong>:
+
+<ul>
+<li>An extremely low-cost storage service for data archival. Amazon Glacier stores data for as little as $0.004 per gigabyte per month, and is optimized for data that is infrequently accessed and for which retrieval times of 3-5 hours are suitable.</li>
+<li>Glacier is basically data archiving. So, in traditional organizations you might archive off to tape, and you might do this because in some countries, companies that are regulated by Financial Services Authority, have to store their data for seven years and more.</li>
+<li>You want to archive off to tapes and put the tapes into a safe location, and then forget about them. After 7 years you can destroy the data So Amazon gives us this data archival as a service. We can do away with tapes entirely,we can archive anything that is in our S3 buckets directly to Glacier.</li>
+<li>In Amazon Glacier, data is stored in archives.</li>
+<li>An archive can contain up to <strong>40TB</strong> of data, and you can have an unlimited number of archives.</li>
+<li>Each archive is assigned a unique archive ID at the time of creation.</li>
+<li><strong>All archives are automatically encrypted, and archives are immutable—after an archive is created, it cannot be modified</strong>.</li>
+<li><strong>Vaults</strong>: Vaults are containers for archives. Each AWS account can have up to 1,000 vaults. You can control access to your vaults and the actions allowed using IAM policies or vault access policies.</li>
+<li><strong>Vaults Locks</strong>: You can easily deploy and enforce compliance controls for individual Amazon Glacier vaults with a vault lock policy. Once locked, the policy can no longer be changed.</li>
+</ul></li>
+</ol>
+
+<div class="text-center">
+    <img class="img-responsive" src="https://anandvyas.in/images/aws/storage-type.png" alt="AWS Identity and Access Management" />
+</div>
+ 
+
+<h3 id="span-style-color-e47911-s3-v-s-rrs-v-s-glacier-span"><span style="color:#e47911">S3 v/s RRS v/s Glacier</span></h3>
+
+<table>
+<thead>
+<tr>
+<th>Amazon Glacier</th>
+<th>S3</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Amazon Glacier supports 40TB archives</td>
+<td>S3 supports 5TB objects</td>
+</tr>
+
+<tr>
+<td>Amazon Glacier are identified by system-generated archive IDs</td>
+<td>Amazon S3 lets you use “friendly” key names</td>
+</tr>
+
+<tr>
+<td>Amazon Glacier archives are automatically encrypted</td>
+<td>encryption at rest is optional in Amazon S3</td>
+</tr>
+</tbody>
+</table>
+
+<div class="text-center">
+    <img class="img-responsive" src="https://anandvyas.in/images/aws/s3-vs-glacier.png" alt="AWS Identity and Access Management" />
+</div>
+ 
+
+<h3 id="span-style-color-e47911-s3-charges-depends-on-span"><span style="color:#e47911">S3 Charges Depends On</span></h3>
+
+<ol>
+<li><strong>Storage</strong>: Charge for storage, how much data you are stored on S3.</li>
+<li><strong>Requests</strong>: You charged for number of requests.</li>
+<li><strong>Storage Management</strong>: We add tags to manage files in S3, that would be chargeable.</li>
+<li><strong>Data Transfer Pricing</strong>: Data incomming is free, but data moving in S3, like replication of data files one region to another region that would be chargeable.</li>
+<li><strong>Transfer Acceleration</strong>: caching file on Edge location.</li>
+</ol>
+
+<h3 id="span-style-color-e47911-s3-charges-list-span"><span style="color:#e47911">S3 Charges List</span></h3>
+
+<div class="text-center">
+    <img class="img-responsive" src="https://anandvyas.in/images/aws/s3-charges.png" alt="AWS Identity and Access Management" />
+</div>
+ 
+
+<p><span style="color:Red">Charges depends on regions, every regions has different charges list</span></p>
+
+<h3 id="span-style-color-e47911-s3-bucket-creation-span"><span style="color:#e47911">S3 Bucket Creation</span></h3>
+
+<ul>
+<li><strong>Rules for Bucket Naming</strong>
+
+<ul>
+<li>Always choose DNS compliant bucket name.</li>
+<li>Bucket names must be at least 3 and no more than 63 characters long.</li>
+<li>Bucket names can contain lowercase letters, numbers, and hyphens. Each label must start and end with a lowercase letter or a number.</li>
+<li>Bucket names must not be formatted as an IP address (e.g., 192.168.5.4).</li>
+<li>Amazon recommend that you do not use periods (.) in bucket names.</li>
+</ul></li>
+</ul>
+
+<div align="center">
+    <video width="620" height="440" controls>
+    <source src="https://anandvyas.in/videos/s3/S4-L2-Create-an-S3-Bucket-Lab.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+    </video>
+</div>
+
+<h3 id="span-style-color-e47911-s3-versioning-span-1"><span style="color:#e47911">S3 Versioning</span></h3>
+
+<ul>
+<li>Stores all the versions of an object(including all writes and even if you delete and object).</li>
+<li><strong>Great backup tool, once enabled,versioning cannot be disabled but only suspended</strong></li>
+<li>Integrates with Lifecycle rules</li>
+<li>Versioning’s MultiFactorAuthentication(MFA) Delete capability, which uses multi-factor authentication, can be used to provide an additional layer of security Cross region Replication, requires versioning enabled on the source bucket</li>
+</ul>
+
+<div align="center">
+    <video width="620" height="440" controls>
+    <source src="https://anandvyas.in/videos/s3/S4-L3-Version-Control-Lab.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+    </video>
+</div>
+
+<h3 id="span-style-color-e47911-cross-region-replication-span"><span style="color:#e47911">Cross Region Replication</span></h3>
+
+<ul>
+<li>Cross-region replication is a feature of Amazon S3 that allows you to asynchronously replicate all new objects in the source bucket in one AWS region to a target bucket in another region.</li>
+<li>Any metadata and ACLs associated with the object are also part of the replication.</li>
+<li><strong>To enable cross-region replication, versioning must be turned on for both source and destination buckets.</strong></li>
+</ul>
+
+<blockquote>
+<p>If turned on in an existing bucket, cross-region replication will only replicate new
+objects. Existing objects will not be replicated and must be copied to the new bucket via a separate command.</p>
+</blockquote>
+
+<div align="center">
+    <video width="620" height="440" controls>
+    <source src="https://anandvyas.in/videos/s3/S4-L4-Cross-Region-Replication.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+    </video>
+</div>
+
+<h3 id="span-style-color-e47911-s3-lifecycle-management-span"><span style="color:#e47911">S3 Lifecycle management</span></h3>
+
+<ul>
+<li>can be used in conjunction with versioning</li>
+<li>can be applied to current versions and previous versions.</li>
+<li>Following actions are allowed in conjunction with or without versioning:
+
+<ul>
+<li>archive to Glacier storage class(30 days after IA, if relevant)</li>
+<li>permanent delete</li>
+<li>archive and permanent delete</li>
+<li>transition to the Standard: Infrequent Access Storage class(128kb and 30 days after the creation date)</li>
+</ul></li>
+</ul>
+
+<div align="center">
+    <video width="620" height="440" controls>
+    <source src="https://anandvyas.in/videos/s3/S4-L4-Lifecycle-Management-and-Glacier-Lab.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+    </video>
+</div>
+
+<h3 id="span-style-color-e47911-exam-tips-span"><span style="color:#e47911">Exam Tips</span></h3>
+
+<ul>
+<li>Amazon S3 is the core object storage service on AWS, allowing you to store an unlimited amount of data with very high durability.</li>
+<li>Common Amazon S3 use cases include backup and archive, web content, big data analytics, static website hosting, mobile and cloud-native application hosting, and disaster recovery.</li>
+<li>Amazon S3 is integrated with many other AWS cloud services, including AWS IAM, AWS
+KMS, Amazon EC2, Amazon EBS, Amazon EMR, Amazon DynamoDB, Amazon Redshift, Amazon SQS, AWS Lambda, and Amazon CloudFront.</li>
+<li>Object storage differs from traditional block and file storage. Block storage manages data at a device level as addressable blocks, while file storage manages data at the operating system level as files and folders. Object storage manages data as objects that contain both data and metadata, manipulated by an API.</li>
+<li>Amazon S3 buckets are containers for objects stored in Amazon S3. Bucket names must be globally unique. Each bucket is created in a specific region, and data does not leave the region unless explicitly copied by the user.</li>
+<li>Amazon S3 objects are files stored in buckets. Objects can be up to 5TB and can contain any kind of data. Objects contain both data and metadata and are identified by keys. Each Amazon S3 object can be addressed by a unique URL formed by the web services endpoint, the bucket name, and the object key.</li>
+<li>Amazon S3 has a minimalistic API—create/delete a bucket, read/write/delete objects, list keys in a bucket—and uses a REST interface based on standard HTTP verbs—GET, PUT, POST, and DELETE. You can also use SDK wrapper libraries, the AWS CLI, and the AWS Management Console to work with Amazon S3.</li>
+<li>Amazon S3 is highly durable and highly available, designed for 11 nines of durability of objects in a given year and four nines of availability.</li>
+<li>Amazon S3 is eventually consistent, but offers read-after-write consistency for new object PUTs.</li>
+<li>Amazon S3 objects are private by default, accessible only to the owner. Objects can be marked public readable to make them accessible on the web. Controlled access may be provided to others using ACLs and AWS IAM and Amazon S3 bucket policies.</li>
+<li>Static websites can be hosted in an Amazon S3 bucket.</li>
+<li>Prefixes and delimiters may be used in key names to organize and navigate data
+hierarchically much like a traditional file system.</li>
+<li>Amazon S3 offers several storage classes suited to different use cases: Standard is designed for general-purpose data needing high performance and low latency. Standard-IA is for less frequently accessed data. RRS offers lower redundancy at lower cost for easily reproduced data. Amazon Glacier offers low-cost durable storage for archive and long-term backups that can are rarely accessed and can accept a three- to five-hour retrieval time.</li>
+<li>Object lifecycle management policies can be used to automatically move data between
+storage classes based on time.</li>
+<li>Amazon S3 data can be encrypted using server-side or client-side encryption, and encryption keys can be managed with Amazon KMS.</li>
+<li>Versioning and MFA Delete can be used to protect against accidental deletion.</li>
+<li>Cross-region replication can be used to automatically copy new objects from a source bucket in one region to a target bucket in another region.</li>
+<li>Pre-signed URLs grant time-limited permission to download objects and can be used to
+protect media and other web content from unauthorized “web scraping.”</li>
+<li>Multipart upload can be used to upload large objects, and Range GETs can be used to
+download portions of an Amazon S3 object or Amazon Glacier archive.</li>
+<li>Server access logs can be enabled on a bucket to track requestor, object, action, and response.</li>
+<li>Amazon S3 event notifications can be used to send an Amazon SQS or Amazon SNS message
+or to trigger an AWS Lambda function when an object is created or deleted.</li>
+<li>Amazon Glacier can be used as a standalone service or as a storage class in Amazon S3.</li>
+<li>Amazon Glacier stores data in archives, which are contained in vaults. You can have up to 1,000 vaults, and each vault can store an unlimited number of archives.</li>
+
+<li><p>Amazon Glacier vaults can be locked for compliance purposes.</p></li>
+
+<li><p>S3</p>
+
+<ul>
+<li>Details
+
+<ul>
+<li>Max 100 buckets</li>
+<li>Unique bucket names, DNS name convention</li>
+<li>Multiple regions. Data stays in region unless explicitly moved.</li>
+<li>Min size: 0b</li>
+<li>Max size: 5Tb</li>
+<li>&gt; 5Gb requires multipart upload</li>
+<li>Multipart upload recommended on &gt;= 100Mb</li>
+<li>Multipart can upload parallel and out of order</li>
+<li><strong>CompleteMultipartUpload</strong> API reassembles the file after multipart upload</li>
+<li>Can be encrypted before WRITE to disk, decrypted ON download</li>
+</ul></li>
+<li>Data Consistency
+
+<ul>
+<li>New objects: Read-after-write consistency
+
+<ul>
+<li>No stale reads possible</li>
+<li>Potential higher read latency</li>
+<li>Potential lower read throughput</li>
+</ul></li>
+<li>Updated objects: Eventual consistency
+
+<ul>
+<li>Stale reads possible</li>
+<li>Lowest read latency</li>
+<li>Highest read throughput</li>
+</ul></li>
+</ul></li>
+<li>Performance
+
+<ul>
+<li>Consistent:
+
+<ul>
+<li>&gt; 100 put/list/update requests/s</li>
+<li>&gt; 300 get requests/s</li>
+</ul></li>
+<li>Burst:
+
+<ul>
+<li>&gt; 300 put/list/update requests/s</li>
+<li>&gt; 800 get requests/s</li>
+</ul></li>
+<li>Request more if needed prior to production</li>
+</ul></li>
+<li>Performance Optimizations
+
+<ul>
+<li>S3 keeps index of object keynames in each region</li>
+<li>BAD:
+
+<ul>
+<li>ex/2016-12-07/p1.jpg</li>
+<li>ex/2016-12-07/p2.jpg</li>
+<li>ex/2016-12-07/p3.jpg</li>
+<li>ex/2016-12-07/p4.jpg</li>
+</ul></li>
+<li>GOOD:
+
+<ul>
+<li>ex/e87f-2016-12-07/p1.jpg</li>
+<li>ex/a023-2016-12-07/p2.jpg</li>
+<li>ex/b753-2016-12-07/p3.jpg</li>
+<li>ex/18fa-2016-12-07/p4.jpg</li>
+</ul></li>
+<li>Requests don&rsquo;t all float through same node (indexes built on hashes rather than the same date string)</li>
+<li>GET heavy workflow =&gt; use CloudFront CDN as caching service
+
+<ul>
+<li>Limits the requests on S3</li>
+</ul></li>
+</ul></li>
+<li>Hosting static websites
+
+<ul>
+<li>HTML/CSS/Javascript in Buckets.
+
+<ul>
+<li>Custom error pages</li>
+<li>Custom index file</li>
+<li>Custom redirect rules</li>
+</ul></li>
+<li>S3 gives default URL
+
+<ul>
+<li><bucket-name>.s3-website-<AWS region>.amazonaws.com</li>
+<li>Route 53 integration for custom names</li>
+</ul></li>
+<li>Bucket name must match domain name (dashsoft.dk -&gt; S3://dashsoft.dk, www.dashsoft.dk -&gt; s3://www.dashsoft.dk)
+
+<ul>
+<li>if someone used that bucket name, feature can&rsquo;t be used</li>
+</ul></li>
+</ul></li>
+<li>S3 IAM and Bucket policies
+
+<ul>
+<li>more: <a href="https://aws.amazon.com/blogs/security/iam-policies-and-bucket-policies-and-acls-oh-my-controlling-access-to-s3-resources/">https://aws.amazon.com/blogs/security/iam-policies-and-bucket-policies-and-acls-oh-my-controlling-access-to-s3-resources/</a></li>
+<li>IAM policy: User level (User policy)
+
+<ul>
+<li>Multiple users can be assigned same IAM policy</li>
+<li>Attached to a user, so can not be used to grant anonymous users permissions</li>
+<li>JSON based</li>
+</ul></li>
+<li>Bucket policy: Resource level (resource-based policy)
+
+<ul>
+<li>JSON file attached to resource
+
+<ul>
+<li>Who is allowed to access resources?</li>
+<li>What that user can do with those resources?</li>
+<li>Can contain conditions (e.g. StringEquals)</li>
+</ul></li>
+<li>max 20kb size</li>
+<li>SHOULD BE USED to manage cross-account permissions for all Amazon S3 permissions</li>
+</ul></li>
+<li>ACLs:
+
+<ul>
+<li>Legacy.</li>
+<li>For buckets and objects</li>
+<li>More restrictive than Bucket Policies
+
+<ul>
+<li>Can manage permissions on INDIVIDUAL OBJECTS WITHIN A BUCKET</li>
+</ul></li>
+<li>XML based</li>
+<li>Grant read/write to OTHER AWS ACCOUNTS</li>
+<li>No conditional permissions</li>
+<li>Can not explicitly deny permissions</li>
+<li>Only way to manage access to objects not owned by the bucket owner</li>
+</ul></li>
+<li>Bucket owner has full permission as default
+
+<ul>
+<li>Bucket owner paying bills can deny access or modify objects regardless of who owns them</li>
+</ul></li>
+<li>Explicit DENY always overrides allows in policies.</li>
+</ul></li>
+<li>Logging S3 API calls
+
+<ul>
+<li>CloudTrail
+
+<ul>
+<li>Bucket levels operations</li>
+<li>Logs all API calls</li>
+<li>Use with CloudWatch to filter certain calls and notify on occurences</li>
+</ul></li>
+<li>Amazon S3 Server Access Logs
+
+<ul>
+<li>Object level operations</li>
+<li>Logs GET</li>
+<li>May take up to 1 hour before showing logs</li>
+<li>on a best effort basis - not for completely accurate logging!!</li>
+</ul></li>
+<li>Saved to S3 bucket</li>
+</ul></li>
+<li>Object Versioning
+
+<ul>
+<li>Three states: Versioning enabled, Versioning suspended, unversioned
+
+<ul>
+<li>Once version-enabled a bucket cannot be unversioned.</li>
+<li>Version-enabled can be version suspended
+
+<ul>
+<li>Existing versions will remain.</li>
+<li>New objects will be given version ID null</li>
+</ul></li>
+</ul></li>
+<li>Setup at bucket level</li>
+<li>New versions of objects are given a Version ID</li>
+<li>Upon GET the latest version is returned</li>
+<li>Upon DELETE all versions remain in bucket, but a delete marker will be inserted on the object. Will appear to be deleted.</li>
+<li>Permanent deletion of version: Specify ID. Next ID will be current version.</li>
+<li>Restore a version:
+
+<ul>
+<li>Copy from ID (old versions ID) to same bucket
+
+<ul>
+<li>works because: GET -&gt; PUT (gets new ID)</li>
+</ul></li>
+<li>Delete current versions ID (i.e. next ID will be current)</li>
+</ul></li>
+<li>Lifecycle management to handle versions life. Examples:
+
+<ul>
+<li>Send noncurrent versions to amazon Glacier?</li>
+<li>Permanently delete objects that have been non-current for 180 days</li>
+</ul></li>
+</ul></li>
+<li>S3 Encryption
+
+<ul>
+<li>Protecting data in-transit
+
+<ul>
+<li>SSL or client-side encryption or&hellip;</li>
+<li>AWS KMS-managed (Key Management System) Customer Master Key (CMK)
+
+<ul>
+<li>Unique encryption key for each object</li>
+<li>Amazon knows master key</li>
+<li>On upload:
+
+<ul>
+<li>Client request key from AWS KMS</li>
+<li>KMS returns key: plain text + cipher blob</li>
+<li>plain text used to encrypt object data</li>
+<li>cipher blob to upload to S3 as object metadata</li>
+</ul></li>
+<li>On download:
+
+<ul>
+<li>Client downloads encrypted object data + cipher blob in object metadata</li>
+<li>Client sends cipher blob to KMS and gets plain text back</li>
+<li>plain text used to decrypt object data</li>
+</ul></li>
+</ul></li>
+<li>Client-side master key:
+
+<ul>
+<li>Amazon does NOT know master key</li>
+<li>on upload:
+
+<ul>
+<li>Client provides master key to AWS S3 encryption client (LOCALLY)</li>
+<li>S3 client generates random data key and encrypts it with master key</li>
+<li>S3 client encrypts data using data key and uploads material description as part of object metadata (x-amz-meta-x-amz-key)</li>
+</ul></li>
+<li>on download:
+
+<ul>
+<li>Client downloads encrypted object WITH metadata</li>
+<li>Metadata tells client which master key to use</li>
+<li>Client decrypts the data key using that master key</li>
+<li>Client uses decrypted data key to decrypt object</li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li>Protecting data at rest
+
+<ul>
+<li>Server side encryption (by AWS S3)
+
+<ul>
+<li>Must add x-amz-server-side-encryption request header to upload request</li>
+<li>Uses AES-256</li>
+<li>Bucket policy can require all objects to use server-side encryption
+
+<ul>
+<li>StringNotEquals &ldquo;x-amz-server-side-encryption&rdquo; = &ldquo;AES-256&rdquo;</li>
+</ul></li>
+</ul></li>
+<li>KMS-managed encryption keys
+
+<ul>
+<li>Uses customer master keys</li>
+<li>More flexibility in controlling keys</li>
+</ul></li>
+<li>Customer-provided encryption keys
+
+<ul>
+<li>Gives the option to generate your own keys outside the environment</li>
+<li>Amazon does NOT store the encryption key</li>
+</ul></li>
+</ul></li>
+<li>Both can be used simultaneously</li>
+</ul></li>
+</ul></li>
+</ul>
+
+<h3 id="span-style-color-e47911-s3-encryption-span"><span style="color:#e47911">S3 Encryption</span></h3>
+
+<h3 id="span-style-color-e47911-storage-gateway-span"><span style="color:#e47911">Storage Gateway</span></h3>
+
+<h3 id="span-style-color-e47911-s3-security-span"><span style="color:#e47911">S3 Security</span></h3>
+
+<h3 id="span-style-color-e47911-s3-host-static-website-span"><span style="color:#e47911">S3 Host Static Website</span></h3>
+
+<h3 id="span-style-color-e47911-s3-transfer-acceleration-span"><span style="color:#e47911">S3 Transfer Acceleration</span></h3>
+
+<p>Amazon S3 Transfer Acceleration enables fast, easy, and secure transfers of files over long distances between your client and your Amazon S3 bucket. Transfer Acceleration leverages Amazon CloudFront’s globally distributed AWS Edge Locations</p>
+
+<ul>
+<li>First, enable Transfer Acceleration on an S3 bucket using the Amazon S3 console,</li>
+<li>After Transfer Acceleration is enabled, you can point your Amazon S3 PUT and GET requests to the s3-accelerate endpoint domain name.</li>
+<li>Your data transfer application must use one of the following two types of endpoints to access the bucket for faster data transfer:
+
+<ul>
+<li><bucketname>.s3-accelerate.amazonaws.com</li>
+<li><bucketname>.s3-accelerate.dualstack.amazonaws.com
+
+<br /></li>
+</ul></li>
+</ul>
+
+<h3 id="span-style-color-e47911-s3-faq-span"><span style="color:#e47911">S3 FAQ</span></h3>
+
+<p>Latest FAQ&rsquo;s find on this <a href="https://aws.amazon.com/s3/faqs/">link</a>.</p>
+        </div>
+        
+    </div>
+    
+    
+    <footer class="sticky-footer">
+    <div class="container">
+        <div class="text-center">
+            <small>Copyright © Anand Vyas 2019</small>
+        </div>
+    </div>
+</footer>
+
+<a class="scroll-to-top rounded" href="#page-top">
+    <i class="fa fa-angle-up"></i>
+</a>
+
+
+<script src="https://anandvyas.in/js/popper.min.js"></script>
+<script src="https://anandvyas.in/js/bootstrap.min.js"></script>
+<script src="https://anandvyas.in/js/highlight.min.js"></script>
+<script src="https://anandvyas.in/js/moment.min.js"></script>
+<script src="https://anandvyas.in/js/clipboard.min.js"></script>
+
+<script src="https://anandvyas.in/js/jquery.easing.min.js"></script>
+
+<script src="https://anandvyas.in/js/sb-admin.js"></script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-108803266-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'UA-108803266-1');
+</script>
+  </div>
+<script data-no-instant>document.write('<script src="/livereload.js?port=1313&mindelay=10"></' + 'script>')</script></body>
+</html>

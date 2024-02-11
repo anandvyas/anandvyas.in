@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Aws Elasticache on Anand vyas</title>
+    <link>https://anandvyas.in/tags/aws-elasticache/</link>
+    <description>Recent content in Aws Elasticache on Anand vyas</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 22 Jul 2017 00:15:00 +0200</lastBuildDate>
+    
+	<atom:link href="https://anandvyas.in/tags/aws-elasticache/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>AWS ElastiCache</title>
+      <link>https://anandvyas.in/aws/aws-elasticache/</link>
+      <pubDate>Sat, 22 Jul 2017 00:15:00 +0200</pubDate>
+      
+      <guid>https://anandvyas.in/aws/aws-elasticache/</guid>
+      <description>&lt;p&gt;Amazon ElastiCache is a web service that simplifies the setup and management of distributed in-memory caching environments. This service makes it easy and cost effective to provide a high-performance and scalable caching solution for your cloud applications.&lt;/p&gt;
+
+&lt;div class=&#34;text-center&#34;&gt;
+    &lt;img class=&#34;img-responsive&#34; src=&#34;https://anandvyas.in/images/aws-elasticache.png&#34; alt=&#34;AWS Elastic Block Storage&#34; /&gt;
+&lt;/div&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

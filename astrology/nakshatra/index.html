@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Nakshatra Calulation - Anand vyas</title>
+    <meta content="Nakshatra Calulation - Anand vyas" property="og:title">
+    <meta content="Astrology" name="keywords">
+    <meta content="Astrology Nakshatra Calulation" property="og:description">
+    <meta name="author" content="Anand Vyas">
+
+    
+    <link href="https://anandvyas.in/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link href="https://anandvyas.in/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    
+    <link href="https://anandvyas.in/css/highlighter.css" rel="stylesheet">
+    
+    <link href="https://anandvyas.in/css/sb-admin.css" rel="stylesheet">
+    <link href="https://anandvyas.in/css/about.css" rel="stylesheet">
+
+    <script src="https://anandvyas.in/js/jquery.min.js"></script>
+</head>
+<body class="fixed-nav sticky-footer bg-dark sidenav-toggled" id="page-top">
+  
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+    <a class="navbar-brand" href="https://anandvyas.in/">
+        <img src="https://anandvyas.in/images/profile/logo.png" />
+        <span>Anand vyas</span>
+    </a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav navbar-sidenav">
+            <li class="nav-item sidebar-profile text-center">
+                <div class="profile-pic">
+                    <img src="https://anandvyas.in/images/profile/avatar.jpg" alt="avatar">
+                </div>
+                <div class="profile-detail">
+                    
+                    <span>Solution Architect</span> 
+                    <span>Cloud Architect</span> 
+                    <span>DevOps</span> 
+                    <span>Tech Lead</span> 
+                </div>
+            </li>
+            
+            <li class="nav-item sidebar-menu" data-toggle="tooltip" data-placement="right" title="Home">
+                <a class="nav-link" href="https://anandvyas.in/">
+                <i class="fa fa-fw fa fa-home"></i>
+                <span class="nav-link-text">Home</span>
+                </a>
+            </li>
+            
+            <li class="nav-item sidebar-menu" data-toggle="tooltip" data-placement="right" title="About">
+                <a class="nav-link" href="https://anandvyas.in/about">
+                <i class="fa fa-fw fa fa-user-circle"></i>
+                <span class="nav-link-text">About</span>
+                </a>
+            </li>
+            
+            <li class="nav-item sidebar-menu" data-toggle="tooltip" data-placement="right" title="Categories">
+                <a class="nav-link" href="https://anandvyas.in/categories">
+                <i class="fa fa-fw fa fa-dashboard"></i>
+                <span class="nav-link-text">Categories</span>
+                </a>
+            </li>
+            
+            <li class="nav-item sidebar-menu" data-toggle="tooltip" data-placement="right" title="Tags">
+                <a class="nav-link" href="https://anandvyas.in/tags">
+                <i class="fa fa-fw fa fa-tags"></i>
+                <span class="nav-link-text">Tags</span>
+                </a>
+            </li>
+            
+        </ul>
+        <ul class="navbar-nav sidenav-social">
+            
+            <li><a href="#" target="_blank"><i class="fa fa-mobile"></i></a></li>
+            
+            <li><a href="mailto:anandvyas@live.com" target="_blank"><i class="fa fa-envelope"></i></a></li>
+            
+            <li><a href="https://twitter.com/anandvyaas" target="_blank"><i class="fa fa-twitter"></i></a></li>
+            
+            <li><a href="https://www.linkedin.com/in/anandvyaas" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+            
+            <li><a href="https://www.instagram.com/anandvyaas" target="_blank"><i class="fa fa-instagram"></i></a></li>
+            
+            <li><a href="https://github.com/anandvyas" target="_blank"><i class="fa fa-github"></i></a></li>
+            
+            <li><a href="https://stackoverflow.com/users/8208060/anand-vyas" target="_blank"><i class="fa fa-stack-overflow"></i></a></li>
+            
+        </ul>
+        <ul class="navbar-nav sidenav-toggler">
+            <li class="nav-item">
+                <a class="nav-link text-center" id="sidenavToggler">
+            <i class="fa fa-fw fa-angle-left"></i>
+            </a>
+            </li>
+        </ul>
+        
+        
+    </div>
+</nav>
+  
+  <div class="content-wrapper">
+    <div class="container-fluid">
+    
+
+
+<ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="https://anandvyas.in/">Home</a></li>
+
+
+    
+    <li class="breadcrumb-item active"><a href='https://anandvyas.in/astrology'>astrology</a></li>
+    
+    
+
+
+    
+    <li class="breadcrumb-item active"><a href='https://anandvyas.in/astrology/nakshatra'>nakshatra</a></li>
+    
+    
+
+
+    
+
+</ol>
+
+        <div class="post">
+            <h1>Nakshatra Calulation</h1>
+            <span class="post-date">Thu, Apr 12, 2018</span>
+            <script src="https://unpkg.com/vue@2.6.10/dist/vue.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/3.8.2/js-yaml.min.js"></script>
+
+<div id="app">
+<br/>
+<div class="row">
+<div class="col-md-6">
+<select class="form-control" v-on:change="changeNakshatra" >
+    <option v-for="(node,index) in nakshatra" :value="nakshatra[index]">[[node]]</option>
+</select>
+</div>
+<div class="col-md-6">
+
+<select class="form-control" v-on:change="changeCharan" >
+    <option v-for="(node,index) in charan" :value="charan[index]">[[node]]</option>
+</select>
+</div>
+</div>
+<br/>
+
+<div class="list-group  col-md-3">
+  <a href="#" class="list-group-item active">
+    Final Calulation
+  </a>
+  <a href="#" v-for="(node,index) in diffCalulation" class="list-group-item">[[ node ]]</a>
+</div>
+
+<p></div></p>
+
+<script>
+var app = new Vue({
+  el: "#app",
+  delimiters: ["[[", "]]"],
+  components: {
+    
+  },
+  data() {
+    return {  
+    charanIndex: 0,
+    nakshatraIndex: 0,
+    charan: ["First","Second","Third","Forth"],
+    nakshatra: ["ASHWANI","BHARNI","KRITIKA","ROHNI","MRIGSHIRA","AARDHA","PUNARWASU","PUSHYA","AASHLESHA","MAGHA","PURWA FALGUNI","UTTRA FALGUNI","HASTH","CHITRA","SWATI","VISHAKHA","ANURADHA","JYESHTHA","MULA","PURWA SHADHA","UTTRA SHADHA","SHARAWAN","GHANISHATHA","SHATBHISHA","PURWA BHADRAPAD","UTTRA BHADRAPAD","REWTI"],
+    firstCharan: [],
+    secondCharan: [],
+    thirdCharan: [],
+    forthCharan: [],
+
+    diffCalulation: []
+    }
+  },
+  beforeMount: function() {
+    this.calulate(1);
+  },
+  methods: {
+    changeCharan: function(e){
+        let cur = this.charan.indexOf(e.target.value);
+        this.charanIndex = cur;
+
+        this.calulate(this.charanIndex);
+    },  
+    changeNakshatra: function(e) {
+      
+      let cur = this.nakshatra.indexOf(e.target.value);
+      this.nakshatraIndex = cur;
+
+      this.calulate(this.charanIndex);
+    },
+    calulate: function(charan){
+
+        let consolidateNakshatra = [];
+        this.nakshatra.map((nakshatra,index) => {
+            this.charan.map((charan, index) => {
+                consolidateNakshatra.push(nakshatra +' - '+charan);
+            })
+        })
+
+        this.diffCalulation = [];
+        // 11,12,21 - first charan
+        this.diffCalulation.push(consolidateNakshatra[this.getIndex(this.nakshatraIndex,11) * 4 + charan ]);
+        this.diffCalulation.push(consolidateNakshatra[this.getIndex(this.nakshatraIndex,12) * 4 + charan ]);
+        this.diffCalulation.push(consolidateNakshatra[this.getIndex(this.nakshatraIndex,21) * 4 + charan ]);
+
+        // 4,14 - second charan
+        this.diffCalulation.push(consolidateNakshatra[this.getIndex(this.nakshatraIndex,4) * 4 + charan + 1]);
+        this.diffCalulation.push(consolidateNakshatra[this.getIndex(this.nakshatraIndex,14) * 4 + charan + 1]);
+
+        // 7,16,24 - third charan
+        this.diffCalulation.push(consolidateNakshatra[this.getIndex(this.nakshatraIndex,7) * 4 + charan + 2]);
+        this.diffCalulation.push(consolidateNakshatra[this.getIndex(this.nakshatraIndex,16) * 4 + charan + 2]);
+        this.diffCalulation.push(consolidateNakshatra[this.getIndex(this.nakshatraIndex,24) * 4 + charan + 2]);
+
+        // 17 - forth charan
+        this.diffCalulation.push(consolidateNakshatra[this.getIndex(this.nakshatraIndex,17) * 4 + charan + 3]);
+
+        return true;
+    },
+    getIndex: function(cur,index){
+        index = index - 1;
+
+        if((cur + index) >= this.nakshatra.length){
+            return (cur + index) - this.nakshatra.length;
+        }else{
+            return cur + index;
+        }
+    }
+  }
+});
+</script>
+
+        </div>
+        
+    </div>
+    
+    
+    <footer class="sticky-footer">
+    <div class="container">
+        <div class="text-center">
+            <small>Copyright © Anand Vyas 2019</small>
+        </div>
+    </div>
+</footer>
+
+<a class="scroll-to-top rounded" href="#page-top">
+    <i class="fa fa-angle-up"></i>
+</a>
+
+
+<script src="https://anandvyas.in/js/popper.min.js"></script>
+<script src="https://anandvyas.in/js/bootstrap.min.js"></script>
+<script src="https://anandvyas.in/js/highlight.min.js"></script>
+<script src="https://anandvyas.in/js/moment.min.js"></script>
+<script src="https://anandvyas.in/js/clipboard.min.js"></script>
+
+<script src="https://anandvyas.in/js/jquery.easing.min.js"></script>
+
+<script src="https://anandvyas.in/js/sb-admin.js"></script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-108803266-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'UA-108803266-1');
+</script>
+  </div>
+<script data-no-instant>document.write('<script src="/livereload.js?port=1313&mindelay=10"></' + 'script>')</script></body>
+</html>
