@@ -1,0 +1,5 @@
+baseURL = 'https://bvkatv.com/'
+languageCode = 'en-us'
+title = 'Anand Vyas'
+theme = 'clarity'
+unsafe = true
