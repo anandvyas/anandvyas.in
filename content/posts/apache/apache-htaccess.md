@@ -1,7 +1,7 @@
 ---
 title: 'Apache - .htaccess'
 date: 2024-02-01
-draft:  true   
+draft:  false   
 featured: false  
 description: "Apache - .htaccess"
 thumbnail: "/posts/apache/images/apache.png"
@@ -32,11 +32,11 @@ Example:
 ```
 
 ### Common Uses of .htaccess
-- Mod_Rewrite
+- `Mod_Rewrite`
 - Authentication
 - Custom Error Pages
 - Mime Types
-- SSI (Server Side Includes)
+- SSI (`Server Side Includes`)
 
 ### Mod_Rewrite
 Mod_rewrite module is use for rule-based rewrite engine, based on Perl Compatible Regular Expressions. All the URL rewrite commands follow the below pattern
@@ -111,7 +111,7 @@ Redirect 301 /olddirectory/file.html http://www.anandvyas.in/newdirectory/file.h
 </filesMatch>
 ```
 
-Gzip Compression
+### Gzip Compression
 ```apache
 # compress text, HTML, JavaScript, CSS, and XML
 AddOutputFilterByType DEFLATE text/plain
