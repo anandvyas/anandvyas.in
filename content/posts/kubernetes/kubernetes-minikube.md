@@ -1,7 +1,7 @@
 ---
 title: 'Kubernetes - Minikube'
 date: 2024-02-01
-draft:  true   
+draft:  false   
 featured: false  
 description: "Kubernetes - Minikube"
 thumbnail: "/posts/kubernetes/images/minikube.png"

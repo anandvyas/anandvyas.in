@@ -1,7 +1,7 @@
 ---
 title: 'Kubernetes - Cheat Sheet'
 date: 2024-02-01
-draft:  true   
+draft:  false   
 featured: false  
 description: "Kubernetes - Cheat Sheet"
 thumbnail: "/posts/kubernetes/images/k8.png"
@@ -161,28 +161,18 @@ kubectl get deployment my-cool-app --output yaml --export > my-cool-app.yaml
 ```
 
 ## Logs
-
-- Get logs.
 ```bash
 kubectl logs -l app=kuard
-```
 
-- Get logs for previously terminated container.
-```bash
+# Get logs for previously terminated container.
 kubectl logs POD_NAME --previous
-```
 
-- Watch logs in real time.
-```bash
+# Watch logs in real time.
 kubectl attach POD_NAME
-```
 
-- Copy files out of pod (Requires `tar` binary in container).
-```bash
+# Copy log files out of pod (Requires `tar` binary in container).
 kubectl cp POD_NAME:/var/log .
 ```
-
-You can also install and use [kail](https://github.com/boz/kail).
 
 ## Port Forward
 
@@ -206,34 +196,28 @@ kubectl autoscale deployment nginx-deployment --min=10 --max=15 --cpu-percent=80
 
 ## Rollout
 
-- Get rollout status.
-
 ```bash
+# Get rollout status.
 kubectl rollout status deployment/nginx-deployment
-# Waiting for rollout to finish: 2 out of 3 new replicas have been updated...
-# deployment "nginx-deployment" successfully rolled out
-```
 
-- Get rollout history.
+# Get rollout history.
 
-```bash 
 kubectl rollout history deployment/nginx-deployment
 kubectl rollout history deployment/nginx-deployment --revision=2
-```
 
-- Undo a rollout.
-```bash 
+# Undo a rollout.
+
 kubectl rollout undo deployment/nginx-deployment
 kubectl rollout undo deployment/nginx-deployment --to-revision=2
-```
 
-- Pause/resume a rollout
-```bash 
+# Pause/resume a rollout
+
 kubectl rollout pause deployment/nginx-deployment
 kubectl rollout resume deploy/nginx-deployment
 ```
 
-### change all the content
+
+### Examples of get commands
 
 ```bash
 # Get commands with basic output
