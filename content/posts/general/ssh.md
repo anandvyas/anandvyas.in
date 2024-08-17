@@ -1,6 +1,6 @@
 ---
 title: 'SSH - Secure Shell'
-date: 2024-02-01
+date: 2024-08-15
 draft:  false   
 featured: false  
 description: "SSH - Secure Shell"

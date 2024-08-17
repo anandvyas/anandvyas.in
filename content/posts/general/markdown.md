@@ -1,7 +1,7 @@
 ---
 title: 'Markdown'
-date: 2024-02-01
-draft:  true   
+date: 2024-08-15
+draft:  false   
 featured: false  
 description: "Markdown"
 thumbnail: "/posts/general/images/markdown.png"
