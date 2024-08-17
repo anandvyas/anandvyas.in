@@ -1,7 +1,7 @@
 ---
 title: 'Git - Cheat Sheet'
 date: 2024-02-01
-draft:  true   
+draft:  false   
 featured: false  
 description: "Git - Cheat Sheet"
 thumbnail: "/posts/git/images/git.png"

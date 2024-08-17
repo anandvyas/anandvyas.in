@@ -1,7 +1,7 @@
 ---
 title: 'MySQL - Cheat Sheet'
-date: 2024-02-01
-draft:  true   
+date: 2024-08-15
+draft:  false   
 featured: false  
 description: "MySQL - Cheat Sheet"
 thumbnail: "/posts/mysql/images/mysql.png"
@@ -14,6 +14,8 @@ tags:
 categories:     
     - MySQL
 ---
+
+Mysql
 
 ### MySQL Locations
 * Mac             */usr/local/mysql/bin*
@@ -225,7 +227,7 @@ SELECT * FROM users WHERE age BETWEEN 20 AND 25;
 
 ```sql
 SELECT * FROM users WHERE dept LIKE 'd%';
-SELECT * FROM users WHERE dept LIKE 'dev%';
+SELECT * FROM users WHERE dept LIKE 'dev%';s
 SELECT * FROM users WHERE dept LIKE '%t';
 SELECT * FROM users WHERE dept LIKE '%e%';
 ```
