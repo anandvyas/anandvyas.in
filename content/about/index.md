@@ -17,7 +17,7 @@ Additionally, I am passionate about automation and have a strong command of scri
 
 With a proven track record of delivering high-quality solutions and staying abreast of industry trends, I am committed to contributing my expertise to drive innovation and success in your organization.
 
-**Download my full CV:** [Resume](./files/anandvyas-resume-2017.pdf)
+**Download my full CV:** [Resume](./files/anandvyas-resume-2024.pdf)
 
 
 ### Certifications
