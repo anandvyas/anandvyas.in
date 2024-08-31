@@ -4,9 +4,9 @@ date: 2017-02-26
 draft:  false   
 featured: false  
 description: "What is DRY principle?"
-thumbnail: "/posts/q&a/images/dry.png"
-featureImage: "/posts/q&a/images/dry.png" 
-shareImage: "/posts/q&a/images/dry.png"
+thumbnail: "/posts/general/images/dry.png"
+featureImage: "/posts/general/images/dry.png" 
+shareImage: "/posts/general/images/dry.png"
 author: "Anand Vyas"
 tags:
     - Design Principles

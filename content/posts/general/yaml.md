@@ -1,5 +1,5 @@
 ---
-title: 'Yaml (YAML Ain’t Markup Language)'
+title: 'Yaml (Yet Another Markup Language)'
 date: 2024-02-01
 draft:  false   
 featured: false  
@@ -14,7 +14,7 @@ categories:
     - General
 ---
 
-YAML (“YAML Ain’t Markup Language”) is a human-readable data serialization language. It is commonly used for configuration files
+YAML (“Yet Another Markup Language”) is a human-readable data serialization language. It is commonly used for configuration files
 
 ### Basic Rules
 > YAML is case sensitive.

@@ -4,9 +4,9 @@ date: 2017-02-26
 draft:  false   
 featured: false  
 description: "What is YAGNI principle?"
-thumbnail: "/posts/q&a/images/yagni.png"
-featureImage: "/posts/q&a/images/yagni.png" 
-shareImage: "/posts/q&a/images/yagni.png"
+thumbnail: "/posts/general/images/yagni.png"
+featureImage: "/posts/general/images/yagni.png" 
+shareImage: "/posts/general/images/yagni.png"
 author: "Anand Vyas"
 tags:
     - Design Principles

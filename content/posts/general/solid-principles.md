@@ -4,9 +4,9 @@ date: 2017-02-26
 draft:  false   
 featured: false  
 description: "What is SOLID principles?"
-thumbnail: "/posts/q&a/images/solid_principles.png"
-featureImage: "/posts/q&a/images/solid_principles.png" 
-shareImage: "/posts/q&a/images/solid_principles.png"
+thumbnail: "/posts/general/images/solid_principles.png"
+featureImage: "/posts/general/images/solid_principles.png" 
+shareImage: "/posts/general/images/solid_principles.png"
 author: "Anand Vyas"
 tags:
     - Design Principles

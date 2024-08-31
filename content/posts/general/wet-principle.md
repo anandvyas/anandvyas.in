@@ -4,9 +4,9 @@ date: 2017-02-26
 draft:  false   
 featured: false  
 description: "What is WET principle?"
-thumbnail: "/posts/q&a/images/wet.png"
-featureImage: "/posts/q&a/images/wet.png" 
-shareImage: "/posts/q&a/images/wet.png"
+thumbnail: "/posts/general/images/wet.png"
+featureImage: "/posts/general/images/wet.png" 
+shareImage: "/posts/general/images/wet.png"
 author: "Anand Vyas"
 tags:
     - Design Principles

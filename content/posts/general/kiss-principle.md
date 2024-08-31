@@ -4,9 +4,9 @@ date: 2017-02-26
 draft:  false   
 featured: false  
 description: "What is KISS principle?"
-thumbnail: "/posts/q&a/images/kiss.webp"
-featureImage: "/posts/q&a/images/kiss.webp" 
-shareImage: "/posts/q&a/images/kiss.webp"
+thumbnail: "/posts/general/images/kiss.webp"
+featureImage: "/posts/general/images/kiss.webp" 
+shareImage: "/posts/general/images/kiss.webp"
 author: "Anand Vyas"
 tags:
     - Design Principles
